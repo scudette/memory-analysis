@@ -1,0 +1,20 @@
+cache_key: 1426435637950/1fdecbf1ecb7f92ecf8dfceb3466fcd4-shell
+error: null
+result: '0'
+stderr: ''
+stdout: "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix aff4:\
+  \ <http://aff4.org/Schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+  \ .\n@prefix memory: <http://aff4.org/Schema#memory/> .\n\n<aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed/PhysicalMemory>\n\
+  \    aff4:category memory:physical ;\n    aff4:stored <aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed>\
+  \ ;\n    a aff4:map .\n\n<aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed/PhysicalMemory/data>\n\
+  \    aff4:chunk_size 32768 ;\n    aff4:chunks_per_segment 1024 ;\n    aff4:compression\
+  \ <https://www.ietf.org/rfc/rfc1950.txt> ;\n    aff4:size 1073336320 ;\n    aff4:stored\
+  \ <aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed> ;\n    a aff4:image .\n\n<aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed/c:/pagefile.sys>\n\
+  \    aff4:category memory:pagefile ;\n    aff4:chunk_size 32768 ;\n    aff4:chunks_per_segment\
+  \ 1024 ;\n    aff4:compression <https://www.ietf.org/rfc/rfc1950.txt> ;\n    memory:pagefile_number\
+  \ 0 ;\n    aff4:size 536870912 ;\n    aff4:stored <aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed>\
+  \ ;\n    a aff4:image .\n\n<file:///home/scudette/projects/workshop/images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4>\n\
+  \    aff4:contains <aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed> .\n\nObjects in\
+  \ use:\nObjects in cache:\naff4://4928ef44-6579-496c-a53e-2ad34d98b7ed - 0\naff4://4928ef44-6579-496c-a53e-2ad34d98b7ed/information.turtle\
+  \ - 0\nfile:///home/scudette/projects/workshop/images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4\
+  \ - 0\n"
