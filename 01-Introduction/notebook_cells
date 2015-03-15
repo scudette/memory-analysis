@@ -1,0 +1,61 @@
+- id: 1426413564516
+  source:
+  - '# Introduction'
+  - ''
+  - This workshop examines the field of memory analysis, and in particular we learn
+    how to use Rekall to explore the different aspects of memory.
+  - ''
+  - This is an interactive, living document. You, the reader, can modify the document,
+    add to it and further explore other aspects of the image. We appreciate any contributions
+    you can make by sending us a pull request on github.
+  - ''
+  - ''
+  - ''
+  type: markdown
+- id: 1426422551475
+  source:
+  - '## Why Memory Forensics?'
+  - ''
+  - Ultimately the system's software must execute instructions on the CPU and store
+    data and code in memory. Memory analysis examines the physical memory of a machine.
+    We therefore gain a view of the raw system state itself. This is usedful when
+    we are unable to obtain the information we need via the system's own mechanisms
+    and APIs.
+  - ''
+  - One reason we might not be able to get accurate information about system state
+    is when the system is compromised by malicious software. The software might change
+    some of the regular system APIs to hide itself. For example, the malware might
+    hook APIs, unlink data structures from internal lists and employ other anti-forensic
+    measure to make its own detection more difficult.
+  - ''
+  - Another reason we are unable to access the system state via regular APIs is when
+    the API's themselves are designed to hide this state. For example, when we wish
+    to extract passwords, or encryption keys from a system we are investigating, but
+    the operating system's APIs are trying to hide these keys.
+  - ''
+  - Finally memory forensics is used to capture and preserve system state. Since memory
+    is volatile, any attempts to investigate a system will change its internal memory
+    state, creating new network connections, allocating new kernel objects etc. By
+    capturin an image we are able to freeze and preserve system state, so we are able
+    to analyse the memory image later without worrying about changing system state.
+  - ''
+  - The last point presents some difficulties however, as we shall see in later sections,
+    the system's state is actually a combination of the disk image, memory image,
+    non volatile ram in device firms and many other sources. Sometimes by capturing
+    a memory image we are only capturing a part of the system state, and later during
+    analysis we realize we have failed to acquire some imporant part of the system
+    state.
+  - ''
+  - Additionally, the system state is constantly evolving. Even during the acquisition
+    process itself, the memory image is typically changing. We discuss in subsequent
+    sections how this affects our analysis.
+  - ''
+  - An important reason to acquire and archive memory images is in order to preserve
+    evidence of a compromise, especially for those advanced intrusions where we are
+    quite sure what are the capabilities or intensions of the attacker. Even in those
+    cases where we do not have the technology to extract and interpret certain aspects
+    of the memory image (perhaps the malware is using a unique technique we dont know
+    about yet). By archiving and preserving the memory image it is possible to employ
+    more advanced techniques in future and perhaps gain more understanding of previous
+    intrusions.
+  type: markdown
