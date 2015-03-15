@@ -12,7 +12,12 @@
   type: markdown
 - id: 1426425048386
   source:
-    caption: ''
+    caption: 'An microscope image of DDR3 memory. You can just make the rectangular
+      tracks for the address and data buses within the chip.
+
+
+      Below - A high level schematic for an Old Z80 based computer. The Z80 accesses
+      the address and data buses directly without an MMU.'
     files:
     - name: MT4C1024-HD.jpg
       type: image/jpeg
@@ -76,7 +81,9 @@
   type: markdown
 - id: 1426426578375
   source:
-    caption: ''
+    caption: A typical Physical memory layout as reported by the BIOS. The regions
+      marked reserved are further subdivided into DMA buffers to PCI deviced by the
+      operating system.
     files:
     - name: physical_memory_layout.jpg
       type: image/jpeg
@@ -345,3 +352,180 @@
 
     linpmem -V -v /tmp/test.aff4'
   type: shell
+- id: 1426448748611
+  source:
+  - '## The WinPmem acquisition tool.'
+  - ''
+  - On Windows, one must insert a signed driver in order to gain access to physical
+    memory. WinPmem from version 2.0 is built on top of the AFF4 imager technology,
+    and is packaged bundled with the appropriate memory drivers. Since AFF4 volumes
+    utilize zip file, as their underlying storage format, it is possible to append
+    an AFF4 volume to the end of any other file type. The WinPmem acquisition tool
+    utilizes this property to simply package all needed drivers and tool in the executable
+    itself - using the AFF4 format.
+  - ''
+  - We typically package with winpmem the 64 bit and 32 bit windows kernel drivers,
+    as well as a copy of fcat.exe from the [sleuthkit ](http://www.sleuthkit.org).
+    This tool is used to provide access to the locked pagefiles.
+  - ''
+  - If no other operation was specified, WinPmem will immediately image memory, pagefiles
+    and also acquire certain files, such as drivers and the kernel image. These are
+    useful to preserve the exact versions of binaries running on the system at the
+    time of the acquisition.
+  - ''
+  - By default WinPmem uses a technique called **PTE Remapping** to acquire memory.
+    This technique is illustrated below and was originally developed in order to bypass
+    potential malware hooking the APIs normally used for acquisition. After much use
+    we found that the technique is in fact more stable than using the APIs and it
+    is actually the only reliable way that access to physical memory is achievable
+    on OSX. We therefore decided to make this the default acquisition mode.
+  type: markdown
+- id: 1426449461463
+  source:
+    caption: 'Figure 4: Illustration of the PTE remapping technique.'
+    files:
+    - name: pte_acquisition.jpg
+      type: image/jpeg
+    size: 0
+  type: fileupload
+- id: 1426449484496
+  source:
+  - 'The PTE remapping technique works in the following steps:'
+  - ''
+  - 1. A page is requested from the operating system to the driver's use. The page
+    is locked into memory (so it can not be paged out).
+  - 2. The PTE of this page is found and directly modified in order to point at another
+    desired page in physical memory.
+  - 3. The Translation Lookaside Buffer (TLB) is flushed (this is essentially a cache
+    of page translated addresses). This forces the hardware to notice the modified
+    PTE.
+  - 4. We now simply read from the page - the data is coming from the physical page
+    we selected earlier.
+  - ''
+  - The strength of this technique is that the OS is not aware that any mapping has
+    occurred - the PTE is allocated to our use and will not be used by the system
+    itself. The translation is done by the hardware and the operating system is not
+    aware it is being imaged.
+  type: markdown
+- id: 1426451006412
+  source:
+  - '# Virtual Memory'
+  - ''
+  - In the start of this chapter we mentioned that although ancient CPUs directly
+    controlled the address bus, these days the CPU is not directly connected to the
+    address bus but must go through an MMU instead. In **Protected mode** the CPU's
+    address lines are translated by the MMU before being forwarded to the main system
+    bus seen by the RAM chips.
+  type: markdown
+- id: 1426451362106
+  source:
+    caption: The "Virtual Address Space" is the visible by the CPU. CPU memory access
+      are made through the Memory Manager unit and are being transformed into the
+      physical address space.
+    files:
+    - name: virtual_address_space.jpg
+      type: image/jpeg
+    size: 1
+  type: fileupload
+- id: 1426451521420
+  source:
+  - The translation is made automatically by the hardware, using pre-populated page
+    tables found in memory. The page tables are pre-configured and managed by the
+    operating system. The exact process of translating the address is outlined in
+    Figure 4, but conceptually the translation can simply be though of as a pre-configured
+    substitution between virtual addresses to physical addresses. The key for this
+    substitution is the value of (Control Register 3) CR3 which is a pointer to a
+    dedicated address in memory where the operating system has pre-configured the
+    page tables.
+  - ''
+  - But why do such a thing? Why are modern CPUs not directly connected to memory
+    like the Z80 example we showed earlier? The below figure shows how useful address
+    translation can be.
+  type: markdown
+- id: 1426452319798
+  source:
+    caption: Virtual Addresses allows physical memory to be shared by many processes
+      in many different ways.
+    files:
+    - name: virtual_memory2.jpg
+      type: image/jpeg
+    size: 0
+  type: fileupload
+- id: 1426452407232
+  source:
+  - 'The figure shows physical memory is divided into frames, each of size 0x1000
+    bytes. However, due to the virtual address translation, each running processes
+    is running in its own Virtual Memory Address Space. That is to say that when the
+    process is scheduled by the operating system, the OS loads a different value into
+    CR3 register, thereby affecting a different transformation between virtual addresses
+    and physical memory. '
+  - ''
+  - 'In this way each process can see its own virtual address space, which is distinct
+    from other process''s virtual address spaces. Now the operationg system can finely
+    control the view of the process''s virtual address space and exactly which memory
+    the process has access to:'
+  - ''
+  - 1. The operating system can implement shared memory by simply mapping different
+    pages in different virtual address spaced, into the same physical page. This effectively
+    allows different processes to share physical memory and can be used to facilitate
+    communication between them.
+  - 2. The operating system can map a virtual page into an actual physical memory
+    frame - this is termed "backed memory" - i.e. there is actual memory backing the
+    virtual address.
+  - 3. If the page not been used for a while the OS can simply mark the page table
+    entry (PTE) belonging to a virtual address in a special way and move the page
+    into the pagefile. Now if the process attempts to access the page, the hardware
+    will generate a page fault and the OS can bring the page back from the pagefile
+    to be used by the application. Thus virtual addressing enabled the OS to implement
+    a page file at all.
+  - 4. The OS can overcommit memory for the process. It is possible for process to
+    request a lot of memory, "just in case" and not actually use it. The OS does not
+    have to actually commit the memory when the process requests it - rather, the
+    OS can overcommit and then, if the process attempts to use the page later, can
+    worry about mapping something in to back the requests. This strategy enables the
+    OS to flexibly respond to varying memory pressure from processes and therefore
+    achieve much higher responsiveness.
+  - 5. File mapping - Similarly a process can map a file into its address space. From
+    the process's point of view the entire file is present inside its virtual address
+    space. When the process attempts to access a part of the file, the OS may read
+    only the relevant part and lock that into memory. This kind of access is commonly
+    used to map executables into many processes (but sharing the file mapped data).
+  type: markdown
+- id: 1426453585949
+  source:
+  - '# Virtual Machines'
+  - ''
+  - In the previous section we discussed how the page tables maintained by the operating
+    system gave each process their own unique view of their Virtual Address Space.
+    The OS can maintain process separation and finely control how much of the memory
+    the processes share. Virtual machines are an extreme example of process separation
+    - in fact the goal is to completely separate different operating systems themselves,
+    while allowing them to share the physical memory of the host machine.
+  - ''
+  - In order to separate the address spaces of multiple guest machines, modern hardware
+    supports a standard called VTx. The gory details are discussed in the blog post
+    [VM discovery and introspection with Rekall](http://www.rekall-forensic.com/posts/2014-10-03-vms.html),
+    but conceptually VTx introduces an additional type of translation table called
+    EPT, which just like regular page tables perform translation between the Guest's
+    virtualized physical memory and the host's physical memory. The hypervisor sets
+    up these tables in advance and the hardware does the rest.
+  type: markdown
+- id: 1426453986452
+  source:
+    caption: Illustration of the EPT translation between the Guest's virtualized Physical
+      Memory and the Host's Physical Memory.
+    files:
+    - name: EPT_translation.jpg
+      type: image/jpeg
+    size: 2
+  type: fileupload
+- id: 1426454090782
+  source:
+  - 'When a process inside the VM access an address in it''s virtual address space:'
+  - ''
+  - 1. The CPU uses the CR3 value loaded to calculate the Virtualized Physical Address
+    for the guest VM.
+  - 2. The hypervisor then uses the EPT to translate between the guest's physical
+    address space and the hosts' physical memory.
+  - 3. Data is fetched from the host's physical memory.
+  type: markdown
