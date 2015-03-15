@@ -59,3 +59,19 @@
     more advanced techniques in future and perhaps gain more understanding of previous
     intrusions.
   type: markdown
+- id: 1426423929941
+  source:
+  - '## Overview'
+  - ''
+  - In this workshop we discuss the state of the art in memory analysis. We use Rekall
+    as the memory forensic tool of choice, although we may demonstrate other tools
+    as needed. The memory forensic field is vast and rapidly evolving. Memory forensics
+    as a scientific field is wedged between many other fields. In order to truely
+    understand memory, we must acquire skills from many different fields, such as
+    kernel development and debugging, software engineering, algorithms, data structures
+    and even hardware design.
+  - ''
+  - We begin our journey by talking about memory in general - what is physical memory?
+    How does it work? How can we acquire it? How does the CPU view physical memory?
+  - ''
+  type: markdown

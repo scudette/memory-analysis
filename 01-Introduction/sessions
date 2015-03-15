@@ -1,4 +1,4 @@
-- id: 132
+- id: 160
   mro: InteractiveSession:JsonSerializableSession:Session:object
   session_id: 1
   state:
@@ -12,8 +12,10 @@
     - []
     - FileName
     session_name:
-    - Default session
+    - mro: str:basestring:object
+      str: Default session
     - String
     timezone:
-    - UTC
+    - mro: str:basestring:object
+      str: UTC
     - TimeZone

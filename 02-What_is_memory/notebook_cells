@@ -1,0 +1,244 @@
+- id: 1426424727236
+  source:
+  - '# Lets talk about memory...'
+  - ''
+  - 'What is physical memory? In order to understand memory analysis we must first
+    understand how memory is accessed and manipulated in a real machine. First lets
+    look at what memory looks like, [first under a microscope](http://upload.wikimedia.org/wikipedia/commons/9/9b/MT4C1024-HD.jpg)
+    then [schematically](http://cpuville.com/Z80.htm):'
+  - ''
+  - ''
+  - ''
+  type: markdown
+- id: 1426425048386
+  source:
+    caption: ''
+    files:
+    - name: MT4C1024-HD.jpg
+      type: image/jpeg
+    - name: schematic_1.jpg
+      type: image/jpeg
+    size: 1
+  type: fileupload
+- id: 1426425477527
+  source:
+  - ''
+  - ''
+  - The diagram is of an old Z80 computer (made in 1980)! Back in those days memory
+    was used directly by the CPU. As the diagram shows, when the CPU wants to read
+    a byte from memory, the CPU dials up the correct address on the *address bus*
+    and then simply reads the data from the *data bus*. Those were the good old simple
+    days.
+  - ''
+  - Today we have more abstractions behind memory but the concept is similar - there
+    is an address bus connecting to the RAM chip itself, and when  an address is dialed
+    up on the bus, the data bus will contain the data. These days however, the CPU
+    is not directly connected to the RAM chip, but goes through a Memory Management
+    Unit (MMU).
+  - ''
+  - Another interesting thing to note is that Read Only Memory (ROM) and peripherals
+    are sharing the address bus and data buses with the RAM chip. What this means
+    is that when the address bus contains addresses in certain ranges, different devices
+    put data on the data bus. For example say that the RAM chip will only answer to
+    addresses between the ranges 0x1000-0x2000, then only when the address bus contains
+    addresses in that range, will the RAM chip attempt to control (i.e. inject electric
+    current on) the data bus. For other addresses the RAM chip will ignore the address
+    bus completely, as if it is not present at all.
+  - ''
+  - This scheme allows multiple different devices to be connected to the same address
+    and data buses as long as they are mapped (i.e. respond to) different address
+    ranges.
+  - ''
+  type: markdown
+- id: 1426425747102
+  source:
+  - '### What happens when the system boots?'
+  - ''
+  - When the system boots the bios needs to map all devices into the address bus.
+    Obviously if different devices are mapped to the same address ranges, this can
+    damage the system because they will both be trying to control (i.e. inject electric
+    current) on the data bus in the same time (it can actually burn out the memory
+    chip drivers if this happens!).
+  - ''
+  - So the bios needs to program the different devices to ensure they do not overlap.
+    In modern systems, the BIOS does not actually map memory mapped IO devices (this
+    is left to the operating system), but the BIOS needs to program the RAM chips
+    into their respective ranges, while at the same time reserving regions for the
+    OS's PnP facilities to actually map devices DMA into.
+  - ''
+  - Therefore the BIOS will build an initial **Physical Memory Layout map**. The BIOS
+    (The Northbridge) then conveys this information to the operating system during
+    system boot - specifically which regions are *available* for the OS to use and
+    which are *reserved* for DMA mappings.
+  - ''
+  - 'The figure below shows a typical BIOS memory map on the left, and a typical final
+    mapping as configured by the operating system''s plug and play facilities:'
+  type: markdown
+- id: 1426426578375
+  source:
+    caption: ''
+    files:
+    - name: physical_memory_layout.jpg
+      type: image/jpeg
+    size: 0
+  type: fileupload
+- id: 1426426996719
+  source:
+  - It should be noted that the BIOS may not actually map physical RAM memory to the
+    reserved regions. They are just gaps in the address space where PCI devices should
+    map their DMA buffers. Since RAM is a scarce resource, the BIOS should generally
+    not waste it on reserved areas. On the other hand some PCI devices only have a
+    32bit address bus, and therefore there must be a large enough region reserved
+    below the 4Gb limit to allow these to be mapped.
+  - ''
+  - 'It follows then, that the largest accessible physical memory address is going
+    to be much larger than the contents of RAM in the system (since reserved gaps
+    will expand it). '
+  - ''
+  - This is often a confusing point for people who acquire images in the RAW format
+    - why is the size of the image much larger than the amount of RAM installed? This
+    is because the RAW format must pad reserved regions with zeros (to maintain alignment).
+  - ''
+  - '### What happens when we read inside the reserved areas?'
+  - ''
+  - We know that the regions marked *available* are available for the OS to use and
+    are backed by suitable RAM chips. But what happens when we read outside this?
+    Often nothing at all! If there is no RAM chip mapped at this region, there is
+    nothing there at all - When you read from it you get zeros.
+  - ''
+  - However sometimes there is a PCI DMA region mapped into the reserved region. What
+    happens when we read from that? Looking back at the first diagram we can see that
+    when the address bus contains the value of the address in the reserved region,
+    the PCI device configured to respond to that address may activate. At this point
+    anything is really possible since the hardware expects that the data bus will
+    contain valid data to act on. Usually the hardware will detect an error and the
+    machine will either bluescreen or crash hard.
+  - ''
+  - It is therefore dangerous for imaging tools to try to read from the reserved regions
+    - in case there are DMA devices mapped there. Most imaging tools avoid these regions
+    by first asking the kernel about them (e.g. in windows an API callem MmGetPhysicalAddressRanges).
+  - ''
+  - It is quite trivial for malware to manipulate the data structures that the kernel
+    maintains about the physical layout. This can easily fool memory analysis tools.
+  - ''
+  - Another interesting property we can see in the image above is that it is possible
+    to have some hidden memory inside the reserved regions. Sometimes due to RAM address
+    alignment limitations, the BIOS will overlap some of the reserved region with
+    RAM chips. In that case writing to that region will actually maintain data (i.e.
+    a read operation will recover the original data). In this case it is possible
+    to store some non-trivial data in regions where memory imagers do not dare to
+    read.
+  type: markdown
+- id: 1426428049991
+  source:
+  - '# Memory acquisition'
+  - ''
+  - How do we acquire memory? Acquision methods are broadly divided into hardware
+    and software methods.
+  - ''
+  - '## Hardware based memory acquisition.'
+  - ''
+  - Although in the past it was possible to acquire memory via Firewire, or a special
+    PCI device, in reality these methods are no longer practical. Acquisition through
+    Firewire is brittle, but even when it works it is only possible to acquire the
+    lower 4Gb of RAM, which on modern systems is just not enough.
+  - ''
+  - By far the most practical way for acquiring memory in hardware is through Virtual
+    Machines. When a guest VM is running inside a virtualization solution, it is often
+    possible to pause the VM and perfectly preserve the state of (virtual) RAM. This
+    is quite a unique ability and actually produces a perfect memory image.
+  - ''
+  - '## Software based memory acquisition.'
+  - ''
+  - If the target we need to acquire is not running inside a virtualization solution,
+    we must use a software aquision technique. This is a program running within the
+    target which copies out physical memory into an image file.
+  - ''
+  - '### Image file format.'
+  - ''
+  - Before we consider the different memory imaging tools, let us first examine how
+    the image is stored - the image file format.
+  - ''
+  - 'By far the simplest image file format is the RAW format. In this format, the
+    physical address space is written byte for byte directly into the image file. '
+  - ''
+  - '* Pros:'
+  - '  * RAW files are very very simple, no special requirements are needed to read
+    the file.'
+  - ''
+  - '* Cons:'
+  - '  * No ability to store sparse regions - all reserved regions must be padded
+    in the image with zeros giving a larger image size.'
+  - '  * No support for compression, encryption etc.'
+  - '  * No support for additional metadata.'
+  - '  * No support for embedding additional files, such as the pagefile, kernel image
+    etc.'
+  - ''
+  - 'For this reason there are a number of different file formats employed:'
+  - ''
+  - 1. The Microsoft Crashdump file, for example, is commonly used with windows images
+    - however this is a proprietary, undocumented file format with no support for
+    compression or embedding (although it supports some windows specific metadata)
+    it is also non-extensible. We do not recommend acquiring with this format directly
+    - if you need to analyze the image with the windows debugger we recommend using
+    the Rekall **raw2dmp** plugin to create a dump file later.
+  - 2. An ELF core file is the standard image format used by GDB and Linux when making
+    a core dump. This format allows the storage of sparse memory regions, but has
+    only limited support for extensible metadata. It is not possible to use this format
+    to collect related files (like the pagefile, kernel image etc). This format is
+    the default produced by versions of Rekall's *pmem* acquisition tools prior to
+    version 2.0. Certain virtualization tools like Virtual Box produce memory images
+    in this format so it can still be useful.
+  - 3. EWF is a compression format which is used by Encase. It offers the ability
+    for the image to be compressed but does not support sparse files, nor multiple
+    streams (at least the versions supported by the open source libewf tool).
+  - '4. Various ad-hoc imaging formats that are sometimes used. Rekall can read those
+    if you receive them in this format:'
+  - ' * Limes - an ad-hoc imaging format sometimes used on Linux.'
+  - ' * HPAK - A propritary format used in HBGary''s tools.'
+  - ' * Mach-O - This is the binary format used on OSX. These kind of images used
+    to be produced by the now defunct "Mac Memory Reader".'
+  - ''
+  - 'After version 2.0 Rekall''s pmem suite of acquisition tools have switched to
+    the AFF4 format for the default image format. AFF4 is:'
+  - ''
+  - '* A peer reviewed open standard for storing digital images.'
+  - '* Supports compression using the Zlib and Snappy protocols - allows imaging at
+    speeds greated than 300mb/s.'
+  - '* Supports storing arbitrary metadata via RDF information triples.'
+  - '* The image file format is a simple Zip file, with all the advantages that brings:'
+  - '  * Readily available tools for recovery of corrupted image files.'
+  - '  * Readily available tools for inspection, verification and manipulation of
+    the image format.'
+  - '  * Built in support in almost every programming language - decompressing an
+    AFF4 stream can be done in 4 lines of python without the use of the AFF4 library.'
+  - ''
+  type: markdown
+- id: 1426431239944
+  source:
+  - '##  AFF4 overview.'
+  - ''
+  - Why did Rekall decide to switch to AFF4 as the standard imaging format? One of
+    the reasons we started writing imaging tools inside the Rekall project was to
+    provide a full end-to-end imaging + analysis solution for memory forensics needs.
+    As we developed more features into our imaging tools we found that we can exploit
+    the synergy between the acquisition and analysis parts of the project, in order
+    to make analysis more powerful. Put simply, we can make our analysis simpler and
+    more robust if we can collect more information at collection time.
+  - ''
+  - For example there is a lot of code in Rekall to try to guess the version of the
+    kernel which is running in the image. But the imager already knows this because
+    it can just call an API to ask about it! Rekall is in a unique position to simply
+    get the imager to collect additional information, saving the analysis part from
+    figuring out this detail.
+  - ''
+  - We therefore wanted an imaging format which we can use to store arbitrary metadata,
+    and that we can extend very easily.
+  - ''
+  - Similarly, as we developed Rekall's analysis capabilities we realized that the
+    pagefile is extremely important in the analysis of userspace programs. We then
+    wanted to also collect the pagefile by default. AFF4 allows us to store multiple
+    streams in the same image. So we can store all the pagefiles, the physical memory
+    stream, the kernel image and all the drivers on the system in the same AFF4 file
+    (in AFF4 terminology it is called an AFF4 volume).
+  type: markdown
