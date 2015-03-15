@@ -224,13 +224,14 @@
     As we developed more features into our imaging tools we found that we can exploit
     the synergy between the acquisition and analysis parts of the project, in order
     to make analysis more powerful. Put simply, we can make our analysis simpler and
-    more robust if we can collect more information at collection time.
+    more robust if we can collect more information at acquisition time.
   - ''
   - For example there is a lot of code in Rekall to try to guess the version of the
     kernel which is running in the image. But the imager already knows this because
-    it can just call an API to ask about it! Rekall is in a unique position to simply
-    get the imager to collect additional information, saving the analysis part from
-    figuring out this detail.
+    it can just call an API to ask about it! Because the Rekall project owns both
+    the analysis and the acquisition components, Rekall is in a unique position to
+    simply get the imager to collect additional information, saving the analysis part
+    from figuring out this detail.
   - ''
   - We therefore wanted an imaging format which we can use to store arbitrary metadata,
     and that we can extend very easily.
@@ -241,4 +242,13 @@
     streams in the same image. So we can store all the pagefiles, the physical memory
     stream, the kernel image and all the drivers on the system in the same AFF4 file
     (in AFF4 terminology it is called an AFF4 volume).
+  - ''
+  - In future we will probably continue to extend the metadata that the imager collects
+    to provide the Rekall analysis engine with more information, thereby making it
+    more powerful. We therefore recommend that images be taken with *pmem*'s default
+    AFF4 format as much as possible.
   type: markdown
+- id: 1426432076242
+  source:
+  - unzip -l ../images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
+  type: shell
