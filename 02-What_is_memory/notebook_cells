@@ -87,7 +87,7 @@
     files:
     - name: physical_memory_layout.jpg
       type: image/jpeg
-    size: 0
+    size: 1
   type: fileupload
 - id: 1426426996719
   source:
@@ -425,7 +425,7 @@
     files:
     - name: virtual_address_space.jpg
       type: image/jpeg
-    size: 1
+    size: 0
   type: fileupload
 - id: 1426451521420
   source:
@@ -517,7 +517,7 @@
     files:
     - name: EPT_translation.jpg
       type: image/jpeg
-    size: 2
+    size: 0
   type: fileupload
 - id: 1426454090782
   source:
@@ -529,3 +529,439 @@
     address space and the hosts' physical memory.
   - 3. Data is fetched from the host's physical memory.
   type: markdown
+- id: 1426641308677
+  source:
+  - '# Examining memory on a Virtual Machine.'
+  - ''
+  - 'To visualize how memory works we took an image of an Ubuntu 14.10 system running
+    the Virtual Box virtualization solution. The system has two virtual machines:
+    A Windows 7 machine, and another Ubuntu machine this time running an x86 (32 bit)
+    Ubuntu 14.10 distribution. '
+  - ''
+  - Since the system we will analyse is a Linux system we must provide it with a profile
+    (See chapter 3 - "Profiles and Multi OS Support." for details of how to build
+    a profile). We have built a profile previously for this system and it is called
+    3.16.0-23-generic_amd64.json. You will find all files in the images directory
+    of this document.
+  - ''
+  - We first click the *Session* button at the toolbar above. Then select the image
+    file, and profile file. Clicking anywhere outside the modal dialog with save our
+    changes.
+  - ''
+  - Lets see if we can list files on this image.
+  - ''
+  - Click the "Add Cell" button on the toolbar and select to add a "Rekall Plugin"
+    (alternative just press c followed by r, c-r).
+  type: markdown
+- id: 1426642004984
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - default: null
+        help: A regex to select a process by name.
+        name: proc_regex
+        positional: false
+        short_opt: ''
+      - help: Physical addresses of task structs.
+        name: phys_task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Kernel addresses of task structs.
+        name: task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Use this as the first task to follow the list.
+        name: task_head
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - choices:
+        - InitTask
+        help: Method to list processes (Default uses all methods).
+        name: method
+        nargs: +
+        positional: false
+        short_opt: ''
+      description: "Gathers active tasks by walking the task_struct->task list.\n\n\
+        \    It does not display the swapper process. If the DTB column is blank,\
+        \ the\n    item is likely a kernel thread.\n    "
+      name: pslist
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Gathers active tasks by walking the task_struct->task list.
+    session_id: 1
+  type: rekallplugin
+- id: 1426642393275
+  source:
+  - The above is the process listing of processes on the host machine.
+  - ''
+  - We can look for virtual machines using the **vmscan** plugin. This plugin will
+    also create suitable sessions for each image. In Rekall a session is an object
+    encapsulating everything Rekall knows about a particular image. When we have several
+    virtual machines within the same image, we actually need multiple sessions, since
+    each virtual machine is unrelated to the others (even though it came from the
+    same image).
+  type: markdown
+- id: 1426642538785
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - default: 1
+        help: 'An integer reflecting the amount of desired output: 0 = quiet, 10 =
+          noisy. Default: 1'
+        name: verbosity
+        positional: false
+        short_opt: V
+        type: IntParser
+      - default: false
+        help: Perform quick VM detection.
+        name: quick
+        positional: false
+        short_opt: ''
+        type: Boolean
+      - default: false
+        help: Don't do nested VM detection.
+        name: no_nested
+        positional: false
+        short_opt: ''
+        type: Boolean
+      - default: 0
+        help: Offset in the physical image to start the scan.
+        name: offset
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - default: false
+        help: Also show VMs that failed validation.
+        name: show_all
+        positional: false
+        short_opt: ''
+        type: Boolean
+      - default: false
+        help: The image is for a guest VM, not the host.
+        name: image_is_guest
+        positional: false
+        short_opt: ''
+        type: Boolean
+      - default: false
+        help: '[DEBUG SETTING] Disable validation of VMs.'
+        name: no_validation
+        positional: false
+        short_opt: ''
+        type: Boolean
+      description: "Scan the physical memory attempting to find hypervisors.\n\n \
+        \   Once EPT values are found, you can use them to inspect virtual machines\n\
+        \    with any of the rekall modules by using the --ept parameter and\n   \
+        \ specifying the guest virtual machine profile.\n\n    Supports the detection\
+        \ of the following virtualization techonlogies:\n      * Intel VT-X with EPT.\
+        \ Microarchitectures:\n        + Westmere\n        + Nehalem\n        + Sandybridge\n\
+        \        + Ivy Bridge\n        + Haswell\n\n      * Intel VT-X without EPT\
+        \ (unsupported page translation in rekall).\n        + Penryn\n\n    For the\
+        \ specific processor models that support EPT, please check:\n    http://ark.intel.com/products/virtualizationtechnology.\n\
+        \    "
+      name: vmscan
+      requirements:
+      - physical_address_space
+      short_description: Scan the physical memory attempting to find hypervisors.
+    session_id: 1
+  type: rekallplugin
+- id: 1426642645442
+  source:
+  - The vmscan plugin discovers Virtual Machine Control Structures (VMCS) in physical
+    memory. Remember that the VMCS and EPT tables are set up for the hardware by the
+    virtualization solution. Therefore the precise structure of these tables is determined
+    by the hardware not the virtualization solution. For this reason, we don't necessarily
+    need to support any specific Virtualization Technology (e.g. Vmware, VirtualBox
+    or KVM) - Rekall merely needs to support the particular CPU used.
+  - ''
+  - The table above shows two virtual machines. The first is a 32 bit operating system
+    (as is indicated by the *I386+PAE*). Note the reported locations of the EPT page
+    tables. These are the only tables we need in order to translate the addresses.
+  - ''
+  - The vmscan plugin also creates new sessions for the VMs. Click on the "Session"
+    button above and find the session corresponding to the first EPT location. We
+    know this is an Ubuntu system, so we must provide the profile (named 3.16.0-23-generic_x86.json).
+    Note that initially the vmscan plugin names the sessions by the offset of the
+    EPT since it has no idea what OS is actually running in the guest. For our ease
+    of use we can rename the sessions Ubuntu Guest and Win7.
+  - ''
+  - Lets list processes in each of the VMs. You can select the session that will apply
+    to each plugin using the pull down selector in the Rekall cell.
+  type: markdown
+- id: 1426643041802
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - default: null
+        help: A regex to select a process by name.
+        name: proc_regex
+        positional: false
+        short_opt: ''
+      - help: Physical addresses of task structs.
+        name: phys_task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Kernel addresses of task structs.
+        name: task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Use this as the first task to follow the list.
+        name: task_head
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - choices:
+        - InitTask
+        help: Method to list processes (Default uses all methods).
+        name: method
+        nargs: +
+        positional: false
+        short_opt: ''
+      description: "Gathers active tasks by walking the task_struct->task list.\n\n\
+        \    It does not display the swapper process. If the DTB column is blank,\
+        \ the\n    item is likely a kernel thread.\n    "
+      name: pslist
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Gathers active tasks by walking the task_struct->task list.
+    session_id: 3
+  type: rekallplugin
+- id: 1426644467482
+  source:
+  - Lets inspect the Windows 7 machine more closely. We run the *imageinfo* plugin
+    to learn a bit about it.
+  type: markdown
+- id: 1426643199744
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: List overview information about this image.
+      name: imageinfo
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: List overview information about this image.
+    session_id: 3
+  type: rekallplugin
+- id: 1426644505194
+  source:
+  - Note that the plugin also displays the physical memory layout of the Win7 guest
+    VM.  We can see there are two ranges valid for this physical memory.
+  - ''
+  - Lets quickly examine the dns cache of the Windows 7 machine.
+  type: markdown
+- id: 1426644767593
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - default: null
+        help: Optionally provide the hashtable
+        name: hashtable
+        positional: false
+        short_opt: ''
+      - default: true
+        help: Should we use the index
+        name: index
+        positional: false
+        short_opt: ''
+        type: Boolean
+      description: Dump the windows DNS resolver cache.
+      name: dns_cache
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Dump the windows DNS resolver cache.
+    session_id: 3
+  type: rekallplugin
+- id: 1426644665312
+  source:
+  - '## The Ubuntu guest VM.'
+  - ''
+  - Lets examine our Ubuntu guest VM.
+  type: markdown
+- id: 1426643162219
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - default: null
+        help: A regex to select a process by name.
+        name: proc_regex
+        positional: false
+        short_opt: ''
+      - help: Physical addresses of task structs.
+        name: phys_task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Kernel addresses of task structs.
+        name: task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Use this as the first task to follow the list.
+        name: task_head
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - choices:
+        - InitTask
+        help: Method to list processes (Default uses all methods).
+        name: method
+        nargs: +
+        positional: false
+        short_opt: ''
+      description: "Gathers active tasks by walking the task_struct->task list.\n\n\
+        \    It does not display the swapper process. If the DTB column is blank,\
+        \ the\n    item is likely a kernel thread.\n    "
+      name: pslist
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Gathers active tasks by walking the task_struct->task list.
+    session_id: 2
+  type: rekallplugin
+- id: 1426644697321
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - default: null
+        help: A regex to select a process by name.
+        name: proc_regex
+        positional: false
+        short_opt: ''
+      - help: Physical addresses of task structs.
+        name: phys_task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Kernel addresses of task structs.
+        name: task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Use this as the first task to follow the list.
+        name: task_head
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - choices:
+        - InitTask
+        help: Method to list processes (Default uses all methods).
+        name: method
+        nargs: +
+        positional: false
+        short_opt: ''
+      - default: false
+        help: Scan the entire process address space, not only the heap.
+        name: scan_entire_address_space
+        positional: false
+        short_opt: ''
+        type: Boolean
+      description: "Scan the bash process for history.\n\n    Based on original algorithm\
+        \ by Andrew Case.\n    "
+      name: bash
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Scan the bash process for history.
+    session_id: 2
+  type: rekallplugin

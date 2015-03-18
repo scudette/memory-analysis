@@ -1,0 +1,81 @@
+- - m
+  - cookie: 7390
+    plugin_name: null
+    tool_name: rekall
+    tool_version: 1.2.1
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges /'
+- - m
+  - cookie: 7390
+    plugin_name: imageinfo
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: key
+      formatstring: '20'
+      name: Fact
+    - cname: value
+      formatstring: '30'
+      name: Value
+  - {}
+- - r
+  - key: Kernel DTB
+    value: '0x187000'
+- - p
+  - 'Kernel AS@0x187000: Merging Address Ranges -'
+- - r
+  - key: NT Build
+    value: 7601.win7sp1_rtm.101119-1850
+- - r
+  - key: NT Build Ex
+    value: 7601.17514.amd64fre.win7sp1_rtm.101119-1850
+- - r
+  - key: Signed Drivers
+    value: "\x01"
+- - r
+  - key: Time (UTC)
+    value:
+      epoch: 1426640705
+      id: 31087
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:05:05+0000
+- - r
+  - key: Time (Local)
+    value:
+      epoch: 1426665905
+      id: 31107
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 08:05:05+0000
+- - r
+  - key: Sec Since Boot
+    value: 223.828125
+- - r
+  - key: NtSystemRoot
+    value: C:\Windows
+- - s
+  - name: Physical Layout
+- - t
+  - - cname: phys
+      formatstring: '[addrpad]'
+      name: Phys Start
+    - cname: phys
+      formatstring: '[addrpad]'
+      name: Phys End
+    - cname: pages
+      formatstring: ''
+      name: Number of Pages
+  - {}
+- - r
+  - pages: 158
+    phys: 651264
+- - r
+  - pages: 261872
+    phys: 1073676288
+- - x
+- - x

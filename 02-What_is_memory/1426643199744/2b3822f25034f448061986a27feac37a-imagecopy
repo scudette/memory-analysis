@@ -1,0 +1,14 @@
+- - m
+  - cookie: 160192
+    plugin_name: null
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 160192
+    plugin_name: imagecopy
+    tool_name: rekall
+    tool_version: 1.2.1
+- - x
+- - e
+  - Please provide an output-image filename
+- - x

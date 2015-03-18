@@ -1,0 +1,1419 @@
+- - m
+  - cookie: 47417
+    plugin_name: null
+    tool_name: rekall
+    tool_version: 1.2.1
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
+- - p
+  - 'Autodetecting profile: 0x1c5b000'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges /'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - Scanning 0x00F37000 with WinDTBScanner
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
+- - m
+  - cookie: 47417
+    plugin_name: pslist
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: _EPROCESS
+      type: _EPROCESS
+    - align: r
+      cname: ppid
+      name: PPID
+      width: 6
+    - align: r
+      cname: thread_count
+      name: Thds
+      width: 6
+    - align: r
+      cname: handle_count
+      name: Hnds
+      width: 8
+    - align: r
+      cname: session_id
+      name: Sess
+      width: 6
+    - cname: wow64
+      name: Wow64
+      width: 6
+    - cname: process_create_time
+      name: Start
+      width: 24
+    - cname: process_exit_time
+      name: Exit
+      width: 24
+  - {}
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640484
+          id: 126333
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:24+0000
+        Image_Info:
+          Command_Line:
+            id: 126352
+            mro: NoneObject:object
+            reason: Pointer Pointer @ 0 invalid
+          File_Name: ''
+          Path:
+            id: 126352
+            mro: NoneObject:object
+            reason: Pointer Pointer @ 0 invalid
+          type: ProcessObj:ImageInfoType
+        Name: System
+        PID: 4
+        Parent_PID: 0
+        type: ProcessObj:ProcessObjectType
+      id: 126253
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427676094528
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 505
+    ppid: 0
+    process_create_time:
+      epoch: 1426640484
+      id: 126333
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:24+0000
+    process_exit_time:
+      epoch: 0
+      id: 126334
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id:
+      id: 126330
+      mro: NoneObject:object
+      reason: Cannot find process session
+    thread_count: 75
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640484
+          id: 126461
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:24+0000
+        Image_Info:
+          Command_Line: \SystemRoot\System32\smss.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\smss.exe
+          Path: \SystemRoot\System32\smss.exe
+          type: ProcessObj:ImageInfoType
+        Name: smss.exe
+        PID: 232
+        Parent_PID: 4
+        type: ProcessObj:ProcessObjectType
+      id: 126272
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427684075856
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 29
+    ppid: 4
+    process_create_time:
+      epoch: 1426640484
+      id: 126461
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:24+0000
+    process_exit_time:
+      epoch: 0
+      id: 126462
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id:
+      id: 126458
+      mro: NoneObject:object
+      reason: Cannot find process session
+    thread_count: 2
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 126600
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: '%SystemRoot%\system32\csrss.exe ObjectDirectory=\Windows
+            SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1
+            ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=winsrv:ConServerDllInitialization,2
+            ServerDll=sxssrv,4 ProfileControl=Off MaxRequestThreads=16'
+          File_Name: \Device\HarddiskVolume2\Windows\System32\csrss.exe
+          Path: C:\Windows\system32\csrss.exe
+          type: ProcessObj:ImageInfoType
+        Name: csrss.exe
+        PID: 308
+        Parent_PID: 296
+        type: ProcessObj:ProcessObjectType
+      id: 126275
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427683575472
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 343
+    ppid: 296
+    process_create_time:
+      epoch: 1426640486
+      id: 126600
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 126601
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 9
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 126731
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: wininit.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\wininit.exe
+          Path: C:\Windows\system32\wininit.exe
+          type: ProcessObj:ImageInfoType
+        Name: wininit.exe
+        PID: 344
+        Parent_PID: 296
+        type: ProcessObj:ProcessObjectType
+      id: 126252
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427676115840
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 76
+    ppid: 296
+    process_create_time:
+      epoch: 1426640486
+      id: 126731
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 126732
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 3
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 126862
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: '%SystemRoot%\system32\csrss.exe ObjectDirectory=\Windows
+            SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1
+            ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=winsrv:ConServerDllInitialization,2
+            ServerDll=sxssrv,4 ProfileControl=Off MaxRequestThreads=16'
+          File_Name: \Device\HarddiskVolume2\Windows\System32\csrss.exe
+          Path: C:\Windows\system32\csrss.exe
+          type: ProcessObj:ImageInfoType
+        Name: csrss.exe
+        PID: 352
+        Parent_PID: 336
+        type: ProcessObj:ProcessObjectType
+      id: 126258
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427676119584
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 226
+    ppid: 336
+    process_create_time:
+      epoch: 1426640486
+      id: 126862
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 126863
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 8
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 126993
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: winlogon.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\winlogon.exe
+          Path: C:\Windows\system32\winlogon.exe
+          type: ProcessObj:ImageInfoType
+        Name: winlogon.exe
+        PID: 380
+        Parent_PID: 336
+        type: ProcessObj:ProcessObjectType
+      id: 126263
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427691970656
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 112
+    ppid: 336
+    process_create_time:
+      epoch: 1426640486
+      id: 126993
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 126994
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 4
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640487
+          id: 127124
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:27+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\svchost.exe -k NetworkService
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\system32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 428
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126260
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427694787376
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 480
+    ppid: 436
+    process_create_time:
+      epoch: 1426640487
+      id: 127124
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:27+0000
+    process_exit_time:
+      epoch: 0
+      id: 127125
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 18
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 127255
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\services.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\services.exe
+          Path: C:\Windows\system32\services.exe
+          type: ProcessObj:ImageInfoType
+        Name: services.exe
+        PID: 436
+        Parent_PID: 344
+        type: ProcessObj:ProcessObjectType
+      id: 126284
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427683445552
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 184
+    ppid: 344
+    process_create_time:
+      epoch: 1426640486
+      id: 127255
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 127256
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 7
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 127386
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\lsass.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\lsass.exe
+          Path: C:\Windows\system32\lsass.exe
+          type: ProcessObj:ImageInfoType
+        Name: lsass.exe
+        PID: 452
+        Parent_PID: 344
+        type: ProcessObj:ProcessObjectType
+      id: 126254
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427692256048
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 602
+    ppid: 344
+    process_create_time:
+      epoch: 1426640486
+      id: 127386
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 127387
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 7
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 127517
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\lsm.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\lsm.exe
+          Path: C:\Windows\system32\lsm.exe
+          type: ProcessObj:ImageInfoType
+        Name: lsm.exe
+        PID: 460
+        Parent_PID: 344
+        type: ProcessObj:ProcessObjectType
+      id: 126255
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427692262288
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 141
+    ppid: 344
+    process_create_time:
+      epoch: 1426640486
+      id: 127517
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 127518
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 10
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640486
+          id: 127648
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:26+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\svchost.exe -k DcomLaunch
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\system32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 568
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126281
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427692738032
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 359
+    ppid: 436
+    process_create_time:
+      epoch: 1426640486
+      id: 127648
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:26+0000
+    process_exit_time:
+      epoch: 0
+      id: 127649
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 12
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640487
+          id: 127779
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:27+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\svchost.exe -k RPCSS
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\system32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 644
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126262
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427692919600
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 260
+    ppid: 436
+    process_create_time:
+      epoch: 1426640487
+      id: 127779
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:27+0000
+    process_exit_time:
+      epoch: 0
+      id: 127780
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 7
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640514
+          id: 127910
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:54+0000
+        Image_Info:
+          Command_Line: '"C:\Program Files (x86)\Internet Explorer\iexplore.exe" SCODEF:2044
+            CREDAT:137473'
+          File_Name: \Device\HarddiskVolume2\Program Files (x86)\Internet Explorer\iexplore.exe
+          Path: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+          type: ProcessObj:ImageInfoType
+        Name: iexplore.exe
+        PID: 716
+        Parent_PID: 2044
+        type: ProcessObj:ProcessObjectType
+      id: 126261
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427698461488
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 594
+    ppid: 2044
+    process_create_time:
+      epoch: 1426640514
+      id: 127910
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:54+0000
+    process_exit_time:
+      epoch: 0
+      id: 127911
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 18
+    wow64: true
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640487
+          id: 128041
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:27+0000
+        Image_Info:
+          Command_Line: C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\System32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 724
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126276
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427693267760
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 463
+    ppid: 436
+    process_create_time:
+      epoch: 1426640487
+      id: 128041
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:27+0000
+    process_exit_time:
+      epoch: 0
+      id: 128042
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 20
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640487
+          id: 128172
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:27+0000
+        Image_Info:
+          Command_Line: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\System32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 772
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126265
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427693493040
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 381
+    ppid: 436
+    process_create_time:
+      epoch: 1426640487
+      id: 128172
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:27+0000
+    process_exit_time:
+      epoch: 0
+      id: 128173
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 18
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640487
+          id: 128303
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:27+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\svchost.exe -k netsvcs
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\system32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 800
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126259
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427693587248
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 1028
+    ppid: 436
+    process_create_time:
+      epoch: 1426640487
+      id: 128303
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:27+0000
+    process_exit_time:
+      epoch: 0
+      id: 128304
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 38
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640487
+          id: 128434
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:27+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\AUDIODG.EXE 0x2a4
+          File_Name: \Device\HarddiskVolume2\Windows\System32\audiodg.exe
+          Path: C:\Windows\system32\AUDIODG.EXE
+          type: ProcessObj:ImageInfoType
+        Name: audiodg.exe
+        PID: 884
+        Parent_PID: 724
+        type: ProcessObj:ProcessObjectType
+      id: 126286
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427693894448
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 111
+    ppid: 724
+    process_create_time:
+      epoch: 1426640487
+      id: 128434
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:27+0000
+    process_exit_time:
+      epoch: 0
+      id: 128435
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 4
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640500
+          id: 128565
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:40+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\SearchIndexer.exe /Embedding
+          File_Name: \Device\HarddiskVolume2\Windows\System32\SearchIndexer.exe
+          Path: C:\Windows\system32\SearchIndexer.exe
+          type: ProcessObj:ImageInfoType
+        Name: SearchIndexer.
+        PID: 916
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126268
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427692452656
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 697
+    ppid: 436
+    process_create_time:
+      epoch: 1426640500
+      id: 128565
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:40+0000
+    process_exit_time:
+      epoch: 0
+      id: 128566
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 15
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640487
+          id: 128696
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:27+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\svchost.exe -k LocalService
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\system32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 972
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126256
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427694283232
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 288
+    ppid: 436
+    process_create_time:
+      epoch: 1426640487
+      id: 128696
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:27+0000
+    process_exit_time:
+      epoch: 0
+      id: 128697
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 12
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640514
+          id: 128827
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:54+0000
+        Image_Info:
+          Command_Line: '"C:\Program Files (x86)\Internet Explorer\iexplore.exe" SCODEF:2044
+            CREDAT:71937'
+          File_Name: \Device\HarddiskVolume2\Program Files (x86)\Internet Explorer\iexplore.exe
+          Path: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+          type: ProcessObj:ImageInfoType
+        Name: iexplore.exe
+        PID: 1008
+        Parent_PID: 2044
+        type: ProcessObj:ProcessObjectType
+      id: 126257
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427684150064
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 686
+    ppid: 2044
+    process_create_time:
+      epoch: 1426640514
+      id: 128827
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:54+0000
+    process_exit_time:
+      epoch: 0
+      id: 128828
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 21
+    wow64: true
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640488
+          id: 128958
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:28+0000
+        Image_Info:
+          Command_Line: C:\Windows\System32\spoolsv.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\spoolsv.exe
+          Path: C:\Windows\System32\spoolsv.exe
+          type: ProcessObj:ImageInfoType
+        Name: spoolsv.exe
+        PID: 1080
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126270
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427695489120
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 283
+    ppid: 436
+    process_create_time:
+      epoch: 1426640488
+      id: 128958
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:28+0000
+    process_exit_time:
+      epoch: 0
+      id: 128959
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 13
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640488
+          id: 129089
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:28+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\system32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 1108
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126279
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427695635248
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 317
+    ppid: 436
+    process_create_time:
+      epoch: 1426640488
+      id: 129089
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:28+0000
+    process_exit_time:
+      epoch: 0
+      id: 129090
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 20
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640488
+          id: 129220
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:28+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\system32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 1204
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126266
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427693998912
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 179
+    ppid: 436
+    process_create_time:
+      epoch: 1426640488
+      id: 129220
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:28+0000
+    process_exit_time:
+      epoch: 0
+      id: 129221
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 11
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640514
+          id: 129351
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:54+0000
+        Image_Info:
+          Command_Line: '"C:\Program Files (x86)\Internet Explorer\iexplore.exe" SCODEF:2044
+            CREDAT:203009'
+          File_Name: \Device\HarddiskVolume2\Program Files (x86)\Internet Explorer\iexplore.exe
+          Path: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+          type: ProcessObj:ImageInfoType
+        Name: iexplore.exe
+        PID: 1248
+        Parent_PID: 2044
+        type: ProcessObj:ProcessObjectType
+      id: 126277
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427698465248
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 560
+    ppid: 2044
+    process_create_time:
+      epoch: 1426640514
+      id: 129351
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:54+0000
+    process_exit_time:
+      epoch: 0
+      id: 129352
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 20
+    wow64: true
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640515
+          id: 129482
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:55+0000
+        Image_Info:
+          Command_Line: '"C:\Program Files (x86)\Internet Explorer\iexplore.exe" SCODEF:2044
+            CREDAT:268545'
+          File_Name: \Device\HarddiskVolume2\Program Files (x86)\Internet Explorer\iexplore.exe
+          Path: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+          type: ProcessObj:ImageInfoType
+        Name: iexplore.exe
+        PID: 1680
+        Parent_PID: 2044
+        type: ProcessObj:ProcessObjectType
+      id: 126280
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427698546736
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 574
+    ppid: 2044
+    process_create_time:
+      epoch: 1426640515
+      id: 129482
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:55+0000
+    process_exit_time:
+      epoch: 0
+      id: 129483
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 17
+    wow64: true
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640493
+          id: 129613
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:33+0000
+        Image_Info:
+          Command_Line: '"taskhost.exe"'
+          File_Name: \Device\HarddiskVolume2\Windows\System32\taskhost.exe
+          Path: C:\Windows\system32\taskhost.exe
+          type: ProcessObj:ImageInfoType
+        Name: taskhost.exe
+        PID: 1716
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126273
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427696663344
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 186
+    ppid: 436
+    process_create_time:
+      epoch: 1426640493
+      id: 129613
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:33+0000
+    process_exit_time:
+      epoch: 0
+      id: 129614
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 9
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640493
+          id: 129744
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:33+0000
+        Image_Info:
+          Command_Line: '"C:\Windows\system32\Dwm.exe"'
+          File_Name: \Device\HarddiskVolume2\Windows\System32\dwm.exe
+          Path: C:\Windows\system32\Dwm.exe
+          type: ProcessObj:ImageInfoType
+        Name: dwm.exe
+        PID: 1772
+        Parent_PID: 772
+        type: ProcessObj:ProcessObjectType
+      id: 126282
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427696757552
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 74
+    ppid: 772
+    process_create_time:
+      epoch: 1426640493
+      id: 129744
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:33+0000
+    process_exit_time:
+      epoch: 0
+      id: 129745
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 4
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640493
+          id: 129875
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:33+0000
+        Image_Info:
+          Command_Line: C:\Windows\Explorer.EXE
+          File_Name: \Device\HarddiskVolume2\Windows\explorer.exe
+          Path: C:\Windows\Explorer.EXE
+          type: ProcessObj:ImageInfoType
+        Name: explorer.exe
+        PID: 1800
+        Parent_PID: 1744
+        type: ProcessObj:ProcessObjectType
+      id: 126269
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427696898144
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 659
+    ppid: 1744
+    process_create_time:
+      epoch: 1426640493
+      id: 129875
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:33+0000
+    process_exit_time:
+      epoch: 0
+      id: 129876
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 20
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640500
+          id: 130006
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:40+0000
+        Image_Info:
+          Command_Line: '"C:\Windows\system32\SearchProtocolHost.exe" Global\UsGthrFltPipeMssGthrPipe1_
+            Global\UsGthrCtrlFltPipeMssGthrPipe1 1 -2147483646 "Software\Microsoft\Windows
+            Search" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0
+            Robot)" "C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc" "DownLevelDaemon" '
+          File_Name: \Device\HarddiskVolume2\Windows\System32\SearchProtocolHost.exe
+          Path: C:\Windows\system32\SearchProtocolHost.exe
+          type: ProcessObj:ImageInfoType
+        Name: SearchProtocol
+        PID: 1860
+        Parent_PID: 916
+        type: ProcessObj:ProcessObjectType
+      id: 126278
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427697951648
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 304
+    ppid: 916
+    process_create_time:
+      epoch: 1426640500
+      id: 130006
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:40+0000
+    process_exit_time:
+      epoch: 0
+      id: 130007
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 9
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640503
+          id: 130137
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:01:43+0000
+        Image_Info:
+          Command_Line: '"C:\Program Files (x86)\Internet Explorer\iexplore.exe" '
+          File_Name: \Device\HarddiskVolume2\Program Files (x86)\Internet Explorer\iexplore.exe
+          Path: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+          type: ProcessObj:ImageInfoType
+        Name: iexplore.exe
+        PID: 2044
+        Parent_PID: 1800
+        type: ProcessObj:ProcessObjectType
+      id: 126283
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427684471616
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 607
+    ppid: 1800
+    process_create_time:
+      epoch: 1426640503
+      id: 130137
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:43+0000
+    process_exit_time:
+      epoch: 0
+      id: 130138
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 17
+    wow64: true
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640682
+          id: 130268
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:04:42+0000
+        Image_Info:
+          Command_Line: '"C:\Windows\system32\SearchFilterHost.exe" 0 508 512 520
+            65536 516 '
+          File_Name: \Device\HarddiskVolume2\Windows\System32\SearchFilterHost.exe
+          Path: C:\Windows\system32\SearchFilterHost.exe
+          type: ProcessObj:ImageInfoType
+        Name: SearchFilterHo
+        PID: 2220
+        Parent_PID: 916
+        type: ProcessObj:ProcessObjectType
+      id: 126264
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427700867632
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 91
+    ppid: 916
+    process_create_time:
+      epoch: 1426640682
+      id: 130268
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:04:42+0000
+    process_exit_time:
+      epoch: 0
+      id: 130269
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 5
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640656
+          id: 130399
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:04:16+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\wbem\wmiprvse.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\wbem\WmiPrvSE.exe
+          Path: C:\Windows\system32\wbem\wmiprvse.exe
+          type: ProcessObj:ImageInfoType
+        Name: WmiPrvSE.exe
+        PID: 2436
+        Parent_PID: 568
+        type: ProcessObj:ProcessObjectType
+      id: 126271
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427701441840
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 176
+    ppid: 568
+    process_create_time:
+      epoch: 1426640656
+      id: 130399
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:04:16+0000
+    process_exit_time:
+      epoch: 0
+      id: 130400
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 9
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640682
+          id: 130530
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:04:42+0000
+        Image_Info:
+          Command_Line: '"C:\Windows\system32\SearchProtocolHost.exe" Global\UsGthrFltPipeMssGthrPipe_S-1-5-21-4224758317-1815903672-1869902075-10002_
+            Global\UsGthrCtrlFltPipeMssGthrPipe_S-1-5-21-4224758317-1815903672-1869902075-10002
+            1 -2147483646 "Software\Microsoft\Windows Search" "Mozilla/4.0 (compatible;
+            MSIE 6.0; Windows NT; MS Search 4.0 Robot)" "C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc"
+            "DownLevelDaemon"  "1"'
+          File_Name: \Device\HarddiskVolume2\Windows\System32\SearchProtocolHost.exe
+          Path: C:\Windows\system32\SearchProtocolHost.exe
+          type: ProcessObj:ImageInfoType
+        Name: SearchProtocol
+        PID: 2696
+        Parent_PID: 916
+        type: ProcessObj:ProcessObjectType
+      id: 126274
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427700688304
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 280
+    ppid: 916
+    process_create_time:
+      epoch: 1426640682
+      id: 130530
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:04:42+0000
+    process_exit_time:
+      epoch: 0
+      id: 130531
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 1
+    thread_count: 7
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640609
+          id: 130661
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:03:29+0000
+        Image_Info:
+          Command_Line: C:\Windows\system32\sppsvc.exe
+          File_Name: \Device\HarddiskVolume2\Windows\System32\sppsvc.exe
+          Path: C:\Windows\system32\sppsvc.exe
+          type: ProcessObj:ImageInfoType
+        Name: sppsvc.exe
+        PID: 2940
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126267
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427700691040
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 150
+    ppid: 436
+    process_create_time:
+      epoch: 1426640609
+      id: 130661
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:03:29+0000
+    process_exit_time:
+      epoch: 0
+      id: 130662
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 5
+    wow64: false
+- - r
+  - _EPROCESS:
+      Cybox:
+        Creation_Time:
+          epoch: 1426640609
+          id: 130792
+          mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+          string_value: 2015-03-18 01:03:29+0000
+        Image_Info:
+          Command_Line: C:\Windows\System32\svchost.exe -k secsvcs
+          File_Name: \Device\HarddiskVolume2\Windows\System32\svchost.exe
+          Path: C:\Windows\System32\svchost.exe
+          type: ProcessObj:ImageInfoType
+        Name: svchost.exe
+        PID: 2976
+        Parent_PID: 436
+        type: ProcessObj:ProcessObjectType
+      id: 126285
+      mro: _EPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _EPROCESS
+      offset: 275427700916320
+      type_name: _EPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    handle_count: 326
+    ppid: 436
+    process_create_time:
+      epoch: 1426640609
+      id: 130792
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:03:29+0000
+    process_exit_time:
+      epoch: 0
+      id: 130793
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    session_id: 0
+    thread_count: 15
+    wow64: false
+- - x
+- - x

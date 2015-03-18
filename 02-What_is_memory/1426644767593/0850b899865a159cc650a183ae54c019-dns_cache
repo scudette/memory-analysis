@@ -1,0 +1,3078 @@
+- - m
+  - cookie: 111850
+    plugin_name: null
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 111850
+    plugin_name: dns_cache
+    tool_name: rekall
+    tool_version: 1.2.1
+- - p
+  - Checking pid 428 for dnsrslvr.dll
+- - t
+  - - name: Name
+      type: TreeNode
+      width: 45
+    - cname: record
+      formatstring: '[addrpad]'
+      name: Record
+    - cname: type
+      formatstring: '16'
+      name: Type
+    - cname: data
+      formatstring: ''
+      name: Data
+  - {}
+- - r
+  - Name: www.flickr.com
+    depth: 0
+    record:
+      id: 121562
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[8] '
+      offset: 34872176
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.flickr.com
+    data: flickr-panda-police.a00.yahoodns.net
+    depth: 1
+    record:
+      id: 121582
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11545072
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: flickr-panda-police.a00.yahoodns.net
+    data: geoycpi-uno-deluxe.gycpi.b.yahoodns.net
+    depth: 1
+    record:
+      id: 121610
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11545232
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: geoycpi-uno-deluxe.gycpi.b.yahoodns.net
+    data: geoycpi-uno.gycpi.b.yahoodns.net
+    depth: 1
+    record:
+      id: 121638
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11545488
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: geoycpi-uno.gycpi.b.yahoodns.net
+    data: any-ycpi-uno.aycpi.b.yahoodns.net
+    depth: 1
+    record:
+      id: 121666
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11545744
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: any-ycpi-uno.aycpi.b.yahoodns.net
+    data: 66.196.66.213
+    depth: 1
+    record:
+      id: 121694
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11545808
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: any-ycpi-uno.aycpi.b.yahoodns.net
+    data: 66.196.66.212
+    depth: 1
+    record:
+      id: 121719
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11547248
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: crl.microsoft.com
+    depth: 0
+    record:
+      id: 121762
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[13] '
+      offset: 34890912
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: crl.microsoft.com
+    data: crl.www.ms.akadns.net
+    depth: 1
+    record:
+      id: 121782
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11820864
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: crl.www.ms.akadns.net
+    data: a1363.dscg.akamai.net
+    depth: 1
+    record:
+      id: 121810
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11821056
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1363.dscg.akamai.net
+    data: 23.204.108.59
+    depth: 1
+    record:
+      id: 121838
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11821248
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1363.dscg.akamai.net
+    data: 23.204.108.64
+    depth: 1
+    record:
+      id: 121863
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11904336
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: img.s-msn.com
+    depth: 0
+    record:
+      id: 121912
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[20] '
+      offset: 34872864
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: img.s-msn.com
+    data: wildcard.s-msn.com.edgekey.net
+    depth: 1
+    record:
+      id: 121932
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11546704
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: wildcard.s-msn.com.edgekey.net
+    data: e7341.g.akamaiedge.net
+    depth: 1
+    record:
+      id: 121960
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11546848
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e7341.g.akamaiedge.net
+    data: 23.72.33.98
+    depth: 1
+    record:
+      id: 121988
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11547456
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: www.facebook.com
+    depth: 0
+    record:
+      id: 122025
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[23] '
+      offset: 34872080
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.facebook.com
+    data: star.c10r.facebook.com
+    depth: 1
+    record:
+      id: 122045
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11553648
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: star.c10r.facebook.com
+    data: 31.13.93.3
+    depth: 1
+    record:
+      id: 122073
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11543680
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: tps30.doubleverify.com
+    depth: 0
+    record:
+      id: 122110
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[26] '
+      offset: 33736592
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: tps30.doubleverify.com
+    data: 204.154.111.224
+    depth: 1
+    record:
+      id: 122130
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11971936
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: www.msn.com
+    depth: 0
+    record:
+      id: 122188
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[29] '
+      offset: 34872000
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.msn.com
+    data: www-msn-com.a-0003.a-msedge.net
+    depth: 1
+    record:
+      id: 122208
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11552160
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: www-msn-com.a-0003.a-msedge.net
+    data: a-0003.a-msedge.net
+    depth: 1
+    record:
+      id: 122236
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11552352
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a-0003.a-msedge.net
+    data: 204.79.197.203
+    depth: 1
+    record:
+      id: 122264
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11552560
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ocsp.msocsp.com
+    depth: 0
+    record:
+      id: 122325
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[40] '
+      offset: 34890816
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ocsp.msocsp.com
+    data: hostedocsp.globalsign.com
+    depth: 1
+    record:
+      id: 122345
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11903136
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.198
+    depth: 1
+    record:
+      id: 122373
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903280
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.203
+    depth: 1
+    record:
+      id: 122398
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903424
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.196
+    depth: 1
+    record:
+      id: 122423
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903488
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.204
+    depth: 1
+    record:
+      id: 122448
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903552
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.202
+    depth: 1
+    record:
+      id: 122473
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903616
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.200
+    depth: 1
+    record:
+      id: 122498
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903680
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.199
+    depth: 1
+    record:
+      id: 122523
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903744
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.197
+    depth: 1
+    record:
+      id: 122548
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903808
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.207
+    depth: 1
+    record:
+      id: 122573
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903872
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.205
+    depth: 1
+    record:
+      id: 122598
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11904208
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: hostedocsp.globalsign.com
+    data: 108.162.232.201
+    depth: 1
+    record:
+      id: 122623
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11904272
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fbstatic-a.akamaihd.net
+    depth: 0
+    record:
+      id: 122654
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[41] '
+      offset: 34872480
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: fbstatic-a.akamaihd.net
+    data: fbstatic-a.akamaihd.net.edgesuite.net
+    depth: 1
+    record:
+      id: 122674
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11543872
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: fbstatic-a.akamaihd.net.edgesuite.net
+    data: a1168.dsw4.akamai.net
+    depth: 1
+    record:
+      id: 122702
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11544096
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1168.dsw4.akamai.net
+    data: 23.204.108.72
+    depth: 1
+    record:
+      id: 122730
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11544320
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1168.dsw4.akamai.net
+    data: 23.204.108.64
+    depth: 1
+    record:
+      id: 122755
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11544448
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: sb.scorecardresearch.com
+    depth: 0
+    record:
+      id: 122783
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34875040
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: sb.scorecardresearch.com
+    data: sb.scorecardresearch.com.edgekey.net
+    depth: 1
+    record:
+      id: 122803
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11896304
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: sb.scorecardresearch.com.edgekey.net
+    data: e2799.e7.akamaiedge.net
+    depth: 1
+    record:
+      id: 122831
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11896544
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e2799.e7.akamaiedge.net
+    data: 23.72.11.120
+    depth: 1
+    record:
+      id: 122859
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11896768
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: encrypted-tbn2.gstatic.com
+    depth: 0
+    record:
+      id: 122896
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[44] '
+      offset: 34873392
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: encrypted-tbn2.gstatic.com
+    data: 216.58.216.142
+    depth: 1
+    record:
+      id: 122916
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11546640
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fbcdn-dragon-a.akamaihd.net
+    depth: 0
+    record:
+      id: 122956
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[48] '
+      offset: 34873584
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: fbcdn-dragon-a.akamaihd.net
+    data: fbcdn-dragon-a.akamaihd.net.edgesuite.net
+    depth: 1
+    record:
+      id: 122976
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11888448
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: fbcdn-dragon-a.akamaihd.net.edgesuite.net
+    data: a1170.dsw4.akamai.net
+    depth: 1
+    record:
+      id: 123004
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11888704
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1170.dsw4.akamai.net
+    data: 23.204.108.72
+    depth: 1
+    record:
+      id: 123032
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11889296
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1170.dsw4.akamai.net
+    data: 23.204.108.65
+    depth: 1
+    record:
+      id: 123057
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11889424
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: www.bing.com
+    depth: 0
+    record:
+      id: 123100
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[53] '
+      offset: 33735904
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.bing.com
+    data: any.edge.bing.com
+    depth: 1
+    record:
+      id: 123120
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11887584
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: any.edge.bing.com
+    data: 204.79.197.200
+    depth: 1
+    record:
+      id: 123148
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11898624
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: s2.symcb.com
+    depth: 0
+    record:
+      id: 123182
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[55] '
+      offset: 34890624
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: s2.symcb.com
+    data: ocsp.ws.symantec.com.edgekey.net
+    depth: 1
+    record:
+      id: 123202
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11970688
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: ocsp.ws.symantec.com.edgekey.net
+    data: e8218.ce.akamaiedge.net
+    depth: 1
+    record:
+      id: 123230
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970896
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e8218.ce.akamaiedge.net
+    data: 23.5.251.27
+    depth: 1
+    record:
+      id: 123258
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11971120
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: s.yimg.com
+    depth: 0
+    record:
+      id: 123304
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[61] '
+      offset: 34872592
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: s.yimg.com
+    data: s.gycs.b.yahoodns.net
+    depth: 1
+    record:
+      id: 123324
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11554416
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: s.gycs.b.yahoodns.net
+    data: 217.12.1.35
+    depth: 1
+    record:
+      id: 123352
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11553440
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: s.gycs.b.yahoodns.net
+    data: 217.12.1.36
+    depth: 1
+    record:
+      id: 123377
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11553568
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: geo.query.yahoo.com
+    depth: 0
+    record:
+      id: 123423
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[67] '
+      offset: 34874368
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: geo.query.yahoo.com
+    data: global-cache.internal.query.g03.yahoodns.net
+    depth: 1
+    record:
+      id: 123443
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11552016
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: global-cache.internal.query.g03.yahoodns.net
+    data: us-cache.internal.query.a01.yahoodns.net
+    depth: 1
+    record:
+      id: 123471
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892752
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: us-cache.internal.query.a01.yahoodns.net
+    data: 98.137.201.232
+    depth: 1
+    record:
+      id: 123499
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893040
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.adnxs.com
+    depth: 0
+    record:
+      id: 123530
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[68] '
+      offset: 34874176
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ib.adnxs.com
+    data: g.geogslb.com
+    depth: 1
+    record:
+      id: 123550
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11891712
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: g.geogslb.com
+    data: ib.anycast.adnxs.com
+    depth: 1
+    record:
+      id: 123578
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11891824
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.59
+    depth: 1
+    record:
+      id: 123606
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892000
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.39
+    depth: 1
+    record:
+      id: 123631
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892128
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.126
+    depth: 1
+    record:
+      id: 123656
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892192
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.109
+    depth: 1
+    record:
+      id: 123681
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892256
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.95
+    depth: 1
+    record:
+      id: 123706
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892320
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.101
+    depth: 1
+    record:
+      id: 123731
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892384
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.30
+    depth: 1
+    record:
+      id: 123756
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892448
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ib.anycast.adnxs.com
+    data: 37.252.170.63
+    depth: 1
+    record:
+      id: 123781
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11892512
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: view.atdmt.com
+    depth: 0
+    record:
+      id: 123818
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[71] '
+      offset: 34890240
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: view.atdmt.com
+    data: view.atdmt.com.nsatc.net
+    depth: 1
+    record:
+      id: 123838
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11548208
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: view.atdmt.com.nsatc.net
+    data: 94.245.121.178
+    depth: 1
+    record:
+      id: 123866
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11899136
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: y.analytics.yahoo.com
+    depth: 0
+    record:
+      id: 123900
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[73] '
+      offset: 34874464
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: y.analytics.yahoo.com
+    data: y.it.a03.yahoodns.net
+    depth: 1
+    record:
+      id: 123920
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11554800
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: y.it.a03.yahoodns.net
+    data: 98.139.225.23
+    depth: 1
+    record:
+      id: 123948
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893344
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: clients1.google.co.uk
+    depth: 0
+    record:
+      id: 123979
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[74] '
+      offset: 34873696
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: clients1.google.co.uk
+    data: clients-cctld.l.google.com
+    depth: 1
+    record:
+      id: 123999
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11547904
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: clients-cctld.l.google.com
+    data: 216.58.216.131
+    depth: 1
+    record:
+      id: 124027
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11889552
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: static-hp-eus.s-msn.com
+    depth: 0
+    record:
+      id: 124055
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34872368
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: static-hp-eus.s-msn.com
+    data: static.s-msn.com.edgekey.net
+    depth: 1
+    record:
+      id: 124075
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11554912
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: static.s-msn.com.edgekey.net
+    data: e7070.g.akamaiedge.net
+    depth: 1
+    record:
+      id: 124103
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11555120
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e7070.g.akamaiedge.net
+    data: 23.72.6.184
+    depth: 1
+    record:
+      id: 124131
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11555328
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ss.symcd.com
+    depth: 0
+    record:
+      id: 124168
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[77] '
+      offset: 34890720
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ss.symcd.com
+    data: ocsp.ws.symantec.com.edgekey.net
+    depth: 1
+    record:
+      id: 124188
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11972128
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: ocsp.ws.symantec.com.edgekey.net
+    data: e8218.ce.akamaiedge.net
+    depth: 1
+    record:
+      id: 124216
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11972336
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e8218.ce.akamaiedge.net
+    data: 23.5.251.27
+    depth: 1
+    record:
+      id: 124244
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11971248
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: api.bing.com
+    depth: 0
+    record:
+      id: 124272
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 33736000
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: api.bing.com
+    data: api-bing-com.a-0001.a-msedge.net
+    depth: 1
+    record:
+      id: 124292
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11899200
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: api-bing-com.a-0001.a-msedge.net
+    data: akam.bing.com
+    depth: 1
+    record:
+      id: 124320
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11900048
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: akam.bing.com
+    data: a134.lm.akamai.net
+    depth: 1
+    record:
+      id: 124348
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11900256
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a134.lm.akamai.net
+    data: 23.204.108.16
+    depth: 1
+    record:
+      id: 124376
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11900432
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a134.lm.akamai.net
+    data: 23.204.108.18
+    depth: 1
+    record:
+      id: 124401
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11900560
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: rtbcdn.doubleverify.com
+    depth: 0
+    record:
+      id: 124432
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[78] '
+      offset: 34874928
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: rtbcdn.doubleverify.com
+    data: wildcard.doubleverify.com.edgekey.net
+    depth: 1
+    record:
+      id: 124452
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11894784
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: wildcard.doubleverify.com.edgekey.net
+    data: e990.g.akamaiedge.net
+    depth: 1
+    record:
+      id: 124480
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11895952
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e990.g.akamaiedge.net
+    data: 23.72.21.226
+    depth: 1
+    record:
+      id: 124508
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11896176
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: tps10216.doubleverify.com
+    depth: 0
+    record:
+      id: 124539
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[79] '
+      offset: 33736704
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: tps10216.doubleverify.com
+    data: 204.154.110.225
+    depth: 1
+    record:
+      id: 124559
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11820656
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: atdmt-a.akamaihd.net
+    depth: 0
+    record:
+      id: 124593
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[81] '
+      offset: 33736480
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: atdmt-a.akamaihd.net
+    data: atdmt-a.akamaihd.net.edgesuite.net
+    depth: 1
+    record:
+      id: 124613
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11890144
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: atdmt-a.akamaihd.net.edgesuite.net
+    data: a1129.g2.akamai.net
+    depth: 1
+    record:
+      id: 124641
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11898880
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1129.g2.akamai.net
+    data: 23.204.108.75
+    depth: 1
+    record:
+      id: 124669
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11553216
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1129.g2.akamai.net
+    data: 23.204.108.81
+    depth: 1
+    record:
+      id: 124694
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11820592
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: encrypted-tbn0.gstatic.com
+    depth: 0
+    record:
+      id: 124722
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34873280
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: encrypted-tbn0.gstatic.com
+    data: 216.58.216.142
+    depth: 1
+    record:
+      id: 124742
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11549888
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: vassg141.ocsp.omniroot.com
+    depth: 0
+    record:
+      id: 124794
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[89] '
+      offset: 34875152
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: vassg141.ocsp.omniroot.com
+    data: vassg.omniroot.com.edgesuite.net
+    depth: 1
+    record:
+      id: 124814
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11896896
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: vassg.omniroot.com.edgesuite.net
+    data: a1158.b.akamai.net
+    depth: 1
+    record:
+      id: 124842
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11897136
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1158.b.akamai.net
+    data: 23.204.108.50
+    depth: 1
+    record:
+      id: 124870
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11897360
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1158.b.akamai.net
+    data: 23.204.108.35
+    depth: 1
+    record:
+      id: 124895
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11897488
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: www.download.windowsupdate.com
+    depth: 0
+    record:
+      id: 124950
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[98] '
+      offset: 33741328
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.download.windowsupdate.com
+    data: www.download.windowsupdate.nsatc.net
+    depth: 1
+    record:
+      id: 124970
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11968720
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: www.download.windowsupdate.nsatc.net
+    data: download.windowsupdate.com.edgesuite.net
+    depth: 1
+    record:
+      id: 124998
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11968960
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: download.windowsupdate.com.edgesuite.net
+    data: a767.g.akamai.net
+    depth: 1
+    record:
+      id: 125026
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11902704
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a767.g.akamai.net
+    data: 23.204.108.57
+    depth: 1
+    record:
+      id: 125054
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11902944
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a767.g.akamai.net
+    data: 23.204.108.72
+    depth: 1
+    record:
+      id: 125079
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11903072
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: mscrl.microsoft.com
+    depth: 0
+    record:
+      id: 125107
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34890432
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: mscrl.microsoft.com
+    data: certrevoc.vo.msecnd.net
+    depth: 1
+    record:
+      id: 125127
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11902096
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: certrevoc.vo.msecnd.net
+    data: cs1.wpc.v0cdn.net
+    depth: 1
+    record:
+      id: 125155
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11902288
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: cs1.wpc.v0cdn.net
+    data: 93.184.215.200
+    depth: 1
+    record:
+      id: 125183
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11902480
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: clients1.google.com
+    depth: 0
+    record:
+      id: 125235
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[106] '
+      offset: 34872768
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: clients1.google.com
+    data: clients.l.google.com
+    depth: 1
+    record:
+      id: 125255
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11891456
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: clients.l.google.com
+    data: 216.58.216.142
+    depth: 1
+    record:
+      id: 125283
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11548080
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: www.google.co.uk
+    depth: 0
+    record:
+      id: 125320
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[109] '
+      offset: 34872272
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.google.co.uk
+    data: 216.58.216.131
+    depth: 1
+    record:
+      id: 125340
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11552992
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ad.doubleclick.net
+    depth: 0
+    record:
+      id: 125386
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[115] '
+      offset: 34873888
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ad.doubleclick.net
+    data: dart.l.doubleclick.net
+    depth: 1
+    record:
+      id: 125406
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11889824
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: dart.l.doubleclick.net
+    data: 216.58.216.134
+    depth: 1
+    record:
+      id: 125434
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11890016
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: c.bing.com
+    depth: 0
+    record:
+      id: 125471
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[118] '
+      offset: 34874848
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: c.bing.com
+    data: c.live.com
+    depth: 1
+    record:
+      id: 125491
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11548272
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: c.live.com
+    data: c.live.com.nsatc.net
+    depth: 1
+    record:
+      id: 125519
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11894096
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: c.live.com.nsatc.net
+    data: 207.46.194.10
+    depth: 1
+    record:
+      id: 125547
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11894272
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: rtb0.doubleverify.com
+    depth: 0
+    record:
+      id: 125602
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[127] '
+      offset: 33736096
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: rtb0.doubleverify.com
+    data: 204.154.110.79
+    depth: 1
+    record:
+      id: 125622
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11548624
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: teredo.ipv6.microsoft.com
+    depth: 0
+    record:
+      id: 125653
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[128] '
+      offset: 34871792
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: teredo.ipv6.microsoft.com
+    data: teredo.ipv6.microsoft.com.nsatc.net
+    depth: 1
+    record:
+      id: 125673
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11551136
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: teredo.ipv6.microsoft.com.nsatc.net
+    data: 157.56.106.189
+    depth: 1
+    record:
+      id: 125701
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11550208
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ocsp.digicert.com
+    depth: 0
+    record:
+      id: 125732
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[129] '
+      offset: 34874272
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ocsp.digicert.com
+    data: cs9.wac.edgecastcdn.net
+    depth: 1
+    record:
+      id: 125752
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11887648
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: cs9.wac.edgecastcdn.net
+    data: 72.21.91.29
+    depth: 1
+    record:
+      id: 125780
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11891328
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: dt.adsafeprotected.com
+    depth: 0
+    record:
+      id: 125823
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[134] '
+      offset: 34875376
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: dt.adsafeprotected.com
+    data: anycast.dt.adsafeprotected.com
+    depth: 1
+    record:
+      id: 125843
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11894544
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: anycast.dt.adsafeprotected.com
+    data: 69.172.216.111
+    depth: 1
+    record:
+      id: 125871
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11897936
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: m.adnxs.com
+    depth: 0
+    record:
+      id: 125899
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34874096
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: m.adnxs.com
+    data: microsoft.geogslb.com
+    depth: 1
+    record:
+      id: 125919
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11890320
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: microsoft.geogslb.com
+    data: m.anycast.adnxs.com
+    depth: 1
+    record:
+      id: 125947
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11890448
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: m.anycast.adnxs.com
+    data: 37.252.170.142
+    depth: 1
+    record:
+      id: 125975
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11890640
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: m.anycast.adnxs.com
+    data: 37.252.170.71
+    depth: 1
+    record:
+      id: 126000
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11890768
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: m.anycast.adnxs.com
+    data: 37.252.170.140
+    depth: 1
+    record:
+      id: 126025
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11890832
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: m.anycast.adnxs.com
+    data: 37.252.170.141
+    depth: 1
+    record:
+      id: 126050
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11890896
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: m.anycast.adnxs.com
+    data: 37.252.170.82
+    depth: 1
+    record:
+      id: 126075
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11890960
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: m.anycast.adnxs.com
+    data: 37.252.170.80
+    depth: 1
+    record:
+      id: 126100
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11891024
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: m.anycast.adnxs.com
+    data: 37.252.170.81
+    depth: 1
+    record:
+      id: 126125
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11891648
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: c.msn.com
+    depth: 0
+    record:
+      id: 126159
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[136] '
+      offset: 34874672
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: c.msn.com
+    data: c.msn.com.nsatc.net
+    depth: 1
+    record:
+      id: 126179
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11895648
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: c.msn.com.nsatc.net
+    data: 207.46.194.10
+    depth: 1
+    record:
+      id: 126207
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11895824
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    depth: 0
+    record:
+      id: 126235
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34874576
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.108
+    depth: 1
+    record:
+      id: 126255
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11893472
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.97
+    depth: 1
+    record:
+      id: 126280
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893600
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.104
+    depth: 1
+    record:
+      id: 126305
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893664
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.65
+    depth: 1
+    record:
+      id: 126330
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893728
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.67
+    depth: 1
+    record:
+      id: 126355
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893792
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.38
+    depth: 1
+    record:
+      id: 126380
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893856
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.93
+    depth: 1
+    record:
+      id: 126405
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893920
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fra1.ib.adnxs.com
+    data: 37.252.170.169
+    depth: 1
+    record:
+      id: 126430
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11893984
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    depth: 0
+    record:
+      id: 126479
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[143] '
+      offset: 34890336
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ping.chartbeat.net
+    data: 54.221.232.226
+    depth: 1
+    record:
+      id: 126499
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11901520
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    data: 54.235.136.66
+    depth: 1
+    record:
+      id: 126524
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901648
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    data: 50.19.238.200
+    depth: 1
+    record:
+      id: 126549
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901712
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    data: 23.23.102.174
+    depth: 1
+    record:
+      id: 126574
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901776
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    data: 54.225.131.235
+    depth: 1
+    record:
+      id: 126599
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901840
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    data: 54.225.146.15
+    depth: 1
+    record:
+      id: 126624
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901904
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    data: 54.243.147.255
+    depth: 1
+    record:
+      id: 126649
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901968
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ping.chartbeat.net
+    data: 50.17.183.90
+    depth: 1
+    record:
+      id: 126674
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11902032
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: go.microsoft.com
+    depth: 0
+    record:
+      id: 126702
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34871904
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: go.microsoft.com
+    data: www.go.microsoft.akadns.net
+    depth: 1
+    record:
+      id: 126722
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11544688
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: www.go.microsoft.akadns.net
+    data: 64.4.11.25
+    depth: 1
+    record:
+      id: 126750
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11544896
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: pixel.adsafeprotected.com
+    depth: 0
+    record:
+      id: 126790
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[147] '
+      offset: 34873984
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: pixel.adsafeprotected.com
+    data: anycast.pixel.adsafeprotected.com
+    depth: 1
+    record:
+      id: 126810
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11554320
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: anycast.pixel.adsafeprotected.com
+    data: 69.172.216.55
+    depth: 1
+    record:
+      id: 126838
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11544512
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: static.chartbeat.com
+    depth: 0
+    record:
+      id: 126875
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[150] '
+      offset: 33736256
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: static.chartbeat.com
+    data: global.ssl.fastly.net
+    depth: 1
+    record:
+      id: 126895
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11900624
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: global.ssl.fastly.net
+    data: global-ssl.fastly.net
+    depth: 1
+    record:
+      id: 126923
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11900816
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: global-ssl.fastly.net
+    data: fallback.global-ssl.fastly.net
+    depth: 1
+    record:
+      id: 126951
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901008
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: fallback.global-ssl.fastly.net
+    data: 185.31.18.184
+    depth: 1
+    record:
+      id: 126979
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901216
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: fallback.global-ssl.fastly.net
+    data: 185.31.19.184
+    depth: 1
+    record:
+      id: 127004
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11901360
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ads1.msads.net
+    depth: 0
+    record:
+      id: 127038
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[152] '
+      offset: 34872672
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ads1.msads.net
+    data: 2-04-0073-0006.cdx.hwcdnlb.net
+    depth: 1
+    record:
+      id: 127058
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11545888
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: 2-04-0073-0006.cdx.hwcdnlb.net
+    data: wildcard.msads.net.edgekey.net
+    depth: 1
+    record:
+      id: 127086
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11546080
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: wildcard.msads.net.edgekey.net
+    data: e8011.g.akamaiedge.net
+    depth: 1
+    record:
+      id: 127114
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11546304
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e8011.g.akamaiedge.net
+    data: 23.72.35.35
+    depth: 1
+    record:
+      id: 127142
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11546512
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: www.msftncsi.com
+    depth: 0
+    record:
+      id: 127170
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34871696
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.msftncsi.com
+    data: www.msftncsi.com.edgesuite.net
+    depth: 1
+    record:
+      id: 127190
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11551328
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: www.msftncsi.com.edgesuite.net
+    data: a1961.g.akamai.net
+    depth: 1
+    record:
+      id: 127218
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11551536
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1961.g.akamai.net
+    data: 23.204.108.72
+    depth: 1
+    record:
+      id: 127246
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11551744
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1961.g.akamai.net
+    data: 23.204.108.57
+    depth: 1
+    record:
+      id: 127271
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11551872
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: h2.msn.com
+    depth: 0
+    record:
+      id: 127305
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[154] '
+      offset: 34873808
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: h2.msn.com
+    data: 2-04-0073-0005.cdx.hwcdnlb.net
+    depth: 1
+    record:
+      id: 127325
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11887840
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: 2-04-0073-0005.cdx.hwcdnlb.net
+    data: wildcard.msn.com.edgekey.net
+    depth: 1
+    record:
+      id: 127353
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11887984
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: wildcard.msn.com.edgekey.net
+    data: e7173.g.akamaiedge.net
+    depth: 1
+    record:
+      id: 127381
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11888208
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e7173.g.akamaiedge.net
+    data: 23.72.6.219
+    depth: 1
+    record:
+      id: 127409
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11889696
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: static.adsafeprotected.com
+    depth: 0
+    record:
+      id: 127470
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[165] '
+      offset: 34875264
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: static.adsafeprotected.com
+    data: anycast.static.adsafeprotected.com
+    depth: 1
+    record:
+      id: 127490
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11894624
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: anycast.static.adsafeprotected.com
+    data: 69.172.216.58
+    depth: 1
+    record:
+      id: 127518
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11897632
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: choices.truste.com
+    depth: 0
+    record:
+      id: 127552
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[167] '
+      offset: 34890528
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: choices.truste.com
+    data: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    depth: 1
+    record:
+      id: 127572
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11969152
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 174.129.254.239
+    depth: 1
+    record:
+      id: 127600
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970032
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 23.21.145.44
+    depth: 1
+    record:
+      id: 127625
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970240
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 174.129.29.134
+    depth: 1
+    record:
+      id: 127650
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970304
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 184.73.187.142
+    depth: 1
+    record:
+      id: 127675
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970368
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 184.73.195.70
+    depth: 1
+    record:
+      id: 127700
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970432
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 23.21.105.69
+    depth: 1
+    record:
+      id: 127725
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970496
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 174.129.219.124
+    depth: 1
+    record:
+      id: 127750
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970560
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: adchoices-icon-cde-1968696106.us-east-1.elb.amazonaws.com
+    data: 23.23.115.42
+    depth: 1
+    record:
+      id: 127775
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11970624
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: otf.msn.com
+    depth: 0
+    record:
+      id: 127803
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 34875488
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: otf.msn.com
+    data: ampudc.udc0.glbdns2.microsoft.com
+    depth: 1
+    record:
+      id: 127823
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11899680
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: ampudc.udc0.glbdns2.microsoft.com
+    data: 138.91.89.250
+    depth: 1
+    record:
+      id: 127851
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11899840
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: encrypted-tbn3.gstatic.com
+    depth: 0
+    record:
+      id: 127882
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[168] '
+      offset: 34873056
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: encrypted-tbn3.gstatic.com
+    data: 216.58.216.142
+    depth: 1
+    record:
+      id: 127902
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11552096
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: cdn.doubleverify.com
+    depth: 0
+    record:
+      id: 127945
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[173] '
+      offset: 33736368
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: cdn.doubleverify.com
+    data: wildcard.doubleverify.com.edgekey.net
+    depth: 1
+    record:
+      id: 127965
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11969312
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: wildcard.doubleverify.com.edgekey.net
+    data: e990.g.akamaiedge.net
+    depth: 1
+    record:
+      id: 127993
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11969536
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e990.g.akamaiedge.net
+    data: 23.72.21.226
+    depth: 1
+    record:
+      id: 128021
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11969760
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: rad.msn.com
+    depth: 0
+    record:
+      id: 128088
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[186] '
+      offset: 34873504
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: rad.msn.com
+    data: rad.msn.com.nsatc.net
+    depth: 1
+    record:
+      id: 128108
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11888976
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: rad.msn.com.nsatc.net
+    data: 94.245.117.43
+    depth: 1
+    record:
+      id: 128136
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11889104
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: rad.msn.com.nsatc.net
+    data: 94.245.117.42
+    depth: 1
+    record:
+      id: 128161
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11889232
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: b.scorecardresearch.com
+    depth: 0
+    record:
+      id: 128207
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[192] '
+      offset: 34875568
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: b.scorecardresearch.com
+    data: b.scorecardresearch.com.edgesuite.net
+    depth: 1
+    record:
+      id: 128227
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11899360
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: b.scorecardresearch.com.edgesuite.net
+    data: a1294.w20.akamai.net
+    depth: 1
+    record:
+      id: 128255
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11899584
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1294.w20.akamai.net
+    data: 23.204.108.18
+    depth: 1
+    record:
+      id: 128283
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11898240
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1294.w20.akamai.net
+    data: 23.204.108.27
+    depth: 1
+    record:
+      id: 128308
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11898368
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1294.w20.akamai.net
+    data: 23.204.108.33
+    depth: 1
+    record:
+      id: 128333
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11898432
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1294.w20.akamai.net
+    data: 23.204.108.8
+    depth: 1
+    record:
+      id: 128358
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11898496
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: ssl.gstatic.com
+    depth: 0
+    record:
+      id: 128407
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[199] '
+      offset: 34872960
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: ssl.gstatic.com
+    data: 216.58.216.131
+    depth: 1
+    record:
+      id: 128427
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11821424
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: www.microsoft.com
+    depth: 0
+    record:
+      id: 128470
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[204] '
+      offset: 34891008
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: www.microsoft.com
+    data: toggle.www.ms.akadns.net
+    depth: 1
+    record:
+      id: 128490
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11972064
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: toggle.www.ms.akadns.net
+    data: www.microsoft.com.edgekey.net
+    depth: 1
+    record:
+      id: 128518
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11904480
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: www.microsoft.com.edgekey.net
+    data: e10088.dscb.akamaiedge.net
+    depth: 1
+    record:
+      id: 128546
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11904704
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: e10088.dscb.akamaiedge.net
+    data: 23.72.15.162
+    depth: 1
+    record:
+      id: 128574
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11904928
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: encrypted-tbn1.gstatic.com
+    depth: 0
+    record:
+      id: 128605
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[205] '
+      offset: 34873168
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: encrypted-tbn1.gstatic.com
+    data: 216.58.216.142
+    depth: 1
+    record:
+      id: 128625
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11821536
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: cdn.adnxs.com
+    depth: 0
+    record:
+      id: 128662
+      mro: DNS_HASHTABLE_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: 'Array[208] '
+      offset: 34874752
+      type_name: DNS_HASHTABLE_ENTRY
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: HTABLE
+- - r
+  - Name: cdn.adnxs.com
+    data: cdn.adnxs.com.edgesuite.net
+    depth: 1
+    record:
+      id: 128682
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Record
+      offset: 11895056
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: cdn.adnxs.com.edgesuite.net
+    data: a1961.g.akamai.net
+    depth: 1
+    record:
+      id: 128710
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11895248
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 5
+- - r
+  - Name: a1961.g.akamai.net
+    data: 23.204.108.57
+    depth: 1
+    record:
+      id: 128738
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11895456
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - r
+  - Name: a1961.g.akamai.net
+    data: 23.204.108.72
+    depth: 1
+    record:
+      id: 128763
+      mro: DNS_RECORD:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Next
+      offset: 11895584
+      type_name: DNS_RECORD
+      vm: WindowsAMD64PagedMemory@0x1831C000 (Process 428)
+    type: 1
+- - x
+- - x
