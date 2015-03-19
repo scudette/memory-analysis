@@ -1,0 +1,2326 @@
+- - m
+  - cookie: 89041
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 89041
+    plugin_name: dt
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - f
+  - "[{0} {1}] @ {2:addrpad} \n"
+  - _EPROCESS
+  - _EPROCESS
+  - 275427684150064
+- - t
+  - - child:
+        style: address
+      max_depth: 5
+      name: Offset
+      type: TreeNode
+      width: 20
+    - cname: field
+      formatstring: '30'
+      name: Field
+    - cname: content
+      name: Content
+  - {}
+- - r
+  - Offset: 0
+    content: '[_KPROCESS Pcb] @ 0xFA8001466B30'
+    depth: 0
+    field: Pcb
+- - r
+  - Offset: 0
+    content: '[_DISPATCHER_HEADER Header] @ 0xFA8001466B30'
+    depth: 1
+    field: Header
+- - r
+  - Offset: 0
+    content: ' [long:Lock]: 0x00580003'
+    depth: 2
+    field: Lock
+- - r
+  - Offset: 0
+    content: ' [Enumeration:Type]: 0x00000003 (ProcessObject)'
+    depth: 2
+    field: Type
+- - r
+  - Offset: 1
+    content: ' [unsigned char:Abandoned]: 0x00000000'
+    depth: 2
+    field: Abandoned
+- - r
+  - Offset: 1
+    content: ' [BitField(0-1):Absolute]: 0x00000000'
+    depth: 2
+    field: Absolute
+- - r
+  - Offset: 1
+    content: ' [BitField(1-2):Coalescable]: 0x00000000'
+    depth: 2
+    field: Coalescable
+- - r
+  - Offset: 1
+    content: ' [BitField(3-8):EncodedTolerableDelay]: 0x00000000'
+    depth: 2
+    field: EncodedTolerableDelay
+- - r
+  - Offset: 1
+    content: ' [BitField(2-3):KeepShifting]: 0x00000000'
+    depth: 2
+    field: KeepShifting
+- - r
+  - Offset: 1
+    content: ' [unsigned char:Signalling]: 0x00000000'
+    depth: 2
+    field: Signalling
+- - r
+  - Offset: 1
+    content: ' [unsigned char:TimerControlFlags]: 0x00000000'
+    depth: 2
+    field: TimerControlFlags
+- - r
+  - Offset: 2
+    content: ' [BitField(2-3):CounterProfiling]: 0x00000000'
+    depth: 2
+    field: CounterProfiling
+- - r
+  - Offset: 2
+    content: ' [BitField(0-1):CpuThrottled]: 0x00000000'
+    depth: 2
+    field: CpuThrottled
+- - r
+  - Offset: 2
+    content: ' [BitField(1-2):CycleProfiling]: 0x00000000'
+    depth: 2
+    field: CycleProfiling
+- - r
+  - Offset: 2
+    content: ' [unsigned char:Hand]: 0x00000058'
+    depth: 2
+    field: Hand
+- - r
+  - Offset: 2
+    content: ' [BitField(3-8):Reserved]: 0x0000000B'
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 2
+    content: ' [unsigned char:Size]: 0x00000058'
+    depth: 2
+    field: Size
+- - r
+  - Offset: 2
+    content: ' [unsigned char:ThreadControlFlags]: 0x00000058'
+    depth: 2
+    field: ThreadControlFlags
+- - r
+  - Offset: 3
+    content: ' [BitField(0-1):ActiveDR7]: 0x00000000'
+    depth: 2
+    field: ActiveDR7
+- - r
+  - Offset: 3
+    content: ' [unsigned char:DebugActive]: 0x00000000'
+    depth: 2
+    field: DebugActive
+- - r
+  - Offset: 3
+    content: ' [unsigned char:DpcActive]: 0x00000000'
+    depth: 2
+    field: DpcActive
+- - r
+  - Offset: 3
+    content: ' [BitField(7-8):Expired]: 0x00000000'
+    depth: 2
+    field: Expired
+- - r
+  - Offset: 3
+    content: ' [BitField(0-6):Index]: 0x00000000'
+    depth: 2
+    field: Index
+- - r
+  - Offset: 3
+    content: ' [BitField(6-7):Inserted]: 0x00000000'
+    depth: 2
+    field: Inserted
+- - r
+  - Offset: 3
+    content: ' [BitField(1-2):Instrumented]: 0x00000000'
+    depth: 2
+    field: Instrumented
+- - r
+  - Offset: 3
+    content: ' [BitField(2-6):Reserved2]: 0x00000000'
+    depth: 2
+    field: Reserved2
+- - r
+  - Offset: 3
+    content: ' [unsigned char:TimerMiscFlags]: 0x00000000'
+    depth: 2
+    field: TimerMiscFlags
+- - r
+  - Offset: 3
+    content: ' [BitField(7-8):UmsPrimary]: 0x00000000'
+    depth: 2
+    field: UmsPrimary
+- - r
+  - Offset: 3
+    content: ' [BitField(6-7):UmsScheduled]: 0x00000000'
+    depth: 2
+    field: UmsScheduled
+- - r
+  - Offset: 4
+    content: ' [long:SignalState]: 0x00000000'
+    depth: 2
+    field: SignalState
+- - r
+  - Offset: 8
+    content: '[_LIST_ENTRY WaitListHead] @ 0xFA8001466B38'
+    depth: 2
+    field: WaitListHead
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA80021481C0] (Flink)>
+    depth: 3
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80021481C0] (Blink)>
+    depth: 3
+    field: Blink
+- - r
+  - Offset: 24
+    content: '[_LIST_ENTRY ProfileListHead] @ 0xFA8001466B48'
+    depth: 1
+    field: ProfileListHead
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA8001466B48] (Flink)>
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA8001466B48] (Blink)>
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 40
+    content: ' [unsigned long:DirectoryTableBase]: 0x099DF000'
+    depth: 1
+    field: DirectoryTableBase
+- - r
+  - Offset: 48
+    content: '[_LIST_ENTRY ThreadListHead] @ 0xFA8001466B60'
+    depth: 1
+    field: ThreadListHead
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA8001468358] (Flink)>
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80013F8358] (Blink)>
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 64
+    content: ' [unsigned long long:ProcessLock]: 0x00000000'
+    depth: 1
+    field: ProcessLock
+- - r
+  - Offset: 72
+    content: '[_KAFFINITY_EX Affinity] @ 0xFA8001466B78'
+    depth: 1
+    field: Affinity
+- - r
+  - Offset: 0
+    content: ' [unsigned short:Count]: 0x00000001'
+    depth: 2
+    field: Count
+- - r
+  - Offset: 2
+    content: ' [unsigned short:Size]: 0x00000004'
+    depth: 2
+    field: Size
+- - r
+  - Offset: 4
+    content: ' [unsigned long:Reserved]: 0x00000000'
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 8
+    content: <Array 4 x unsigned long long @ 0xFA8001466B80>
+    depth: 2
+    field: Bitmap
+- - r
+  - Offset: 112
+    content: '[_LIST_ENTRY ReadyListHead] @ 0xFA8001466BA0'
+    depth: 1
+    field: ReadyListHead
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA8001466BA0] (Flink)>
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA8001466BA0] (Blink)>
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 128
+    content: '[_SINGLE_LIST_ENTRY SwapListEntry] @ 0xFA8001466BB0'
+    depth: 1
+    field: SwapListEntry
+- - r
+  - Offset: 0
+    content: <_SINGLE_LIST_ENTRY Pointer to [0x00000000] (Next)>
+    depth: 2
+    field: Next
+- - r
+  - Offset: 136
+    content: '[_KAFFINITY_EX ActiveProcessors] @ 0xFA8001466BB8'
+    depth: 1
+    field: ActiveProcessors
+- - r
+  - Offset: 0
+    content: ' [unsigned short:Count]: 0x00000004'
+    depth: 2
+    field: Count
+- - r
+  - Offset: 2
+    content: ' [unsigned short:Size]: 0x00000004'
+    depth: 2
+    field: Size
+- - r
+  - Offset: 4
+    content: ' [unsigned long:Reserved]: 0x00000000'
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 8
+    content: <Array 4 x unsigned long long @ 0xFA8001466BC0>
+    depth: 2
+    field: Bitmap
+- - r
+  - Offset: 176
+    content: ' [BitField(3-7):ActiveGroupsMask]: 0x00000001'
+    depth: 1
+    field: ActiveGroupsMask
+- - r
+  - Offset: 176
+    content: ' [BitField(0-1):AutoAlignment]: 0x00000001'
+    depth: 1
+    field: AutoAlignment
+- - r
+  - Offset: 176
+    content: ' [BitField(1-2):DisableBoost]: 0x00000000'
+    depth: 1
+    field: DisableBoost
+- - r
+  - Offset: 176
+    content: ' [BitField(2-3):DisableQuantum]: 0x00000000'
+    depth: 1
+    field: DisableQuantum
+- - r
+  - Offset: 176
+    content: ' [long:ProcessFlags]: 0x00000009'
+    depth: 1
+    field: ProcessFlags
+- - r
+  - Offset: 176
+    content: ' [BitField(7-32):ReservedFlags]: 0x00000000'
+    depth: 1
+    field: ReservedFlags
+- - r
+  - Offset: 180
+    content: ' [unsigned char:BasePriority]: 0x00000008'
+    depth: 1
+    field: BasePriority
+- - r
+  - Offset: 181
+    content: ' [unsigned char:QuantumReset]: 0x00000006'
+    depth: 1
+    field: QuantumReset
+- - r
+  - Offset: 182
+    content: ' [unsigned char:Visited]: 0x00000000'
+    depth: 1
+    field: Visited
+- - r
+  - Offset: 183
+    content: ' [unsigned char:Unused3]: 0x00000000'
+    depth: 1
+    field: Unused3
+- - r
+  - Offset: 184
+    content: <Array 4 x unsigned long @ 0xFA8001466BE8>
+    depth: 1
+    field: ThreadSeed
+- - r
+  - Offset: 200
+    content: <Array 4 x unsigned short @ 0xFA8001466BF8>
+    depth: 1
+    field: IdealNode
+- - r
+  - Offset: 208
+    content: ' [unsigned short:IdealGlobalNode]: 0x00000000'
+    depth: 1
+    field: IdealGlobalNode
+- - r
+  - Offset: 210
+    content: '[_KEXECUTE_OPTIONS Flags] @ 0xFA8001466C02'
+    depth: 1
+    field: Flags
+- - r
+  - Offset: 0
+    content: ' [BitField(6-7):DisableExceptionChainValidation]: 0x00000001'
+    depth: 2
+    field: DisableExceptionChainValidation
+- - r
+  - Offset: 0
+    content: ' [BitField(2-3):DisableThunkEmulation]: 0x00000000'
+    depth: 2
+    field: DisableThunkEmulation
+- - r
+  - Offset: 0
+    content: ' [BitField(0-1):ExecuteDisable]: 0x00000001'
+    depth: 2
+    field: ExecuteDisable
+- - r
+  - Offset: 0
+    content: ' [BitField(4-5):ExecuteDispatchEnable]: 0x00000001'
+    depth: 2
+    field: ExecuteDispatchEnable
+- - r
+  - Offset: 0
+    content: ' [BitField(1-2):ExecuteEnable]: 0x00000000'
+    depth: 2
+    field: ExecuteEnable
+- - r
+  - Offset: 0
+    content: ' [unsigned char:ExecuteOptions]: 0x00000079'
+    depth: 2
+    field: ExecuteOptions
+- - r
+  - Offset: 0
+    content: ' [BitField(5-6):ImageDispatchEnable]: 0x00000001'
+    depth: 2
+    field: ImageDispatchEnable
+- - r
+  - Offset: 0
+    content: ' [BitField(3-4):Permanent]: 0x00000001'
+    depth: 2
+    field: Permanent
+- - r
+  - Offset: 0
+    content: ' [BitField(7-8):Spare]: 0x00000000'
+    depth: 2
+    field: Spare
+- - r
+  - Offset: 211
+    content: ' [unsigned char:Unused1]: 0x00000000'
+    depth: 1
+    field: Unused1
+- - r
+  - Offset: 212
+    content: ' [unsigned long:Unused2]: 0x00000000'
+    depth: 1
+    field: Unused2
+- - r
+  - Offset: 216
+    content: ' [unsigned long:Unused4]: 0x00000000'
+    depth: 1
+    field: Unused4
+- - r
+  - Offset: 220
+    content: '[_KSTACK_COUNT StackCount] @ 0xFA8001466C0C'
+    depth: 1
+    field: StackCount
+- - r
+  - Offset: 0
+    content: ' [BitField(3-32):StackCount]: 0x00000015'
+    depth: 2
+    field: StackCount
+- - r
+  - Offset: 0
+    content: ' [BitField(0-3):State]: 0x00000000'
+    depth: 2
+    field: State
+- - r
+  - Offset: 0
+    content: ' [long:Value]: 0x000000A8'
+    depth: 2
+    field: Value
+- - r
+  - Offset: 224
+    content: '[_LIST_ENTRY ProcessListEntry] @ 0xFA8001466C10'
+    depth: 1
+    field: ProcessListEntry
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA800220CC10] (Flink)>
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80014B5420] (Blink)>
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 240
+    content: ' [unsigned long long:CycleTime]: 0x55E64C18'
+    depth: 1
+    field: CycleTime
+- - r
+  - Offset: 248
+    content: ' [unsigned long:KernelTime]: 0x00000017'
+    depth: 1
+    field: KernelTime
+- - r
+  - Offset: 252
+    content: ' [unsigned long:UserTime]: 0x0000000F'
+    depth: 1
+    field: UserTime
+- - r
+  - Offset: 256
+    content: <Void Pointer to [0x00000000] (InstrumentationCallback)>
+    depth: 1
+    field: InstrumentationCallback
+- - r
+  - Offset: 264
+    content: '[_KGDTENTRY64 LdtSystemDescriptor] @ 0xFA8001466C38'
+    depth: 1
+    field: LdtSystemDescriptor
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Alignment]: 0x00000000'
+    depth: 2
+    field: Alignment
+- - r
+  - Offset: 0
+    content: ' [unsigned short:LimitLow]: 0x00000000'
+    depth: 2
+    field: LimitLow
+- - r
+  - Offset: 2
+    content: ' [unsigned short:BaseLow]: 0x00000000'
+    depth: 2
+    field: BaseLow
+- - r
+  - Offset: 4
+    content: '[<unnamed-8642> Bits] @ 0xFA8001466C3C'
+    depth: 2
+    field: Bits
+- - r
+  - Offset: 0
+    content: ' [BitField(24-32):BaseHigh]: 0x00000000'
+    depth: 3
+    field: BaseHigh
+- - r
+  - Offset: 0
+    content: ' [BitField(0-8):BaseMiddle]: 0x00000000'
+    depth: 3
+    field: BaseMiddle
+- - r
+  - Offset: 0
+    content: ' [BitField(22-23):DefaultBig]: 0x00000000'
+    depth: 3
+    field: DefaultBig
+- - r
+  - Offset: 0
+    content: ' [BitField(13-15):Dpl]: 0x00000000'
+    depth: 3
+    field: Dpl
+- - r
+  - Offset: 0
+    content: ' [BitField(23-24):Granularity]: 0x00000000'
+    depth: 3
+    field: Granularity
+- - r
+  - Offset: 0
+    content: ' [BitField(16-20):LimitHigh]: 0x00000000'
+    depth: 3
+    field: LimitHigh
+- - r
+  - Offset: 0
+    content: ' [BitField(21-22):LongMode]: 0x00000000'
+    depth: 3
+    field: LongMode
+- - r
+  - Offset: 0
+    content: ' [BitField(15-16):Present]: 0x00000000'
+    depth: 3
+    field: Present
+- - r
+  - Offset: 0
+    content: ' [BitField(20-21):System]: 0x00000000'
+    depth: 3
+    field: System
+- - r
+  - Offset: 0
+    content: ' [BitField(8-13):Type]: 0x00000000'
+    depth: 3
+    field: Type
+- - r
+  - Offset: 4
+    content: '[<unnamed-8638> Bytes] @ 0xFA8001466C3C'
+    depth: 2
+    field: Bytes
+- - r
+  - Offset: 0
+    content: ' [unsigned char:BaseMiddle]: 0x00000000'
+    depth: 3
+    field: BaseMiddle
+- - r
+  - Offset: 1
+    content: ' [unsigned char:Flags1]: 0x00000000'
+    depth: 3
+    field: Flags1
+- - r
+  - Offset: 2
+    content: ' [unsigned char:Flags2]: 0x00000000'
+    depth: 3
+    field: Flags2
+- - r
+  - Offset: 3
+    content: ' [unsigned char:BaseHigh]: 0x00000000'
+    depth: 3
+    field: BaseHigh
+- - r
+  - Offset: 8
+    content: ' [unsigned long:BaseUpper]: 0x00000000'
+    depth: 2
+    field: BaseUpper
+- - r
+  - Offset: 12
+    content: ' [unsigned long:MustBeZero]: 0x00000000'
+    depth: 2
+    field: MustBeZero
+- - r
+  - Offset: 280
+    content: <Void Pointer to [0x00000000] (LdtBaseAddress)>
+    depth: 1
+    field: LdtBaseAddress
+- - r
+  - Offset: 288
+    content: '[_KGUARDED_MUTEX LdtProcessLock] @ 0xFA8001466C50'
+    depth: 1
+    field: LdtProcessLock
+- - r
+  - Offset: 0
+    content: ' [long:Count]: 0x00000001'
+    depth: 2
+    field: Count
+- - r
+  - Offset: 8
+    content: <_KTHREAD Pointer to [0x00000000] (Owner)>
+    depth: 2
+    field: Owner
+- - r
+  - Offset: 16
+    content: ' [unsigned long:Contention]: 0x00000000'
+    depth: 2
+    field: Contention
+- - r
+  - Offset: 24
+    content: '[_KGATE Gate] @ 0xFA8001466C68'
+    depth: 2
+    field: Gate
+- - r
+  - Offset: 0
+    content: '[_DISPATCHER_HEADER Header] @ 0xFA8001466C68'
+    depth: 3
+    field: Header
+- - r
+  - Offset: 0
+    content: ' [long:Lock]: 0x00060107'
+    depth: 4
+    field: Lock
+- - r
+  - Offset: 0
+    content: ' [Enumeration:Type]: 0x00000007 (GateObject)'
+    depth: 4
+    field: Type
+- - r
+  - Offset: 1
+    content: ' [unsigned char:Abandoned]: 0x00000001'
+    depth: 4
+    field: Abandoned
+- - r
+  - Offset: 1
+    content: ' [BitField(0-1):Absolute]: 0x00000001'
+    depth: 4
+    field: Absolute
+- - r
+  - Offset: 1
+    content: ' [BitField(1-2):Coalescable]: 0x00000000'
+    depth: 4
+    field: Coalescable
+- - r
+  - Offset: 1
+    content: ' [BitField(3-8):EncodedTolerableDelay]: 0x00000000'
+    depth: 4
+    field: EncodedTolerableDelay
+- - r
+  - Offset: 1
+    content: ' [BitField(2-3):KeepShifting]: 0x00000000'
+    depth: 4
+    field: KeepShifting
+- - r
+  - Offset: 1
+    content: ' [unsigned char:Signalling]: 0x00000001'
+    depth: 4
+    field: Signalling
+- - r
+  - Offset: 1
+    content: ' [unsigned char:TimerControlFlags]: 0x00000001'
+    depth: 4
+    field: TimerControlFlags
+- - r
+  - Offset: 2
+    content: ' [BitField(2-3):CounterProfiling]: 0x00000001'
+    depth: 4
+    field: CounterProfiling
+- - r
+  - Offset: 2
+    content: ' [BitField(0-1):CpuThrottled]: 0x00000000'
+    depth: 4
+    field: CpuThrottled
+- - r
+  - Offset: 2
+    content: ' [BitField(1-2):CycleProfiling]: 0x00000001'
+    depth: 4
+    field: CycleProfiling
+- - r
+  - Offset: 2
+    content: ' [unsigned char:Hand]: 0x00000006'
+    depth: 4
+    field: Hand
+- - r
+  - Offset: 2
+    content: ' [BitField(3-8):Reserved]: 0x00000000'
+    depth: 4
+    field: Reserved
+- - r
+  - Offset: 2
+    content: ' [unsigned char:Size]: 0x00000006'
+    depth: 4
+    field: Size
+- - r
+  - Offset: 2
+    content: ' [unsigned char:ThreadControlFlags]: 0x00000006'
+    depth: 4
+    field: ThreadControlFlags
+- - r
+  - Offset: 3
+    content: ' [BitField(0-1):ActiveDR7]: 0x00000000'
+    depth: 4
+    field: ActiveDR7
+- - r
+  - Offset: 3
+    content: ' [unsigned char:DebugActive]: 0x00000000'
+    depth: 4
+    field: DebugActive
+- - r
+  - Offset: 3
+    content: ' [unsigned char:DpcActive]: 0x00000000'
+    depth: 4
+    field: DpcActive
+- - r
+  - Offset: 3
+    content: ' [BitField(7-8):Expired]: 0x00000000'
+    depth: 4
+    field: Expired
+- - r
+  - Offset: 3
+    content: ' [BitField(0-6):Index]: 0x00000000'
+    depth: 4
+    field: Index
+- - r
+  - Offset: 3
+    content: ' [BitField(6-7):Inserted]: 0x00000000'
+    depth: 4
+    field: Inserted
+- - r
+  - Offset: 3
+    content: ' [BitField(1-2):Instrumented]: 0x00000000'
+    depth: 4
+    field: Instrumented
+- - r
+  - Offset: 3
+    content: ' [BitField(2-6):Reserved2]: 0x00000000'
+    depth: 4
+    field: Reserved2
+- - r
+  - Offset: 3
+    content: ' [unsigned char:TimerMiscFlags]: 0x00000000'
+    depth: 4
+    field: TimerMiscFlags
+- - r
+  - Offset: 3
+    content: ' [BitField(7-8):UmsPrimary]: 0x00000000'
+    depth: 4
+    field: UmsPrimary
+- - r
+  - Offset: 3
+    content: ' [BitField(6-7):UmsScheduled]: 0x00000000'
+    depth: 4
+    field: UmsScheduled
+- - r
+  - Offset: 4
+    content: ' [long:SignalState]: 0x00000000'
+    depth: 4
+    field: SignalState
+- - r
+  - Offset: 8
+    content: '[_LIST_ENTRY WaitListHead] @ 0xFA8001466C70'
+    depth: 4
+    field: WaitListHead
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA8001466C70] (Flink)>
+    depth: 5
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA8001466C70] (Blink)>
+    depth: 5
+    field: Blink
+- - r
+  - Offset: 48
+    content: ' [unsigned long:CombinedApcDisable]: 0x00000000'
+    depth: 2
+    field: CombinedApcDisable
+- - r
+  - Offset: 48
+    content: ' [short:KernelApcDisable]: 0x00000000'
+    depth: 2
+    field: KernelApcDisable
+- - r
+  - Offset: 50
+    content: ' [short:SpecialApcDisable]: 0x00000000'
+    depth: 2
+    field: SpecialApcDisable
+- - r
+  - Offset: 344
+    content: ' [unsigned short:LdtFreeSelectorHint]: 0x00000000'
+    depth: 1
+    field: LdtFreeSelectorHint
+- - r
+  - Offset: 346
+    content: ' [unsigned short:LdtTableLength]: 0x00000000'
+    depth: 1
+    field: LdtTableLength
+- - r
+  - Offset: 352
+    content: '[_EX_PUSH_LOCK ProcessLock] @ 0xFA8001466C90'
+    depth: 0
+    field: ProcessLock
+- - r
+  - Offset: 0
+    content: ' [BitField(0-1):Locked]: 0x00000000'
+    depth: 1
+    field: Locked
+- - r
+  - Offset: 0
+    content: ' [BitField(3-4):MultipleShared]: 0x00000000'
+    depth: 1
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content: <Void Pointer to [0x00000000] (Ptr)>
+    depth: 1
+    field: Ptr
+- - r
+  - Offset: 0
+    content: ' [BitField(4-64):Shared]: 0x00000000'
+    depth: 1
+    field: Shared
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Value]: 0x00000000'
+    depth: 1
+    field: Value
+- - r
+  - Offset: 0
+    content: ' [BitField(1-2):Waiting]: 0x00000000'
+    depth: 1
+    field: Waiting
+- - r
+  - Offset: 0
+    content: ' [BitField(2-3):Waking]: 0x00000000'
+    depth: 1
+    field: Waking
+- - r
+  - Offset: 360
+    content: ' [WinFileTime:CreateTime]: 0x5508CE82 (2015-03-18 01:01:54+0000)'
+    depth: 0
+    field: CreateTime
+- - r
+  - Offset: 368
+    content: ' [WinFileTime:ExitTime]: 0x00000000 (-)'
+    depth: 0
+    field: ExitTime
+- - r
+  - Offset: 376
+    content: '[_EX_RUNDOWN_REF RundownProtect] @ 0xFA8001466CA8'
+    depth: 0
+    field: RundownProtect
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Count]: 0x00000000'
+    depth: 1
+    field: Count
+- - r
+  - Offset: 0
+    content: <Void Pointer to [0x00000000] (Ptr)>
+    depth: 1
+    field: Ptr
+- - r
+  - Offset: 384
+    content: ' [unsigned int:UniqueProcessId]: 0x000003F0'
+    depth: 0
+    field: UniqueProcessId
+- - r
+  - Offset: 392
+    content: '[_LIST_ENTRY ActiveProcessLinks] @ 0xFA8001466CB8'
+    depth: 0
+    field: ActiveProcessLinks
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA800220CCB8] (Flink)>
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80014B54C8] (Blink)>
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 408
+    content: <Array 2 x unsigned long long @ 0xFA8001466CC8>
+    depth: 0
+    field: ProcessQuotaUsage
+- - r
+  - Offset: 424
+    content: <Array 2 x unsigned long long @ 0xFA8001466CD8>
+    depth: 0
+    field: ProcessQuotaPeak
+- - r
+  - Offset: 440
+    content: ' [unsigned long long:CommitCharge]: 0x0000312D'
+    depth: 0
+    field: CommitCharge
+- - r
+  - Offset: 448
+    content: <_EPROCESS_QUOTA_BLOCK Pointer to [0xFA8001CC3840] (QuotaBlock)>
+    depth: 0
+    field: QuotaBlock
+- - r
+  - Offset: 456
+    content: <_PS_CPU_QUOTA_BLOCK Pointer to [0x00000000] (CpuQuotaBlock)>
+    depth: 0
+    field: CpuQuotaBlock
+- - r
+  - Offset: 464
+    content: ' [unsigned long long:PeakVirtualSize]: 0x0D872000'
+    depth: 0
+    field: PeakVirtualSize
+- - r
+  - Offset: 472
+    content: ' [unsigned long long:VirtualSize]: 0x0C1A0000'
+    depth: 0
+    field: VirtualSize
+- - r
+  - Offset: 480
+    content: '[_LIST_ENTRY SessionProcessLinks] @ 0xFA8001466D10'
+    depth: 0
+    field: SessionProcessLinks
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA800220CD10] (Flink)>
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80014B5520] (Blink)>
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 496
+    content: <Void Pointer to [0x00000000] (DebugPort)>
+    depth: 0
+    field: DebugPort
+- - r
+  - Offset: 504
+    content: <Void Pointer to [0xFA8001BD6C30] (ExceptionPortData)>
+    depth: 0
+    field: ExceptionPortData
+- - r
+  - Offset: 504
+    content: ' [BitField(0-3):ExceptionPortState]: 0x00000000'
+    depth: 0
+    field: ExceptionPortState
+- - r
+  - Offset: 504
+    content: ' [unsigned long long:ExceptionPortValue]: 0xFFFFFA8001BD6C30'
+    depth: 0
+    field: ExceptionPortValue
+- - r
+  - Offset: 512
+    content: <_HANDLE_TABLE Pointer to [0xF8A0015894E0] (ObjectTable)>
+    depth: 0
+    field: ObjectTable
+- - r
+  - Offset: 520
+    content: '[_EX_FAST_REF Token] @ 0xFA8001466D38'
+    depth: 0
+    field: Token
+- - r
+  - Offset: 0
+    content: <None Pointer to [0xF8A0015B6A90] (Pointer)>
+    depth: 1
+    field: Object
+- - r
+  - Offset: 0
+    content: ' [BitField(0-4):RefCnt]: 0x00000006'
+    depth: 1
+    field: RefCnt
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Value]: 0xFFFFF8A0015B6A96'
+    depth: 1
+    field: Value
+- - r
+  - Offset: 528
+    content: ' [unsigned long long:WorkingSetPage]: 0x0000A263'
+    depth: 0
+    field: WorkingSetPage
+- - r
+  - Offset: 536
+    content: '[_EX_PUSH_LOCK AddressCreationLock] @ 0xFA8001466D48'
+    depth: 0
+    field: AddressCreationLock
+- - r
+  - Offset: 0
+    content: ' [BitField(0-1):Locked]: 0x00000000'
+    depth: 1
+    field: Locked
+- - r
+  - Offset: 0
+    content: ' [BitField(3-4):MultipleShared]: 0x00000000'
+    depth: 1
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content: <Void Pointer to [0x00000000] (Ptr)>
+    depth: 1
+    field: Ptr
+- - r
+  - Offset: 0
+    content: ' [BitField(4-64):Shared]: 0x00000000'
+    depth: 1
+    field: Shared
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Value]: 0x00000000'
+    depth: 1
+    field: Value
+- - r
+  - Offset: 0
+    content: ' [BitField(1-2):Waiting]: 0x00000000'
+    depth: 1
+    field: Waiting
+- - r
+  - Offset: 0
+    content: ' [BitField(2-3):Waking]: 0x00000000'
+    depth: 1
+    field: Waking
+- - r
+  - Offset: 544
+    content: <_ETHREAD Pointer to [0x00000000] (RotateInProgress)>
+    depth: 0
+    field: RotateInProgress
+- - r
+  - Offset: 552
+    content: <_ETHREAD Pointer to [0x00000000] (ForkInProgress)>
+    depth: 0
+    field: ForkInProgress
+- - r
+  - Offset: 560
+    content: ' [unsigned long long:HardwareTrigger]: 0x00000000'
+    depth: 0
+    field: HardwareTrigger
+- - r
+  - Offset: 568
+    content: <_MM_AVL_TABLE Pointer to [0x00000000] (PhysicalVadRoot)>
+    depth: 0
+    field: PhysicalVadRoot
+- - r
+  - Offset: 576
+    content: <Void Pointer to [0x00000000] (CloneRoot)>
+    depth: 0
+    field: CloneRoot
+- - r
+  - Offset: 584
+    content: ' [unsigned long long:NumberOfPrivatePages]: 0x000028E8'
+    depth: 0
+    field: NumberOfPrivatePages
+- - r
+  - Offset: 592
+    content: ' [unsigned long long:NumberOfLockedPages]: 0x00000000'
+    depth: 0
+    field: NumberOfLockedPages
+- - r
+  - Offset: 600
+    content: <Void Pointer to [0xF900C204F300] (Win32Process)>
+    depth: 0
+    field: Win32Process
+- - r
+  - Offset: 608
+    content: <_EJOB Pointer to [0xFA80021DE210] (Job)>
+    depth: 0
+    field: Job
+- - r
+  - Offset: 616
+    content: <Void Pointer to [0xF8A0015A8480] (SectionObject)>
+    depth: 0
+    field: SectionObject
+- - r
+  - Offset: 624
+    content: <Void Pointer to [0x00AA0000] (SectionBaseAddress)>
+    depth: 0
+    field: SectionBaseAddress
+- - r
+  - Offset: 632
+    content: ' [unsigned long:Cookie]: 0x4C9B4417'
+    depth: 0
+    field: Cookie
+- - r
+  - Offset: 636
+    content: ' [unsigned long:UmsScheduledThreads]: 0x00000000'
+    depth: 0
+    field: UmsScheduledThreads
+- - r
+  - Offset: 640
+    content: <_PAGEFAULT_HISTORY Pointer to [0x00000000] (WorkingSetWatch)>
+    depth: 0
+    field: WorkingSetWatch
+- - r
+  - Offset: 648
+    content: <Void Pointer to [0x00000050] (Win32WindowStation)>
+    depth: 0
+    field: Win32WindowStation
+- - r
+  - Offset: 656
+    content: ' [unsigned int:InheritedFromUniqueProcessId]: 0x000007FC'
+    depth: 0
+    field: InheritedFromUniqueProcessId
+- - r
+  - Offset: 664
+    content: <Void Pointer to [0x00000000] (LdtInformation)>
+    depth: 0
+    field: LdtInformation
+- - r
+  - Offset: 672
+    content: <Void Pointer to [0x00000000] (Spare)>
+    depth: 0
+    field: Spare
+- - r
+  - Offset: 680
+    content: ' [unsigned long long:ConsoleHostProcess]: 0x00000000'
+    depth: 0
+    field: ConsoleHostProcess
+- - r
+  - Offset: 688
+    content: <Void Pointer to [0xF8A000E76B30] (DeviceMap)>
+    depth: 0
+    field: DeviceMap
+- - r
+  - Offset: 696
+    content: <Void Pointer to [0xFA800234ABA0] (EtwDataSource)>
+    depth: 0
+    field: EtwDataSource
+- - r
+  - Offset: 704
+    content: <Void Pointer to [0x7EFA4000] (FreeTebHint)>
+    depth: 0
+    field: FreeTebHint
+- - r
+  - Offset: 712
+    content: <Void Pointer to [0x100000000] (FreeUmsTebHint)>
+    depth: 0
+    field: FreeUmsTebHint
+- - r
+  - Offset: 720
+    content: ' [unsigned long long:Filler]: 0x00000000'
+    depth: 0
+    field: Filler
+- - r
+  - Offset: 720
+    content: '[_HARDWARE_PTE PageDirectoryPte] @ 0xFA8001466E00'
+    depth: 0
+    field: PageDirectoryPte
+- - r
+  - Offset: 0
+    content: ' [BitField(5-6):Accessed]: 0x00000000'
+    depth: 1
+    field: Accessed
+- - r
+  - Offset: 0
+    content: ' [BitField(4-5):CacheDisable]: 0x00000000'
+    depth: 1
+    field: CacheDisable
+- - r
+  - Offset: 0
+    content: ' [BitField(9-10):CopyOnWrite]: 0x00000000'
+    depth: 1
+    field: CopyOnWrite
+- - r
+  - Offset: 0
+    content: ' [BitField(6-7):Dirty]: 0x00000000'
+    depth: 1
+    field: Dirty
+- - r
+  - Offset: 0
+    content: ' [BitField(8-9):Global]: 0x00000000'
+    depth: 1
+    field: Global
+- - r
+  - Offset: 0
+    content: ' [BitField(7-8):LargePage]: 0x00000000'
+    depth: 1
+    field: LargePage
+- - r
+  - Offset: 0
+    content: ' [BitField(63-64):NoExecute]: 0x00000000'
+    depth: 1
+    field: NoExecute
+- - r
+  - Offset: 0
+    content: ' [BitField(2-3):Owner]: 0x00000000'
+    depth: 1
+    field: Owner
+- - r
+  - Offset: 0
+    content: ' [BitField(12-48):PageFrameNumber]: 0x00000000'
+    depth: 1
+    field: PageFrameNumber
+- - r
+  - Offset: 0
+    content: ' [BitField(10-11):Prototype]: 0x00000000'
+    depth: 1
+    field: Prototype
+- - r
+  - Offset: 0
+    content: ' [BitField(52-63):SoftwareWsIndex]: 0x00000000'
+    depth: 1
+    field: SoftwareWsIndex
+- - r
+  - Offset: 0
+    content: ' [BitField(0-1):Valid]: 0x00000000'
+    depth: 1
+    field: Valid
+- - r
+  - Offset: 0
+    content: ' [BitField(1-2):Write]: 0x00000000'
+    depth: 1
+    field: Write
+- - r
+  - Offset: 0
+    content: ' [BitField(3-4):WriteThrough]: 0x00000000'
+    depth: 1
+    field: WriteThrough
+- - r
+  - Offset: 0
+    content: ' [BitField(11-12):reserved0]: 0x00000000'
+    depth: 1
+    field: reserved0
+- - r
+  - Offset: 0
+    content: ' [BitField(48-52):reserved1]: 0x00000000'
+    depth: 1
+    field: reserved1
+- - r
+  - Offset: 728
+    content: <_MM_SESSION_SPACE Pointer to [0xF88003A77000] (Session)>
+    depth: 0
+    field: Session
+- - r
+  - Offset: 736
+    content: ' [String:ImageFileName]: ''iexplore.exe\x00'''
+    depth: 0
+    field: ImageFileName
+- - r
+  - Offset: 751
+    content: ' [unsigned char:PriorityClass]: 0x00000002'
+    depth: 0
+    field: PriorityClass
+- - r
+  - Offset: 752
+    content: '[_LIST_ENTRY JobLinks] @ 0xFA8001466E20'
+    depth: 0
+    field: JobLinks
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA800220CE20] (Flink)>
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80021DE238] (Blink)>
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 768
+    content: <Void Pointer to [0x00000000] (LockedPagesList)>
+    depth: 0
+    field: LockedPagesList
+- - r
+  - Offset: 776
+    content: '[_LIST_ENTRY ThreadListHead] @ 0xFA8001466E38'
+    depth: 0
+    field: ThreadListHead
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA8001468480] (Flink)>
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80013F8480] (Blink)>
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 792
+    content: <Void Pointer to [0x00000000] (SecurityPort)>
+    depth: 0
+    field: SecurityPort
+- - r
+  - Offset: 800
+    content: <Void Pointer to [0x7EFDE000] (Wow64Process)>
+    depth: 0
+    field: Wow64Process
+- - r
+  - Offset: 808
+    content: ' [unsigned long:ActiveThreads]: 0x00000015'
+    depth: 0
+    field: ActiveThreads
+- - r
+  - Offset: 812
+    content: ' [unsigned long:ImagePathHash]: 0x4B6C9213'
+    depth: 0
+    field: ImagePathHash
+- - r
+  - Offset: 816
+    content: ' [unsigned long:DefaultHardErrorProcessing]: 0x00000000'
+    depth: 0
+    field: DefaultHardErrorProcessing
+- - r
+  - Offset: 820
+    content: ' [long:LastThreadExitStatus]: 0x00000000'
+    depth: 0
+    field: LastThreadExitStatus
+- - r
+  - Offset: 824
+    content: <_PEB Pointer to [0x7EFDF000] (Pointer)>
+    depth: 0
+    field: Peb
+- - r
+  - Offset: 832
+    content: '[_EX_FAST_REF PrefetchTrace] @ 0xFA8001466E70'
+    depth: 0
+    field: PrefetchTrace
+- - r
+  - Offset: 0
+    content: <None Pointer to [0x00000000] (Pointer)>
+    depth: 1
+    field: Object
+- - r
+  - Offset: 0
+    content: ' [BitField(0-4):RefCnt]: 0x00000000'
+    depth: 1
+    field: RefCnt
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Value]: 0x00000000'
+    depth: 1
+    field: Value
+- - r
+  - Offset: 840
+    content: '[_LARGE_INTEGER ReadOperationCount] @ 0xFA8001466E78'
+    depth: 0
+    field: ReadOperationCount
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x00000016'
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: ' [long long:QuadPart]: 0x00000016'
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content: '[<unnamed-4167> u] @ 0xFA8001466E78'
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x00000016'
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 848
+    content: '[_LARGE_INTEGER WriteOperationCount] @ 0xFA8001466E80'
+    depth: 0
+    field: WriteOperationCount
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x00000398'
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: ' [long long:QuadPart]: 0x00000398'
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content: '[<unnamed-4167> u] @ 0xFA8001466E80'
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x00000398'
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 856
+    content: '[_LARGE_INTEGER OtherOperationCount] @ 0xFA8001466E88'
+    depth: 0
+    field: OtherOperationCount
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x000017DE'
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: ' [long long:QuadPart]: 0x000017DE'
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content: '[<unnamed-4167> u] @ 0xFA8001466E88'
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x000017DE'
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 864
+    content: '[_LARGE_INTEGER ReadTransferCount] @ 0xFA8001466E90'
+    depth: 0
+    field: ReadTransferCount
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x00048CF6'
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: ' [long long:QuadPart]: 0x00048CF6'
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content: '[<unnamed-4167> u] @ 0xFA8001466E90'
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x00048CF6'
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 872
+    content: '[_LARGE_INTEGER WriteTransferCount] @ 0xFA8001466E98'
+    depth: 0
+    field: WriteTransferCount
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x001386DF'
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: ' [long long:QuadPart]: 0x001386DF'
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content: '[<unnamed-4167> u] @ 0xFA8001466E98'
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x001386DF'
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 880
+    content: '[_LARGE_INTEGER OtherTransferCount] @ 0xFA8001466EA0'
+    depth: 0
+    field: OtherTransferCount
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x0002CB39'
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: ' [long long:QuadPart]: 0x0002CB39'
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content: '[<unnamed-4167> u] @ 0xFA8001466EA0'
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: ' [unsigned long:LowPart]: 0x0002CB39'
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: ' [long:HighPart]: 0x00000000'
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 888
+    content: ' [unsigned long long:CommitChargeLimit]: 0x00000000'
+    depth: 0
+    field: CommitChargeLimit
+- - r
+  - Offset: 896
+    content: ' [unsigned long long:CommitChargePeak]: 0x000032EC'
+    depth: 0
+    field: CommitChargePeak
+- - r
+  - Offset: 904
+    content: <Void Pointer to [0x00000000] (AweInfo)>
+    depth: 0
+    field: AweInfo
+- - r
+  - Offset: 912
+    content: '[_SE_AUDIT_PROCESS_CREATION_INFO SeAuditProcessCreationInfo] @ 0xFA8001466EC0'
+    depth: 0
+    field: SeAuditProcessCreationInfo
+- - r
+  - Offset: 0
+    content: <_OBJECT_NAME_INFORMATION Pointer to [0xFA8002205340] (ImageFileName)>
+    depth: 1
+    field: ImageFileName
+- - r
+  - Offset: 920
+    content: '[_MMSUPPORT Vm] @ 0xFA8001466EC8'
+    depth: 0
+    field: Vm
+- - r
+  - Offset: 0
+    content: '[_EX_PUSH_LOCK WorkingSetMutex] @ 0xFA8001466EC8'
+    depth: 1
+    field: WorkingSetMutex
+- - r
+  - Offset: 0
+    content: ' [BitField(0-1):Locked]: 0x00000000'
+    depth: 2
+    field: Locked
+- - r
+  - Offset: 0
+    content: ' [BitField(3-4):MultipleShared]: 0x00000000'
+    depth: 2
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content: <Void Pointer to [0x00000000] (Ptr)>
+    depth: 2
+    field: Ptr
+- - r
+  - Offset: 0
+    content: ' [BitField(4-64):Shared]: 0x00000000'
+    depth: 2
+    field: Shared
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Value]: 0x00000000'
+    depth: 2
+    field: Value
+- - r
+  - Offset: 0
+    content: ' [BitField(1-2):Waiting]: 0x00000000'
+    depth: 2
+    field: Waiting
+- - r
+  - Offset: 0
+    content: ' [BitField(2-3):Waking]: 0x00000000'
+    depth: 2
+    field: Waking
+- - r
+  - Offset: 8
+    content: <_KGATE Pointer to [0x00000000] (ExitGate)>
+    depth: 1
+    field: ExitGate
+- - r
+  - Offset: 16
+    content: <Void Pointer to [0x00000000] (AccessLog)>
+    depth: 1
+    field: AccessLog
+- - r
+  - Offset: 24
+    content: '[_LIST_ENTRY WorkingSetExpansionLinks] @ 0xFA8001466EE0'
+    depth: 1
+    field: WorkingSetExpansionLinks
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA800220CEE0] (Flink)>
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA8001454D00] (Blink)>
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 40
+    content: <Array 7 x unsigned long @ 0xFA8001466EF0>
+    depth: 1
+    field: AgeDistribution
+- - r
+  - Offset: 68
+    content: ' [unsigned long:MinimumWorkingSetSize]: 0x00000032'
+    depth: 1
+    field: MinimumWorkingSetSize
+- - r
+  - Offset: 72
+    content: ' [unsigned long:WorkingSetSize]: 0x00003BE4'
+    depth: 1
+    field: WorkingSetSize
+- - r
+  - Offset: 76
+    content: ' [unsigned long:WorkingSetPrivateSize]: 0x000028ED'
+    depth: 1
+    field: WorkingSetPrivateSize
+- - r
+  - Offset: 80
+    content: ' [unsigned long:MaximumWorkingSetSize]: 0x00000159'
+    depth: 1
+    field: MaximumWorkingSetSize
+- - r
+  - Offset: 84
+    content: ' [unsigned long:ChargedWslePages]: 0x00000000'
+    depth: 1
+    field: ChargedWslePages
+- - r
+  - Offset: 88
+    content: ' [unsigned long:ActualWslePages]: 0x0000001E'
+    depth: 1
+    field: ActualWslePages
+- - r
+  - Offset: 92
+    content: ' [unsigned long:WorkingSetSizeOverhead]: 0x00000029'
+    depth: 1
+    field: WorkingSetSizeOverhead
+- - r
+  - Offset: 96
+    content: ' [unsigned long:PeakWorkingSetSize]: 0x00003CC0'
+    depth: 1
+    field: PeakWorkingSetSize
+- - r
+  - Offset: 100
+    content: ' [unsigned long:HardFaultCount]: 0x0000014F'
+    depth: 1
+    field: HardFaultCount
+- - r
+  - Offset: 104
+    content: <_MMWSL Pointer to [0xF70001080000] (VmWorkingSetList)>
+    depth: 1
+    field: VmWorkingSetList
+- - r
+  - Offset: 112
+    content: ' [unsigned short:NextPageColor]: 0x0000A105'
+    depth: 1
+    field: NextPageColor
+- - r
+  - Offset: 114
+    content: ' [unsigned short:LastTrimStamp]: 0x000000C7'
+    depth: 1
+    field: LastTrimStamp
+- - r
+  - Offset: 116
+    content: ' [unsigned long:PageFaultCount]: 0x000082C5'
+    depth: 1
+    field: PageFaultCount
+- - r
+  - Offset: 120
+    content: ' [unsigned long:RepurposeCount]: 0x00003FA2'
+    depth: 1
+    field: RepurposeCount
+- - r
+  - Offset: 124
+    content: <Array 2 x unsigned long @ 0xFA8001466F44>
+    depth: 1
+    field: Spare
+- - r
+  - Offset: 132
+    content: '[_MMSUPPORT_FLAGS Flags] @ 0xFA8001466F4C'
+    depth: 1
+    field: Flags
+- - r
+  - Offset: 0
+    content: ' [BitField(6-7):ForceTrim]: 0x00000000'
+    depth: 2
+    field: ForceTrim
+- - r
+  - Offset: 0
+    content: ' [BitField(5-6):MaximumWorkingSetHard]: 0x00000000'
+    depth: 2
+    field: MaximumWorkingSetHard
+- - r
+  - Offset: 0
+    content: ' [BitField(7-8):MinimumWorkingSetHard]: 0x00000000'
+    depth: 2
+    field: MinimumWorkingSetHard
+- - r
+  - Offset: 0
+    content: ' [BitField(3-4):ModwriterAttached]: 0x00000000'
+    depth: 2
+    field: ModwriterAttached
+- - r
+  - Offset: 0
+    content: ' [BitField(4-5):TrimHard]: 0x00000000'
+    depth: 2
+    field: TrimHard
+- - r
+  - Offset: 0
+    content: ' [BitField(0-3):WorkingSetType]: 0x00000000'
+    depth: 2
+    field: WorkingSetType
+- - r
+  - Offset: 1
+    content: ' [BitField(4-8):PageStealers]: 0x00000000'
+    depth: 2
+    field: PageStealers
+- - r
+  - Offset: 1
+    content: ' [BitField(3-4):Reserved]: 0x00000000'
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 1
+    content: ' [BitField(0-1):SessionMaster]: 0x00000000'
+    depth: 2
+    field: SessionMaster
+- - r
+  - Offset: 1
+    content: ' [BitField(1-3):TrimmerState]: 0x00000000'
+    depth: 2
+    field: TrimmerState
+- - r
+  - Offset: 2
+    content: ' [BitField(0-8):MemoryPriority]: 0x00000000'
+    depth: 2
+    field: MemoryPriority
+- - r
+  - Offset: 3
+    content: ' [BitField(3-8):Available]: 0x00000000'
+    depth: 2
+    field: Available
+- - r
+  - Offset: 3
+    content: ' [BitField(2-3):ExpansionFailed]: 0x00000000'
+    depth: 2
+    field: ExpansionFailed
+- - r
+  - Offset: 3
+    content: ' [BitField(1-2):VmExiting]: 0x00000000'
+    depth: 2
+    field: VmExiting
+- - r
+  - Offset: 3
+    content: ' [BitField(0-1):WsleDeleted]: 0x00000000'
+    depth: 2
+    field: WsleDeleted
+- - r
+  - Offset: 1056
+    content: '[_LIST_ENTRY MmProcessLinks] @ 0xFA8001466F50'
+    depth: 0
+    field: MmProcessLinks
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xFA800220CF50] (Flink)>
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xFA80014B5760] (Blink)>
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 1072
+    content: <Void Pointer to [0x7FFF0000] (HighestUserAddress)>
+    depth: 0
+    field: HighestUserAddress
+- - r
+  - Offset: 1080
+    content: ' [unsigned long:ModifiedPageCount]: 0x0000036C'
+    depth: 0
+    field: ModifiedPageCount
+- - r
+  - Offset: 1084
+    content: ' [BitField(1-2):AccountingFolded]: 0x00000000'
+    depth: 0
+    field: AccountingFolded
+- - r
+  - Offset: 1084
+    content: ' [BitField(18-19):AffinityPermanent]: 0x00000000'
+    depth: 0
+    field: AffinityPermanent
+- - r
+  - Offset: 1084
+    content: ' [BitField(19-20):AffinityUpdateEnable]: 0x00000000'
+    depth: 0
+    field: AffinityUpdateEnable
+- - r
+  - Offset: 1084
+    content: ' [BitField(12-15):DefaultPagePriority]: 0x00000005'
+    depth: 0
+    field: DefaultPagePriority
+- - r
+  - Offset: 1084
+    content: ' [BitField(3-4):ExitProcessReported]: 0x00000000'
+    depth: 0
+    field: ExitProcessReported
+- - r
+  - Offset: 1084
+    content: ' [BitField(21-22):ExplicitAffinity]: 0x00000000'
+    depth: 0
+    field: ExplicitAffinity
+- - r
+  - Offset: 1084
+    content: ' [unsigned long:Flags2]: 0x0000D010'
+    depth: 0
+    field: Flags2
+- - r
+  - Offset: 1084
+    content: ' [BitField(7-8):HandleTableRundown]: 0x00000000'
+    depth: 0
+    field: HandleTableRundown
+- - r
+  - Offset: 1084
+    content: ' [BitField(0-1):JobNotReallyActive]: 0x00000000'
+    depth: 0
+    field: JobNotReallyActive
+- - r
+  - Offset: 1084
+    content: ' [BitField(5-6):LastReportMemory]: 0x00000000'
+    depth: 0
+    field: LastReportMemory
+- - r
+  - Offset: 1084
+    content: ' [BitField(8-9):NeedsHandleRundown]: 0x00000000'
+    depth: 0
+    field: NeedsHandleRundown
+- - r
+  - Offset: 1084
+    content: ' [BitField(2-3):NewProcessReported]: 0x00000000'
+    depth: 0
+    field: NewProcessReported
+- - r
+  - Offset: 1084
+    content: ' [BitField(10-11):NumaAware]: 0x00000000'
+    depth: 0
+    field: NumaAware
+- - r
+  - Offset: 1084
+    content: ' [BitField(15-16):PrimaryTokenFrozen]: 0x00000001'
+    depth: 0
+    field: PrimaryTokenFrozen
+- - r
+  - Offset: 1084
+    content: ' [BitField(16-17):ProcessVerifierTarget]: 0x00000000'
+    depth: 0
+    field: ProcessVerifierTarget
+- - r
+  - Offset: 1084
+    content: ' [BitField(20-21):PropagateNode]: 0x00000000'
+    depth: 0
+    field: PropagateNode
+- - r
+  - Offset: 1084
+    content: ' [BitField(11-12):ProtectedProcess]: 0x00000000'
+    depth: 0
+    field: ProtectedProcess
+- - r
+  - Offset: 1084
+    content: ' [BitField(9-10):RefTraceEnabled]: 0x00000000'
+    depth: 0
+    field: RefTraceEnabled
+- - r
+  - Offset: 1084
+    content: ' [BitField(4-5):ReportCommitChanges]: 0x00000001'
+    depth: 0
+    field: ReportCommitChanges
+- - r
+  - Offset: 1084
+    content: ' [BitField(6-7):ReportPhysicalPageChanges]: 0x00000000'
+    depth: 0
+    field: ReportPhysicalPageChanges
+- - r
+  - Offset: 1084
+    content: ' [BitField(17-18):StackRandomizationDisabled]: 0x00000000'
+    depth: 0
+    field: StackRandomizationDisabled
+- - r
+  - Offset: 1088
+    content: ' [BitField(10-12):AddressSpaceInitialized]: 0x00000002'
+    depth: 0
+    field: AddressSpaceInitialized
+- - r
+  - Offset: 1088
+    content: ' [BitField(13-14):BreakOnTermination]: 0x00000000'
+    depth: 0
+    field: BreakOnTermination
+- - r
+  - Offset: 1088
+    content: ' [BitField(0-1):CreateReported]: 0x00000001'
+    depth: 0
+    field: CreateReported
+- - r
+  - Offset: 1088
+    content: ' [BitField(25-26):CrossSessionCreate]: 0x00000000'
+    depth: 0
+    field: CrossSessionCreate
+- - r
+  - Offset: 1088
+    content: ' [BitField(27-30):DefaultIoPriority]: 0x00000002'
+    depth: 0
+    field: DefaultIoPriority
+- - r
+  - Offset: 1088
+    content: ' [BitField(14-15):DeprioritizeViews]: 0x00000000'
+    depth: 0
+    field: DeprioritizeViews
+- - r
+  - Offset: 1088
+    content: ' [unsigned long:Flags]: 0x144D0801'
+    depth: 0
+    field: Flags
+- - r
+  - Offset: 1088
+    content: ' [BitField(8-9):ForkFailed]: 0x00000000'
+    depth: 0
+    field: ForkFailed
+- - r
+  - Offset: 1088
+    content: ' [BitField(18-19):HasAddressSpace]: 0x00000001'
+    depth: 0
+    field: HasAddressSpace
+- - r
+  - Offset: 1088
+    content: ' [BitField(22-23):ImageNotifyDone]: 0x00000001'
+    depth: 0
+    field: ImageNotifyDone
+- - r
+  - Offset: 1088
+    content: ' [BitField(20-21):InjectInpageErrors]: 0x00000000'
+    depth: 0
+    field: InjectInpageErrors
+- - r
+  - Offset: 1088
+    content: ' [BitField(19-20):LaunchPrefetched]: 0x00000001'
+    depth: 0
+    field: LaunchPrefetched
+- - r
+  - Offset: 1088
+    content: ' [BitField(1-2):NoDebugInherit]: 0x00000000'
+    depth: 0
+    field: NoDebugInherit
+- - r
+  - Offset: 1088
+    content: ' [BitField(6-7):OutswapEnabled]: 0x00000000'
+    depth: 0
+    field: OutswapEnabled
+- - r
+  - Offset: 1088
+    content: ' [BitField(7-8):Outswapped]: 0x00000000'
+    depth: 0
+    field: Outswapped
+- - r
+  - Offset: 1088
+    content: ' [BitField(17-18):OverrideAddressSpace]: 0x00000000'
+    depth: 0
+    field: OverrideAddressSpace
+- - r
+  - Offset: 1088
+    content: ' [BitField(23-24):PdeUpdateNeeded]: 0x00000000'
+    depth: 0
+    field: PdeUpdateNeeded
+- - r
+  - Offset: 1088
+    content: ' [BitField(3-4):ProcessDelete]: 0x00000000'
+    depth: 0
+    field: ProcessDelete
+- - r
+  - Offset: 1088
+    content: ' [BitField(2-3):ProcessExiting]: 0x00000000'
+    depth: 0
+    field: ProcessExiting
+- - r
+  - Offset: 1088
+    content: ' [BitField(16-17):ProcessInSession]: 0x00000001'
+    depth: 0
+    field: ProcessInSession
+- - r
+  - Offset: 1088
+    content: ' [BitField(26-27):ProcessInserted]: 0x00000001'
+    depth: 0
+    field: ProcessInserted
+- - r
+  - Offset: 1088
+    content: ' [BitField(30-31):ProcessSelfDelete]: 0x00000000'
+    depth: 0
+    field: ProcessSelfDelete
+- - r
+  - Offset: 1088
+    content: ' [BitField(12-13):SetTimerResolution]: 0x00000000'
+    depth: 0
+    field: SetTimerResolution
+- - r
+  - Offset: 1088
+    content: ' [BitField(31-32):SetTimerResolutionLink]: 0x00000000'
+    depth: 0
+    field: SetTimerResolutionLink
+- - r
+  - Offset: 1088
+    content: ' [BitField(24-25):VdmAllowed]: 0x00000000'
+    depth: 0
+    field: VdmAllowed
+- - r
+  - Offset: 1088
+    content: ' [BitField(5-6):VmDeleted]: 0x00000000'
+    depth: 0
+    field: VmDeleted
+- - r
+  - Offset: 1088
+    content: ' [BitField(21-22):VmTopDown]: 0x00000000'
+    depth: 0
+    field: VmTopDown
+- - r
+  - Offset: 1088
+    content: ' [BitField(4-5):Wow64SplitPages]: 0x00000000'
+    depth: 0
+    field: Wow64SplitPages
+- - r
+  - Offset: 1088
+    content: ' [BitField(9-10):Wow64VaSpace4Gb]: 0x00000000'
+    depth: 0
+    field: Wow64VaSpace4Gb
+- - r
+  - Offset: 1088
+    content: ' [BitField(15-16):WriteWatch]: 0x00000000'
+    depth: 0
+    field: WriteWatch
+- - r
+  - Offset: 1092
+    content: ' [long:ExitStatus]: 0x00000103'
+    depth: 0
+    field: ExitStatus
+- - r
+  - Offset: 1096
+    content: '[_MM_AVL_TABLE VadRoot] @ 0xFA8001466F78'
+    depth: 0
+    field: VadRoot
+- - r
+  - Offset: 0
+    content: '[_MMADDRESS_NODE BalancedRoot] @ 0xFA8001466F78'
+    depth: 1
+    field: BalancedRoot
+- - r
+  - Offset: -12
+    content: ' [String:Tag]: ''\x10\xd0\x00'''
+    depth: 2
+    field: Tag
+- - r
+  - Offset: 0
+    content: '[<unnamed-5581> u1] @ 0xFA8001466F78'
+    depth: 2
+    field: u1
+- - r
+  - Offset: 0
+    content: ' [BitField(0-2):Balance]: 0x00000000'
+    depth: 3
+    field: Balance
+- - r
+  - Offset: 0
+    content: <_MMADDRESS_NODE Pointer to [0xFA8001466F78] (Parent)>
+    depth: 3
+    field: Parent
+- - r
+  - Offset: 8
+    content: <_MMADDRESS_NODE Pointer to [0x00000000] (LeftChild)>
+    depth: 2
+    field: LeftChild
+- - r
+  - Offset: 16
+    content: <_MMADDRESS_NODE Pointer to [0xFA8002379600] (RightChild)>
+    depth: 2
+    field: RightChild
+- - r
+  - Offset: 24
+    content: ' [unsigned long long:StartingVpn]: 0x00000000'
+    depth: 2
+    field: StartingVpn
+- - r
+  - Offset: 32
+    content: ' [unsigned long long:EndingVpn]: 0x00000000'
+    depth: 2
+    field: EndingVpn
+- - r
+  - Offset: 40
+    content: ' [BitField(0-5):DepthOfTree]: 0x0000000B'
+    depth: 1
+    field: DepthOfTree
+- - r
+  - Offset: 40
+    content: ' [BitField(8-64):NumberGenericTableElements]: 0x00000226'
+    depth: 1
+    field: NumberGenericTableElements
+- - r
+  - Offset: 40
+    content: ' [BitField(5-8):Unused]: 0x00000000'
+    depth: 1
+    field: Unused
+- - r
+  - Offset: 48
+    content: <Void Pointer to [0xFA8002379600] (NodeHint)>
+    depth: 1
+    field: NodeHint
+- - r
+  - Offset: 56
+    content: <Void Pointer to [0x00000000] (NodeFreeHint)>
+    depth: 1
+    field: NodeFreeHint
+- - r
+  - Offset: 1160
+    content: '[_ALPC_PROCESS_CONTEXT AlpcContext] @ 0xFA8001466FB8'
+    depth: 0
+    field: AlpcContext
+- - r
+  - Offset: 0
+    content: '[_EX_PUSH_LOCK Lock] @ 0xFA8001466FB8'
+    depth: 1
+    field: Lock
+- - r
+  - Offset: 0
+    content: ' [BitField(0-1):Locked]: 0x00000000'
+    depth: 2
+    field: Locked
+- - r
+  - Offset: 0
+    content: ' [BitField(3-4):MultipleShared]: 0x00000000'
+    depth: 2
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content: <Void Pointer to [0x00000000] (Ptr)>
+    depth: 2
+    field: Ptr
+- - r
+  - Offset: 0
+    content: ' [BitField(4-64):Shared]: 0x00000000'
+    depth: 2
+    field: Shared
+- - r
+  - Offset: 0
+    content: ' [unsigned long long:Value]: 0x00000000'
+    depth: 2
+    field: Value
+- - r
+  - Offset: 0
+    content: ' [BitField(1-2):Waiting]: 0x00000000'
+    depth: 2
+    field: Waiting
+- - r
+  - Offset: 0
+    content: ' [BitField(2-3):Waking]: 0x00000000'
+    depth: 2
+    field: Waking
+- - r
+  - Offset: 8
+    content: '[_LIST_ENTRY ViewListHead] @ 0xFA8001466FC0'
+    depth: 1
+    field: ViewListHead
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0xF8A0015C2FF0] (Flink)>
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0xF8A0015C2FF0] (Blink)>
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 24
+    content: ' [unsigned long long:PagedPoolQuotaCache]: 0x00000360'
+    depth: 1
+    field: PagedPoolQuotaCache
+- - r
+  - Offset: 1192
+    content: '[_LIST_ENTRY TimerResolutionLink] @ 0xFA8001466FD8'
+    depth: 0
+    field: TimerResolutionLink
+- - r
+  - Offset: 0
+    content: <_LIST_ENTRY Pointer to [0x00000000] (Flink)>
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content: <_LIST_ENTRY Pointer to [0x00000000] (Blink)>
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 1208
+    content: ' [unsigned long:RequestedTimerResolution]: 0x00000000'
+    depth: 0
+    field: RequestedTimerResolution
+- - r
+  - Offset: 1212
+    content: ' [unsigned long:ActiveThreadsHighWatermark]: 0x00000028'
+    depth: 0
+    field: ActiveThreadsHighWatermark
+- - r
+  - Offset: 1216
+    content: ' [unsigned long:SmallestTimerResolution]: 0x00000000'
+    depth: 0
+    field: SmallestTimerResolution
+- - r
+  - Offset: 1224
+    content: <_PO_DIAG_STACK_RECORD Pointer to [0x00000000] (TimerResolutionStackRecord)>
+    depth: 0
+    field: TimerResolutionStackRecord
+- - x
+- - x

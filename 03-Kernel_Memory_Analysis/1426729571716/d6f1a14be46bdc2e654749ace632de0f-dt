@@ -1,0 +1,121 @@
+- - m
+  - cookie: 137273
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 137273
+    plugin_name: dt
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - f
+  - "[{0} {1}] @ {2:addrpad} \n"
+  - _POOL_HEADER
+  - _POOL_HEADER
+  - 275427684149968
+- - t
+  - - child:
+        style: address
+      max_depth: 5
+      name: Offset
+      type: TreeNode
+      width: 20
+    - cname: field
+      formatstring: '30'
+      name: Field
+    - cname: content
+      name: Content
+  - {}
+- - r
+  - Offset: 0
+    content: ' [BitField(16-24):BlockSize]: 0x00000053'
+    depth: 0
+    field: BlockSize
+- - r
+  - Offset: 0
+    content: ' [BitField(8-16):PoolIndex]: 0x00000000'
+    depth: 0
+    field: PoolIndex
+- - r
+  - Offset: 0
+    content: ' [Enumeration:Enumeration]: 0x00000002 (NonPagedPoolMustSucceed)'
+    depth: 0
+    field: PoolType
+- - r
+  - Offset: 0
+    content: ' [BitField(0-8):PreviousSize]: 0x00000022'
+    depth: 0
+    field: PreviousSize
+- - r
+  - Offset: 0
+    content: ' [unsigned long:Ulong1]: 0x02530022'
+    depth: 0
+    field: Ulong1
+- - r
+  - Offset: 4
+    content: ' [unsigned long:PoolTag]: 0xE36F7250'
+    depth: 0
+    field: PoolTag
+- - r
+  - Offset: 8
+    content: ' [unsigned short:AllocatorBackTraceIndex]: 0x0000FFFF'
+    depth: 0
+    field: AllocatorBackTraceIndex
+- - r
+  - Offset: 8
+    content: <_EPROCESS Pointer to [0xFFFFFFFFFFFF] (ProcessBilled)>
+    depth: 0
+    field: ProcessBilled
+- - r
+  - Offset: 10
+    content: ' [unsigned short:PoolTagHash]: 0x0000FFFF'
+    depth: 0
+    field: PoolTagHash
+- - x
+- - x

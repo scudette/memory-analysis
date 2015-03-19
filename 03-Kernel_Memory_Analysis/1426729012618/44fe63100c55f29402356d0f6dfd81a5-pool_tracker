@@ -1,0 +1,5064 @@
+- - m
+  - cookie: 98179
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 98179
+    plugin_name: pool_tracker
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: tag
+      formatstring: '4'
+      name: Tag
+    - cname: nonpaged
+      formatstring: '>20'
+      name: NP Alloc
+    - cname: nonpaged_bytes
+      formatstring: '>10'
+      name: NP Bytes
+    - cname: nonpaged
+      formatstring: '>20'
+      name: P Alloc
+    - cname: nonpaged_bytes
+      formatstring: '>10'
+      name: P Bytes
+  - sort:
+    - tag
+- - p
+  - ' -'
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 768
+    tag: Ntfl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDpo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ObCI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TCPT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PoIr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcST
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wnln
+- - r
+  - nonpaged: 12 (1)
+    nonpaged_bytes: 96
+    tag: HidC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: HidP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LSwi
+- - r
+  - nonpaged: 12 (12)
+    nonpaged_bytes: 36864
+    tag: CM10
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 4096
+    tag: CM20
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcHT
+- - r
+  - nonpaged: 3 (0)
+    nonpaged_bytes: 0
+    tag: CM50
+- - r
+  - nonpaged: 61879 (0)
+    nonpaged_bytes: 0
+    tag: 'Se  '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RMcc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InTl
+- - r
+  - nonpaged: 6 (4)
+    nonpaged_bytes: 704
+    tag: AxLd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InNl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDpb
+- - r
+  - nonpaged: 601 (377)
+    nonpaged_bytes: 44304
+    tag: Ntfo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WSKs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDco
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDmo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlCC
+- - r
+  - nonpaged: 5 (5)
+    nonpaged_bytes: 592
+    tag: Afdt
+- - r
+  - nonpaged: 4 (0)
+    nonpaged_bytes: 0
+    tag: 'KRC '
+- - r
+  - nonpaged: 15188 (392)
+    nonpaged_bytes: 92256
+    tag: ObSc
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: WmiI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlNP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlPP
+- - r
+  - nonpaged: 2652 (0)
+    nonpaged_bytes: 0
+    tag: Rqrv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlKC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPsi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDdb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDfb
+- - r
+  - nonpaged: 4 (1)
+    nonpaged_bytes: 1104
+    tag: UlCP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlAP
+- - r
+  - nonpaged: 8989 (543)
+    nonpaged_bytes: 93904
+    tag: NtFU
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 224
+    tag: inte
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSb
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 528
+    tag: UdfC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EtwS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlTP
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 192
+    tag: ARFT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Cngb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gla4
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Txts
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FlpC
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: SeLS
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: Txfs
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 64
+    tag: SeFS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NbtX
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: NBSr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FlmC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AleD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPpv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMRm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoSD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SmMm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IrbL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcLR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gdxg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TmTx
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IrpL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FOCX
+- - r
+  - nonpaged: 5986 (482)
+    nonpaged_bytes: 147296
+    tag: Luaf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WanO
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoCx
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 576
+    tag: Cs@&
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Powe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NSpc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfK
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: QoSc
+- - r
+  - nonpaged: 71 (2)
+    nonpaged_bytes: 96
+    tag: AcpS
+- - r
+  - nonpaged: 35 (35)
+    nonpaged_bytes: 819200
+    tag: PfNL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pnp2
+- - r
+  - nonpaged: 2 (1)
+    nonpaged_bytes: 288
+    tag: TVEP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'BIG '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Afdh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AcpF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nsic
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlAO
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcRH
+- - r
+  - nonpaged: 7 (0)
+    nonpaged_bytes: 0
+    tag: CsEs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Time
+- - r
+  - nonpaged: 10 (10)
+    nonpaged_bytes: 496
+    tag: FxLc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcPf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PlPi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfpH
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RSPt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb01
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EtwR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDpn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UMB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AmlC
+- - r
+  - nonpaged: 544 (509)
+    nonpaged_bytes: 152336
+    tag: CMSc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: _STR
+- - r
+  - nonpaged: 1429 (6)
+    nonpaged_bytes: 1536
+    tag: FIcn
+- - r
+  - nonpaged: 3 (0)
+    nonpaged_bytes: 0
+    tag: NDda
+- - r
+  - nonpaged: 13 (4)
+    nonpaged_bytes: 224
+    tag: FIvn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDoa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDfa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udfv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: USBD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDan
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ntfn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RASw
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 1120
+    tag: Udfi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NLNa
+- - r
+  - nonpaged: 604 (233)
+    nonpaged_bytes: 24352
+    tag: Wmip
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NtfT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SeTl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PPMp
+- - r
+  - nonpaged: 3 (0)
+    nonpaged_bytes: 0
+    tag: NDca
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FLli
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 800
+    tag: TmLl
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 128
+    tag: PcwQ
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 272
+    tag: HD01
+- - r
+  - nonpaged: 7 (1)
+    nonpaged_bytes: 528
+    tag: Cs@%
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PsEx
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: DOPE
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NtFa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmCp
+- - r
+  - nonpaged: 6 (6)
+    nonpaged_bytes: 768
+    tag: MmDp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Nls '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlLl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: StDa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSa
+- - r
+  - nonpaged: 10 (2)
+    nonpaged_bytes: 6368
+    tag: 'Vga '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmLp
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 320
+    tag: MuSp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AleE
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FlSB
+- - r
+  - nonpaged: 684 (147)
+    nonpaged_bytes: 17024
+    tag: Sdba
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: StBn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PnpL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMct
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Lfsr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TSNb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MuFc
+- - r
+  - nonpaged: 14 (0)
+    nonpaged_bytes: 0
+    tag: SWki
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MuIc
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: PmRP
+- - r
+  - nonpaged: 4337 (2407)
+    nonpaged_bytes: 180880
+    tag: Ntf0
+- - r
+  - nonpaged: 12 (0)
+    nonpaged_bytes: 0
+    tag: UdfN
+- - r
+  - nonpaged: 130006 (556)
+    nonpaged_bytes: 32624
+    tag: CMNb
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 4096
+    tag: CMSb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NtFW
+- - r
+  - nonpaged: 41 (0)
+    nonpaged_bytes: 0
+    tag: ObTn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RaDA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UdpN
+- - r
+  - nonpaged: 5 (0)
+    nonpaged_bytes: 0
+    tag: CMLb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AfdB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCo
+- - r
+  - nonpaged: 5 (5)
+    nonpaged_bytes: 20480
+    tag: WDIs
+- - r
+  - nonpaged: 278 (0)
+    nonpaged_bytes: 0
+    tag: PnpK
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Iptt
+- - r
+  - nonpaged: 3869 (2337)
+    nonpaged_bytes: 112176
+    tag: PfFK
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pnp1
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfpI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I4ba
+- - r
+  - nonpaged: 22 (0)
+    nonpaged_bytes: 0
+    tag: SeAl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UxSH
+- - r
+  - nonpaged: 588 (334)
+    nonpaged_bytes: 32064
+    tag: CMpb
+- - r
+  - nonpaged: 412 (347)
+    nonpaged_bytes: 38864
+    tag: CMnb
+- - r
+  - nonpaged: 6 (0)
+    nonpaged_bytes: 0
+    tag: NpFw
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 1504
+    tag: LS2h
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcpI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcWK
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Vadm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmNo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AcpD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmIo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wait
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I4ma
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TSic
+- - r
+  - nonpaged: 1839 (1824)
+    nonpaged_bytes: 262656
+    tag: FSim
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FSfm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ReTa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmDb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb03
+- - r
+  - nonpaged: 42 (0)
+    nonpaged_bytes: 0
+    tag: SYPK
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TCPc
+- - r
+  - nonpaged: 12586 (0)
+    nonpaged_bytes: 0
+    tag: Ppio
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I4ua
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb33
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: HdWM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: apth
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzWp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PpRb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WmiG
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gla5
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VadF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FLsh
+- - r
+  - nonpaged: 13 (0)
+    nonpaged_bytes: 0
+    tag: FIvp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ObjT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RxTl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb23
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 64
+    tag: NpFC
+- - r
+  - nonpaged: 8 (6)
+    nonpaged_bytes: 960
+    tag: AzAp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcZe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NLmc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDoc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIk
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NLcp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDpc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDrc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NLap
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ntfp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VadS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDpp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NtfV
+- - r
+  - nonpaged: 10 (0)
+    nonpaged_bytes: 0
+    tag: 'Mup '
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 64
+    tag: PoSL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AleS
+- - r
+  - nonpaged: 39671 (2770)
+    nonpaged_bytes: 493888
+    tag: IoNm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FIPc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udft
+- - r
+  - nonpaged: 1274 (1251)
+    nonpaged_bytes: 180144
+    tag: Ntfc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TmRm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NLcc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TmTm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbuf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LeGe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NetQ
+- - r
+  - nonpaged: 3 (0)
+    nonpaged_bytes: 0
+    tag: VoSp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSc
+- - r
+  - nonpaged: 169 (113)
+    nonpaged_bytes: 5504
+    tag: SeAk
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NtfI
+- - r
+  - nonpaged: 7 (0)
+    nonpaged_bytes: 0
+    tag: 'Mem '
+- - r
+  - nonpaged: 1320 (0)
+    nonpaged_bytes: 0
+    tag: CmVn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NeWQ
+- - r
+  - nonpaged: 5 (0)
+    nonpaged_bytes: 0
+    tag: Txf1
+- - r
+  - nonpaged: 37 (0)
+    nonpaged_bytes: 0
+    tag: MuDn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: StCc
+- - r
+  - nonpaged: 10392 (17)
+    nonpaged_bytes: 2368
+    tag: NtFI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AfdP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmIn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ussy
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 560
+    tag: LSsh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AfdC
+- - r
+  - nonpaged: 98 (0)
+    nonpaged_bytes: 0
+    tag: MmLn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PmIB
+- - r
+  - nonpaged: 278 (216)
+    nonpaged_bytes: 18336
+    tag: MmDT
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: PsSl
+- - r
+  - nonpaged: 8 (8)
+    nonpaged_bytes: 1744
+    tag: PcwR
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 96
+    tag: Wdog
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcSl
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 176
+    tag: Cs@$
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmCa
+- - r
+  - nonpaged: 181 (160)
+    nonpaged_bytes: 472832
+    tag: Obtb
+- - r
+  - nonpaged: 172 (31)
+    nonpaged_bytes: 273632
+    tag: Clfs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TSrp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PnpJ
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NBSf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcWq
+- - r
+  - nonpaged: 43 (0)
+    nonpaged_bytes: 0
+    tag: EtwD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: wido
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMwi
+- - r
+  - nonpaged: 10605 (5)
+    nonpaged_bytes: 288
+    tag: 'Io  '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FxLa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WanN
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VfIT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMfi
+- - r
+  - nonpaged: 5 (5)
+    nonpaged_bytes: 736
+    tag: MuUn
+- - r
+  - nonpaged: 21 (11)
+    nonpaged_bytes: 2000
+    tag: SAad
+- - r
+  - nonpaged: 38 (5)
+    nonpaged_bytes: 624
+    tag: PRCx
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Muta
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCG
+- - r
+  - nonpaged: 105 (3)
+    nonpaged_bytes: 480
+    tag: AcpR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udf4
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 1440
+    tag: Txtr
+- - r
+  - nonpaged: 17 (0)
+    nonpaged_bytes: 0
+    tag: WL03
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Vadl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RawN
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCa
+- - r
+  - nonpaged: 3300 (95)
+    nonpaged_bytes: 4192
+    tag: CMIn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlCN
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: 'DG  '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CMVa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SpWi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScDa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Thre
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 128
+    tag: Txte
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UdpA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NbL2
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I4nb
+- - r
+  - nonpaged: 8 (4)
+    nonpaged_bytes: 192
+    tag: FSel
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VfAT
+- - r
+  - nonpaged: 13 (13)
+    nonpaged_bytes: 195600
+    tag: CMCa
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: WLR3
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InPE
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PooL
+- - r
+  - nonpaged: 11 (0)
+    nonpaged_bytes: 0
+    tag: RpcS
+- - r
+  - nonpaged: 176 (0)
+    nonpaged_bytes: 0
+    tag: Ppen
+- - r
+  - nonpaged: 169 (2)
+    nonpaged_bytes: 4176
+    tag: Ppin
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EtwQ
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nnbl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScDM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: BkCh
+- - r
+  - nonpaged: 18 (0)
+    nonpaged_bytes: 0
+    tag: AcpB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Icp '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UdfF
+- - r
+  - nonpaged: 10 (10)
+    nonpaged_bytes: 800
+    tag: UlPS
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: UlUS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb22
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzWd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: iGig
+- - r
+  - nonpaged: 24 (16)
+    nonpaged_bytes: 672
+    tag: AzSd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NSpg
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 80
+    tag: Cs@#
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NpFR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzJd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Io
+- - r
+  - nonpaged: 19 (19)
+    nonpaged_bytes: 3648
+    tag: ClfH
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzCd
+- - r
+  - nonpaged: 48 (32)
+    nonpaged_bytes: 2208
+    tag: AzAd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FxLg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InSB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TNbl
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: Sid0
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I6ai
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: FVE0
+- - r
+  - nonpaged: 65 (27)
+    nonpaged_bytes: 11904
+    tag: 'Lfs '
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 288
+    tag: CMPt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EtwC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcTW
+- - r
+  - nonpaged: 4 (0)
+    nonpaged_bytes: 0
+    tag: Efsm
+- - r
+  - nonpaged: 3 (1)
+    nonpaged_bytes: 64
+    tag: ScDg
+- - r
+  - nonpaged: 5 (5)
+    nonpaged_bytes: 1008
+    tag: NDse
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDar
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDre
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TdxB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ntfr
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 16384
+    tag: VmRb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AcpO
+- - r
+  - nonpaged: 16 (0)
+    nonpaged_bytes: 0
+    tag: EMqu
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 560
+    tag: LBpt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TmFN
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KSdh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PPMt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlP4
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: File
+- - r
+  - nonpaged: 11 (0)
+    nonpaged_bytes: 0
+    tag: FxL3
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TuV4
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KSoh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ccmp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PmPE
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 352
+    tag: Txfc
+- - r
+  - nonpaged: 74 (1)
+    nonpaged_bytes: 96
+    tag: PmTE
+- - r
+  - nonpaged: 29 (0)
+    nonpaged_bytes: 0
+    tag: RtlT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PmVE
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: VoSr
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: PpLg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TpWc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EQHb
+- - r
+  - nonpaged: 3514 (29)
+    nonpaged_bytes: 23120
+    tag: EtwP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: aFDC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: HTab
+- - r
+  - nonpaged: 3106 (2700)
+    nonpaged_bytes: 4556624
+    tag: MmSt
+- - r
+  - nonpaged: 10 (0)
+    nonpaged_bytes: 0
+    tag: IoRN
+- - r
+  - nonpaged: 10 (0)
+    nonpaged_bytes: 0
+    tag: KbdC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FlpS
+- - r
+  - nonpaged: 833 (717)
+    nonpaged_bytes: 62784
+    tag: AtmA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: L2T4
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDw1
+- - r
+  - nonpaged: 253 (0)
+    nonpaged_bytes: 0
+    tag: CM53
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: armp
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 4096
+    tag: CM13
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 96
+    tag: MmSg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ala4
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: BaNB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: DQUD
+- - r
+  - nonpaged: 59 (46)
+    nonpaged_bytes: 7360
+    tag: FSrN
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ObNM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Mdp '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScDs
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 131072
+    tag: EtwB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ' DMV'
+- - r
+  - nonpaged: 2 (1)
+    nonpaged_bytes: 64
+    tag: ScCs
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 368
+    tag: Udfl
+- - r
+  - nonpaged: 4 (3)
+    nonpaged_bytes: 352
+    tag: vdrv
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 96
+    tag: GOPM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NAcc
+- - r
+  - nonpaged: 197 (89)
+    nonpaged_bytes: 5936
+    tag: EMst
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TdxC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MqWl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Cdma
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PWQT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TCPr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Scbf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Mdl '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoSh
+- - r
+  - nonpaged: 6754 (460)
+    nonpaged_bytes: 49584
+    tag: EMit
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: IoFu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: DfCC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcVp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PoEa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WRKR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbtn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ObSt
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 512
+    tag: Txsc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcPc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcSc
+- - r
+  - nonpaged: 469 (286)
+    nonpaged_bytes: 22304
+    tag: PSet
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NBSn
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 384
+    tag: PlWl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InPP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InNP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcBc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbta
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 96
+    tag: PSwt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Plcl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RtPb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gla8
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: BatC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PnpV
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Call
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 224
+    tag: NpFD
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: SMBi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDrd
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: SeAi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDnd
+- - r
+  - nonpaged: 9 (9)
+    nonpaged_bytes: 36864
+    tag: CM32
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WanS
+- - r
+  - nonpaged: 3 (0)
+    nonpaged_bytes: 0
+    tag: NDsd
+- - r
+  - nonpaged: 3 (0)
+    nonpaged_bytes: 0
+    tag: CM52
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScB2
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VmLa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AcpP
+- - r
+  - nonpaged: 30 (0)
+    nonpaged_bytes: 0
+    tag: Txf0
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PnpI
+- - r
+  - nonpaged: 31 (1)
+    nonpaged_bytes: 64
+    tag: MuSf
+- - r
+  - nonpaged: 1449 (0)
+    nonpaged_bytes: 0
+    tag: AlEB
+- - r
+  - nonpaged: 139 (7)
+    nonpaged_bytes: 1520
+    tag: ClMn
+- - r
+  - nonpaged: 844 (18)
+    nonpaged_bytes: 576
+    tag: SeSi
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 48
+    tag: FxL2
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AfdR
+- - r
+  - nonpaged: 4 (4)
+    nonpaged_bytes: 1376
+    tag: MsPp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIj
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Cs@"
+- - r
+  - nonpaged: 4 (4)
+    nonpaged_bytes: 320
+    tag: Ntfd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ItoM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AfdE
+- - r
+  - nonpaged: 38 (14)
+    nonpaged_bytes: 7664
+    tag: FSrt
+- - r
+  - nonpaged: 7 (3)
+    nonpaged_bytes: 416
+    tag: NtfJ
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PmSD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfG
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gsem
+- - r
+  - nonpaged: 30 (26)
+    nonpaged_bytes: 2912
+    tag: FLfl
+- - r
+  - nonpaged: 6746 (20)
+    nonpaged_bytes: 2032
+    tag: NtFd
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: Mn01
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfpL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlCi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Irp '
+- - r
+  - nonpaged: 6 (1)
+    nonpaged_bytes: 16384
+    tag: PfFH
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LBdi
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 4096
+    tag: 'Ke  '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbt0
+- - r
+  - nonpaged: 24 (24)
+    nonpaged_bytes: 4224
+    tag: PcwC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcMb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TuPi
+- - r
+  - nonpaged: 22 (0)
+    nonpaged_bytes: 0
+    tag: TXHT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LBwi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Afdl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Init
+- - r
+  - nonpaged: 44 (0)
+    nonpaged_bytes: 0
+    tag: IoKB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FLTR
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 384
+    tag: PCSC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Acpt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcWC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcRL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: L2Ti
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KCNw
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmWe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb30
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TuSB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDw3
+- - r
+  - nonpaged: 16 (16)
+    nonpaged_bytes: 768
+    tag: MmFr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb20
+- - r
+  - nonpaged: 191 (185)
+    nonpaged_bytes: 24320
+    tag: Symb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wnds
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Alei
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 224
+    tag: ExEH
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoRi
+- - r
+  - nonpaged: 23 (1)
+    nonpaged_bytes: 112
+    tag: Dacl
+- - r
+  - nonpaged: 14450 (75)
+    nonpaged_bytes: 6976
+    tag: Strg
+- - r
+  - nonpaged: 394 (70)
+    nonpaged_bytes: 10080
+    tag: AlVi
+- - r
+  - nonpaged: 13 (0)
+    nonpaged_bytes: 0
+    tag: 'D2d '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlPi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmSe
+- - r
+  - nonpaged: 1151 (587)
+    nonpaged_bytes: 2419040
+    tag: MmRe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoTi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NSIr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Scs$
+- - r
+  - nonpaged: 294 (42)
+    nonpaged_bytes: 11424
+    tag: ObSq
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: FxDr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RhHi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CDmp
+- - r
+  - nonpaged: 12 (3)
+    nonpaged_bytes: 6944
+    tag: Cs@!
+- - r
+  - nonpaged: 20 (20)
+    nonpaged_bytes: 3952
+    tag: UlCE
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlAE
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlLE
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Mmpr
+- - r
+  - nonpaged: 154 (37)
+    nonpaged_bytes: 4544
+    tag: ObHd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: hibr
+- - r
+  - nonpaged: 660 (0)
+    nonpaged_bytes: 0
+    tag: SeLu
+- - r
+  - nonpaged: 34 (18)
+    nonpaged_bytes: 5152
+    tag: ArbL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AcpA
+- - r
+  - nonpaged: 15 (5)
+    nonpaged_bytes: 2000
+    tag: Txsa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcpL
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: CMTr
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 64
+    tag: HD20
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCe
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: HD30
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 2320
+    tag: rtPi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlPR
+- - r
+  - nonpaged: 11815 (2)
+    nonpaged_bytes: 272
+    tag: CMVe
+- - r
+  - nonpaged: 6 (6)
+    nonpaged_bytes: 352
+    tag: LS2x
+- - r
+  - nonpaged: 36 (36)
+    nonpaged_bytes: 2880
+    tag: CMPe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InPA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: asmp
+- - r
+  - nonpaged: 4 (3)
+    nonpaged_bytes: 12496
+    tag: Fwpp
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 768
+    tag: Batt
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: TAPI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Txrn
+- - r
+  - nonpaged: 22 (22)
+    nonpaged_bytes: 4928
+    tag: NpfF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FLex
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: PcRv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmSd
+- - r
+  - nonpaged: 11 (0)
+    nonpaged_bytes: 0
+    tag: FxL1
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlP6
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: AfdS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NbtV
+- - r
+  - nonpaged: 4 (0)
+    nonpaged_bytes: 0
+    tag: NDcs
+- - r
+  - nonpaged: 82 (0)
+    nonpaged_bytes: 0
+    tag: KSnv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PSPi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Etwt
+- - r
+  - nonpaged: 3846 (2349)
+    nonpaged_bytes: 451008
+    tag: FIcs
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 1536
+    tag: Ntfs
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 112
+    tag: Ntrs
+- - r
+  - nonpaged: 27 (22)
+    nonpaged_bytes: 6528
+    tag: PcSi
+- - r
+  - nonpaged: 17 (17)
+    nonpaged_bytes: 3488
+    tag: PcwO
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RawE
+- - r
+  - nonpaged: 6 (0)
+    nonpaged_bytes: 0
+    tag: MmLd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfpM
+- - r
+  - nonpaged: 6051 (2988)
+    nonpaged_bytes: 303696
+    tag: NtFs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AleP
+- - r
+  - nonpaged: 30 (30)
+    nonpaged_bytes: 1584
+    tag: ClMp
+- - r
+  - nonpaged: 16225 (0)
+    nonpaged_bytes: 0
+    tag: EMev
+- - r
+  - nonpaged: 180 (6)
+    nonpaged_bytes: 1024
+    tag: PciB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDif
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIu
+- - r
+  - nonpaged: 32 (0)
+    nonpaged_bytes: 0
+    tag: Ppdd
+- - r
+  - nonpaged: 2630 (2044)
+    nonpaged_bytes: 2518208
+    tag: Ntff
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDpf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlSP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDof
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcCi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcEi
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: CM21
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 8192
+    tag: CM11
+- - r
+  - nonpaged: 6 (1)
+    nonpaged_bytes: 144
+    tag: VoSs
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 128
+    tag: ScC1
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: smKG
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScB1
+- - r
+  - nonpaged: 18 (0)
+    nonpaged_bytes: 0
+    tag: IdeX
+- - r
+  - nonpaged: 23 (14)
+    nonpaged_bytes: 131808
+    tag: NtFf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClMc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ALPC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ala6
+- - r
+  - nonpaged: 19 (19)
+    nonpaged_bytes: 1782880
+    tag: ClfI
+- - r
+  - nonpaged: 8847 (8847)
+    nonpaged_bytes: 39489536
+    tag: CM31
+- - r
+  - nonpaged: 24 (20)
+    nonpaged_bytes: 1600
+    tag: PcDi
+- - r
+  - nonpaged: 31 (0)
+    nonpaged_bytes: 0
+    tag: ArbM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ReSe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: DfCB
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 160
+    tag: ReRe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcpM
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 128
+    tag: UlCD
+- - r
+  - nonpaged: 12 (0)
+    nonpaged_bytes: 0
+    tag: '8042'
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TdxA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Fl6D
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Rxbw
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDw2
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 96
+    tag: Txfo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScLW
+- - r
+  - nonpaged: 6979 (659)
+    nonpaged_bytes: 108176
+    tag: Sect
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TpWo
+- - r
+  - nonpaged: 6 (0)
+    nonpaged_bytes: 0
+    tag: UlRD
+- - r
+  - nonpaged: 3 (1)
+    nonpaged_bytes: 80
+    tag: UlSD
+- - r
+  - nonpaged: 6 (6)
+    nonpaged_bytes: 23968
+    tag: LSfR
+- - r
+  - nonpaged: 822 (523)
+    nonpaged_bytes: 87424
+    tag: SpSy
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcPt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlWQ
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Cont
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScLq
+- - r
+  - nonpaged: 63 (59)
+    nonpaged_bytes: 3776
+    tag: NtFL
+- - r
+  - nonpaged: 350 (5)
+    nonpaged_bytes: 208
+    tag: cbuf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcDM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcCM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AmlR
+- - r
+  - nonpaged: 126 (29)
+    nonpaged_bytes: 4432
+    tag: Vprt
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: EQSp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FstB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcBn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EQSc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcVa
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 64
+    tag: Azfg
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: KSsi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: BGIK
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMsl
+- - r
+  - nonpaged: 20 (1)
+    nonpaged_bytes: 64
+    tag: usbp
+- - r
+  - nonpaged: 391 (10)
+    nonpaged_bytes: 2464
+    tag: TunP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KsoO
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzSt
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 160
+    tag: Udfx
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMdl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMfl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcPT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 2UuQ
+- - r
+  - nonpaged: 6 (6)
+    nonpaged_bytes: 288
+    tag: TxTb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMpt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzFg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcEr
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 176
+    tag: Udfp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcPr
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: Pcge
+- - r
+  - nonpaged: 182 (131)
+    nonpaged_bytes: 17376
+    tag: PEAU
+- - r
+  - nonpaged: 779 (266)
+    nonpaged_bytes: 4256
+    tag: Frag
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMvo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pcle
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InF2
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcDe
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 336
+    tag: msis
+- - r
+  - nonpaged: 7 (0)
+    nonpaged_bytes: 0
+    tag: AlHd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Afd '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMRg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TWTa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ppmp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pnim
+- - r
+  - nonpaged: 163 (0)
+    nonpaged_bytes: 0
+    tag: PcCr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClMl
+- - r
+  - nonpaged: 10 (4)
+    nonpaged_bytes: 384
+    tag: Txfl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Tcpt
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 64
+    tag: Txdl
+- - r
+  - nonpaged: 24044 (668)
+    nonpaged_bytes: 42752
+    tag: SeAt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I4ai
+- - r
+  - nonpaged: 9 (0)
+    nonpaged_bytes: 0
+    tag: MuoC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WanI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UxSC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb28
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfE
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 336
+    tag: Txvl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb38
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Plcp
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 192
+    tag: Pnp9
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Uske
+- - r
+  - nonpaged: 8 (8)
+    nonpaged_bytes: 384
+    tag: Cbrb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RaMI
+- - r
+  - nonpaged: 13 (1)
+    nonpaged_bytes: 128
+    tag: HdCl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ReEv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Gla:'
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcRA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcDN
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcBm
+- - r
+  - nonpaged: 122 (2)
+    nonpaged_bytes: 112
+    tag: CscS
+- - r
+  - nonpaged: 1235 (1068)
+    nonpaged_bytes: 51264
+    tag: ObDi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ObCi
+- - r
+  - nonpaged: 12 (12)
+    nonpaged_bytes: 768
+    tag: EMpr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScDC
+- - r
+  - nonpaged: 4 (4)
+    nonpaged_bytes: 4160
+    tag: Ntfu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDwh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDqu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: User
+- - r
+  - nonpaged: 8 (8)
+    nonpaged_bytes: 131072
+    tag: CM26
+- - r
+  - nonpaged: 48 (48)
+    nonpaged_bytes: 204800
+    tag: CM16
+- - r
+  - nonpaged: 251 (141)
+    nonpaged_bytes: 199760
+    tag: CIsc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LS2p
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDch
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScPC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPdc
+- - r
+  - nonpaged: 10 (9)
+    nonpaged_bytes: 48704
+    tag: ArbA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIf
+- - r
+  - nonpaged: 137 (61)
+    nonpaged_bytes: 3904
+    tag: KSce
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NQoS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KSee
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: AmlI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pccr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SslC
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 496
+    tag: UlCJ
+- - r
+  - nonpaged: 92 (0)
+    nonpaged_bytes: 0
+    tag: Umpo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FLpc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcVm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Job '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Txfm
+- - r
+  - nonpaged: 27 (3)
+    nonpaged_bytes: 304
+    tag: UHUB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UNbl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IrpS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SeIf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbtk
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmCi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SmBf
+- - r
+  - nonpaged: 6881 (0)
+    nonpaged_bytes: 0
+    tag: NtFA
+- - r
+  - nonpaged: 8638 (0)
+    nonpaged_bytes: 0
+    tag: SeUs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FlpI
+- - r
+  - nonpaged: 7 (7)
+    nonpaged_bytes: 336
+    tag: TmRr
+- - r
+  - nonpaged: 19 (1)
+    nonpaged_bytes: 128
+    tag: BatM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PmPT
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 17952
+    tag: Txrm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wmiw
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PPMi
+- - r
+  - nonpaged: 13 (6)
+    nonpaged_bytes: 3232
+    tag: SmMs
+- - r
+  - nonpaged: 28 (14)
+    nonpaged_bytes: 1152
+    tag: SeLs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Mmdi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Sess
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 128
+    tag: TxfF
+- - r
+  - nonpaged: 5 (0)
+    nonpaged_bytes: 0
+    tag: CcPF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoEr
+- - r
+  - nonpaged: 57 (52)
+    nonpaged_bytes: 4992
+    tag: AlRr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMhf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcpN
+- - r
+  - nonpaged: 31 (0)
+    nonpaged_bytes: 0
+    tag: IdeP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NbtD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PmAT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: L2T1
+- - r
+  - nonpaged: 195 (35)
+    nonpaged_bytes: 5040
+    tag: AlRe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmHi
+- - r
+  - nonpaged: 8551 (464)
+    nonpaged_bytes: 74240
+    tag: AlSe
+- - r
+  - nonpaged: 6982 (2397)
+    nonpaged_bytes: 952976
+    tag: FMfn
+- - r
+  - nonpaged: 203 (0)
+    nonpaged_bytes: 0
+    tag: IoSe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmSi
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: PcKd
+- - r
+  - nonpaged: 32 (1)
+    nonpaged_bytes: 976
+    tag: mltr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMla
+- - r
+  - nonpaged: 8 (0)
+    nonpaged_bytes: 0
+    tag: FwSD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PTPc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScIO
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TdxM
+- - r
+  - nonpaged: 108452 (1191)
+    nonpaged_bytes: 226288
+    tag: 'Key '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NpFn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KSed
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb37
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EtwL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Mmpv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb17
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcVl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb27
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb07
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RxNr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Uref
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RxIr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: DfCg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UdMI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SeCL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MiSc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Acpg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gla;
+- - r
+  - nonpaged: 2762 (201)
+    nonpaged_bytes: 11728
+    tag: CMpi
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 96
+    tag: MVSN
+- - r
+  - nonpaged: 3296 (23)
+    nonpaged_bytes: 2752
+    tag: MntA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KeIn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ntft
+- - r
+  - nonpaged: 20 (9)
+    nonpaged_bytes: 928
+    tag: umbu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udfc
+- - r
+  - nonpaged: 7 (2)
+    nonpaged_bytes: 176
+    tag: AcpM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDst
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDrt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Filt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FVEl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FSmg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Devi
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: FxL5
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Itht
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDrw
+- - r
+  - nonpaged: 33 (0)
+    nonpaged_bytes: 0
+    tag: MmIh
+- - r
+  - nonpaged: 370 (207)
+    nonpaged_bytes: 18544
+    tag: Ppsu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmPh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Cs@+
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Dnod
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RxNf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AmlT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDId
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcRB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCB
+- - r
+  - nonpaged: 32 (5)
+    nonpaged_bytes: 560
+    tag: 'VM  '
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 80
+    tag: 'Vm  '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcpB
+- - r
+  - nonpaged: 2183 (2183)
+    nonpaged_bytes: 10039296
+    tag: CM25
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Dlst
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzSi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UIRP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzMi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzLi
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 48
+    tag: RxMs
+- - r
+  - nonpaged: 9 (9)
+    nonpaged_bytes: 1152
+    tag: UlCH
+- - r
+  - nonpaged: 132 (131)
+    nonpaged_bytes: 27248
+    tag: NtfC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlAU
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 48
+    tag: CM45
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbtm
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 784
+    tag: PsQt
+- - r
+  - nonpaged: 21 (18)
+    nonpaged_bytes: 1728
+    tag: PcSt
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 48
+    tag: IoFs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcRt
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 192
+    tag: Drmk
+- - r
+  - nonpaged: 342 (240)
+    nonpaged_bytes: 195840
+    tag: AlMs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Etwr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoUs
+- - r
+  - nonpaged: 145 (3)
+    nonpaged_bytes: 304
+    tag: Rx??
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPpa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udfb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pnp8
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UDNb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AleL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcEt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfTi
+- - r
+  - nonpaged: 5 (0)
+    nonpaged_bytes: 0
+    tag: TmCs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AFGp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: HidU
+- - r
+  - nonpaged: 1344 (81)
+    nonpaged_bytes: 6192
+    tag: NtFC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: L2Ts
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InF1
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: BaPd
+- - r
+  - nonpaged: 31 (0)
+    nonpaged_bytes: 0
+    tag: RxM2
+- - r
+  - nonpaged: 13 (0)
+    nonpaged_bytes: 0
+    tag: Prcr
+- - r
+  - nonpaged: 16 (6)
+    nonpaged_bytes: 352
+    tag: ParP
+- - r
+  - nonpaged: 52 (0)
+    nonpaged_bytes: 0
+    tag: SePr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Raw '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LScn
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 64
+    tag: RxCt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PTPa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMfc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMic
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EtwW
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TCPC
+- - r
+  - nonpaged: 4 (4)
+    nonpaged_bytes: 1120
+    tag: NpPp
+- - r
+  - nonpaged: 18 (18)
+    nonpaged_bytes: 1328
+    tag: TCSC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LS2b
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PXa
+- - r
+  - nonpaged: 7 (7)
+    nonpaged_bytes: 448
+    tag: SWda
+- - r
+  - nonpaged: 498 (182)
+    nonpaged_bytes: 53488
+    tag: RpcM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PTPn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb29
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FSrs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PX9
+- - r
+  - nonpaged: 4 (4)
+    nonpaged_bytes: 132064
+    tag: LfsS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PXb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CM44
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PXc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PXd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScB4
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PXg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AVpc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PX5
+- - r
+  - nonpaged: 63 (53)
+    nonpaged_bytes: 14416
+    tag: NpFc
+- - r
+  - nonpaged: 3 (0)
+    nonpaged_bytes: 0
+    tag: CM54
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIr
+- - r
+  - nonpaged: 10 (0)
+    nonpaged_bytes: 0
+    tag: FxL4
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlTT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb39
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UlOT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nnbf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pool
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: ScDN
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KeSc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VadL
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 2240
+    tag: UlHT
+- - r
+  - nonpaged: 4 (0)
+    nonpaged_bytes: 0
+    tag: PBcd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: W32l
+- - r
+  - nonpaged: 6 (6)
+    nonpaged_bytes: 2149328
+    tag: CcPD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScDA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WPLg
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 32
+    tag: MsFD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcCC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TQoS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PX2
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PX3
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FLln
+- - r
+  - nonpaged: 30 (1)
+    nonpaged_bytes: 144
+    tag: 'Hal '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PRFd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: apna
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcWk
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 128
+    tag: UdfT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ntfi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FIcv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udfn
+- - r
+  - nonpaged: 8 (3)
+    nonpaged_bytes: 304
+    tag: KLRG
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDwi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDfv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wrpc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Even
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AmlH
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Curt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NEtd
+- - r
+  - nonpaged: 10 (2)
+    nonpaged_bytes: 112
+    tag: LSlb
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 160
+    tag: VoSv
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: MIsa
+- - r
+  - nonpaged: 107 (0)
+    nonpaged_bytes: 0
+    tag: NtFv
+- - r
+  - nonpaged: 24141 (668)
+    nonpaged_bytes: 129776
+    tag: SeTd
+- - r
+  - nonpaged: 96942 (15)
+    nonpaged_bytes: 2496
+    tag: SeSd
+- - r
+  - nonpaged: 7 (0)
+    nonpaged_bytes: 0
+    tag: ObDu
+- - r
+  - nonpaged: 17 (17)
+    nonpaged_bytes: 1904
+    tag: PnpD
+- - r
+  - nonpaged: 3 (2)
+    nonpaged_bytes: 176
+    tag: PcUs
+- - r
+  - nonpaged: 4 (3)
+    nonpaged_bytes: 336
+    tag: LSdb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbtl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gfsm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PXh
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfpC
+- - r
+  - nonpaged: 16 (10)
+    nonpaged_bytes: 8800
+    tag: NtFB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PXl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcDf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NbtR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: dFVE
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: Blbp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SDgi
+- - r
+  - nonpaged: 6 (0)
+    nonpaged_bytes: 0
+    tag: Pnp7
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 160
+    tag: Cs@*
+- - r
+  - nonpaged: 4266 (24)
+    nonpaged_bytes: 7216
+    tag: 'CM  '
+- - r
+  - nonpaged: 29 (2)
+    nonpaged_bytes: 160
+    tag: LSSL
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 96
+    tag: Gi2c
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Flng
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmIm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NtFl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Etwp
+- - r
+  - nonpaged: 497 (497)
+    nonpaged_bytes: 71568
+    tag: FSro
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Whea
+- - r
+  - nonpaged: 13 (13)
+    nonpaged_bytes: 1456
+    tag: PnpC
+- - r
+  - nonpaged: 7 (0)
+    nonpaged_bytes: 0
+    tag: TmLn
+- - p
+  - ' \'
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Fstb
+- - r
+  - nonpaged: 50 (45)
+    nonpaged_bytes: 73440
+    tag: Keye
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: STCE
+- - r
+  - nonpaged: 103 (0)
+    nonpaged_bytes: 0
+    tag: NtFR
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: Txfv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FlpM
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb05
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 96
+    tag: Txfi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb25
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TmEn
+- - r
+  - nonpaged: 89 (22)
+    nonpaged_bytes: 7392
+    tag: NtfE
+- - r
+  - nonpaged: 19 (0)
+    nonpaged_bytes: 0
+    tag: Pnp6
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcPw
+- - r
+  - nonpaged: 13 (0)
+    nonpaged_bytes: 0
+    tag: IoDn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlIn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzBD
+- - r
+  - nonpaged: 10 (9)
+    nonpaged_bytes: 8496
+    tag: AtmT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RxVn
+- - r
+  - nonpaged: 3 (2)
+    nonpaged_bytes: 912
+    tag: MsvC
+- - r
+  - nonpaged: 522 (416)
+    nonpaged_bytes: 61056
+    tag: AlHa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMpr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Proc
+- - r
+  - nonpaged: 711 (0)
+    nonpaged_bytes: 0
+    tag: 'CM8 '
+- - r
+  - nonpaged: 40 (0)
+    nonpaged_bytes: 0
+    tag: FMtr
+- - r
+  - nonpaged: 1906 (1805)
+    nonpaged_bytes: 115520
+    tag: MmSm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMrr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CCsw
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMcr
+- - r
+  - nonpaged: 24 (0)
+    nonpaged_bytes: 0
+    tag: 'CM1 '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoEa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ExIC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: OlmI
+- - r
+  - nonpaged: 24 (0)
+    nonpaged_bytes: 0
+    tag: 'CM2 '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMfr
+- - r
+  - nonpaged: 24 (0)
+    nonpaged_bytes: 0
+    tag: 'CM3 '
+- - r
+  - nonpaged: 24 (0)
+    nonpaged_bytes: 0
+    tag: 'CM4 '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NpFr
+- - r
+  - nonpaged: 66 (12)
+    nonpaged_bytes: 2976
+    tag: HDAu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ACPI
+- - r
+  - nonpaged: 58 (58)
+    nonpaged_bytes: 2784
+    tag: 'CM7 '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udf3
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Desk
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: idle
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPmf
+- - r
+  - nonpaged: 3 (3)
+    nonpaged_bytes: 304
+    tag: moni
+- - r
+  - nonpaged: 22 (3)
+    nonpaged_bytes: 144
+    tag: 'Mm  '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPif
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScDS
+- - r
+  - nonpaged: 6 (6)
+    nonpaged_bytes: 752
+    tag: cdro
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 160
+    tag: Comp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: HdAB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LShs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pcsb
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: IoSn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ioin
+- - r
+  - nonpaged: 35 (1)
+    nonpaged_bytes: 80
+    tag: Cs@)
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfN
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PSlo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VmBu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LBtn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PsPb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PsSb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nph1
+- - r
+  - nonpaged: 36 (30)
+    nonpaged_bytes: 960
+    tag: PcSb
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 160
+    tag: stor
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PsQb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcRD
+- - r
+  - nonpaged: 36 (36)
+    nonpaged_bytes: 21552
+    tag: LSbf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcDQ
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 160
+    tag: LBpn
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 560
+    tag: CscC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NBqh
+- - r
+  - nonpaged: 8806 (378)
+    nonpaged_bytes: 55216
+    tag: 'Pp  '
+- - r
+  - nonpaged: 5 (0)
+    nonpaged_bytes: 0
+    tag: DfCI
+- - r
+  - nonpaged: 287 (23)
+    nonpaged_bytes: 9264
+    tag: AcpI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzPx
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CBRe
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AzMx
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: LBea
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMpc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ipas
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: PcCb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Uspo
+- - r
+  - nonpaged: 10 (5)
+    nonpaged_bytes: 800
+    tag: CMRm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Driv
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPss
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gdwd
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: LBan
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 208
+    tag: LBbn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wrpr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMRc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PsFn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ntfx
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 128
+    tag: StSD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmRl
+- - r
+  - nonpaged: 24120 (668)
+    nonpaged_bytes: 1261712
+    tag: Toke
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Mdxg
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: apms
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Mmdl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScC9
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 384
+    tag: NtfD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nnnn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Tdxc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udf2
+- - r
+  - nonpaged: 25 (25)
+    nonpaged_bytes: 3600
+    tag: ClfA
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NbL4
+- - r
+  - nonpaged: 53665 (6)
+    nonpaged_bytes: 688
+    tag: SeAc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PnpB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FSun
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScLF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WanM
+- - r
+  - nonpaged: 821 (83)
+    nonpaged_bytes: 16576
+    tag: AfdX
+- - r
+  - nonpaged: 13 (0)
+    nonpaged_bytes: 0
+    tag: UlUL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SmTp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RxCo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb14
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 1568
+    tag: CM49
+- - r
+  - nonpaged: 25519 (12)
+    nonpaged_bytes: 1152
+    tag: SeSc
+- - r
+  - nonpaged: 456 (456)
+    nonpaged_bytes: 205824
+    tag: CM39
+- - r
+  - nonpaged: 24 (24)
+    nonpaged_bytes: 393216
+    tag: CM29
+- - r
+  - nonpaged: 77 (0)
+    nonpaged_bytes: 0
+    tag: Pnp5
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: SpLd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoBo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoCo
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: SeAp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: UdfL
+- - r
+  - nonpaged: 5 (5)
+    nonpaged_bytes: 400
+    tag: ObDm
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 8240
+    tag: WmDS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AleU
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InF0
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcCR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Usla
+- - r
+  - nonpaged: 34894 (1082)
+    nonpaged_bytes: 72992
+    tag: ObNm
+- - r
+  - nonpaged: 1701 (534)
+    nonpaged_bytes: 42720
+    tag: RRle
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 200704
+    tag: WmIS
+- - r
+  - nonpaged: 4 (4)
+    nonpaged_bytes: 512
+    tag: Udff
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NtFD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gla1
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AlPU
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcpE
+- - r
+  - nonpaged: 8 (0)
+    nonpaged_bytes: 0
+    tag: ObNS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CcPB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Afdr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoCb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gdde
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Vad '
+- - r
+  - nonpaged: 18 (18)
+    nonpaged_bytes: 864
+    tag: ArbR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ipng
+- - r
+  - nonpaged: 20 (0)
+    nonpaged_bytes: 0
+    tag: PcwT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Fsb '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbtg
+- - r
+  - nonpaged: 6 (0)
+    nonpaged_bytes: 0
+    tag: AzRR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pcna
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TmNo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TuNb
+- - r
+  - nonpaged: 47 (39)
+    nonpaged_bytes: 17872
+    tag: Dire
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TDIa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Udf1
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Uspp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMng
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pium
+- - r
+  - nonpaged: 31 (0)
+    nonpaged_bytes: 0
+    tag: RxEc
+- - r
+  - nonpaged: 8 (8)
+    nonpaged_bytes: 1776
+    tag: SWdr
+- - r
+  - nonpaged: 31 (1)
+    nonpaged_bytes: 1264
+    tag: RxFc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LSwq
+- - r
+  - nonpaged: 7 (7)
+    nonpaged_bytes: 1168
+    tag: SWbr
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PoEj
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SWre
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbtw
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CM48
+- - r
+  - nonpaged: 128 (72)
+    nonpaged_bytes: 5760
+    tag: NpAt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WmiD
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NpFt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: RxSc
+- - r
+  - nonpaged: 40640 (48)
+    nonpaged_bytes: 4239408
+    tag: CIcr
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 16384
+    tag: CM28
+- - r
+  - nonpaged: 5 (0)
+    nonpaged_bytes: 0
+    tag: BLes
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMRb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: pukm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wrps
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: InPa
+- - r
+  - nonpaged: 736 (97)
+    nonpaged_bytes: 397312
+    tag: CMAl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbtj
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MiPr
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: 'ND  '
+- - r
+  - nonpaged: 10 (0)
+    nonpaged_bytes: 0
+    tag: FxL8
+- - r
+  - nonpaged: 1 (0)
+    nonpaged_bytes: 0
+    tag: Udfe
+- - r
+  - nonpaged: 159 (0)
+    nonpaged_bytes: 0
+    tag: 'SLS '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LS2q
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Psap
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IPrq
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Tdx '
+- - r
+  - nonpaged: 3 (1)
+    nonpaged_bytes: 48
+    tag: Cs@(
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WanJ
+- - r
+  - nonpaged: 78 (0)
+    nonpaged_bytes: 0
+    tag: Mp10
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NbtC
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: PcDW
+- - r
+  - nonpaged: 9 (2)
+    nonpaged_bytes: 128
+    tag: None
+- - r
+  - nonpaged: 520 (416)
+    nonpaged_bytes: 46592
+    tag: AlCI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: CPnp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I6ma
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MdlP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KScp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDam
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDcm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: KSpp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I6ua
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AfdL
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WanW
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NDfm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmFl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Wind
+- - r
+  - nonpaged: 6 (6)
+    nonpaged_bytes: 3648
+    tag: NtfS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmMl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoOp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TdxT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ntf9
+- - r
+  - nonpaged: 143 (36)
+    nonpaged_bytes: 4608
+    tag: AlSc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb16
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb26
+- - r
+  - nonpaged: 404 (362)
+    nonpaged_bytes: 80528
+    tag: NtFS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nb36
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: AVns
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TuPI
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Tdxn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClMC
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Fsrc
+- - r
+  - nonpaged: 535 (397)
+    nonpaged_bytes: 558976
+    tag: NtfF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: IoCc
+- - r
+  - nonpaged: 142 (0)
+    nonpaged_bytes: 0
+    tag: AzCm
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pwmi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Sema
+- - r
+  - nonpaged: 18 (0)
+    nonpaged_bytes: 0
+    tag: NtFF
+- - r
+  - nonpaged: 2 (0)
+    nonpaged_bytes: 0
+    tag: Txfu
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Gla@
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScPD
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 86016
+    tag: WmGE
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 368
+    tag: Cs@'
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nhfs
+- - r
+  - nonpaged: 5 (2)
+    nonpaged_bytes: 64
+    tag: FMus
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Alep
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Npfs
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Adap
+- - r
+  - nonpaged: 2 (2)
+    nonpaged_bytes: 1024
+    tag: Udfd
+- - r
+  - nonpaged: 2 (1)
+    nonpaged_bytes: 112
+    tag: EP
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FMis
+- - r
+  - nonpaged: 665 (1)
+    nonpaged_bytes: 96
+    tag: NpFs
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 960
+    tag: WmMR
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: TcWS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LBxp
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ObCl
+- - r
+  - nonpaged: 59 (2)
+    nonpaged_bytes: 16384
+    tag: Ksec
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: EtwG
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ObLl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NSIk
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PoEi
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: LS2e
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WmiR
+- - r
+  - nonpaged: 4 (4)
+    nonpaged_bytes: 320
+    tag: PcPc
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 4096
+    tag: ClfO
+- - r
+  - nonpaged: 10 (8)
+    nonpaged_bytes: 5600
+    tag: PcFp
+- - r
+  - nonpaged: 191 (185)
+    nonpaged_bytes: 11344
+    tag: Symt
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: NMRn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ClfB
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FxL7
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nbti
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Perf
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SWfd
+- - r
+  - nonpaged: 7 (7)
+    nonpaged_bytes: 672
+    tag: SWid
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Pcfc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfpS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Ipur
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: WfpF
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Tdxo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: FTnd
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: PcIc
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: aFDT
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Nph2
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Net '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: 'Vpb '
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Mmlk
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 144
+    tag: DfCo
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: VoSl
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: DPwr
+- - r
+  - nonpaged: 102 (0)
+    nonpaged_bytes: 0
+    tag: BCDK
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: SeOn
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: I6nb
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: MmCx
+- - r
+  - nonpaged: 2 (1)
+    nonpaged_bytes: 128
+    tag: RngS
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScCD
+- - r
+  - nonpaged: 10 (10)
+    nonpaged_bytes: 13168
+    tag: CM27
+- - r
+  - nonpaged: 9 (9)
+    nonpaged_bytes: 147456
+    tag: CM17
+- - r
+  - nonpaged: 137 (0)
+    nonpaged_bytes: 0
+    tag: SeSa
+- - r
+  - nonpaged: 137 (0)
+    nonpaged_bytes: 0
+    tag: SeTa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: Info
+- - r
+  - nonpaged: 1 (1)
+    nonpaged_bytes: 32
+    tag: SePa
+- - r
+  - nonpaged: 0 (0)
+    nonpaged_bytes: 0
+    tag: ScC7
+- - x
+- - x

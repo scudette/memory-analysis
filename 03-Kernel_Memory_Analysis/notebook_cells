@@ -89,3 +89,517 @@
     it has become increasingly difficult to hook the SSDT. These days it is very unlikely
     to see any SSDT hooks in practice.
   type: markdown
+- id: 1426726496394
+  source:
+  - '# Process Management'
+  - ''
+  - One of the more important functions of the kernel is to create and destroy processes.
+    A process is the first thing a userspace application needs before it can begin
+    executing. The kernel is responsible for creating the process in the first place.
+  - ''
+  - '## What does creating a process mean?'
+  - ''
+  - 'When  the kernel creates a process - it prepares an arena or a skeleton for userspace
+    code to run in:'
+  - ''
+  - 1. It needs to create page tables for the userspace application to have its own
+    unique address space (Recall that the virtual address space is created via the
+    page tables).
+  - '2. It needs to link in the first library for the process to begin functioning
+    - *ntdll.dll*, and the executable image is also mapped into memory. '
+  - 3. The  initial process heap and environment variables are created.
+  - ''
+  - 'Now  execution can be given to the process. '
+  - ''
+  - However, the kernel must also keep track of the process. The does this by keeping
+    process specific information in an object called the *EPROCESS* struct. This struct
+    keeps metadata about the process, we will see shortly what kind of information
+    is kept about each process, but for now it is sufficient to note that _EPROCESS
+    structures are connected in a linked list. The kernel maintains the head of this
+    list at the symbol *nt!PsActiveProcessHead".
+  - ''
+  - Rekall can list all running processes by following this linked list - this is
+    implemented in the *pslist* plugin. In reality Rekall uses a number of techniques
+    to discover all processes, in case one technique is manipulated by malware. Lets
+    have a look at the process listing.
+  type: markdown
+- id: 1426727376672
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - help: Kernel addresses of eprocess structs.
+        name: eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Physical addresses of eprocess structs.
+        name: phys_eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - default: null
+        help: A regex to select a process by name.
+        name: proc_regex
+        positional: false
+        short_opt: ''
+        type: RegEx
+      - choices:
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
+        default:
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
+        help: Method to list processes (Default uses all methods).
+        name: method
+        positional: false
+        short_opt: ''
+        type: ChoiceArray
+      description: List processes for windows.
+      name: pslist
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: List processes for windows.
+    session_id: 1
+  type: rekallplugin
+- id: 1426727442923
+  source:
+  - 'We can see a list of processes above. Each process is a list with some actions
+    associated with it. Some of the more useful actions are:'
+  - ''
+  - '- HexDump - This dumps the _EPROCESS struct itself.'
+  - '- Information - This prints a lot of metadata about the process - like the filename
+    etc.'
+  - '- Struct - This shows the _EPROCESS struct in a modal window - useful for quick
+    inspection.'
+  - ''
+  - We can also see the _EPROCESS struct using the *dt* plugin. We will come back
+    to this very important structure in the next chapter and discuss it in more detail.
+  type: markdown
+- id: 1426727585234
+  source:
+    arguments:
+      offset: 275427684150064
+      target: _EPROCESS
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: Name of a struct definition.
+        name: target
+        positional: true
+        short_opt: ''
+      - default: 0
+        help: Name of a struct definition.
+        name: offset
+        positional: true
+        required: false
+        short_opt: ''
+        type: IntParser
+      - default: null
+        help: The address space to use.
+        name: address-space
+        positional: false
+        short_opt: a
+      description: "Print a struct or other symbol.\n\n    Really just a convenience\
+        \ function for instantiating the object and printing\n    all its members.\n\
+        \    "
+      name: dt
+      requirements:
+      - profile
+      short_description: Print a struct or other symbol.
+    session_id: 1
+  type: rekallplugin
+- id: 1426727810769
+  source:
+  - '## Kernel Objects.'
+  - ''
+  - The windows kernel manages resources through a component called the *Object Manager*.
+    The work object is a bit of a stretch here - it is not the same as what is typically
+    referred to as an Object say in python or Java or C++.  Kernel Objects are basically
+    C structs with some overloaded function pointers and a unified management.
+  - ''
+  - There are many types of kernel objects (kernel objects are _not_ extensible and
+    drivers can not define their own object types - the types of objects are unique
+    to the version of windows).
+  - ''
+  - Lets have a look at the object types supported by Windows 7 (Typically older versions
+    of windows have less object types).
+  type: markdown
+- id: 1426728057164
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: Displays all object Types on the system.
+      name: object_types
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Displays all object Types on the system.
+    session_id: 1
+  type: rekallplugin
+- id: 1426728126000
+  source:
+  - Windows keeps a table of statistics of object types, how many objects are currently
+    in use and which pool type these objects are taken from.
+  - ''
+  - We can see that type 7 (Process objects) has 35 outstanding objects. This corresponds
+    to the number of _EPROCESS objects in use right now (and it should be the total
+    number of processes revealed from pslist).
+  - ''
+  - '## Pool allocations.'
+  - ''
+  - We can see that there are two types of pools mentioned in the previous output.
+    We saw that the _EPROCESS objects are allocated from non-paged pool. What is a
+    pool anyway?
+  - ''
+  - The kernel needs to allocate memory for its own use. The windows kernel uses a
+    *Pool based* allocation strategy. When the kernel boots it sets aside different
+    areas of the virtual address space called pools. Lets have a look at all the pools
+    the kernel supports (using the pools plugin).
+  type: markdown
+- id: 1426728487829
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: "Prints information about system pools.\n\n    Ref:\n    http://illmatics.com/Windows%208%20Heap%20Internals.pdf\n\
+        \    https://media.blackhat.com/bh-dc-11/Mandt/BlackHat_DC_2011_Mandt_kernelpool-wp.pdf\n\
+        \    https://immunityinc.com/infiltrate/archives/kernelpool_infiltrate2011.pdf\n\
+        \    http://gate.upm.ro/os/LABs/Windows_OS_Internals_Curriculum_Resource_Kit-ACADEMIC/WindowsResearchKernel-WRK/WRK-v1.2/base/ntos/ex/pool.c\n\
+        \    "
+      name: pools
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Prints information about system pools.
+    session_id: 1
+  type: rekallplugin
+- id: 1426728510937
+  source:
+  - The non-paged pool is reserved for allocations which may never be paged to disk.
+    This is saved for objects which are so critical that they simply can not be paged.
+    For example, objects which need to be accessed from interrupt level can not be
+    paged because the kernel can not wait for the page to be brought in from the pagefile
+    during interrupt service.
+  - ''
+  - There are several paged pools - these pools can be paged. When the kernel accesses
+    objects from these pools it must be prepared to wait until the page is brought
+    in from the pagefile.
+  - ''
+  - This explains why the windows kernel always uses certain pools for different types
+    of objects - _EPROCESS comes from the non-paged pool because it needs to be accessed
+    quickly. On the other hand a *Key* (i.e. a Registry Key) can be paged because
+    there are many keys and they are not so critical.
+  - ''
+  - '## How are pools used?'
+  - ''
+  - The kernel allocated from pool using the function [ExAllocatePoolWithTag](https://msdn.microsoft.com/en-us/library/windows/hardware/ff544520%28v=vs.85%29.aspx).
+    This function accept a tag (unique 32 bit integer) which is used to mark the allocation.
+    This is used as a debugging aid - the developer can scan the pools for their unique
+    tag to see if any allocations are leaked.
+  - ''
+  - There are many tags used for pool allocations - each tag corresponds with a unique
+    type of object. It makes sense to use a unique tag for each object so developers
+    can see if a particular object is accidentally leaked (i.e. not being properly
+    destroyed).
+  - ''
+  - 'Windows keeps a table of statistics for each tag and its use count (This is called
+    the pool tracker):'
+  type: markdown
+- id: 1426729012618
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: Enumerate pool tag usage statistics.
+      name: pool_tracker
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Enumerate pool tag usage statistics.
+    session_id: 1
+  type: rekallplugin
+- id: 1426729087931
+  source:
+  - 'This output illustrates the total number of allocations outstanding from the
+    non paged and paged pools for each object type. '
+  - ''
+  - '# Pool Scanning Techniques.'
+  - ''
+  - We previously said that the _EPROCESS struct is a "Kernel Object" and its allocation
+    contains a unique "Pool Tag", but from the output of the "dt" plugin before we
+    have not seen any such fields? Where is the pool tag stored?
+  - ''
+  - Lets examine the hexdump of the _EPROCESS at 0xfa8001466b30 but lets look a bit
+    before that address.
+  type: markdown
+- id: 1426729443859
+  source:
+    arguments:
+      offset: '0xfa8001466ad0'
+    plugin:
+      arguments:
+      - help: An offset to hexdump.
+        name: offset
+        positional: true
+        short_opt: ''
+        type: SymbolAddress
+      - default: null
+        help: The address space to use.
+        name: address_space
+        positional: false
+        short_opt: a
+      - default: null
+        help: Dump this string instead.
+        name: data
+        positional: false
+        short_opt: ''
+      - default: null
+        help: Maximum length to dump.
+        name: length
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - default: false
+        help: Should headers be suppressed?.
+        name: suppress_headers
+        positional: false
+        short_opt: ''
+        type: Boolean
+      description: Hexdump an object or memory location.
+      name: dump
+      requirements: []
+      short_description: Hexdump an object or memory location.
+    session_id: 1
+  type: rekallplugin
+- id: 1426729527672
+  source:
+  - We see the "Pro\x53" Pool tag. This is the pool header.
+  type: markdown
+- id: 1426729571716
+  source:
+    arguments:
+      offset: 275427684149968
+      target: _POOL_HEADER
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: Name of a struct definition.
+        name: target
+        positional: true
+        short_opt: ''
+      - default: 0
+        help: Name of a struct definition.
+        name: offset
+        positional: true
+        required: false
+        short_opt: ''
+        type: IntParser
+      - default: null
+        help: The address space to use.
+        name: address-space
+        positional: false
+        short_opt: a
+      description: "Print a struct or other symbol.\n\n    Really just a convenience\
+        \ function for instantiating the object and printing\n    all its members.\n\
+        \    "
+      name: dt
+      requirements:
+      - profile
+      short_description: Print a struct or other symbol.
+    session_id: 1
+  type: rekallplugin
+- id: 1426729654234
+  source:
+  - It is possible to develop a signature for this pool tag so we can scan for it
+    in memory and essentially "carve out" the _EPROCESS structs.
+  - ''
+  - This in a nutshell is what pool tag scanning is all about - try to carve out pool
+    allocations by signature. Lets look at the psscan plugin which finds _EPROCESS
+    structs allocated from pool.
+  type: markdown
+- id: 1426729759744
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - default: false
+        help: Scan in the kernel address space
+        name: scan_in_kernel
+        positional: false
+        short_opt: ''
+        type: Boolean
+      description: "Scan Physical memory for _EPROCESS pool allocations.\n\n    Status\
+        \ flags:\n      E: A known _EPROCESS address from pslist.\n      P: A known\
+        \ pid from pslist.\n    "
+      name: psscan
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Scan Physical memory for _EPROCESS pool allocations.
+    session_id: 1
+  type: rekallplugin
+- id: 1426729865652
+  source:
+  - 'The technique has some pros and cons:'
+  - ''
+  - '- Pros:'
+  - '  - May help detect hidden processes, unlinked from ordinary lists.'
+  - '  - May detect old, exited processes which have been returned to pool but not
+    used yet.'
+  - ''
+  - '- Cons:'
+  - '  - The technique is very easy to fool:'
+  - '    1. Insert garbage data looking like another process.'
+  - '    2. Simply overwrite the pool tag (but to do that the malware must have kernel
+    access).'
+  type: markdown
+- id: 1426730077730
+  source:
+  - '# The Object Tree'
+  - ''
+  - Kernel objects are managed by the object manager. Therefore the object manager
+    keeps metadata about them. Some kernel objects can be named. The name of an object
+    is a way to find the object. The object manager keeps a tree (very similar to
+    a filesystem) in which to store objects. Objects are stored inside "Object Directories"
+    to form this tree.
+  - ''
+  - We can see the object tree using Rekall.
+  type: markdown
+- id: 1426730252211
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - default: .
+        help: Filter the type of objects shown.
+        name: type_regex
+        positional: false
+        short_opt: ''
+      description: "Visualize the kernel object tree.\n\n    Ref:\n    http://msdn.microsoft.com/en-us/library/windows/hardware/ff557762(v=vs.85).aspx\n\
+        \    "
+      name: object_tree
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Visualize the kernel object tree.
+    session_id: 1
+  type: rekallplugin
+- id: 1426730454229
+  source:
+  - 'There is a wealth of information to be gleaned from the object tree. '
+  - ''
+  - 1. Symbolic links allow userspace programs to open a device. For example we can
+    see the GLOBAL?? directory contains symbolic links to the cdrom0 which we can
+    open from userspace via \\.\D:. Similarly opening \\.\PhysicalDrive0 will cause
+    the driver in \Device\Harddisk0\DR0 to be opened.
+  - '   - Symbolic links also have a timestamp which is very useful. For example,
+    often malware will create a kernel device with a symlink (so the userspace component
+    can open it). The timestamp here shows when the malware created and inserted the
+    driver.'
+  - 2. The BaseNamedObject directory shows Events and Mutants. Both of these are often
+    used by malware as a flag to indicate that the system has already been infected.
+    Many IOCs are written in terms of Mutant and Event names.
+  - 3. The Device and Driver directories show the known drivers and devices. This
+    would be useful to compare to the output of the "modules" and "driverirp" plugins.
+  type: markdown
+- id: 1426730989793
+  source:
+  - '# Summary'
+  - ''
+  - 'In this chapter we have learned about the windows Kernel and how it manages its
+    memory (Through pool allocation). We also saw how the kernel keeps track of the
+    kernel objects through the object manager, and the object tree. '
+  - ''
+  - We learned about list traversal plugins and pool scanning techniques for uncovering
+    hidden kernel objects.
+  type: markdown
