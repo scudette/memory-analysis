@@ -352,6 +352,85 @@
 
     linpmem -V -v /tmp/test.aff4'
   type: shell
+- id: 1426761568250
+  source:
+  - '## Inspecting live memory'
+  - ''
+  - One of the most important differences between the *Pmem suite* and other memory
+    acquisition tools is that most other acquisition tools dump the memory image from
+    kernel space, arguably in order to minimize system disturbance and reduce overheads
+    in copying large quantities of data across the kernel/userspace boundary.
+  - ''
+  - 'Unfortunately dumping memory from kernel space has some serious limitations:'
+  - ''
+  - '- It is difficult to support more complex image storage formats as all code must
+    run in kernel space - so no access to libraries.'
+  - '- Much more complex code is running in kernel space - a bug in this code will
+    bring down the entire machine (or blue screen it).'
+  - ''
+  - 'When Pmem was designed we have made a design choice to have a simple kernel mode
+    component which simply exposes an interface to userspace. In our experience the
+    additional overheads in copying memory from kernel to userspace is insignificant
+    in practice, but this gives us the following advantages:'
+  - ''
+  - '- The userspace component can implement a complex, complete imaging format.'
+  - '- Complex userspace code is contained inside a process - a bug will not bluescreen
+    the machine - it will simply cause the imaging tool to crash. This is much safer
+    and enabled us to implement more complete imaging solutions.'
+  - ''
+  - But most importantly, having a driver export a device to physical memory enabled
+    us to easily attach to the device with Rekall. Rekall can then inspect the real,
+    live memory of the system without the need to take an image first.
+  - ''
+  - 'This approach opens up some exciting possibilities:'
+  - ''
+  - 1. We can automate memory analysis such that we can triage a system very quickly
+    based on analysis of its live memory. This might mean that we do not need to acquire
+    memory in many cases - perhaps we have a yara signature we can use to determine
+    if the system is of interest. Running it on live memory is very quick and will
+    enable us to triage the system, saving us from taking, transporting, storing and
+    archiving yet another memory image.
+  - 2. The possibility of quickly triaging a system based on live memory analysis
+    can be extended to remote response tools such as GRR. GRR can run a "memory hunt"
+    on an entire fleet of machines checking for memory artifacts directly from live
+    memory.
+  - 3. When machines have a large amount of memory, the issue of memory smear becomes
+    significant - as the imaging tool is acquiring the memory, the memory itself is
+    changing. Therefore information in some parts of the image will be out of sync
+    to data in other parts. Smear becomes significant for servers (which typically
+    have a huge amount of memory - more than 128GB - this might take up to 10 minutes
+    to image, an eternity in computer scale). By analysing live memory we can selectively
+    read only the important  regions and therefore minimize the time window for the
+    memory to change.
+  - ''
+  - We believe that live memory analysis is the future of memory forensics, and will
+    enable us to scale to analysis of very large systems (which are becoming more
+    common all the time). We are therefore excited to have a suite of memory imaging
+    tools which enable this mode of analysis.
+  - ''
+  - The next example shows how one would analyse live memory on windows.
+  type: markdown
+- id: 1426762823201
+  source:
+    caption: Live Memory Analysis on windows using WinPmem
+    files:
+    - name: livemode.jpg
+      type: image/jpeg
+    size: 2
+  type: fileupload
+- id: 1426762879441
+  source:
+  - 1. First a command prompt is opened with administrative privilege (Right click
+    on the cmd.exe icon and select "Run As Administratory"
+  - 2. Next we load the driver using the -l switch to winpmem. This tells winpmem
+    we want to have the driver loaded and left loaded instead of taking a memory image.
+    Winpmem will quite as soon as the driver is loaded.
+  - 3. Now we launch Rekall, giving the name of the winpmem device as the filename
+    - *\\\\.\\pmem*.
+  - ''
+  - Rekall will continue analyzing live memory in exactly the same way as if it was
+    an image, except we do not need to copy and ship a large image around.
+  type: markdown
 - id: 1426448748611
   source:
   - '## The WinPmem acquisition tool.'
