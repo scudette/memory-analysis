@@ -1,0 +1,22 @@
+- id: 132
+  mro: InteractiveSession:JsonSerializableSession:Session:object
+  session_id: 1
+  state:
+    ept:
+    - 2283466782
+    - IntParser
+    filename:
+    - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+    - FileName
+    pagefile:
+    - []
+    - FileName
+    profile:
+    - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+    - FileName
+    session_name:
+    - Win 7 Guest
+    - String
+    timezone:
+    - UTC
+    - TimeZone

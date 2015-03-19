@@ -725,6 +725,16 @@
         positional: false
         short_opt: ''
         type: IntParser
+      - help: Kernel addresses of eprocess structs.
+        name: eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Physical addresses of eprocess structs.
+        name: phys_eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
       - help: One or more pids of processes to select.
         name: pid
         positional: false
@@ -735,36 +745,37 @@
         name: proc_regex
         positional: false
         short_opt: ''
-      - help: Physical addresses of task structs.
-        name: phys_task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Kernel addresses of task structs.
-        name: task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Use this as the first task to follow the list.
-        name: task_head
-        positional: false
-        short_opt: ''
-        type: IntParser
+        type: RegEx
       - choices:
-        - InitTask
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
+        default:
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
         help: Method to list processes (Default uses all methods).
         name: method
-        nargs: +
         positional: false
         short_opt: ''
-      description: "Gathers active tasks by walking the task_struct->task list.\n\n\
-        \    It does not display the swapper process. If the DTB column is blank,\
-        \ the\n    item is likely a kernel thread.\n    "
-      name: pslist
+        type: ChoiceArray
+      - default: 1
+        help: 'An integer reflecting the amount of desired output: 0 = quiet, 10 =
+          noisy. Default: 1'
+        name: verbosity
+        positional: false
+        short_opt: V
+        type: IntParser
+      description: Print process list as a tree
+      name: pstree
       requirements:
       - profile
       - physical_address_space
-      short_description: Gathers active tasks by walking the task_struct->task list.
+      short_description: Print process list as a tree
     session_id: 3
   type: rekallplugin
 - id: 1426644467482
@@ -801,11 +812,72 @@
   - Note that the plugin also displays the physical memory layout of the Win7 guest
     VM.  We can see there are two ranges valid for this physical memory.
   - ''
-  - Lets quickly examine the dns cache of the Windows 7 machine.
+  - '### Examining the Virtual Address Space of the kernel.'
+  - ''
+  - As described above, in protected mode, the CPU can not access the physical memory
+    directly. The MMU is responsible for translating between virtual addresses to
+    physical addresses. Rekall replicate this behavior by stacking address spaces
+    on top of one another, each address space is responsible for one level of translation.
+  - ''
+  - 'When a read request occurs, Rekall relays the request to the *AddressSpace()*
+    object which translate this address into a read from its base address space (i.e.
+    the address space below it in the stack). '
+  - ''
+  - 'Lets examine this concept using the *inspect_vaddr* plugin. We select to inspect
+    the Windows 7 Virtual Machine by selecting the correct session:'
   type: markdown
-- id: 1426644767593
+- id: 1426680365572
   source:
-    arguments: {}
+    arguments:
+      address: nt
+    plugin:
+      arguments:
+      - help: Virtual address to inspect.
+        name: address
+        positional: true
+        required: true
+        short_opt: ''
+        type: SymbolAddress
+      description: Inspect the mapping of a virtual address.
+      name: inspect_vaddr
+      requirements: []
+      short_description: Inspect the mapping of a virtual address.
+    session_id: 3
+  type: rekallplugin
+- id: 1426684461372
+  source:
+  - Note that the plugin accepts a single *address* parameter. This parameter can
+    be an actual address or the name of a symbol. Rekall knows how to identify symbols
+    by name so specifying addresses by name is very convenient. In this example, we
+    specify "nt" as the symbol name (this is the base address of the kernel image
+    itself). You can try other symbols, like "nt!MmGetPhysicalMemoryRanges" which
+    is a windows kernel function.
+  - ''
+  - In the above we see that the symbol was resolved into the address **0xf80002659000**.
+    Reading from the kernel's address space will translate this into a read of the
+    VTxPagedMemory address space (using the EPT at 0x881af01e) for an offset of **0x265900**.
+    Note that this translation is governed by the windows kernel page tables inside
+    the virtual machine itself.
+  - ''
+  - The VTxPagedMemory address space simply uses the EPT tables to resolve an address
+    in the guest's physical address space to a address in the host's physical address
+    space. Note that since this is hardware virtualization, the host's operating system
+    has nothing to do with this translation - it is all done in the VTx hardware.
+    The host's OS is only responsible for managing the EPT page tables.
+  - ''
+  - The next step shown is that the Guest's physical address 0x2659000 is translated
+    to the offset 0x12082a000 in the image itself. The image is stored in the AFF4
+    format, hence we have the AFF4AddressSpace to read from it.
+  - ''
+  - 'We mentioned that the first part of the translation is from Guest Virtual Address
+    to Guest Physical Address and it is governed by normal 64 bit page tables. We
+    can see how this looks by using the *vtop* plugin to show us how a virtual address
+    is translated to a physical address in the guest''s session:'
+  type: markdown
+- id: 1426685309480
+  source:
+    arguments:
+      virtual_address: nt
     plugin:
       arguments:
       - critical: true
@@ -819,32 +891,75 @@
         positional: false
         short_opt: ''
         type: IntParser
+      - help: Kernel addresses of eprocess structs.
+        name: eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Physical addresses of eprocess structs.
+        name: phys_eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
       - default: null
-        help: Optionally provide the hashtable
-        name: hashtable
+        help: A regex to select a process by name.
+        name: proc_regex
         positional: false
         short_opt: ''
-      - default: true
-        help: Should we use the index
-        name: index
+        type: RegEx
+      - choices:
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
+        default:
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
+        help: Method to list processes (Default uses all methods).
+        name: method
         positional: false
         short_opt: ''
-        type: Boolean
-      description: Dump the windows DNS resolver cache.
-      name: dns_cache
+        type: ChoiceArray
+      - help: The Virtual Address to examine.
+        name: virtual_address
+        positional: true
+        required: true
+        short_opt: ''
+        type: SymbolAddress
+      description: Prints information about the virtual to physical translation.
+      name: vtop
       requirements:
       - profile
       - physical_address_space
-      short_description: Dump the windows DNS resolver cache.
+      short_description: Prints information about the virtual to physical translation.
     session_id: 3
   type: rekallplugin
+- id: 1426685406927
+  source:
+  - We can see the plugin explain how the virtual address is translated through the
+    4 level page table located in 0x187000. The important information from here is
+    that the page is valid and therefore mapped into the physical address space.
+  - ''
+  - If the page was not valid, the CPU would generate a page fault for the OS when
+    the page is accessed. This page fault interrupt tells the OS that the hardware
+    is unable to simply resolve the page and needs assistance from the OS.
+  type: markdown
 - id: 1426644665312
   source:
   - '## The Ubuntu guest VM.'
   - ''
   - Lets examine our Ubuntu guest VM.
   type: markdown
-- id: 1426643162219
+- id: 1426715713609
   source:
     arguments: {}
     plugin:
@@ -902,66 +1017,19 @@
       short_description: Gathers active tasks by walking the task_struct->task list.
     session_id: 2
   type: rekallplugin
-- id: 1426644697321
+- id: 1426721305335
   source:
-    arguments: {}
-    plugin:
-      arguments:
-      - critical: true
-        help: Name of the profile to load. This is the filename of the profile found
-          in the profiles directory. Profiles are searched in the profile path order.
-        name: profile
-        positional: false
-        short_opt: p
-      - help: The DTB physical address.
-        name: dtb
-        positional: false
-        short_opt: ''
-        type: IntParser
-      - help: One or more pids of processes to select.
-        name: pid
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - default: null
-        help: A regex to select a process by name.
-        name: proc_regex
-        positional: false
-        short_opt: ''
-      - help: Physical addresses of task structs.
-        name: phys_task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Kernel addresses of task structs.
-        name: task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Use this as the first task to follow the list.
-        name: task_head
-        positional: false
-        short_opt: ''
-        type: IntParser
-      - choices:
-        - InitTask
-        help: Method to list processes (Default uses all methods).
-        name: method
-        nargs: +
-        positional: false
-        short_opt: ''
-      - default: false
-        help: Scan the entire process address space, not only the heap.
-        name: scan_entire_address_space
-        positional: false
-        short_opt: ''
-        type: Boolean
-      description: "Scan the bash process for history.\n\n    Based on original algorithm\
-        \ by Andrew Case.\n    "
-      name: bash
-      requirements:
-      - profile
-      - physical_address_space
-      short_description: Scan the bash process for history.
-    session_id: 2
-  type: rekallplugin
+  - '# Summary'
+  - ''
+  - 'In this module we saw how memory is used by a computer system. We learned that
+    the CPU running in protected mode can not access physical memory directly. The
+    MMU is responsible for translating the Virtual Address the CPU is referencing
+    into a physical address. '
+  - ''
+  - Rekall emulates the MMU's function by using the address space object. Rekall layeres
+    address spaces on top of each other to emulate the way the hardware does it. We
+    saw how multiple levels of indirections allows for virtual machines to share the
+    same physical address space. We also saw how the EPT tables allow the hardware
+    to emulate the guest's physical address space - allowing multiple different operating
+    systems to run on the same host.
+  type: markdown

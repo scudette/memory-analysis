@@ -1,0 +1,91 @@
+- id: 1426722536521
+  source:
+  - '# Kernel Memory Analysis'
+  - ''
+  - In this section we will focus on analysis of the Windows Kernel. We discuss how
+    the kernel manages its own memory and how we can reconstruct the kernel's state.
+  - ''
+  - '## What is the kernel?'
+  - ''
+  - Before we start lets discuss what the "Kernel" is. Modern CPUs run in [protected
+    mode](http://en.wikipedia.org/wiki/Protected_mode). In this mode, the CPU can
+    operate in one of four privilege levels (called Rings). In windows user code runs
+    at *Ring 3* (least privileged) while kernel code runs at *Ring 0*.
+  - ''
+  - 'We have already seen that protected mode allows for the use of paging, but it
+    also allows for privilege separation between trusted and un-trusted code. Since
+    the kernel runs at higher privilege is acts as a buffer between applications and
+    the hardware. '
+  - ''
+  - 'Typically the kernel is responsible for:'
+  - ''
+  - 1. Create and destroy resources associated with processes.
+  - '2. Creating and managing the process address space:'
+  - '  - Allocates memory into the process address space.'
+  - '  - Manage the paging of memory into the pagefile.'
+  - 3. Access hardware like peripherals (network cards etc).
+  - 4. Provides networking services to processes.
+  - 5. In windows maintains the Registry services to allow processes to store key/value
+    pairs.
+  - 6. In Windows the kernel also maintains a large part of the GUI subsystem in the
+    win32k.sys driver.
+  - ''
+  - '## System calls.'
+  - ''
+  - Since processes are not privileged they need to communicate with the kernel to
+    request its services via a well controlled interface. This is called the the system
+    call interface. It is not a normal function call, since the CPU must switch privilege
+    levels - We say the CPU transitions from user space to kernel space. Historically
+    the system call interface was done via an interrupt, but these days it is done
+    via the **sysenter** assembly code.
+  - ''
+  - 'When a userspace program wants to request the kernel''s services it executes
+    the sysenter op code, with the *system call number* contained in the EAX register.
+    This number is an index into the SSDT (System Service Descriptor Table). '
+  - ''
+  - Lets take a look at the SSDT of a windows 7 system using the *ssdt* plugin.
+  type: markdown
+- id: 1426725925910
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: Enumerate the SSDT.
+      name: ssdt
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Enumerate the SSDT.
+    session_id: 1
+  type: rekallplugin
+- id: 1426725960135
+  source:
+  - As we can see there are two SSDT tables. The first table is used to request services
+    from the kernel (Note all symbols begin with "nt"). The table contains function
+    pointers to functions within the kernel itself. You can guess by the name of the
+    function what type of service this system call provides.
+  - ''
+  - 'The second take requests services from the GUI subsystem (since all functions
+    pointed to are in the win32k driver). '
+  - ''
+  - Historically malware would hook the SSDT by replacing these function pointers
+    to its own function. This allows the malware to filter all userspace requests
+    to the kernel (for example prevent certain files from being opened or seen). If
+    you run the SSDT plugin and see a function pointer not originating in the kernel
+    or win32k it is pretty suspicious.
+  - ''
+  - Since Microsoft introduced [PatchGuard](http://en.wikipedia.org/wiki/Kernel_Patch_Protection)
+    it has become increasingly difficult to hook the SSDT. These days it is very unlikely
+    to see any SSDT hooks in practice.
+  type: markdown

@@ -1,0 +1,84 @@
+- - m
+  - cookie: 1940
+    plugin_name: null
+    tool_name: rekall
+    tool_version: 1.2.1
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges /'
+- - m
+  - cookie: 1940
+    plugin_name: vtop
+    tool_name: rekall
+    tool_version: 1.2.1
+- - s
+  - name: '0xf80002659000'
+- - f
+  - 'Virtual {0:addrpad} Page Directory {1:addr}
+
+    '
+  - 272678923898880
+  - 1601536
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pml4e
+  - '0x187f80'
+  - 1675363
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pdpte
+  - '0x199000'
+  - 1671267
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pde
+  - '0x198098'
+  - 1937507
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pte
+  - '0x1d92c8'
+  - 9223372036894988643
+- - f
+  - '
+
+    PTE Contains {1:#x}
+
+    PTE Type: {2}
+
+    {0:style=full}
+
+    '
+  - id: 25399
+    mro: _MMPTE_HARDWARE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+    name: Hard
+    offset: 1938120
+    type_name: _MMPTE_HARDWARE
+    vm: VTxPagedMemory@0x881AF01E
+  - 9223372036894988643
+  - Valid
+- - f
+  - 'PTE mapped at {0:addrpad}
+
+    '
+  - 40210432
+- - f
+  - 'Physical Address {0}
+
+    '
+  - '0x2659000'
+- - x
+- - x
