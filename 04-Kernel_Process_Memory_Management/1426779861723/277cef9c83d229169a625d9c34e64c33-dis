@@ -1,0 +1,535 @@
+- - m
+  - cookie: 281244
+    plugin_name: null
+    session:
+      id: 192836
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 2
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/stuxnet.vmem.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/30B5FB31AE7E4ACAABA750AA241FF3311
+        - FileName
+        session_name:
+        - Stuxnet
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 281244
+    plugin_name: dis
+    session:
+      id: 192836
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 2
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/stuxnet.vmem.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/30B5FB31AE7E4ACAABA750AA241FF3311
+        - FileName
+        session_name:
+        - Stuxnet
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - child:
+        style: address
+      cname: cmd_address
+      name: Address
+      type: TreeNode
+    - cname: relative_address
+      formatstring: '[addr]'
+      name: Rel
+    - cname: opcode
+      formatstring: <20
+      name: Op Codes
+    - cname: instruction
+      formatstring: <30
+      name: Instruction
+    - cname: comment
+      formatstring: ''
+      name: Comment
+  - suppress_headers: false
+- - p
+  - 'Disassembled : 0x0'
+- - r
+  - annotation: true
+    cmd_address: '------  ------
+
+      '
+- - r
+  - cmd_address: 0
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 0
+- - r
+  - cmd_address: 2
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 2
+- - r
+  - cmd_address: 4
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 4
+- - r
+  - cmd_address: 6
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 6
+- - r
+  - cmd_address: 8
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 8
+- - r
+  - cmd_address: 10
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 10
+- - r
+  - cmd_address: 12
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 12
+- - r
+  - cmd_address: 14
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 14
+- - r
+  - cmd_address: 16
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 16
+- - r
+  - cmd_address: 18
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 18
+- - r
+  - cmd_address: 20
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 20
+- - r
+  - cmd_address: 22
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 22
+- - r
+  - cmd_address: 24
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 24
+- - r
+  - cmd_address: 26
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 26
+- - r
+  - cmd_address: 28
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 28
+- - r
+  - cmd_address: 30
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 30
+- - r
+  - cmd_address: 32
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 32
+- - r
+  - cmd_address: 34
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 34
+- - r
+  - cmd_address: 36
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 36
+- - r
+  - cmd_address: 38
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 38
+- - r
+  - cmd_address: 40
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 40
+- - r
+  - cmd_address: 42
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 42
+- - r
+  - cmd_address: 44
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 44
+- - r
+  - cmd_address: 46
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 46
+- - r
+  - cmd_address: 48
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 48
+- - r
+  - cmd_address: 50
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 50
+- - r
+  - cmd_address: 52
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 52
+- - r
+  - cmd_address: 54
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 54
+- - r
+  - cmd_address: 56
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 56
+- - r
+  - cmd_address: 58
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 58
+- - r
+  - cmd_address: 60
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 60
+- - r
+  - cmd_address: 62
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 62
+- - r
+  - cmd_address: 64
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 64
+- - r
+  - cmd_address: 66
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 66
+- - r
+  - cmd_address: 68
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 68
+- - r
+  - cmd_address: 70
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 70
+- - r
+  - cmd_address: 72
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 72
+- - r
+  - cmd_address: 74
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 74
+- - r
+  - cmd_address: 76
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 76
+- - r
+  - cmd_address: 78
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 78
+- - r
+  - cmd_address: 80
+    comment:
+      mro: Instruction:unicode:basestring:object
+      value: ''
+    depth: 0
+    instruction:
+      mro: Instruction:unicode:basestring:object
+      value: ADD [EAX], AL
+    opcode: '0000'
+    relative_address: 80
+- - x
+- - x
