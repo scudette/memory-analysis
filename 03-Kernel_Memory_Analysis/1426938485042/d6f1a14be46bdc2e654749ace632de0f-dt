@@ -1,5 +1,5 @@
 - - m
-  - cookie: 137273
+  - cookie: 169
     plugin_name: null
     session:
       id: 160
@@ -26,8 +26,16 @@
         - TimeZone
     tool_name: rekall
     tool_version: 1.2.1
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - Scanning 0x00CD7000 with WinDTBScanner
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
 - - m
-  - cookie: 137273
+  - cookie: 169
     plugin_name: dt
     session:
       id: 160
@@ -71,51 +79,89 @@
       name: Field
     - cname: content
       name: Content
+      style: compact
   - {}
 - - r
   - Offset: 0
-    content: ' [BitField(16-24):BlockSize]: 0x00000053'
+    content:
+      enum: '83'
+      id: 20564
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 83
     depth: 0
     field: BlockSize
 - - r
   - Offset: 0
-    content: ' [BitField(8-16):PoolIndex]: 0x00000000'
+    content:
+      enum: '0'
+      id: 20578
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
     depth: 0
     field: PoolIndex
 - - r
   - Offset: 0
-    content: ' [Enumeration:Enumeration]: 0x00000002 (NonPagedPoolMustSucceed)'
+    content:
+      enum: NonPagedPoolMustSucceed
+      id: 20571
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
     depth: 0
     field: PoolType
 - - r
   - Offset: 0
-    content: ' [BitField(0-8):PreviousSize]: 0x00000022'
+    content:
+      enum: '34'
+      id: 20575
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 34
     depth: 0
     field: PreviousSize
 - - r
   - Offset: 0
-    content: ' [unsigned long:Ulong1]: 0x02530022'
+    content: 38993954
     depth: 0
     field: Ulong1
 - - r
   - Offset: 4
-    content: ' [unsigned long:PoolTag]: 0xE36F7250'
+    content: 3815731792
     depth: 0
     field: PoolTag
 - - r
   - Offset: 8
-    content: ' [unsigned short:AllocatorBackTraceIndex]: 0x0000FFFF'
+    content: 65535
     depth: 0
     field: AllocatorBackTraceIndex
 - - r
   - Offset: 8
-    content: <_EPROCESS Pointer to [0xFFFFFFFFFFFF] (ProcessBilled)>
+    content:
+      id: 20566
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: ProcessBilled
+      offset: 275427684149976
+      target: 281474976710655
+      target_obj:
+        id: 20719
+        mro: NoneObject:object
+        reason: Pointer ProcessBilled @ 281474976710655 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
     depth: 0
     field: ProcessBilled
 - - r
   - Offset: 10
-    content: ' [unsigned short:PoolTagHash]: 0x0000FFFF'
+    content: 65535
     depth: 0
     field: PoolTagHash
+- - r
+  - Offset:
+      id: 20573
+      mro: NoneObject:object
+      reason: Struct _POOL_HEADER has no member Tag
+    content:
+      b64: UHJv4w==
+      mro: str:basestring:object
+    depth: 0
+    field: Tag
 - - x
 - - x
