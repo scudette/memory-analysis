@@ -23,7 +23,7 @@
       type: image/jpeg
     - name: schematic_1.jpg
       type: image/jpeg
-    size: 1
+    size: 0
   type: fileupload
 - id: 1426425477527
   source:
@@ -261,7 +261,7 @@
     Server 2003 system, acquired together with the pagefile:'
   type: markdown
 - id: 1426432076242
-  source: unzip -l ../images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
+  source: unzip -l images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
   type: shell
 - id: 1426433971953
   source:
@@ -275,7 +275,7 @@
   - 'Lets examine the metadata:'
   type: markdown
 - id: 1426434167257
-  source: unzip -p ../images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
+  source: unzip -p images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
     information.turtle
   type: shell
 - id: 1426434241789
@@ -315,7 +315,7 @@
     the provided AFF4 volume and outputs a common view of all known objects.
   type: markdown
 - id: 1426435637950
-  source: linpmem -V ../images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
+  source: linpmem -V images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
   type: shell
 - id: 1426435719407
   source:
@@ -325,7 +325,7 @@
     pagefile into the /tmp/ directory:'
   type: markdown
 - id: 1426441759666
-  source: linpmem --export /c:/pagefile.sys --output /tmp/pagefile.sys ../images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
+  source: linpmem --export /c:/pagefile.sys --output /tmp/pagefile.sys images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4
   type: shell
 - id: 1426446371053
   source:
@@ -416,7 +416,7 @@
     files:
     - name: livemode.jpg
       type: image/jpeg
-    size: 2
+    size: 1
   type: fileupload
 - id: 1426762879441
   source:
@@ -632,62 +632,19 @@
   - Click the "Add Cell" button on the toolbar and select to add a "Rekall Plugin"
     (alternative just press c followed by r, c-r).
   type: markdown
-- id: 1426853217477
+- id: 1426939785726
   source:
     arguments: {}
     plugin:
       arguments:
-      - critical: true
-        help: Name of the profile to load. This is the filename of the profile found
-          in the profiles directory. Profiles are searched in the profile path order.
-        name: profile
-        positional: false
-        short_opt: p
-      - help: The DTB physical address.
-        name: dtb
-        positional: false
+      - help: The session id to change to
+        name: session_id
+        positional: true
         short_opt: ''
-        type: IntParser
-      - help: One or more pids of processes to select.
-        name: pid
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - default: null
-        help: A regex to select a process by name.
-        name: proc_regex
-        positional: false
-        short_opt: ''
-      - help: Physical addresses of task structs.
-        name: phys_task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Kernel addresses of task structs.
-        name: task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Use this as the first task to follow the list.
-        name: task_head
-        positional: false
-        short_opt: ''
-        type: IntParser
-      - choices:
-        - InitTask
-        help: Method to list processes (Default uses all methods).
-        name: method
-        nargs: +
-        positional: false
-        short_opt: ''
-      description: "Gathers active tasks by walking the task_struct->task list.\n\n\
-        \    It does not display the swapper process. If the DTB column is blank,\
-        \ the\n    item is likely a kernel thread.\n    "
-      name: pslist
-      requirements:
-      - profile
-      - physical_address_space
-      short_description: Gathers active tasks by walking the task_struct->task list.
+      description: List the sessions available.
+      name: slist
+      requirements: []
+      short_description: List the sessions available.
     session_id: 1
   type: rekallplugin
 - id: 1426642393275

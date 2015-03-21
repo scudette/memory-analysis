@@ -1,8 +1,8 @@
-cache_key: 1426432076242/71e6c9417f4452cef8e2beaf07d31221-shell
+cache_key: 1426432076242/9afde47861142153a88856cf0eb5c31c-shell
 error: null
 result: '0'
 stderr: ''
-stdout: "Archive:  ../images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4\n\
+stdout: "Archive:  images/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4\n\
   aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed\n  Length      Date    Time    Name\n\
   ---------  ---------- -----   ----\n      847  2015-03-10 00:50   information.turtle\n\
   \       56  2015-03-10 00:50   PhysicalMemory/map\n       64  2015-03-10 00:50 \

@@ -1,12 +1,9 @@
-cache_key: 1426441759666/5cab6a426ccc90c2e01a7c96a75f1d1b-shell
+cache_key: 1426441759666/dd04f54b75fdabe8705a605bb5e94ee2-shell
 error: null
 result: '0'
 stderr: ''
 stdout: "Extracting aff4://4928ef44-6579-496c-a53e-2ad34d98b7ed/c:/pagefile.sys into\
-  \ file:///tmp/pagefile.sys\n Reading 0xa00000  10MiB / 512MiB 0MiB/s\r Reading 0x3c00000\
-  \  60MiB / 512MiB 197MiB/s\r Reading 0x8200000  130MiB / 512MiB 274MiB/s\r Reading\
-  \ 0xb400000  180MiB / 512MiB 169MiB/s\r Reading 0xdc00000  220MiB / 512MiB 134MiB/s\r\
-  \ Reading 0xfa00000  250MiB / 512MiB 95MiB/s\r Reading 0x12200000  290MiB / 512MiB\
-  \ 150MiB/s\r Reading 0x14a00000  330MiB / 512MiB 127MiB/s\r Reading 0x17c00000 \
-  \ 380MiB / 512MiB 185MiB/s\r Reading 0x19a00000  410MiB / 512MiB 111MiB/s\r Reading\
-  \ 0x1cc00000  460MiB / 512MiB 180MiB/s\r Reading 0x1f400000  500MiB / 512MiB 146MiB/s\r"
+  \ file:///tmp/pagefile.sys\n Reading 0xa00000  10MiB / 512MiB 0MiB/s\r Reading 0x5000000\
+  \  80MiB / 512MiB 266MiB/s\r Reading 0xc800000  200MiB / 512MiB 474MiB/s\r Reading\
+  \ 0x15e00000  350MiB / 512MiB 586MiB/s\r Reading 0x19a00000  410MiB / 512MiB 236MiB/s\r\
+  \ Reading 0x1d600000  470MiB / 512MiB 216MiB/s\r"
