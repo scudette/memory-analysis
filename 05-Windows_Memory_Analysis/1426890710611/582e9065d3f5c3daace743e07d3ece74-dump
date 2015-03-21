@@ -1,0 +1,617 @@
+- - m
+  - cookie: 1485630
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 1485630
+    plugin_name: dump
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: offset
+      formatstring: '[addr]'
+      name: Offset
+    - hex_width: 16
+      name: Data
+      style: hexdump
+    - cname: comment
+      formatstring: '40'
+      name: Comment
+  - suppress_headers: false
+- - r
+  - Data:
+      highlights:
+      - - 0
+        - 1
+        - BLACK
+        - RED
+      mro: HexDumpedString:AttributedString:object
+      translated: M.Z............................
+      value: 4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00
+    comment:
+      highlights:
+      - - 0
+        - 44
+        - BLACK
+        - RED
+      mro: AttributedString:object
+      value: \Program Files\Amazon\XenTools\LiteAgent.exe
+    nowrap: true
+    offset: 140697458966528
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '................@..............'
+      value: b8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966544
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966560
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 00 00 00 00 00 00 00 00 00 00 00 f8 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966576
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '................!.....L...!.T.h'
+      value: 0e 1f ba 0e 00 b4 09 cd 21 b8 01 4c cd 21 54 68
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966592
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: i.s...p.r.o.g.r.a.m...c.a.n.n.o
+      value: 69 73 20 70 72 6f 67 72 61 6d 20 63 61 6e 6e 6f
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966608
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: t...b.e...r.u.n...i.n...D.O.S..
+      value: 74 20 62 65 20 72 75 6e 20 69 6e 20 44 4f 53 20
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966624
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: m.o.d.e.........$..............
+      value: 6d 6f 64 65 2e 0d 0d 0a 24 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966640
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: ..c.........c.......c.......c..
+      value: fe 63 0d d4 ba 02 63 87 ba 02 63 87 ba 02 63 87
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966656
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: F.u.........c...K...........c..
+      value: 46 75 dd 87 bb 02 63 87 4b c4 ad 87 df 02 63 87
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966672
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: K...........c...K...........c..
+      value: 4b c4 ae 87 b3 02 63 87 4b c4 ac 87 97 02 63 87
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966688
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: F.u.........c.......b.......c..
+      value: 46 75 df 87 bb 02 63 87 ba 02 62 87 c1 02 63 87
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966704
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: F.u.........c...............c..
+      value: 46 75 da 87 b7 02 63 87 dc ec b0 87 bf 02 63 87
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966720
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '............c...............c..'
+      value: dc ec aa 87 bb 02 63 87 ba 02 f4 87 bb 02 63 87
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966736
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '............c...R.i.c.h.....c..'
+      value: dc ec af 87 bb 02 63 87 52 69 63 68 ba 02 63 87
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966752
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '................P.E.....d......'
+      value: 00 00 00 00 00 00 00 00 50 45 00 00 64 86 07 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966768
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: T.O.X.S....................."..
+      value: 54 4f 58 53 00 00 00 00 00 00 00 00 f0 00 22 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966784
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 0b 02 0b 00 00 02 01 00 00 82 01 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966800
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: ..a............................
+      value: d0 61 00 00 00 10 00 00 00 00 10 ae f6 7f 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966816
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 10 00 00 00 02 00 00 06 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966832
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 06 00 00 00 00 00 00 00 00 d0 02 00 00 04 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966848
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: v.8.........`..................
+      value: 76 38 03 00 02 00 60 81 00 00 10 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966864
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 10 00 00 00 00 00 00 00 00 10 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966880
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 10 00 00 00 00 00 00 00 00 00 00 10 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966896
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '................|..............'
+      value: 00 00 00 00 00 00 00 00 7c c3 01 00 8c 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966912
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: ..@.......m.............\......
+      value: 00 40 02 00 98 6d 00 00 00 10 02 00 5c 10 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966928
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: ..d............................
+      value: 00 64 02 00 e8 1e 00 00 00 b0 02 00 e0 07 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966944
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: P.$.....8......................
+      value: 50 24 01 00 38 00 00 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966960
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '........................(......'
+      value: 00 00 00 00 00 00 00 00 80 a8 01 00 28 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966976
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '........p......................'
+      value: 10 a8 01 00 70 00 00 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458966992
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 20 01 00 a0 03 00 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967008
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967024
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: ..t.e.x.t......................
+      value: 2e 74 65 78 74 00 00 00 ef 01 01 00 00 10 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967040
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 02 01 00 00 04 00 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967056
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '..............`...r.d.a.t.a....'
+      value: 00 00 00 00 20 00 00 60 2e 72 64 61 74 61 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967072
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: ba af 00 00 00 20 01 00 00 b0 00 00 00 06 01 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967088
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '........................@.....@'
+      value: 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 40
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967104
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: ..d.a.t.a.........9............
+      value: 2e 64 61 74 61 00 00 00 f0 39 00 00 00 d0 01 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967120
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 16 00 00 00 b6 01 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967136
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '........@.........p.d.a.t.a....'
+      value: 00 00 00 00 40 00 00 c0 2e 70 64 61 74 61 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967152
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: \..............................
+      value: 5c 10 00 00 00 10 02 00 00 12 00 00 00 cc 01 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967168
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '........................@.....@'
+      value: 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 40
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967184
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: ..t.l.s...................0....
+      value: 2e 74 6c 73 00 00 00 00 19 00 00 00 00 30 02 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967200
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '...............................'
+      value: 00 02 00 00 00 de 01 00 00 00 00 00 00 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967216
+- - r
+  - Data:
+      highlights: []
+      mro: HexDumpedString:AttributedString:object
+      translated: '........@.........r.s.r.c......'
+      value: 00 00 00 00 40 00 00 c0 2e 72 73 72 63 00 00 00
+    comment:
+      highlights: []
+      mro: AttributedString:object
+      value: ''
+    nowrap: true
+    offset: 140697458967232
+- - x
+- - x

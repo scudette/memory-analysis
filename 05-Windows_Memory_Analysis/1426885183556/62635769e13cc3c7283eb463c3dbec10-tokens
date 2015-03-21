@@ -1,0 +1,147 @@
+- - m
+  - cookie: 1005052
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 1005052
+    plugin_name: tokens
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: process
+      formatstring: '16'
+      name: Process
+    - cname: pid
+      formatstring: '5'
+      name: Pid
+    - cname: sid
+      formatstring: '50'
+      name: Sid
+    - cname: comment
+      formatstring: ''
+      name: Comment
+  - {}
+- - r
+  - comment: Administrator
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-21-787187815-2830375873-2455342951-500
+- - r
+  - comment: Domain Users
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-21-787187815-2830375873-2455342951-513
+- - r
+  - comment: Everyone
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-1-0
+- - r
+  - comment: ''
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-114
+- - r
+  - comment: Administrators
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-32-544
+- - r
+  - comment: Users
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-32-545
+- - r
+  - comment: Remote Interactive Logon
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-14
+- - r
+  - comment: Interactive
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-4
+- - r
+  - comment: Authenticated Users
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-11
+- - r
+  - comment: This Organization
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-15
+- - r
+  - comment: ''
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-113
+- - r
+  - comment: Logon Session
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-5-0-1495222
+- - r
+  - comment: Local (Users with the ability to log in locally)
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-2-0
+- - r
+  - comment: NTLM Authentication
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-5-64-10
+- - r
+  - comment: High Mandatory Level
+    pid: 644
+    process: winpmem.exe
+    sid: S-1-16-12288
+- - x
+- - x

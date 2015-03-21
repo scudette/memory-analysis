@@ -1,0 +1,249 @@
+- - m
+  - cookie: 169
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - p
+  - ': Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - Scanning 0xF8001BCFF000 with ExportScanner
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - Scanning 0xF8001C59D000 with ExportScanner
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - m
+  - cookie: 169
+    plugin_name: hives
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/scudette/projects/workshop/images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: offset
+      formatstring: '[addrpad]'
+      name: Offset
+    - cname: name
+      formatstring: ''
+      name: Name
+  - {}
+- - r
+  - name: ' @ 0xc00183015000'
+    offset:
+      id: 665098
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112725401600
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \REGISTRY\MACHINE\SYSTEM @ 0xc0018302d000
+    offset:
+      id: 665125
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112725499904
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \REGISTRY\MACHINE\HARDWARE @ 0xc00183055000
+    offset:
+      id: 665155
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112725663744
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \Device\HarddiskVolume1\Boot\BCD @ 0xc00183659000
+    offset:
+      id: 665185
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112731971584
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \SystemRoot\System32\Config\SOFTWARE @ 0xc001836e7000
+    offset:
+      id: 665213
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112732553216
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \SystemRoot\System32\Config\DEFAULT @ 0xc0018a8e0000
+    offset:
+      id: 665241
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112852062208
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \SystemRoot\System32\Config\SECURITY @ 0xc001844d3000
+    offset:
+      id: 665269
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112747151360
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \SystemRoot\System32\Config\SAM @ 0xc00184511000
+    offset:
+      id: 665297
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112747405312
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \??\C:\Windows\ServiceProfiles\NetworkService\NTUSER.DAT @ 0xc0018458f000
+    offset:
+      id: 665325
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112747921408
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \SystemRoot\System32\Config\BBI @ 0xc00184576000
+    offset:
+      id: 665353
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112747819008
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \??\C:\Windows\ServiceProfiles\LocalService\NTUSER.DAT @ 0xc00184661000
+    offset:
+      id: 665381
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112748781568
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \??\C:\Users\Administrator\ntuser.dat @ 0xc00185889000
+    offset:
+      id: 665409
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112767819776
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \??\C:\Users\Administrator\AppData\Local\Microsoft\Windows\UsrClass.dat
+      @ 0xc00187292000
+    offset:
+      id: 665437
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112795119616
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - r
+  - name: \??\C:\Windows\AppCompat\Programs\Amcache.hve @ 0xc001875c0000
+    offset:
+      id: 665465
+      mro: _CMHIVE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _CMHIVE
+      offset: 211112798453760
+      type_name: _CMHIVE
+      vm: WindowsAMD64PagedMemory@0x001AA000 (Kernel AS@0x1aa000)
+- - x
+- - x
