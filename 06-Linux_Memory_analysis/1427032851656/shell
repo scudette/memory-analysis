@@ -1,0 +1,11 @@
+cache_key: 1427032851656/0fa496c8d6d03a719ddd88fd0aa4588b-shell
+error: null
+result: '0'
+stderr: ''
+stdout: "\n----------------------------------------------------------------------------\n\
+  The Rekall Memory Forensic framework 1.2.1 (Col de la Croix).\n\n\"We can remember\
+  \ it for you wholesale!\"\n\nThis program is free software; you can redistribute\
+  \ it and/or modify it under\nthe terms of the GNU General Public License.\n\nSee\
+  \ http://www.rekall-forensic.com/docs/Manual/tutorial.html to get started.\n----------------------------------------------------------------------------\n\
+  \x01\e[0;32m\x02\x01\e[1;36m\x02[1] Default session\x01\e[1;34m\x02\x01\e[0;32m\x02\
+  \ 15:05:21> \x01\e[0m\x02\nDo you really want to exit ([y]/n)? \nSorry. Too perfect.\n"

@@ -1,0 +1,608 @@
+- - m
+  - cookie: 27987
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 27987
+    plugin_name: check_task_fops
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: pid
+      formatstring: '6'
+      name: Pid
+    - cname: comm
+      formatstring: '20'
+      name: Command
+    - cname: member
+      formatstring: '30'
+      name: Member
+    - cname: address
+      formatstring: '[addrpad]'
+      name: Address
+    - cname: module
+      formatstring: <20
+      name: Module
+  - {}
+- - r
+  - address:
+      id: 28260
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: compat_ioctl
+      offset: 281472848258819
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: compat_ioctl
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29029
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: fasync
+      offset: 281472848258761
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: fasync
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29071
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: llseek
+      offset: 281472847025501
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: llseek
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29107
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: open
+      offset: 281472848264260
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: open
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29140
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: poll
+      offset: 281472848258983
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: poll
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29170
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: read
+      offset: 281472848259094
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: read
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29203
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: release
+      offset: 281472848263110
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: release
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29245
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: unlocked_ioctl
+      offset: 281472848266023
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: unlocked_ioctl
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29275
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: write
+      offset: 281472848260270
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: write
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29322
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: compat_ioctl
+      offset: 281472848258819
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: compat_ioctl
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29355
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: fasync
+      offset: 281472848258761
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: fasync
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29397
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: llseek
+      offset: 281472847025501
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: llseek
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29433
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: open
+      offset: 281472848264260
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: open
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29466
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: poll
+      offset: 281472848258983
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: poll
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29496
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: read
+      offset: 281472848259094
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: read
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29529
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: release
+      offset: 281472848263110
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: release
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29571
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: unlocked_ioctl
+      offset: 281472848266023
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: unlocked_ioctl
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29601
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: write
+      offset: 281472848260270
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: write
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29648
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: compat_ioctl
+      offset: 281472848258819
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: compat_ioctl
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29681
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: fasync
+      offset: 281472848258761
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: fasync
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29723
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: llseek
+      offset: 281472847025501
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: llseek
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29759
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: open
+      offset: 281472848264260
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: open
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29792
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: poll
+      offset: 281472848258983
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: poll
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29822
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: read
+      offset: 281472848259094
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: read
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29855
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: release
+      offset: 281472848263110
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: release
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29897
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: unlocked_ioctl
+      offset: 281472848266023
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: unlocked_ioctl
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 29927
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: write
+      offset: 281472848260270
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: write
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 30721
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: aio_read
+      offset: 281472846747729
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: aio_read
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 30751
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: aio_write
+      offset: 281473367508983
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: aio_write
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 30788
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: compat_ioctl
+      offset: 281473367546294
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: compat_ioctl
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 30819
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: fallocate
+      offset: 281473367667982
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: fallocate
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 30859
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: fsync
+      offset: 281473367509793
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: fsync
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 30893
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: llseek
+      offset: 281473367509548
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: llseek
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 30927
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: mmap
+      offset: 281473367508914
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: mmap
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 30958
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: open
+      offset: 281473367508558
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: open
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 30995
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: read
+      offset: 281472847026104
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: read
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 31028
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: release
+      offset: 281473367508411
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: release
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 31065
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: splice_read
+      offset: 281472847161321
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: splice_read
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 31095
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: splice_write
+      offset: 281472847157449
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: splice_write
+    module: linux
+    pid: 2601
+- - r
+  - address:
+      id: 31125
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: unlocked_ioctl
+      offset: 281473367544185
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: unlocked_ioctl
+    module: ext4
+    pid: 2601
+- - r
+  - address:
+      id: 31156
+      mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+      name: write
+      offset: 281472847025868
+      type_name: Function
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    comm: backdoor.sh
+    highlight: null
+    member: write
+    module: linux
+    pid: 2601
+- - x
+- - x

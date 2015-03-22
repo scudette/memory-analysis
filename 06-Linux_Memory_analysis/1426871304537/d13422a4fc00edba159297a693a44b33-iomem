@@ -1,0 +1,435 @@
+- - m
+  - cookie: 242328
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 242328
+    plugin_name: iomem
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: resource
+      formatstring: '[addrpad]'
+      name: Resource
+    - cname: depth
+      formatstring: ''
+      name: ''
+    - cname: start
+      formatstring: '[addrpad]'
+      name: Start
+    - cname: end
+      formatstring: '[addrpad]'
+      name: End
+    - cname: name
+      formatstring: ''
+      name: Name
+  - {}
+- - r
+  - depth: ''
+    end: 68719476735
+    name: PCI mem
+    resource:
+      id: 242422
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: resource
+      offset: 281472852393216
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 0
+- - r
+  - depth: .
+    end: 65535
+    name: reserved
+    resource:
+      id: 242454
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 149534118178112
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 0
+- - r
+  - depth: .
+    end: 654335
+    name: System RAM
+    resource:
+      id: 242488
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534118178168
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 65536
+- - r
+  - depth: .
+    end: 655359
+    name: reserved
+    resource:
+      id: 242522
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534118178224
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 654336
+- - r
+  - depth: .
+    end: 819199
+    name: Video ROM
+    resource:
+      id: 242556
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 281472852365904
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 786432
+- - r
+  - depth: .
+    end: 929791
+    name: Adapter ROM
+    resource:
+      id: 242590
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 281472852365568
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 925696
+- - r
+  - depth: .
+    end: 1048575
+    name: reserved
+    resource:
+      id: 242624
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534118178280
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 983040
+- - r
+  - depth: ..
+    end: 1048575
+    name: System ROM
+    resource:
+      id: 242656
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 281472852365968
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 983040
+- - r
+  - depth: .
+    end: 536805375
+    name: System RAM
+    resource:
+      id: 242693
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534118178336
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 1048576
+- - r
+  - depth: ..
+    end: 20280037
+    name: Kernel code
+    resource:
+      id: 242725
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 281472852364672
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 16777216
+- - r
+  - depth: ..
+    end: 23677951
+    name: Kernel data
+    resource:
+      id: 242759
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 281472852364736
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 20280038
+- - r
+  - depth: ..
+    end: 25194495
+    name: Kernel bss
+    resource:
+      id: 242793
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 281472852364800
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 24285184
+- - r
+  - depth: .
+    end: 536870911
+    name: ACPI Tables
+    resource:
+      id: 242835
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534118178392
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 536805376
+- - r
+  - depth: .
+    end: 3774873599
+    name: '0000:00:02.0'
+    resource:
+      id: 242869
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111683352
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 3758096384
+- - r
+  - depth: .
+    end: 4026662911
+    name: '0000:00:03.0'
+    resource:
+      id: 242903
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111687448
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4026531840
+- - r
+  - depth: ..
+    end: 4026662911
+    name: e1000
+    resource:
+      id: 242935
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 149534102149504
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4026531840
+- - r
+  - depth: .
+    end: 4034920447
+    name: '0000:00:04.0'
+    resource:
+      id: 242972
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111691600
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4030726144
+- - r
+  - depth: ..
+    end: 4034920447
+    name: vboxguest
+    resource:
+      id: 243004
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 149534065368768
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4030726144
+- - r
+  - depth: .
+    end: 4034936831
+    name: '0000:00:04.0'
+    resource:
+      id: 243041
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111691656
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4034920448
+- - r
+  - depth: .
+    end: 4034940927
+    name: '0000:00:06.0'
+    resource:
+      id: 243075
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111699736
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4034936832
+- - r
+  - depth: ..
+    end: 4034940927
+    name: ohci_hcd
+    resource:
+      id: 243107
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 149534097564288
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4034936832
+- - r
+  - depth: .
+    end: 4035182591
+    name: '0000:00:08.0'
+    resource:
+      id: 243144
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111707928
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4035051520
+- - r
+  - depth: ..
+    end: 4035182591
+    name: e1000
+    resource:
+      id: 243176
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 149534097565120
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4035051520
+- - r
+  - depth: .
+    end: 4035186687
+    name: 0000:00:0b.0
+    resource:
+      id: 243213
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111712024
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4035182592
+- - r
+  - depth: ..
+    end: 4035186687
+    name: ehci_hcd
+    resource:
+      id: 243245
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 149534075483968
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4035182592
+- - r
+  - depth: .
+    end: 4035198975
+    name: 0000:00:0d.0
+    resource:
+      id: 243282
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534111716400
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4035190784
+- - r
+  - depth: ..
+    end: 4035198975
+    name: ahci
+    resource:
+      id: 243314
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: child
+      offset: 149534097565696
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4035190784
+- - r
+  - depth: .
+    end: 4273996799
+    name: IOAPIC 0
+    resource:
+      id: 243351
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534118178560
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4273995776
+- - r
+  - depth: .
+    end: 4276097023
+    name: Local APIC
+    resource:
+      id: 243385
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 281472852379312
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4276092928
+- - r
+  - depth: .
+    end: 4294967295
+    name: reserved
+    resource:
+      id: 243419
+      mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: sibling
+      offset: 149534118178448
+      type_name: resource
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    start: 4294705152
+- - x
+- - x

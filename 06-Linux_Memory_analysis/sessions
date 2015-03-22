@@ -1,0 +1,22 @@
+- id: 160
+  mro: InteractiveSession:JsonSerializableSession:Session:object
+  session_id: 1
+  state:
+    ept:
+    - null
+    - IntParser
+    filename:
+    - /home/driest/research/memory-analysis/images/debianx64.elf
+    - FileName
+    pagefile:
+    - []
+    - FileName
+    profile:
+    - Debian/3.2.0-4-amd64
+    - FileName
+    session_name:
+    - Debian AMD64
+    - String
+    timezone:
+    - UTC
+    - TimeZone

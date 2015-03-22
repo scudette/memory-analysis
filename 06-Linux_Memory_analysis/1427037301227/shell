@@ -1,0 +1,58 @@
+cache_key: 1427037301227/65981ff63f71d410bee8c50c5eec4846-shell
+error: null
+result: '0'
+stderr: ''
+stdout: "Module                  Size  Used by\nmsr                    12865  0 \n\
+  pci_stub               12622  1 \nvboxpci                23194  0 \nvboxnetadp \
+  \            25670  0 \nvboxnetflt             27613  0 \nvboxdrv              \
+  \ 405719  3 vboxnetadp,vboxnetflt,vboxpci\nctr                    13049  0 \nccm\
+  \                    17773  0 \nipt_MASQUERADE         12880  3 \niptable_nat  \
+  \          13011  1 \nnf_nat_ipv4            13263  1 iptable_nat\nnf_nat      \
+  \           21841  3 ipt_MASQUERADE,nf_nat_ipv4,iptable_nat\nnf_conntrack_ipv4 \
+  \     15012  2 \nnf_defrag_ipv4         12758  1 nf_conntrack_ipv4\nxt_conntrack\
+  \           12760  1 \nnf_conntrack           96976  6 ipt_MASQUERADE,nf_nat,nf_nat_ipv4,xt_conntrack,iptable_nat,nf_conntrack_ipv4\n\
+  ipt_REJECT             12541  2 \nxt_CHECKSUM            12549  1 \niptable_mangle\
+  \         12695  1 \nxt_tcpudp              12884  6 \nbridge                110833\
+  \  0 \nstp                    12976  1 bridge\nllc                    14552  2 stp,bridge\n\
+  ip6table_filter        12815  0 \nip6_tables             27025  1 ip6table_filter\n\
+  iptable_filter         12810  1 \nip_tables              27239  3 iptable_filter,iptable_mangle,iptable_nat\n\
+  ebtable_nat            12807  0 \nebtables               30913  1 ebtable_nat\n\
+  x_tables               34059  11 ip6table_filter,xt_CHECKSUM,ip_tables,xt_tcpudp,ipt_MASQUERADE,xt_conntrack,iptable_filter,ebtables,ipt_REJECT,iptable_mangle,ip6_tables\n\
+  vsock                  34903  0 \nrfcomm                 69160  0 \nbnep       \
+  \            19624  2 \nbinfmt_misc            17468  1 \nnls_iso8859_1        \
+  \  12713  1 \nsnd_hda_codec_hdmi     46368  1 \nsnd_hda_codec_conexant    57441\
+  \  1 \nuvcvideo               80885  0 \nvideobuf2_vmalloc      13216  1 uvcvideo\n\
+  videobuf2_memops       13362  1 videobuf2_vmalloc\nvideobuf2_core         40664\
+  \  1 uvcvideo\nvideodev              134688  2 uvcvideo,videobuf2_core\narc4   \
+  \                12608  2 \niwldvm                232285  0 \nmac80211         \
+  \     630669  1 iwldvm\nintel_rapl             18773  0 \nx86_pkg_temp_thermal \
+  \   14205  0 \nintel_powerclamp       14705  0 \ncoretemp               13435  0\
+  \ \nkvm_intel             143187  0 \nkvm                   455835  1 kvm_intel\n\
+  crct10dif_pclmul       14289  0 \ncrc32_pclmul           13113  0 \nghash_clmulni_intel\
+  \    13216  0 \naesni_intel            55624  0 \naes_x86_64             17131 \
+  \ 1 aesni_intel\nlrw                    13286  1 aesni_intel\ngf128mul         \
+  \      14951  1 lrw\nglue_helper            13990  1 aesni_intel\nablk_helper  \
+  \          13597  1 aesni_intel\ncryptd                 20359  3 ghash_clmulni_intel,aesni_intel,ablk_helper\n\
+  btusb                  32412  0 \nbluetooth             391136  11 bnep,btusb,rfcomm\n\
+  serio_raw              13462  0 \nsnd_hda_intel          56531  3 \nwmi        \
+  \            19177  0 \nsnd_hda_codec         192906  3 snd_hda_codec_hdmi,snd_hda_codec_conexant,snd_hda_intel\n\
+  i915                  784111  4 \nsnd_hwdep              13602  1 snd_hda_codec\n\
+  thinkpad_acpi          81013  1 \nnvram                  14411  1 thinkpad_acpi\n\
+  snd_pcm               102099  3 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel\n\
+  snd_page_alloc         18710  2 snd_pcm,snd_hda_intel\nsnd_seq_midi           13324\
+  \  0 \nsnd_seq_midi_event     14899  1 snd_seq_midi\ndrm_kms_helper         55071\
+  \  1 i915\nsnd_rawmidi            30144  1 snd_seq_midi\ndrm                   303102\
+  \  5 i915,drm_kms_helper\nsnd_seq                61560  2 snd_seq_midi_event,snd_seq_midi\n\
+  video                  19476  1 i915\nsnd_seq_device         14497  3 snd_seq,snd_rawmidi,snd_seq_midi\n\
+  snd_timer              29482  2 snd_pcm,snd_seq\niwlwifi               169932  1\
+  \ iwldvm\ncfg80211              484040  3 iwlwifi,mac80211,iwldvm\ni2c_algo_bit\
+  \           13413  1 i915\nparport_pc             32701  0 \nsnd               \
+  \     69322  18 snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_hda_codec_conexant,snd_pcm,snd_seq,snd_rawmidi,snd_hda_codec,snd_hda_intel,thinkpad_acpi,snd_seq_device,snd_seq_midi\n\
+  lpc_ich                21080  0 \nsoundcore              12680  1 snd\nmei_me  \
+  \               18627  0 \nmei                    82276  1 mei_me\nmac_hid     \
+  \           13205  0 \nppdev                  17671  0 \nlp                    \
+  \ 17759  0 \nparport                42348  3 lp,ppdev,parport_pc\ne1000e       \
+  \         254433  0 \npsmouse               106714  0 \nahci                   29915\
+  \  3 \nsdhci_pci              23172  0 \nlibahci                32716  1 ahci\n\
+  ptp                    18933  1 e1000e\nsdhci                  43015  1 sdhci_pci\n\
+  pps_core               19382  1 ptp\n"

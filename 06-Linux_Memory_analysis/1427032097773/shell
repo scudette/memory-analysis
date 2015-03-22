@@ -1,0 +1,12 @@
+cache_key: 1427032097773/2452538e2e8b1b6ab47c68fbe130f7ad-shell
+error: null
+result: '0'
+stderr: ''
+stdout: "make: Entering directory `/home/driest/research/memory-analysis/05-Linux_Memory_Forensics/profile'\n\
+  make -C /usr/src/linux-headers-3.13.0-45-generic CONFIG_DEBUG_INFO=y M=`pwd` modules\n\
+  make[1]: Entering directory `/usr/src/linux-headers-3.13.0-45-generic'\n  Building\
+  \ modules, stage 2.\n  MODPOST 2 modules\nmake[1]: Leaving directory `/usr/src/linux-headers-3.13.0-45-generic'\n\
+  cp module.ko module_dwarf.ko\nzip \"3.13.0-45-generic.zip\" module_dwarf.ko /boot/System.map-3.13.0-45-generic\
+  \ /boot/config-3.13.0-45-generic\nupdating: module_dwarf.ko (deflated 65%)\nupdating:\
+  \ boot/config-3.13.0-45-generic (deflated 75%)\nupdating: boot/System.map-3.13.0-45-generic\
+  \ (deflated 79%)\nmake: Leaving directory `/home/driest/research/memory-analysis/05-Linux_Memory_Forensics/profile'\n"

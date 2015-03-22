@@ -1,0 +1,699 @@
+- - m
+  - cookie: 9162
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 9162
+    plugin_name: check_modules
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: module_addr
+      formatstring: '[addrpad]'
+      name: Module
+    - cname: module
+      formatstring: '30'
+      name: Module Name
+    - cname: refcount
+      formatstring: ^10
+      name: Ref Count
+    - cname: known
+      formatstring: ''
+      name: Known
+  - {}
+- - r
+  - known: true
+    module: e1000
+    module_addr:
+      id: 10518
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366423728
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: usb_common
+    module_addr:
+      id: 10555
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366482944
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: usbcore
+    module_addr:
+      id: 10592
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366610112
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: scsi_mod
+    module_addr:
+      id: 10629
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367249136
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: libata
+    module_addr:
+      id: 10666
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367471264
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: ehci_hcd
+    module_addr:
+      id: 10703
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366130992
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: ata_piix
+    module_addr:
+      id: 10740
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366188048
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: libahci
+    module_addr:
+      id: 10777
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366238432
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: ahci
+    module_addr:
+      id: 10814
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366288512
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: ohci_hcd
+    module_addr:
+      id: 10851
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366659312
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: ata_generic
+    module_addr:
+      id: 10888
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366152608
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: crc_t10dif
+    module_addr:
+      id: 10925
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366208512
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: cdrom
+    module_addr:
+      id: 10962
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366328176
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: sd_mod
+    module_addr:
+      id: 10999
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366721584
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: sr_mod
+    module_addr:
+      id: 11036
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366458704
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: sg
+    module_addr:
+      id: 11073
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366769792
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: mbcache
+    module_addr:
+      id: 11110
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366790256
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: jbd2
+    module_addr:
+      id: 11147
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366870816
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: crc16
+    module_addr:
+      id: 11184
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366679552
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: ext4
+    module_addr:
+      id: 11221
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367809024
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: hid
+    module_addr:
+      id: 11258
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367076016
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: usbhid
+    module_addr:
+      id: 11295
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366917792
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: pcspkr
+    module_addr:
+      id: 11332
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366958240
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: soundcore
+    module_addr:
+      id: 11369
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366937600
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: ac97_bus
+    module_addr:
+      id: 11406
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367281792
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: snd
+    module_addr:
+      id: 11443
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367331344
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: vboxguest
+    module_addr:
+      id: 11480
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368111504
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: i2c_core
+    module_addr:
+      id: 11517
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473366987536
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: i2c_piix4
+    module_addr:
+      id: 11554
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367870208
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: snd_timer
+    module_addr:
+      id: 11591
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367896192
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: snd_page_alloc
+    module_addr:
+      id: 11628
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367986224
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: snd_pcm
+    module_addr:
+      id: 11665
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368327408
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: serio_raw
+    module_addr:
+      id: 11702
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367916800
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: evdev
+    module_addr:
+      id: 11739
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367941280
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: thermal_sys
+    module_addr:
+      id: 11776
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368167824
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: snd_ac97_codec
+    module_addr:
+      id: 11813
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368438416
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: psmouse
+    module_addr:
+      id: 11850
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368514064
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: button
+    module_addr:
+      id: 11887
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473367962016
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: processor
+    module_addr:
+      id: 11924
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368201712
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: snd_intel8x0
+    module_addr:
+      id: 11961
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368557136
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: parport
+    module_addr:
+      id: 11998
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368236976
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: parport_pc
+    module_addr:
+      id: 12035
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368605344
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 4
+- - r
+  - known: true
+    module: power_supply
+    module_addr:
+      id: 12072
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368257936
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: ac
+    module_addr:
+      id: 12109
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368682864
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: battery
+    module_addr:
+      id: 12146
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368626272
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: joydev
+    module_addr:
+      id: 12183
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368649888
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: loop
+    module_addr:
+      id: 12220
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368711776
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: sunrpc
+    module_addr:
+      id: 12257
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368871584
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: lockd
+    module_addr:
+      id: 12294
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473369061616
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: fscache
+    module_addr:
+      id: 12331
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368949616
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: auth_rpcgss
+    module_addr:
+      id: 12368
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473369104960
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: nfs_acl
+    module_addr:
+      id: 12405
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368576000
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: nfs
+    module_addr:
+      id: 12442
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473369388416
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: nfsd
+    module_addr:
+      id: 12479
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473369706960
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: rootkit
+    module_addr:
+      id: 12516
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473368993792
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: true
+    module: pmem
+    module_addr:
+      id: 12553
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 281473369514096
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 3
+- - r
+  - known: false
+    module: P
+    module_addr:
+      id: 12590
+      mro: module:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: module
+      offset: 149534111322600
+      type_name: module
+      vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
+    refcount: 64
+- - x
+- - x
