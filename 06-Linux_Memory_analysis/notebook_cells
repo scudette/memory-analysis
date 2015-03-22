@@ -118,6 +118,54 @@
     kernel for memory access, but performs memory mapping itself with a technique
     called *PTE remapping* **REFERENCE**.'
   type: markdown
+- id: 1427056160716
+  source:
+  - '## The iomem resource tree'
+  - ''
+  - It is important to be aware of the physical memory layout and how it has been
+    enumerated, to make sure malicious software has not hidden memory regions from
+    acquisition. The *iomem\_resource* tree is a Linux kernel data structure that
+    manages the layout of the physical address space. It can be accessed from user
+    space by reading the */proc/iomem* file.
+  type: markdown
+- id: 1427056311614
+  source: cat /proc/iomem
+  type: shell
+- id: 1427056322369
+  source:
+  - The *iomem* plugin walks the iomem resource tree and enumerates all physical memory
+    regions. This should be checked for consistency, as malicious software can easily
+    manipulate this data structure to make certain regions immune to memory acquisition.
+    Both LiME and LMAP use this data structure to determine the regions of memory
+    to acquire, and restrict the image to "System RAM" regions. Simply renaming a
+    region to something else, like "System ROM" will exempt them from acquisition.
+    More sophisticated strategies will split a region in two and leave out only the
+    pages that malicious software is trying to hide.
+  type: markdown
+- id: 1427056327758
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: mimics /proc/iomem.
+      name: iomem
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: mimics /proc/iomem.
+    session_id: 1
+  type: rekallplugin
 - id: 1426868564145
   source:
   - '## Kernel Rootkits'
@@ -131,6 +179,30 @@
     found in '/proc/modules', as well as in '/sys/module'. The 'lsmod' program obtains
     it's information from these two sources.
   type: markdown
+- id: 1426871304537
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: mimics /proc/iomem.
+      name: iomem
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: mimics /proc/iomem.
+    session_id: 1
+  type: rekallplugin
 - id: 1427037301227
   source: lsmod
   type: shell
@@ -226,6 +298,8 @@
 - id: 1427038761688
   source:
   - We can dump suspicious modules to disk for analysis with the 'moddump' plugin.
+    Note that this will just dump the binary module from memory, which has already
+    been relocated etc. This will not result in a valid ELF .ko file.
   type: markdown
 - id: 1427038729502
   source:
@@ -379,8 +453,25 @@
   type: shell
 - id: 1427051321863
   source:
+  - The kernel manages processes in a list of tasks, called the *task list*. This
+    is a doubly linked list of *struct task\_struct* objects, which each represent
+    a process. The *init\_task* is the first process spawned on boot, all other processes
+    are linked into the same list.
+  type: markdown
+- id: 1427055163619
+  source:
+    caption: ''
+    files:
+    - name: task list.jpg
+      type: image/jpeg
+    size: 1
+  type: fileupload
+- id: 1427055335259
+  source:
   - The *pslist* plugin enumerates all running processes by walking the task list
-    in kernel space.
+    in the memory image. This will reveal any processes that have been hidden by hooks
+    in '/proc'. Since the task list also contains kernel threads, we need to differentiate
+    between them and user mode processes.
   type: markdown
 - id: 1427050388640
   source:
@@ -438,68 +529,6 @@
       - profile
       - physical_address_space
       short_description: Gathers active tasks by walking the task_struct->task list.
-    session_id: 1
-  type: rekallplugin
-- id: 1427050507481
-  source:
-  - '##LSOF'
-  type: markdown
-- id: 1427050528391
-  source:
-    arguments:
-      pid:
-      - 2601
-    plugin:
-      arguments:
-      - critical: true
-        help: Name of the profile to load. This is the filename of the profile found
-          in the profiles directory. Profiles are searched in the profile path order.
-        name: profile
-        positional: false
-        short_opt: p
-      - help: The DTB physical address.
-        name: dtb
-        positional: false
-        short_opt: ''
-        type: IntParser
-      - help: One or more pids of processes to select.
-        name: pid
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - default: null
-        help: A regex to select a process by name.
-        name: proc_regex
-        positional: false
-        short_opt: ''
-      - help: Physical addresses of task structs.
-        name: phys_task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Kernel addresses of task structs.
-        name: task
-        positional: false
-        short_opt: ''
-        type: ArrayIntParser
-      - help: Use this as the first task to follow the list.
-        name: task_head
-        positional: false
-        short_opt: ''
-        type: IntParser
-      - choices:
-        - InitTask
-        help: Method to list processes (Default uses all methods).
-        name: method
-        nargs: +
-        positional: false
-        short_opt: ''
-      description: Lists open files.
-      name: lsof
-      requirements:
-      - profile
-      - physical_address_space
-      short_description: Lists open files.
     session_id: 1
   type: rekallplugin
 - id: 1426868635349
@@ -634,77 +663,5 @@
       - profile
       - physical_address_space
       short_description: Check open files in tasks for f_ops modifications.
-    session_id: 1
-  type: rekallplugin
-- id: 1426871304537
-  source:
-    arguments: {}
-    plugin:
-      arguments:
-      - critical: true
-        help: Name of the profile to load. This is the filename of the profile found
-          in the profiles directory. Profiles are searched in the profile path order.
-        name: profile
-        positional: false
-        short_opt: p
-      - help: The DTB physical address.
-        name: dtb
-        positional: false
-        short_opt: ''
-        type: IntParser
-      description: mimics /proc/iomem.
-      name: iomem
-      requirements:
-      - profile
-      - physical_address_space
-      short_description: mimics /proc/iomem.
-    session_id: 1
-  type: rekallplugin
-- id: 1426871357984
-  source:
-    arguments: {}
-    plugin:
-      arguments:
-      - critical: true
-        help: Name of the profile to load. This is the filename of the profile found
-          in the profiles directory. Profiles are searched in the profile path order.
-        name: profile
-        positional: false
-        short_opt: p
-      - help: The DTB physical address.
-        name: dtb
-        positional: false
-        short_opt: ''
-        type: IntParser
-      description: Print the active network connections.
-      name: netstat
-      requirements:
-      - profile
-      - physical_address_space
-      short_description: Print the active network connections.
-    session_id: 1
-  type: rekallplugin
-- id: 1426871209820
-  source:
-    arguments: {}
-    plugin:
-      arguments:
-      - critical: true
-        help: Name of the profile to load. This is the filename of the profile found
-          in the profiles directory. Profiles are searched in the profile path order.
-        name: profile
-        positional: false
-        short_opt: p
-      - help: The DTB physical address.
-        name: dtb
-        positional: false
-        short_opt: ''
-        type: IntParser
-      description: Gathers dmesg buffer.
-      name: dmesg
-      requirements:
-      - profile
-      - physical_address_space
-      short_description: Gathers dmesg buffer.
     session_id: 1
   type: rekallplugin
