@@ -6,7 +6,7 @@
     - 2283466782
     - IntParser
     filename:
-    - images/Ubuntu14.10_virtualbox.aff4
+    - ../images/Ubuntu14.10_virtualbox.aff4
     - FileName
     pagefile:
     - []
@@ -28,7 +28,7 @@
     - null
     - IntParser
     filename:
-    - images/stuxnet.vmem.E01
+    - ../images/stuxnet.vmem.E01
     - FileName
     pagefile:
     - []

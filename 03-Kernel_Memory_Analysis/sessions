@@ -6,7 +6,7 @@
     - 2283466782
     - IntParser
     filename:
-    - /home/scudette/projects/workshop/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+    - ../images/Ubuntu14.10_virtualbox.aff4
     - FileName
     pagefile:
     - []
