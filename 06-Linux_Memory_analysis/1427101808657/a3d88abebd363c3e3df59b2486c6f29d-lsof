@@ -1,0 +1,123 @@
+- - m
+  - cookie: 2230
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - p
+  - 'Elf64CoreDump|/home/driest/research/memory-analysis/images/debianx64.elf: Merging
+    Address Ranges -'
+- - m
+  - cookie: 2230
+    plugin_name: lsof
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: name
+      formatstring: 20s
+      name: Name
+    - cname: pid
+      formatstring: '8'
+      name: Pid
+    - cname: uid
+      formatstring: '>8'
+      name: User
+    - cname: fd
+      formatstring: '>8'
+      name: FD
+    - cname: size
+      formatstring: '>12'
+      name: Size
+    - cname: offset
+      formatstring: '>12'
+      name: Offset
+    - cname: node
+      formatstring: '>8'
+      name: Node
+    - cname: path
+      formatstring: ''
+      name: Path
+  - {}
+- - r
+  - fd: 0
+    name: backdoor.sh
+    node: 3
+    offset: 0
+    path: /dev/pts/0
+    pid: 2601
+    size: 0
+    uid: 0
+- - r
+  - fd: 1
+    name: backdoor.sh
+    node: 3
+    offset: 0
+    path: /dev/pts/0
+    pid: 2601
+    size: 0
+    uid: 0
+- - r
+  - fd: 2
+    name: backdoor.sh
+    node: 3
+    offset: 0
+    path: /dev/pts/0
+    pid: 2601
+    size: 0
+    uid: 0
+- - r
+  - fd: 255
+    name: backdoor.sh
+    node: 392563
+    offset: 105
+    path: /root/backdoor.sh
+    pid: 2601
+    size: 105
+    uid: 0
+- - x
+- - x

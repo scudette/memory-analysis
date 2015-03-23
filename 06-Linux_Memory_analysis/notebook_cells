@@ -511,7 +511,7 @@
   type: rekallplugin
 - id: 1426868635349
   source:
-  - '## Inodes'
+  - '## The Virtual File System'
   - ''
   - The Linux kernel maintains a virtual filesystem (VFS) tree, into which all files
     and directories are mounted. The central bookkeeping data structure for a node
@@ -520,7 +520,7 @@
   type: markdown
 - id: 1426868643047
   source:
-  - '## File Operations'
+  - '### File Operations'
   - ''
   - File operations are data structures that dispatch operations on a specific file
     to functions in the kernel. For example, among others, a regular file has pointers
@@ -641,5 +641,117 @@
       - profile
       - physical_address_space
       short_description: Check open files in tasks for f_ops modifications.
+    session_id: 1
+  type: rekallplugin
+- id: 1427101429596
+  source:
+  - '### Open Files'
+  - ''
+  - Processes in Linux manage their open files using integers called *file descriptors*.
+    These are indexes into the kernel's file descriptor table for a process, which
+    is an array of *struct file* data structures.
+  - ''
+  - Each *struct file* stores information on the open file (eg. the mode with which
+    it has been opened, its path, the position where the next read/write will occur,
+    a reference to the page cache with the files contents, and a reference to the
+    corresponding *struct file\_operations*).
+  - ''
+  - By walking the kernels file descriptor array for a process, the 'lsof' plugin
+    enumerates all open files.
+  type: markdown
+- id: 1427101808657
+  source:
+    arguments:
+      pid:
+      - 2601
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - default: null
+        help: A regex to select a process by name.
+        name: proc_regex
+        positional: false
+        short_opt: ''
+      - help: Physical addresses of task structs.
+        name: phys_task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Kernel addresses of task structs.
+        name: task
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Use this as the first task to follow the list.
+        name: task_head
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - choices:
+        - InitTask
+        help: Method to list processes (Default uses all methods).
+        name: method
+        nargs: +
+        positional: false
+        short_opt: ''
+      description: Lists open files.
+      name: lsof
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Lists open files.
+    session_id: 1
+  type: rekallplugin
+- id: 1427102119183
+  source:
+  - '### Network Connections'
+  - ''
+  - Network connections in Linux are managed by sockets. A socket is also referenced
+    from user-mode by a file descriptor integer, which references into the same table
+    as open files. When walking the kernels file-descriptor table, we can identify
+    sockets because their *file\_operations* or *dentry\_operations* reference points
+    to the kernels socket file/dentry operations handler.
+  - ''
+  - The 'netstat' plugin walks a processes *struct file\_operations* and identifies
+    all open sockets. It can thus discover network connections that have been hidden
+    by hooks in '/proc/net'.
+  type: markdown
+- id: 1427102327606
+  source:
+    arguments: {}
+    plugin:
+      arguments:
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      description: Print the active network connections.
+      name: netstat
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Print the active network connections.
     session_id: 1
   type: rekallplugin

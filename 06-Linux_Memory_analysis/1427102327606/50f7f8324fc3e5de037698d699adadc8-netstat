@@ -1,0 +1,763 @@
+- - m
+  - cookie: 5204
+    plugin_name: null
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - m
+  - cookie: 5204
+    plugin_name: netstat
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - /home/driest/research/memory-analysis/images/debianx64.elf
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.2.1
+- - t
+  - - cname: proto
+      formatstring: '12'
+      name: Proto
+    - cname: saddr
+      formatstring: '15'
+      name: SAddr
+    - cname: sport
+      formatstring: '8'
+      name: SPort
+    - cname: daddr
+      formatstring: '15'
+      name: DAddr
+    - cname: dport
+      formatstring: '5'
+      name: DPort
+    - cname: state
+      formatstring: '15'
+      name: State
+    - cname: pid
+      formatstring: '8'
+      name: Pid
+    - cname: comm
+      formatstring: '20'
+      name: Comm
+  - {}
+- - r
+  - comm: rpcbind
+    daddr: '::'
+    dport: 0
+    pid: 1569
+    proto:
+      enum: IPPROTO_UDP
+      id: 22237
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: '::'
+    sport: 0
+    state:
+      enum: CLOSE
+      id: 22256
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpcbind
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1569
+    proto:
+      enum: IPPROTO_UDP
+      id: 22296
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: 0.0.0.0
+    sport: 111
+    state:
+      enum: CLOSE
+      id: 22318
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpcbind
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1569
+    proto:
+      enum: IPPROTO_UDP
+      id: 22357
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: 0.0.0.0
+    sport: 896
+    state:
+      enum: CLOSE
+      id: 22379
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpcbind
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1569
+    proto:
+      enum: IPPROTO_TCP
+      id: 22418
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 0.0.0.0
+    sport: 111
+    state:
+      enum: LISTEN
+      id: 22440
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: rpcbind
+    daddr: '::'
+    dport: 0
+    pid: 1569
+    proto:
+      enum: IPPROTO_UDP
+      id: 22479
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: '::'
+    sport: 111
+    state:
+      enum: CLOSE
+      id: 22498
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpcbind
+    daddr: '::'
+    dport: 0
+    pid: 1569
+    proto:
+      enum: IPPROTO_UDP
+      id: 22537
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: '::'
+    sport: 896
+    state:
+      enum: CLOSE
+      id: 22556
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpcbind
+    daddr: '::'
+    dport: 0
+    pid: 1569
+    proto:
+      enum: IPPROTO_TCP
+      id: 22595
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: '::'
+    sport: 111
+    state:
+      enum: LISTEN
+      id: 22614
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: rpc.statd
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1605
+    proto:
+      enum: IPPROTO_UDP
+      id: 22653
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: 127.0.0.1
+    sport: 933
+    state:
+      enum: CLOSE
+      id: 22675
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpc.statd
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1605
+    proto:
+      enum: IPPROTO_UDP
+      id: 22715
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: 0.0.0.0
+    sport: 52915
+    state:
+      enum: CLOSE
+      id: 22737
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpc.statd
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1605
+    proto:
+      enum: IPPROTO_TCP
+      id: 22776
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 0.0.0.0
+    sport: 50330
+    state:
+      enum: LISTEN
+      id: 22798
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: rpc.statd
+    daddr: '::'
+    dport: 0
+    pid: 1605
+    proto:
+      enum: IPPROTO_UDP
+      id: 22837
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: '::'
+    sport: 46562
+    state:
+      enum: CLOSE
+      id: 22856
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: rpc.statd
+    daddr: '::'
+    dport: 0
+    pid: 1605
+    proto:
+      enum: IPPROTO_TCP
+      id: 22895
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: '::'
+    sport: 56576
+    state:
+      enum: LISTEN
+      id: 22914
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: dhclient
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1641
+    proto:
+      enum: IPPROTO_UDP
+      id: 22953
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: 0.0.0.0
+    sport: 68
+    state:
+      enum: CLOSE
+      id: 22975
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: dhclient
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 1641
+    proto:
+      enum: IPPROTO_UDP
+      id: 23015
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: 0.0.0.0
+    sport: 46421
+    state:
+      enum: CLOSE
+      id: 23037
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: dhclient
+    daddr: '::'
+    dport: 0
+    pid: 1641
+    proto:
+      enum: IPPROTO_UDP
+      id: 23076
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 17
+    saddr: '::'
+    sport: 55177
+    state:
+      enum: CLOSE
+      id: 23095
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+- - r
+  - comm: exim4
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 2389
+    proto:
+      enum: IPPROTO_TCP
+      id: 23134
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 127.0.0.1
+    sport: 25
+    state:
+      enum: LISTEN
+      id: 23156
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: exim4
+    daddr: '::'
+    dport: 0
+    pid: 2389
+    proto:
+      enum: IPPROTO_TCP
+      id: 23196
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: ::1
+    sport: 25
+    state:
+      enum: LISTEN
+      id: 23215
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: sshd
+    daddr: 0.0.0.0
+    dport: 0
+    pid: 2525
+    proto:
+      enum: IPPROTO_TCP
+      id: 23254
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 0.0.0.0
+    sport: 22
+    state:
+      enum: LISTEN
+      id: 23276
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: sshd
+    daddr: '::'
+    dport: 0
+    pid: 2525
+    proto:
+      enum: IPPROTO_TCP
+      id: 23316
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: '::'
+    sport: 22
+    state:
+      enum: LISTEN
+      id: 23335
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+- - r
+  - comm: sshd
+    daddr: 192.168.56.1
+    dport: 40597
+    pid: 2529
+    proto:
+      enum: IPPROTO_TCP
+      id: 23374
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 192.168.56.104
+    sport: 22
+    state:
+      enum: ESTABLISHED
+      id: 23396
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - comm: bash
+    daddr: 192.168.56.1
+    dport: 56398
+    pid: 2646
+    proto:
+      enum: IPPROTO_TCP
+      id: 23436
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 192.168.56.104
+    sport: 1337
+    state:
+      enum: ESTABLISHED
+      id: 23458
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - comm: bash
+    daddr: 192.168.56.1
+    dport: 56398
+    pid: 2646
+    proto:
+      enum: IPPROTO_TCP
+      id: 23498
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 192.168.56.104
+    sport: 1337
+    state:
+      enum: ESTABLISHED
+      id: 23520
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - comm: vim
+    daddr: 192.168.56.1
+    dport: 56398
+    pid: 2648
+    proto:
+      enum: IPPROTO_TCP
+      id: 23559
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 192.168.56.104
+    sport: 1337
+    state:
+      enum: ESTABLISHED
+      id: 23581
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - comm: vim
+    daddr: 192.168.56.1
+    dport: 56398
+    pid: 2648
+    proto:
+      enum: IPPROTO_TCP
+      id: 23621
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    saddr: 192.168.56.104
+    sport: 1337
+    state:
+      enum: ESTABLISHED
+      id: 23643
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - s
+  - name: null
+- - t
+  - - cname: proto
+      formatstring: '12'
+      name: Proto
+    - cname: ref
+      formatstring: ^8
+      name: RefCount
+    - cname: type
+      formatstring: '15'
+      name: Type
+    - cname: state
+      formatstring: '18'
+      name: State
+    - cname: inode
+      formatstring: '8'
+      name: Inode
+    - cname: path
+      formatstring: '20'
+      name: Path
+  - {}
+- - r
+  - inode: 3212
+    path: /run/udev/control
+    proto: UNIX
+    ref: 1
+    state:
+      enum: LISTEN
+      id: 23698
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+    type:
+      enum: SOCK_SEQPACKET
+      id: 23696
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 5
+- - r
+  - inode: 3218
+    path:
+      id: 23734
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 23735
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: CLOSE
+      id: 23741
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 23739
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - r
+  - inode: 3219
+    path:
+      id: 23789
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 23790
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: CLOSE
+      id: 23796
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 23794
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - r
+  - inode: 3219
+    path:
+      id: 23844
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 23845
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: CLOSE
+      id: 23851
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 23849
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - r
+  - inode: 3219
+    path:
+      id: 23899
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 23900
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: CLOSE
+      id: 23906
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 23904
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - r
+  - inode: 4987
+    path: /var/run/rpcbind.sock
+    proto: UNIX
+    ref: 1
+    state:
+      enum: LISTEN
+      id: 23967
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+    type:
+      enum: SOCK_STREAM
+      id: 23965
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - inode: 5146
+    path:
+      id: 24003
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 24004
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: ESTABLISHED
+      id: 24010
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    type:
+      enum: SOCK_STREAM
+      id: 24008
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - inode: 5147
+    path:
+      id: 24058
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 24059
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: ESTABLISHED
+      id: 24065
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    type:
+      enum: SOCK_STREAM
+      id: 24063
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - inode: 5389
+    path: /dev/log
+    proto: UNIX
+    ref: 1
+    state:
+      enum: CLOSE
+      id: 24126
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 24124
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - r
+  - inode: 5439
+    path:
+      id: 24162
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 24163
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: CLOSE
+      id: 24169
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 24167
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - r
+  - inode: 5446
+    path: /var/run/acpid.socket
+    proto: UNIX
+    ref: 1
+    state:
+      enum: LISTEN
+      id: 24230
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 10
+    type:
+      enum: SOCK_STREAM
+      id: 24228
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+- - r
+  - inode: 5747
+    path:
+      id: 24266
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 24267
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: CLOSE
+      id: 24273
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 24271
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - r
+  - inode: 5996
+    path:
+      id: 24321
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    proto: UNIX
+    ref:
+      id: 24322
+      mro: NoneObject:object
+      reason: Pointer addr @ 0 invalid
+    state:
+      enum: CLOSE
+      id: 24328
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    type:
+      enum: SOCK_DGRAM
+      id: 24326
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+- - x
+- - x
