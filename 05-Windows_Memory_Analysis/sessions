@@ -6,7 +6,7 @@
     - null
     - IntParser
     filename:
-    - images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+    - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
     - FileName
     pagefile:
     - []

@@ -6,13 +6,13 @@
     - null
     - IntParser
     filename:
-    - /home/driest/research/memory-analysis/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+    - ../images/Ubuntu14.10_virtualbox.aff4
     - FileName
     pagefile:
     - []
     - FileName
     profile:
-    - /home/driest/research/memory-analysis/02-What_is_memory/images/3.16.0-23-generic_amd64.json
+    - ../images/3.16.0-23-generic_amd64.json
     - FileName
     session_name:
     - Virtual Machine Host
@@ -28,13 +28,13 @@
     - - 2148171806
     - IntParser
     filename:
-    - /home/driest/research/memory-analysis/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+    - ../images/Ubuntu14.10_virtualbox.aff4
     - FileName
     pagefile:
     - []
     - FileName
     profile:
-    - /home/driest/research/memory-analysis/02-What_is_memory/images/3.16.0-23-generic_x86.json
+    - ../images/3.16.0-23-generic_x86.json
     - FileName
     session_name:
     - Ubuntu Guest
@@ -50,7 +50,7 @@
     - - 2283466782
     - IntParser
     filename:
-    - /home/driest/research/memory-analysis/02-What_is_memory/images/Ubuntu14.10_virtualbox.aff4
+    - ../images/Ubuntu14.10_virtualbox.aff4
     - FileName
     pagefile:
     - []
@@ -72,7 +72,7 @@
     - null
     - IntParser
     filename:
-    - /home/driest/research/memory-analysis/02-What_is_memory/images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+    - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
     - FileName
     pagefile:
     - []

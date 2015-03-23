@@ -6,7 +6,7 @@
     - null
     - IntParser
     filename:
-    - /home/driest/research/memory-analysis/images/debianx64.elf
+    - ../images/debianx64.elf.E01
     - FileName
     pagefile:
     - []
