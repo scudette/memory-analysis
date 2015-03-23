@@ -6,7 +6,7 @@
   - '# Linux Memory Forensics'
   - In this chapter we give an overview on Linux memory forensics. We show how to
     create profiles for Linux hosts and give a quick overview on kernel data structures.
-    Finally, we give an overview on common Linux malware techniques and how to analyze
+    Finally, we explain some common Linux kernel rootkit techniques and how to analyze
     them using Rekall.
   type: markdown
 - id: 1426861176884
@@ -74,7 +74,8 @@
   type: shell
 - id: 1427035184206
   source:
-  - You can also add the profile to your local profile path in your '~.rekallrc'
+  - You can also add the directory which stores the profile to your local profile
+    path in your '~.rekallrc'
   type: markdown
 - id: 1427035259891
   source: cat ~/.rekallrc
@@ -96,9 +97,9 @@
     device for security reasons.'
   - '* **/proc/kcore** exports the kernels state as a read-only ELF core dump. It
     is enabled on many distributions to allow for limited local kernel debugging.
-    Since the kernel maps all physical memory on x86-64 systems **REFERENCE***, it
-    is possible to create a physical memory dump by copying these sections. The Linux
-    version of pmem **REFERENCE** uses this mechanism to access physical memory.'
+    Since the kernel [maps all physical memory on x86-64 systems](https://www.kernel.org/doc/Documentation/x86/x86_64/mm.txt),
+    it is possible to create a physical memory dump by copying these sections. The
+    Linux version of pmem uses this mechanism to access physical memory.'
   - ''
   - '### Kernel Mode'
   - When non of the user mode interfaces are available, we must load a kernel module
@@ -116,7 +117,7 @@
     locates a binary compatible kernel module on the target system and instruments
     its data structures to interface with the running kernel. LMAP does not use the
     kernel for memory access, but performs memory mapping itself with a technique
-    called *PTE remapping* **REFERENCE**.'
+    called [PTE remapping](http://www.dfrws.org/2013/proceedings/DFRWS2013-13.pdf).'
   type: markdown
 - id: 1427056160716
   source:
@@ -179,30 +180,6 @@
     found in '/proc/modules', as well as in '/sys/module'. The 'lsmod' program obtains
     it's information from these two sources.
   type: markdown
-- id: 1426871304537
-  source:
-    arguments: {}
-    plugin:
-      arguments:
-      - critical: true
-        help: Name of the profile to load. This is the filename of the profile found
-          in the profiles directory. Profiles are searched in the profile path order.
-        name: profile
-        positional: false
-        short_opt: p
-      - help: The DTB physical address.
-        name: dtb
-        positional: false
-        short_opt: ''
-        type: IntParser
-      description: mimics /proc/iomem.
-      name: iomem
-      requirements:
-      - profile
-      - physical_address_space
-      short_description: mimics /proc/iomem.
-    session_id: 1
-  type: rekallplugin
 - id: 1427037301227
   source: lsmod
   type: shell
@@ -471,7 +448,8 @@
   - The *pslist* plugin enumerates all running processes by walking the task list
     in the memory image. This will reveal any processes that have been hidden by hooks
     in '/proc'. Since the task list also contains kernel threads, we need to differentiate
-    between them and user mode processes.
+    between them and user mode processes. Kernel threads don't have a DTB, which allows
+    us to identify them easily.
   type: markdown
 - id: 1427050388640
   source:
