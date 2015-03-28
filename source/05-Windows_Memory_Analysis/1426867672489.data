@@ -1,0 +1,115 @@
+cache_key: 58f264e355760134c1661a1ad31099ff-hives
+data:
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - m
+  - cookie: 4323
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - e
+  - "Traceback (most recent call last):\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 602, in _RunPlugin\n    plugin_obj = self._GetPluginObj(plugin_obj, *pos_args,\
+    \ **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\", line 592, in\
+    \ _GetPluginObj\n    return plugin_cls(*pos_args, **kwargs)\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 137, in __call__\n    return self._target(*(self._args + args), **new_kwargs)\n\
+    \  File \"/home/scudette/rekall/rekall/registry.py\", line 56, in __call__\n \
+    \   res = super(UniqueObjectIdMetaclass, cls).__call__(*args, **kwargs)\n  File\
+    \ \"/home/scudette/rekall/rekall/plugins/windows/registry/registry.py\", line\
+    \ 616, in __init__\n    self.hive_offsets = list(self.list_hives())\n  File \"\
+    /home/scudette/rekall/rekall/plugins/windows/registry/registry.py\", line 629,\
+    \ in list_hives\n    \"CmpHiveListHead\", \"_LIST_ENTRY\")\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 2092, in get_constant_object\n    offset = self.get_constant(constant,\
+    \ is_address=True)\n  File \"/home/scudette/rekall/rekall/plugins/overlays/windows/pe_vtypes.py\"\
+    , line 1099, in get_constant\n    return base_constant + self.GetImageBase()\n\
+    \  File \"/home/scudette/rekall/rekall/plugins/overlays/windows/windows.py\",\
+    \ line 128, in GetImageBase\n    self.session.GetParameter(\"kernel_base\"))\n\
+    \  File \"/home/scudette/rekall/rekall/session.py\", line 491, in GetParameter\n\
+    \    result = self._RunParameterHook(item)\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 519, in _RunParameterHook\n    result = hook.calculate()\n  File \"/home/scudette/rekall/rekall/plugins/windows/kernel.py\"\
+    , line 68, in calculate\n    for hit in scanner.scan(offset=kernel_boundary, maxlen=maxlen):\n\
+    \  File \"/home/scudette/rekall/rekall/scan.py\", line 202, in scan\n    phys_chunk_offset,\
+    \ chunk_size),\n  File \"/home/scudette/rekall/rekall/addrspace.py\", line 297,\
+    \ in read\n    data = self.read_partial(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 326, in read_partial\n    chunk_number * self.CHUNK_SIZE, self.CHUNK_SIZE)\n\
+    \  File \"/home/scudette/rekall/rekall/addrspace.py\", line 371, in read\n   \
+    \ buf = self._read_chunk(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 514, in _read_chunk\n    return _as.read(physical_offset, min(length, available_length))\n\
+    \  File \"/home/scudette/rekall/rekall/plugins/addrspaces/aff4.py\", line 58,\
+    \ in read\n    return self.stream.read(length)\n  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4.py\"\
+    , line 195, in read\n    return self.Read(length)\n  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_map.py\"\
+    , line 157, in Read\n    result += target_stream.Read(length_to_read_in_target)\n\
+    \  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_image.py\"\
+    , line 160, in Read\n    chunks_read, data = self._ReadPartial(chunk_id, chunks_to_read)\n\
+    \  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_image.py\"\
+    , line 194, in _ReadPartial\n    chunk_id, bevy, bevy_index_array, index_size)\n\
+    \  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_image.py\"\
+    , line 229, in _ReadChunkFromBevy\n    return zlib.decompress(cbuffer)\nerror:\
+    \ Error -5 while decompressing data: incomplete or truncated stream\n"
+- - e
+  - "Traceback (most recent call last):\n  File \"/home/scudette/rekall/rekall/plugins/tools/webconsole/runplugin.py\"\
+    , line 569, in RunPlugin\n    renderer=renderer, **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 1020, in RunPlugin\n    self.last = super(InteractiveSession, self).RunPlugin(*args,\
+    \ **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\", line 564, in\
+    \ RunPlugin\n    *pos_args, **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 602, in _RunPlugin\n    plugin_obj = self._GetPluginObj(plugin_obj, *pos_args,\
+    \ **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\", line 592, in\
+    \ _GetPluginObj\n    return plugin_cls(*pos_args, **kwargs)\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 137, in __call__\n    return self._target(*(self._args + args), **new_kwargs)\n\
+    \  File \"/home/scudette/rekall/rekall/registry.py\", line 56, in __call__\n \
+    \   res = super(UniqueObjectIdMetaclass, cls).__call__(*args, **kwargs)\n  File\
+    \ \"/home/scudette/rekall/rekall/plugins/windows/registry/registry.py\", line\
+    \ 616, in __init__\n    self.hive_offsets = list(self.list_hives())\n  File \"\
+    /home/scudette/rekall/rekall/plugins/windows/registry/registry.py\", line 629,\
+    \ in list_hives\n    \"CmpHiveListHead\", \"_LIST_ENTRY\")\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 2092, in get_constant_object\n    offset = self.get_constant(constant,\
+    \ is_address=True)\n  File \"/home/scudette/rekall/rekall/plugins/overlays/windows/pe_vtypes.py\"\
+    , line 1099, in get_constant\n    return base_constant + self.GetImageBase()\n\
+    \  File \"/home/scudette/rekall/rekall/plugins/overlays/windows/windows.py\",\
+    \ line 128, in GetImageBase\n    self.session.GetParameter(\"kernel_base\"))\n\
+    \  File \"/home/scudette/rekall/rekall/session.py\", line 491, in GetParameter\n\
+    \    result = self._RunParameterHook(item)\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 519, in _RunParameterHook\n    result = hook.calculate()\n  File \"/home/scudette/rekall/rekall/plugins/windows/kernel.py\"\
+    , line 68, in calculate\n    for hit in scanner.scan(offset=kernel_boundary, maxlen=maxlen):\n\
+    \  File \"/home/scudette/rekall/rekall/scan.py\", line 202, in scan\n    phys_chunk_offset,\
+    \ chunk_size),\n  File \"/home/scudette/rekall/rekall/addrspace.py\", line 297,\
+    \ in read\n    data = self.read_partial(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 326, in read_partial\n    chunk_number * self.CHUNK_SIZE, self.CHUNK_SIZE)\n\
+    \  File \"/home/scudette/rekall/rekall/addrspace.py\", line 371, in read\n   \
+    \ buf = self._read_chunk(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 514, in _read_chunk\n    return _as.read(physical_offset, min(length, available_length))\n\
+    \  File \"/home/scudette/rekall/rekall/plugins/addrspaces/aff4.py\", line 58,\
+    \ in read\n    return self.stream.read(length)\n  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4.py\"\
+    , line 195, in read\n    return self.Read(length)\n  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_map.py\"\
+    , line 157, in Read\n    result += target_stream.Read(length_to_read_in_target)\n\
+    \  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_image.py\"\
+    , line 160, in Read\n    chunks_read, data = self._ReadPartial(chunk_id, chunks_to_read)\n\
+    \  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_image.py\"\
+    , line 194, in _ReadPartial\n    chunk_id, bevy, bevy_index_array, index_size)\n\
+    \  File \"/home/scudette/Dev/local/lib/python2.7/site-packages/pyaff4/aff4_image.py\"\
+    , line 229, in _ReadChunkFromBevy\n    return zlib.decompress(cbuffer)\nerror:\
+    \ Error -5 while decompressing data: incomplete or truncated stream\n"
+- - x

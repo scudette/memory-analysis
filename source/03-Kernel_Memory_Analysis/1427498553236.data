@@ -1,0 +1,158 @@
+cache_key: d6f1a14be46bdc2e654749ace632de0f-dt
+data:
+- - m
+  - cookie: 188341
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 188341
+    plugin_name: dt
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - f
+  - "[{0} {1}] @ {2:addrpad} \n"
+  - _POOL_HEADER
+  - _POOL_HEADER
+  - 275427684149968
+- - t
+  - - child:
+        style: address
+      max_depth: 5
+      name: Offset
+      type: TreeNode
+      width: 20
+    - cname: field
+      formatstring: '30'
+      name: Field
+    - cname: content
+      name: Content
+      style: typed
+  - {}
+- - r
+  - Offset: -1
+    content:
+      b64: UHJv4w==
+      mro: str:basestring:object
+    depth: 0
+    field: Tag
+- - r
+  - Offset: 0
+    content:
+      enum: '83'
+      id: 188445
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 83
+    depth: 0
+    field: BlockSize
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 188459
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: PoolIndex
+- - r
+  - Offset: 0
+    content:
+      enum: NonPagedPoolMustSucceed
+      id: 188452
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+    depth: 0
+    field: PoolType
+- - r
+  - Offset: 0
+    content:
+      enum: '34'
+      id: 188456
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 34
+    depth: 0
+    field: PreviousSize
+- - r
+  - Offset: 0
+    content: 38993954
+    depth: 0
+    field: Ulong1
+- - r
+  - Offset: 4
+    content: 3815731792
+    depth: 0
+    field: PoolTag
+- - r
+  - Offset: 8
+    content: 65535
+    depth: 0
+    field: AllocatorBackTraceIndex
+- - r
+  - Offset: 8
+    content:
+      id: 188447
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: ProcessBilled
+      offset: 275427684149976
+      target: 281474976710655
+      target_obj:
+        id: 188613
+        mro: NoneObject:object
+        reason: Pointer ProcessBilled @ 281474976710655 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ProcessBilled
+- - r
+  - Offset: 10
+    content: 65535
+    depth: 0
+    field: PoolTagHash
+- - x
+- - x

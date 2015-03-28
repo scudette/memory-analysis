@@ -1,0 +1,1 @@
+{"error": null, "cache_key": "1427035259891/43ba674cdc11250020ce18ac074e2c32-shell", "result": "0", "stderr": "", "stdout": "notebook_dir: /home/driest\nprofile_path: ['/home/driest/research/rekall-profiles', 'https://raw.githubusercontent.com/google/rekall-profiles/master',\n  'http://profiles.rekall-forensic.com']\n"}

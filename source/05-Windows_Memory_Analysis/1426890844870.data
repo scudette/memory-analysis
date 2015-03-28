@@ -1,0 +1,122 @@
+cache_key: f6c7cda89edeb0b5679f393eff368475-vtop
+data:
+- - m
+  - cookie: 1823
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 1823
+    plugin_name: vtop
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - s
+  - name: '0x7ff6ae113000'
+- - f
+  - 'Virtual {0:addrpad} Page Directory {1:addr}
+
+    '
+  - 140697459044352
+  - 1744896
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pml4e
+  - '0x1aa7f8'
+  - 270215978634664039
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pdpte
+  - '0x3b275ed0'
+  - 0
+- - f
+  - '{0}
+
+    '
+  - Invalid PDPTE
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pde
+  - '0xb80'
+  - 0
+- - f
+  - '
+
+    PTE Contains {1:#x}
+
+    PTE Type: {2}
+
+    {0:style=full}
+
+    '
+  - id: 2942
+    mro: _MMPTE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+    name: _MMPTE
+    offset: 0
+    type_name: _MMPTE
+    vm: AFF4AddressSpace
+  - 0
+  - Unknown
+- - f
+  - 'Invalid PTE
+
+    '
+- - f
+  - 'Physical Address Invalid
+
+    '
+- - x
+- - x

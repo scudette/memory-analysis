@@ -1,0 +1,4574 @@
+cache_key: 1ebe093544415342ae1faf5b44ea300d-dt
+data:
+- - m
+  - cookie: 771
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - Scanning 0x003D8000 with WinDTBScanner
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges /'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges /'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - Scanning 0x00E70000 with WinDTBScanner
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges /'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges -'
+- - p
+  - 'VTxPagedMemory@0x881af01e: Merging Address Ranges \'
+- - m
+  - cookie: 771
+    plugin_name: dt
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win 7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - f
+  - "[{0} {1}] @ {2:addrpad} \n"
+  - _EPROCESS
+  - _EPROCESS
+  - 275427684150064
+- - t
+  - - child:
+        style: address
+      max_depth: 5
+      name: Offset
+      type: TreeNode
+      width: 20
+    - cname: field
+      formatstring: '30'
+      name: Field
+    - cname: content
+      name: Content
+      style: typed
+  - {}
+- - r
+  - Offset: -1
+    content:
+      id: 80529
+      mro: _MMADDRESS_NODE:VadTraverser:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: BalancedRoot
+      offset: 275427684151160
+      type_name: _MMADDRESS_NODE
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: RealVadRoot
+- - r
+  - Offset: -12
+    content: "\x10\uFFFD"
+    depth: 1
+    field: Tag
+- - r
+  - Offset: 0
+    content:
+      id: 80838
+      mro: <unnamed-5581>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u1
+      offset: 275427684151160
+      type_name: <unnamed-5581>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: u1
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 80875
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Balance
+- - r
+  - Offset: 0
+    content:
+      id: 80877
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Parent
+      offset: 275427684151160
+      target: 275427684151160
+      target_obj:
+        id: 80913
+        mro: _MMADDRESS_NODE:VadTraverser:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Parent
+        offset: 275427684151160
+        type_name: _MMADDRESS_NODE
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Parent
+- - r
+  - Offset: 8
+    content:
+      id: 80835
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: LeftChild
+      offset: 275427684151168
+      target: 0
+      target_obj:
+        id: 80972
+        mro: NoneObject:object
+        reason: Pointer LeftChild @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: LeftChild
+- - r
+  - Offset: 16
+    content:
+      id: 80840
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: RightChild
+      offset: 275427684151176
+      target: 275427699955200
+      target_obj:
+        id: 81019
+        mro: _MMADDRESS_NODE:VadTraverser:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: RightChild
+        offset: 275427699955200
+        type_name: _MMADDRESS_NODE
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: RightChild
+- - r
+  - Offset: 24
+    content: 0
+    depth: 1
+    field: StartingVpn
+- - r
+  - Offset: 32
+    content: 0
+    depth: 1
+    field: EndingVpn
+- - r
+  - Offset: -1
+    content: iexplore.exe
+    depth: 0
+    field: name
+- - r
+  - Offset: -1
+    content: 1008
+    depth: 0
+    field: pid
+- - r
+  - Offset: 0
+    content:
+      id: 80525
+      mro: _KPROCESS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Pcb
+      offset: 275427684150064
+      type_name: _KPROCESS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Pcb
+- - r
+  - Offset: 0
+    content:
+      id: 81164
+      mro: _DISPATCHER_HEADER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Header
+      offset: 275427684150064
+      type_name: _DISPATCHER_HEADER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Header
+- - r
+  - Offset: 0
+    content: 5767171
+    depth: 2
+    field: Lock
+- - r
+  - Offset: 0
+    content:
+      enum: ProcessObject
+      id: 81207
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 3
+    depth: 2
+    field: Type
+- - r
+  - Offset: 1
+    content: 0
+    depth: 2
+    field: Abandoned
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 81205
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Absolute
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 81229
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Coalescable
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 81235
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: EncodedTolerableDelay
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 81210
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: KeepShifting
+- - r
+  - Offset: 1
+    content: 0
+    depth: 2
+    field: Signalling
+- - r
+  - Offset: 1
+    content: 0
+    depth: 2
+    field: TimerControlFlags
+- - r
+  - Offset: 2
+    content:
+      enum: '0'
+      id: 81197
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: CounterProfiling
+- - r
+  - Offset: 2
+    content:
+      enum: '0'
+      id: 81214
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: CpuThrottled
+- - r
+  - Offset: 2
+    content:
+      enum: '0'
+      id: 81221
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: CycleProfiling
+- - r
+  - Offset: 2
+    content: 88
+    depth: 2
+    field: Hand
+- - r
+  - Offset: 2
+    content:
+      enum: '11'
+      id: 81212
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 11
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 2
+    content: 88
+    depth: 2
+    field: Size
+- - r
+  - Offset: 2
+    content: 88
+    depth: 2
+    field: ThreadControlFlags
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81201
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: ActiveDR7
+- - r
+  - Offset: 3
+    content: 0
+    depth: 2
+    field: DebugActive
+- - r
+  - Offset: 3
+    content: 0
+    depth: 2
+    field: DpcActive
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81219
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Expired
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81192
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Index
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81194
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Inserted
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81226
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Instrumented
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81232
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Reserved2
+- - r
+  - Offset: 3
+    content: 0
+    depth: 2
+    field: TimerMiscFlags
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81199
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: UmsPrimary
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 81216
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: UmsScheduled
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: SignalState
+- - r
+  - Offset: 8
+    content:
+      id: 81202
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: WaitListHead
+      offset: 275427684150072
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: WaitListHead
+- - r
+  - Offset: 0
+    content:
+      id: 81746
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150072
+      target: 275427697656256
+      target_obj:
+        id: 81759
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427697656256
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 3
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 81748
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150080
+      target: 275427697656256
+      target_obj:
+        id: 81818
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427697656256
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 3
+    field: Blink
+- - r
+  - Offset: 24
+    content:
+      id: 81142
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ProfileListHead
+      offset: 275427684150088
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ProfileListHead
+- - r
+  - Offset: 0
+    content:
+      id: 81890
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150088
+      target: 275427684150088
+      target_obj:
+        id: 81903
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427684150088
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 81892
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150096
+      target: 275427684150088
+      target_obj:
+        id: 81956
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684150088
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 40
+    content: 161345536
+    depth: 1
+    field: DirectoryTableBase
+- - r
+  - Offset: 48
+    content:
+      id: 81138
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ThreadListHead
+      offset: 275427684150112
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ThreadListHead
+- - r
+  - Offset: 0
+    content:
+      id: 82032
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150112
+      target: 275427684156248
+      target_obj:
+        id: 82045
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427684156248
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 82034
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150120
+      target: 275427683697496
+      target_obj:
+        id: 82104
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427683697496
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 64
+    content: 0
+    depth: 1
+    field: ProcessLock
+- - r
+  - Offset: 72
+    content:
+      id: 81128
+      mro: _KAFFINITY_EX:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Affinity
+      offset: 275427684150136
+      type_name: _KAFFINITY_EX
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Affinity
+- - r
+  - Offset: 0
+    content: 1
+    depth: 2
+    field: Count
+- - r
+  - Offset: 2
+    content: 4
+    depth: 2
+    field: Size
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 8
+    content:
+      id: 82181
+      mro: Array:BaseObject:object
+      name: Bitmap
+      offset: 275427684150144
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Bitmap
+- - r
+  - Offset: 112
+    content:
+      id: 81165
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ReadyListHead
+      offset: 275427684150176
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ReadyListHead
+- - r
+  - Offset: 0
+    content:
+      id: 82265
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150176
+      target: 275427684150176
+      target_obj:
+        id: 82278
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427684150176
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 82267
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150184
+      target: 275427684150176
+      target_obj:
+        id: 82331
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684150176
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 128
+    content:
+      id: 81167
+      mro: _SINGLE_LIST_ENTRY:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: SwapListEntry
+      offset: 275427684150192
+      type_name: _SINGLE_LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: SwapListEntry
+- - r
+  - Offset: 0
+    content:
+      id: 82403
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Next
+      offset: 275427684150192
+      target: 0
+      target_obj:
+        id: 82414
+        mro: NoneObject:object
+        reason: Pointer Next @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Next
+- - r
+  - Offset: 136
+    content:
+      id: 81148
+      mro: _KAFFINITY_EX:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ActiveProcessors
+      offset: 275427684150200
+      type_name: _KAFFINITY_EX
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ActiveProcessors
+- - r
+  - Offset: 0
+    content: 4
+    depth: 2
+    field: Count
+- - r
+  - Offset: 2
+    content: 4
+    depth: 2
+    field: Size
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 8
+    content:
+      id: 82469
+      mro: Array:BaseObject:object
+      name: Bitmap
+      offset: 275427684150208
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Bitmap
+- - r
+  - Offset: 176
+    content:
+      enum: '1'
+      id: 81161
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 1
+    field: ActiveGroupsMask
+- - r
+  - Offset: 176
+    content:
+      enum: '1'
+      id: 81137
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 1
+    field: AutoAlignment
+- - r
+  - Offset: 176
+    content:
+      enum: '0'
+      id: 81163
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: DisableBoost
+- - r
+  - Offset: 176
+    content:
+      enum: '0'
+      id: 81157
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: DisableQuantum
+- - r
+  - Offset: 176
+    content: 9
+    depth: 1
+    field: ProcessFlags
+- - r
+  - Offset: 176
+    content:
+      enum: '0'
+      id: 81150
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: ReservedFlags
+- - r
+  - Offset: 180
+    content: 8
+    depth: 1
+    field: BasePriority
+- - r
+  - Offset: 181
+    content: 6
+    depth: 1
+    field: QuantumReset
+- - r
+  - Offset: 182
+    content: 0
+    depth: 1
+    field: Visited
+- - r
+  - Offset: 183
+    content: 0
+    depth: 1
+    field: Unused3
+- - r
+  - Offset: 184
+    content:
+      id: 81144
+      mro: Array:BaseObject:object
+      name: ThreadSeed
+      offset: 275427684150248
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ThreadSeed
+- - r
+  - Offset: 200
+    content:
+      id: 81147
+      mro: Array:BaseObject:object
+      name: IdealNode
+      offset: 275427684150264
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: IdealNode
+- - r
+  - Offset: 208
+    content: 0
+    depth: 1
+    field: IdealGlobalNode
+- - r
+  - Offset: 210
+    content:
+      id: 81153
+      mro: _KEXECUTE_OPTIONS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Flags
+      offset: 275427684150274
+      type_name: _KEXECUTE_OPTIONS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flags
+- - r
+  - Offset: 0
+    content:
+      enum: '1'
+      id: 82758
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 2
+    field: DisableExceptionChainValidation
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 82764
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: DisableThunkEmulation
+- - r
+  - Offset: 0
+    content:
+      enum: '1'
+      id: 82773
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 2
+    field: ExecuteDisable
+- - r
+  - Offset: 0
+    content:
+      enum: '1'
+      id: 82762
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 2
+    field: ExecuteDispatchEnable
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 82770
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: ExecuteEnable
+- - r
+  - Offset: 0
+    content: 121
+    depth: 2
+    field: ExecuteOptions
+- - r
+  - Offset: 0
+    content:
+      enum: '1'
+      id: 82760
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 2
+    field: ImageDispatchEnable
+- - r
+  - Offset: 0
+    content:
+      enum: '1'
+      id: 82766
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 2
+    field: Permanent
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 82768
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Spare
+- - r
+  - Offset: 211
+    content: 0
+    depth: 1
+    field: Unused1
+- - r
+  - Offset: 212
+    content: 0
+    depth: 1
+    field: Unused2
+- - r
+  - Offset: 216
+    content: 0
+    depth: 1
+    field: Unused4
+- - r
+  - Offset: 220
+    content:
+      id: 81124
+      mro: _KSTACK_COUNT:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: StackCount
+      offset: 275427684150284
+      type_name: _KSTACK_COUNT
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: StackCount
+- - r
+  - Offset: 0
+    content:
+      enum: '21'
+      id: 83710
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 21
+    depth: 2
+    field: StackCount
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 83707
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: State
+- - r
+  - Offset: 0
+    content: 168
+    depth: 2
+    field: Value
+- - r
+  - Offset: 224
+    content:
+      id: 81168
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ProcessListEntry
+      offset: 275427684150288
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ProcessListEntry
+- - r
+  - Offset: 0
+    content:
+      id: 83802
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150288
+      target: 275427698461712
+      target_obj:
+        id: 83825
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427698461712
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 83804
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150296
+      target: 275427684471840
+      target_obj:
+        id: 83878
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684471840
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 240
+    content: 1441156120
+    depth: 1
+    field: CycleTime
+- - r
+  - Offset: 248
+    content: 23
+    depth: 1
+    field: KernelTime
+- - r
+  - Offset: 252
+    content: 15
+    depth: 1
+    field: UserTime
+- - r
+  - Offset: 256
+    content:
+      id: 81135
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: InstrumentationCallback
+      offset: 275427684150320
+      target: 0
+      target_obj:
+        id: 83981
+        mro: NoneObject:object
+        reason: Pointer InstrumentationCallback @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: InstrumentationCallback
+- - r
+  - Offset: 264
+    content:
+      id: 81152
+      mro: _KGDTENTRY64:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: LdtSystemDescriptor
+      offset: 275427684150328
+      type_name: _KGDTENTRY64
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: LdtSystemDescriptor
+- - r
+  - Offset: 0
+    content: 0
+    depth: 2
+    field: Alignment
+- - r
+  - Offset: 0
+    content: 0
+    depth: 2
+    field: LimitLow
+- - r
+  - Offset: 2
+    content: 0
+    depth: 2
+    field: BaseLow
+- - r
+  - Offset: 4
+    content:
+      id: 84039
+      mro: <unnamed-8642>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Bits
+      offset: 275427684150332
+      type_name: <unnamed-8642>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Bits
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84098
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: BaseHigh
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84096
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: BaseMiddle
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84094
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: DefaultBig
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84106
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: Dpl
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84104
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: Granularity
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84100
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: LimitHigh
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84112
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: LongMode
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84110
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: Present
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84102
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: System
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 84108
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: Type
+- - r
+  - Offset: 4
+    content:
+      id: 84034
+      mro: <unnamed-8638>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Bytes
+      offset: 275427684150332
+      type_name: <unnamed-8638>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Bytes
+- - r
+  - Offset: 0
+    content: 0
+    depth: 3
+    field: BaseMiddle
+- - r
+  - Offset: 1
+    content: 0
+    depth: 3
+    field: Flags1
+- - r
+  - Offset: 2
+    content: 0
+    depth: 3
+    field: Flags2
+- - r
+  - Offset: 3
+    content: 0
+    depth: 3
+    field: BaseHigh
+- - r
+  - Offset: 8
+    content: 0
+    depth: 2
+    field: BaseUpper
+- - r
+  - Offset: 12
+    content: 0
+    depth: 2
+    field: MustBeZero
+- - r
+  - Offset: 280
+    content:
+      id: 81127
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: LdtBaseAddress
+      offset: 275427684150344
+      target: 0
+      target_obj:
+        id: 84449
+        mro: NoneObject:object
+        reason: Pointer LdtBaseAddress @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: LdtBaseAddress
+- - r
+  - Offset: 288
+    content:
+      id: 81139
+      mro: _KGUARDED_MUTEX:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: LdtProcessLock
+      offset: 275427684150352
+      type_name: _KGUARDED_MUTEX
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: LdtProcessLock
+- - r
+  - Offset: 0
+    content: 1
+    depth: 2
+    field: Count
+- - r
+  - Offset: 8
+    content:
+      id: 84507
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Owner
+      offset: 275427684150360
+      target: 0
+      target_obj:
+        id: 84530
+        mro: NoneObject:object
+        reason: Pointer Owner @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Owner
+- - r
+  - Offset: 16
+    content: 0
+    depth: 2
+    field: Contention
+- - r
+  - Offset: 24
+    content:
+      id: 84508
+      mro: _KGATE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Gate
+      offset: 275427684150376
+      type_name: _KGATE
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Gate
+- - r
+  - Offset: 0
+    content:
+      id: 84593
+      mro: _DISPATCHER_HEADER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Header
+      offset: 275427684150376
+      type_name: _DISPATCHER_HEADER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 3
+    field: Header
+- - r
+  - Offset: 0
+    content: 393479
+    depth: 4
+    field: Lock
+- - r
+  - Offset: 0
+    content:
+      enum: GateObject
+      id: 84632
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 7
+    depth: 4
+    field: Type
+- - r
+  - Offset: 1
+    content: 1
+    depth: 4
+    field: Abandoned
+- - r
+  - Offset: 1
+    content:
+      enum: '1'
+      id: 84630
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 4
+    field: Absolute
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 84654
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: Coalescable
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 84660
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: EncodedTolerableDelay
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 84635
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: KeepShifting
+- - r
+  - Offset: 1
+    content: 1
+    depth: 4
+    field: Signalling
+- - r
+  - Offset: 1
+    content: 1
+    depth: 4
+    field: TimerControlFlags
+- - r
+  - Offset: 2
+    content:
+      enum: '1'
+      id: 84622
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 4
+    field: CounterProfiling
+- - r
+  - Offset: 2
+    content:
+      enum: '0'
+      id: 84639
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: CpuThrottled
+- - r
+  - Offset: 2
+    content:
+      enum: '1'
+      id: 84646
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 4
+    field: CycleProfiling
+- - r
+  - Offset: 2
+    content: 6
+    depth: 4
+    field: Hand
+- - r
+  - Offset: 2
+    content:
+      enum: '0'
+      id: 84637
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: Reserved
+- - r
+  - Offset: 2
+    content: 6
+    depth: 4
+    field: Size
+- - r
+  - Offset: 2
+    content: 6
+    depth: 4
+    field: ThreadControlFlags
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84626
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: ActiveDR7
+- - r
+  - Offset: 3
+    content: 0
+    depth: 4
+    field: DebugActive
+- - r
+  - Offset: 3
+    content: 0
+    depth: 4
+    field: DpcActive
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84644
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: Expired
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84617
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: Index
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84619
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: Inserted
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84651
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: Instrumented
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84657
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: Reserved2
+- - r
+  - Offset: 3
+    content: 0
+    depth: 4
+    field: TimerMiscFlags
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84624
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: UmsPrimary
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 84641
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 4
+    field: UmsScheduled
+- - r
+  - Offset: 4
+    content: 0
+    depth: 4
+    field: SignalState
+- - r
+  - Offset: 8
+    content:
+      id: 84627
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: WaitListHead
+      offset: 275427684150384
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 4
+    field: WaitListHead
+- - r
+  - Offset: 0
+    content:
+      id: 85307
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150384
+      target: 275427684150384
+      target_obj:
+        id: 85320
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427684150384
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 5
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 85309
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150392
+      target: 275427684150384
+      target_obj:
+        id: 85393
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684150384
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 5
+    field: Blink
+- - r
+  - Offset: 48
+    content: 0
+    depth: 2
+    field: CombinedApcDisable
+- - r
+  - Offset: 48
+    content: 0
+    depth: 2
+    field: KernelApcDisable
+- - r
+  - Offset: 50
+    content: 0
+    depth: 2
+    field: SpecialApcDisable
+- - r
+  - Offset: 344
+    content: 0
+    depth: 1
+    field: LdtFreeSelectorHint
+- - r
+  - Offset: 346
+    content: 0
+    depth: 1
+    field: LdtTableLength
+- - r
+  - Offset: 352
+    content:
+      id: 80654
+      mro: _EX_PUSH_LOCK:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ProcessLock
+      offset: 275427684150416
+      type_name: _EX_PUSH_LOCK
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ProcessLock
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 85651
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Locked
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 85653
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content:
+      id: 85657
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Ptr
+      offset: 275427684150416
+      target: 0
+      target_obj:
+        id: 85709
+        mro: NoneObject:object
+        reason: Pointer Ptr @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Ptr
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 85655
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Shared
+- - r
+  - Offset: 0
+    content: 0
+    depth: 1
+    field: Value
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 85649
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Waiting
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 85660
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Waking
+- - r
+  - Offset: 360
+    content:
+      epoch: 1426640514
+      id: 80811
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:01:54+0000
+    depth: 0
+    field: CreateTime
+- - r
+  - Offset: 368
+    content:
+      epoch: 0
+      id: 80596
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+    depth: 0
+    field: ExitTime
+- - r
+  - Offset: 376
+    content:
+      id: 80520
+      mro: _EX_RUNDOWN_REF:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: RundownProtect
+      offset: 275427684150440
+      type_name: _EX_RUNDOWN_REF
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: RundownProtect
+- - r
+  - Offset: 0
+    content: 0
+    depth: 1
+    field: Count
+- - r
+  - Offset: 0
+    content:
+      id: 86077
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Ptr
+      offset: 275427684150440
+      target: 0
+      target_obj:
+        id: 86098
+        mro: NoneObject:object
+        reason: Pointer Ptr @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Ptr
+- - r
+  - Offset: 384
+    content: 1008
+    depth: 0
+    field: UniqueProcessId
+- - r
+  - Offset: 392
+    content:
+      id: 80801
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ActiveProcessLinks
+      offset: 275427684150456
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ActiveProcessLinks
+- - r
+  - Offset: 0
+    content:
+      id: 86162
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150456
+      target: 275427698461880
+      target_obj:
+        id: 86175
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427698461880
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 86164
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150464
+      target: 275427684472008
+      target_obj:
+        id: 86568
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684472008
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 408
+    content:
+      id: 80780
+      mro: Array:BaseObject:object
+      name: ProcessQuotaUsage
+      offset: 275427684150472
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ProcessQuotaUsage
+- - r
+  - Offset: 424
+    content:
+      id: 80642
+      mro: Array:BaseObject:object
+      name: ProcessQuotaPeak
+      offset: 275427684150488
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ProcessQuotaPeak
+- - r
+  - Offset: 440
+    content: 12589
+    depth: 0
+    field: CommitCharge
+- - r
+  - Offset: 448
+    content:
+      id: 80663
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: QuotaBlock
+      offset: 275427684150512
+      target: 275427692918848
+      target_obj:
+        id: 86676
+        mro: NoneObject:object
+        reason: Pointer QuotaBlock @ 275427692918848 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: QuotaBlock
+- - r
+  - Offset: 456
+    content:
+      id: 80651
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: CpuQuotaBlock
+      offset: 275427684150520
+      target: 0
+      target_obj:
+        id: 86717
+        mro: NoneObject:object
+        reason: Pointer CpuQuotaBlock @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: CpuQuotaBlock
+- - r
+  - Offset: 464
+    content: 226959360
+    depth: 0
+    field: PeakVirtualSize
+- - r
+  - Offset: 472
+    content: 203030528
+    depth: 0
+    field: VirtualSize
+- - r
+  - Offset: 480
+    content:
+      id: 80778
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: SessionProcessLinks
+      offset: 275427684150544
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: SessionProcessLinks
+- - r
+  - Offset: 0
+    content:
+      id: 86791
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150544
+      target: 275427698461968
+      target_obj:
+        id: 86804
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427698461968
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 86793
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150552
+      target: 275427684472096
+      target_obj:
+        id: 86857
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684472096
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 496
+    content:
+      id: 80612
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DebugPort
+      offset: 275427684150560
+      target: 0
+      target_obj:
+        id: 86910
+        mro: NoneObject:object
+        reason: Pointer DebugPort @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: DebugPort
+- - r
+  - Offset: 504
+    content:
+      id: 80639
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: ExceptionPortData
+      offset: 275427684150568
+      target: 275427691949104
+      target_obj:
+        id: 86952
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: ExceptionPortData
+        offset: 275427691949104
+        target: 275427691949104
+        target_obj:
+          id: 86955
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ExceptionPortData
+- - r
+  - Offset: 504
+    content:
+      enum: '0'
+      id: 80571
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ExceptionPortState
+- - r
+  - Offset: 504
+    content: 18446738026424790064
+    depth: 0
+    field: ExceptionPortValue
+- - r
+  - Offset: 512
+    content:
+      id: 80656
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: ObjectTable
+      offset: 275427684150576
+      target: 273366101038304
+      target_obj:
+        id: 87516
+        mro: _HANDLE_TABLE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: ObjectTable
+        offset: 273366101038304
+        type_name: _HANDLE_TABLE
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ObjectTable
+- - r
+  - Offset: 520
+    content:
+      id: 80559
+      mro: _EX_FAST_REF:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Token
+      offset: 275427684150584
+      type_name: _EX_FAST_REF
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Token
+- - r
+  - Offset: 0
+    content:
+      id: 87685
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Pointer
+      offset:
+        id: 87683
+        mro: NoneObject:object
+        reason: No address specified
+      target: 273366101224080
+      target_obj:
+        id: 87705
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: Pointer
+        offset: 273366101224080
+        target: 273366101224080
+        target_obj:
+          id: 87710
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Object
+- - r
+  - Offset: 0
+    content:
+      enum: '6'
+      id: 80558
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 6
+    depth: 1
+    field: RefCnt
+- - r
+  - Offset: 0
+    content: 18446735964834065046
+    depth: 1
+    field: Value
+- - r
+  - Offset: 528
+    content: 41571
+    depth: 0
+    field: WorkingSetPage
+- - r
+  - Offset: 536
+    content:
+      id: 80696
+      mro: _EX_PUSH_LOCK:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: AddressCreationLock
+      offset: 275427684150600
+      type_name: _EX_PUSH_LOCK
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: AddressCreationLock
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 88022
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Locked
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 88024
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content:
+      id: 88028
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Ptr
+      offset: 275427684150600
+      target: 0
+      target_obj:
+        id: 88128
+        mro: NoneObject:object
+        reason: Pointer Ptr @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Ptr
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 88026
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Shared
+- - r
+  - Offset: 0
+    content: 0
+    depth: 1
+    field: Value
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 88020
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Waiting
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 88031
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Waking
+- - r
+  - Offset: 544
+    content:
+      id: 80807
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: RotateInProgress
+      offset: 275427684150608
+      target: 0
+      target_obj:
+        id: 88384
+        mro: NoneObject:object
+        reason: Pointer RotateInProgress @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: RotateInProgress
+- - r
+  - Offset: 552
+    content:
+      id: 80625
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: ForkInProgress
+      offset: 275427684150616
+      target: 0
+      target_obj:
+        id: 88485
+        mro: NoneObject:object
+        reason: Pointer ForkInProgress @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ForkInProgress
+- - r
+  - Offset: 560
+    content: 0
+    depth: 0
+    field: HardwareTrigger
+- - r
+  - Offset: 568
+    content:
+      id: 80661
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: PhysicalVadRoot
+      offset: 275427684150632
+      target: 0
+      target_obj:
+        id: 88656
+        mro: NoneObject:object
+        reason: Pointer PhysicalVadRoot @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: PhysicalVadRoot
+- - r
+  - Offset: 576
+    content:
+      id: 80579
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: CloneRoot
+      offset: 275427684150640
+      target: 0
+      target_obj:
+        id: 88749
+        mro: NoneObject:object
+        reason: Pointer CloneRoot @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: CloneRoot
+- - r
+  - Offset: 584
+    content: 10472
+    depth: 0
+    field: NumberOfPrivatePages
+- - r
+  - Offset: 592
+    content: 0
+    depth: 0
+    field: NumberOfLockedPages
+- - r
+  - Offset: 600
+    content:
+      id: 80533
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Win32Process
+      offset: 275427684150664
+      target: 273781650420480
+      target_obj:
+        id: 88918
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: Win32Process
+        offset: 273781650420480
+        target: 273781650420480
+        target_obj:
+          id: 88923
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Win32Process
+- - r
+  - Offset: 608
+    content:
+      id: 80590
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Job
+      offset: 275427684150672
+      target: 275427698270736
+      target_obj:
+        id: 89081
+        mro: _EJOB:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Job
+        offset: 275427698270736
+        type_name: _EJOB
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Job
+- - r
+  - Offset: 616
+    content:
+      id: 80600
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: SectionObject
+      offset: 275427684150680
+      target: 273366101165184
+      target_obj:
+        id: 89204
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: SectionObject
+        offset: 273366101165184
+        target: 273366101165184
+        target_obj:
+          id: 89209
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: SectionObject
+- - r
+  - Offset: 624
+    content:
+      id: 80618
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: SectionBaseAddress
+      offset: 275427684150688
+      target: 11141120
+      target_obj:
+        id: 89367
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: SectionBaseAddress
+        offset: 11141120
+        target: 11141120
+        target_obj:
+          id: 89372
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: SectionBaseAddress
+- - r
+  - Offset: 632
+    content: 1285243927
+    depth: 0
+    field: Cookie
+- - r
+  - Offset: 636
+    content: 0
+    depth: 0
+    field: UmsScheduledThreads
+- - r
+  - Offset: 640
+    content:
+      id: 80561
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: WorkingSetWatch
+      offset: 275427684150704
+      target: 0
+      target_obj:
+        id: 89536
+        mro: NoneObject:object
+        reason: Pointer WorkingSetWatch @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: WorkingSetWatch
+- - r
+  - Offset: 648
+    content:
+      id: 80685
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Win32WindowStation
+      offset: 275427684150712
+      target: 80
+      target_obj:
+        id: 89578
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: Win32WindowStation
+        offset: 80
+        target: 80
+        target_obj:
+          id: 89581
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Win32WindowStation
+- - r
+  - Offset: 656
+    content: 2044
+    depth: 0
+    field: InheritedFromUniqueProcessId
+- - r
+  - Offset: 664
+    content:
+      id: 80563
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: LdtInformation
+      offset: 275427684150728
+      target: 0
+      target_obj:
+        id: 89670
+        mro: NoneObject:object
+        reason: Pointer LdtInformation @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: LdtInformation
+- - r
+  - Offset: 672
+    content:
+      id: 80777
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Spare
+      offset: 275427684150736
+      target: 0
+      target_obj:
+        id: 89711
+        mro: NoneObject:object
+        reason: Pointer Spare @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Spare
+- - r
+  - Offset: 680
+    content: 0
+    depth: 0
+    field: ConsoleHostProcess
+- - r
+  - Offset: 688
+    content:
+      id: 80573
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeviceMap
+      offset: 275427684150752
+      target: 273366093622064
+      target_obj:
+        id: 89791
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: DeviceMap
+        offset: 273366093622064
+        target: 273366093622064
+        target_obj:
+          id: 89796
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: DeviceMap
+- - r
+  - Offset: 696
+    content:
+      id: 80793
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: EtwDataSource
+      offset: 275427684150760
+      target: 275427699764128
+      target_obj:
+        id: 89936
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: EtwDataSource
+        offset: 275427699764128
+        target: 275427699764128
+        target_obj:
+          id: 89941
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: EtwDataSource
+- - r
+  - Offset: 704
+    content:
+      id: 80796
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: FreeTebHint
+      offset: 275427684150768
+      target: 2130329600
+      target_obj:
+        id: 90103
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: FreeTebHint
+        offset: 2130329600
+        target: 2130329600
+        target_obj:
+          id: 90109
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: FreeTebHint
+- - r
+  - Offset: 712
+    content:
+      id: 80575
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: FreeUmsTebHint
+      offset: 275427684150776
+      target: 4294967296
+      target_obj:
+        id: 90284
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: FreeUmsTebHint
+        offset: 4294967296
+        target: 4294967296
+        target_obj:
+          id: 90315
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: FreeUmsTebHint
+- - r
+  - Offset: 720
+    content: 0
+    depth: 0
+    field: Filler
+- - r
+  - Offset: 720
+    content:
+      id: 80621
+      mro: _HARDWARE_PTE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: PageDirectoryPte
+      offset: 275427684150784
+      type_name: _HARDWARE_PTE
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: PageDirectoryPte
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90556
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Accessed
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90546
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: CacheDisable
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90542
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: CopyOnWrite
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90554
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Dirty
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90566
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Global
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90540
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: LargePage
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90548
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: NoExecute
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90570
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Owner
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90564
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: PageFrameNumber
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90558
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Prototype
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90544
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: SoftwareWsIndex
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90552
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Valid
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90550
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Write
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90568
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: WriteThrough
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90562
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: reserved0
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 90560
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: reserved1
+- - r
+  - Offset: 728
+    content:
+      id: 80616
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Session
+      offset: 275427684150792
+      target: 273228700807168
+      target_obj:
+        id: 91272
+        mro: _MM_SESSION_SPACE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Session
+        offset: 273228700807168
+        type_name: _MM_SESSION_SPACE
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Session
+- - r
+  - Offset: 736
+    content: iexplore.exe
+    depth: 0
+    field: ImageFileName
+- - r
+  - Offset: 751
+    content: 2
+    depth: 0
+    field: PriorityClass
+- - r
+  - Offset: 752
+    content:
+      id: 80787
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: JobLinks
+      offset: 275427684150816
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: JobLinks
+- - r
+  - Offset: 0
+    content:
+      id: 91437
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150816
+      target: 275427698462240
+      target_obj:
+        id: 91450
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427698462240
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 91439
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150824
+      target: 275427698270776
+      target_obj:
+        id: 91566
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427698270776
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 768
+    content:
+      id: 80689
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: LockedPagesList
+      offset: 275427684150832
+      target: 0
+      target_obj:
+        id: 91696
+        mro: NoneObject:object
+        reason: Pointer LockedPagesList @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: LockedPagesList
+- - r
+  - Offset: 776
+    content:
+      id: 80791
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ThreadListHead
+      offset: 275427684150840
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ThreadListHead
+- - r
+  - Offset: 0
+    content:
+      id: 91812
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684150840
+      target: 275427684156544
+      target_obj:
+        id: 91837
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427684156544
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 91814
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684150848
+      target: 275427683697792
+      target_obj:
+        id: 91957
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427683697792
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 792
+    content:
+      id: 80692
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: SecurityPort
+      offset: 275427684150856
+      target: 0
+      target_obj:
+        id: 92071
+        mro: NoneObject:object
+        reason: Pointer SecurityPort @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: SecurityPort
+- - r
+  - Offset: 800
+    content:
+      id: 80667
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Wow64Process
+      offset: 275427684150864
+      target: 2130567168
+      target_obj:
+        id: 92170
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: Wow64Process
+        offset: 2130567168
+        target: 2130567168
+        target_obj:
+          id: 92175
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Wow64Process
+- - r
+  - Offset: 808
+    content: 21
+    depth: 0
+    field: ActiveThreads
+- - r
+  - Offset: 812
+    content: 1265406483
+    depth: 0
+    field: ImagePathHash
+- - r
+  - Offset: 816
+    content: 0
+    depth: 0
+    field: DefaultHardErrorProcessing
+- - r
+  - Offset: 820
+    content: 0
+    depth: 0
+    field: LastThreadExitStatus
+- - r
+  - Offset: 824
+    content:
+      id: 80772
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Pointer
+      offset: 275427684150888
+      target: 2130571264
+      target_obj:
+        id: 92588
+        mro: _PEB:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Pointer
+        offset: 2130571264
+        type_name: _PEB
+        vm: WindowsAMD64PagedMemory@0x099DF000 (Process 1008)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x099DF000 (Process 1008)
+    depth: 0
+    field: Peb
+- - r
+  - Offset: 832
+    content:
+      id: 80556
+      mro: _EX_FAST_REF:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: PrefetchTrace
+      offset: 275427684150896
+      type_name: _EX_FAST_REF
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: PrefetchTrace
+- - r
+  - Offset: 0
+    content:
+      id: 92660
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Pointer
+      offset:
+        id: 92658
+        mro: NoneObject:object
+        reason: No address specified
+      target: 0
+      target_obj:
+        id: 92679
+        mro: NoneObject:object
+        reason: Pointer Pointer @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Object
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 80555
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: RefCnt
+- - r
+  - Offset: 0
+    content: 0
+    depth: 1
+    field: Value
+- - r
+  - Offset: 840
+    content:
+      id: 80605
+      mro: _LARGE_INTEGER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ReadOperationCount
+      offset: 275427684150904
+      type_name: _LARGE_INTEGER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ReadOperationCount
+- - r
+  - Offset: 0
+    content: 22
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: 22
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content:
+      id: 92961
+      mro: <unnamed-4167>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u
+      offset: 275427684150904
+      type_name: <unnamed-4167>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: 22
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 848
+    content:
+      id: 80541
+      mro: _LARGE_INTEGER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: WriteOperationCount
+      offset: 275427684150912
+      type_name: _LARGE_INTEGER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: WriteOperationCount
+- - r
+  - Offset: 0
+    content: 920
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: 920
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content:
+      id: 93156
+      mro: <unnamed-4167>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u
+      offset: 275427684150912
+      type_name: <unnamed-4167>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: 920
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 856
+    content:
+      id: 80647
+      mro: _LARGE_INTEGER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: OtherOperationCount
+      offset: 275427684150920
+      type_name: _LARGE_INTEGER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: OtherOperationCount
+- - r
+  - Offset: 0
+    content: 6110
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: 6110
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content:
+      id: 93387
+      mro: <unnamed-4167>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u
+      offset: 275427684150920
+      type_name: <unnamed-4167>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: 6110
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 864
+    content:
+      id: 80810
+      mro: _LARGE_INTEGER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ReadTransferCount
+      offset: 275427684150928
+      type_name: _LARGE_INTEGER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: ReadTransferCount
+- - r
+  - Offset: 0
+    content: 298230
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: 298230
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content:
+      id: 93618
+      mro: <unnamed-4167>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u
+      offset: 275427684150928
+      type_name: <unnamed-4167>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: 298230
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 872
+    content:
+      id: 80593
+      mro: _LARGE_INTEGER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: WriteTransferCount
+      offset: 275427684150936
+      type_name: _LARGE_INTEGER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: WriteTransferCount
+- - r
+  - Offset: 0
+    content: 1279711
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: 1279711
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content:
+      id: 93803
+      mro: <unnamed-4167>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u
+      offset: 275427684150936
+      type_name: <unnamed-4167>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: 1279711
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 880
+    content:
+      id: 80690
+      mro: _LARGE_INTEGER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: OtherTransferCount
+      offset: 275427684150944
+      type_name: _LARGE_INTEGER
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: OtherTransferCount
+- - r
+  - Offset: 0
+    content: 183097
+    depth: 1
+    field: LowPart
+- - r
+  - Offset: 0
+    content: 183097
+    depth: 1
+    field: QuadPart
+- - r
+  - Offset: 0
+    content:
+      id: 94005
+      mro: <unnamed-4167>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u
+      offset: 275427684150944
+      type_name: <unnamed-4167>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: u
+- - r
+  - Offset: 0
+    content: 183097
+    depth: 2
+    field: LowPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 2
+    field: HighPart
+- - r
+  - Offset: 4
+    content: 0
+    depth: 1
+    field: HighPart
+- - r
+  - Offset: 888
+    content: 0
+    depth: 0
+    field: CommitChargeLimit
+- - r
+  - Offset: 896
+    content: 13036
+    depth: 0
+    field: CommitChargePeak
+- - r
+  - Offset: 904
+    content:
+      id: 80630
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: AweInfo
+      offset: 275427684150968
+      target: 0
+      target_obj:
+        id: 94198
+        mro: NoneObject:object
+        reason: Pointer AweInfo @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: AweInfo
+- - r
+  - Offset: 912
+    content:
+      id: 80519
+      mro: _SE_AUDIT_PROCESS_CREATION_INFO:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: SeAuditProcessCreationInfo
+      offset: 275427684150976
+      type_name: _SE_AUDIT_PROCESS_CREATION_INFO
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: SeAuditProcessCreationInfo
+- - r
+  - Offset: 0
+    content:
+      id: 94354
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: ImageFileName
+      offset: 275427684150976
+      target: 275427698430784
+      target_obj:
+        id: 94366
+        mro: _OBJECT_NAME_INFORMATION:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: ImageFileName
+        offset: 275427698430784
+        type_name: _OBJECT_NAME_INFORMATION
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ImageFileName
+- - r
+  - Offset: 920
+    content:
+      id: 80802
+      mro: _MMSUPPORT:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Vm
+      offset: 275427684150984
+      type_name: _MMSUPPORT
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: Vm
+- - r
+  - Offset: 0
+    content:
+      id: 94435
+      mro: _EX_PUSH_LOCK:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: WorkingSetMutex
+      offset: 275427684150984
+      type_name: _EX_PUSH_LOCK
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: WorkingSetMutex
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 94515
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Locked
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 94517
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content:
+      id: 94521
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Ptr
+      offset: 275427684150984
+      target: 0
+      target_obj:
+        id: 94713
+        mro: NoneObject:object
+        reason: Pointer Ptr @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Ptr
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 94519
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Shared
+- - r
+  - Offset: 0
+    content: 0
+    depth: 2
+    field: Value
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 94513
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Waiting
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 94524
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Waking
+- - r
+  - Offset: 8
+    content:
+      id: 94433
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: ExitGate
+      offset: 275427684150992
+      target: 0
+      target_obj:
+        id: 94965
+        mro: NoneObject:object
+        reason: Pointer ExitGate @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ExitGate
+- - r
+  - Offset: 16
+    content:
+      id: 94445
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: AccessLog
+      offset: 275427684151000
+      target: 0
+      target_obj:
+        id: 95012
+        mro: NoneObject:object
+        reason: Pointer AccessLog @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: AccessLog
+- - r
+  - Offset: 24
+    content:
+      id: 94451
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: WorkingSetExpansionLinks
+      offset: 275427684151008
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: WorkingSetExpansionLinks
+- - r
+  - Offset: 0
+    content:
+      id: 95066
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684151008
+      target: 275427698462432
+      target_obj:
+        id: 95079
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427698462432
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 95068
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684151016
+      target: 275427684076800
+      target_obj:
+        id: 95132
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684076800
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 40
+    content:
+      id: 94439
+      mro: Array:BaseObject:object
+      name: AgeDistribution
+      offset: 275427684151024
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: AgeDistribution
+- - r
+  - Offset: 68
+    content: 50
+    depth: 1
+    field: MinimumWorkingSetSize
+- - r
+  - Offset: 72
+    content: 15332
+    depth: 1
+    field: WorkingSetSize
+- - r
+  - Offset: 76
+    content: 10477
+    depth: 1
+    field: WorkingSetPrivateSize
+- - r
+  - Offset: 80
+    content: 345
+    depth: 1
+    field: MaximumWorkingSetSize
+- - r
+  - Offset: 84
+    content: 0
+    depth: 1
+    field: ChargedWslePages
+- - r
+  - Offset: 88
+    content: 30
+    depth: 1
+    field: ActualWslePages
+- - r
+  - Offset: 92
+    content: 41
+    depth: 1
+    field: WorkingSetSizeOverhead
+- - r
+  - Offset: 96
+    content: 15552
+    depth: 1
+    field: PeakWorkingSetSize
+- - r
+  - Offset: 100
+    content: 335
+    depth: 1
+    field: HardFaultCount
+- - r
+  - Offset: 104
+    content:
+      id: 94453
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: VmWorkingSetList
+      offset: 275427684151088
+      target: 271579389362176
+      target_obj:
+        id: 95297
+        mro: _MMWSL:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: VmWorkingSetList
+        offset: 271579389362176
+        type_name: _MMWSL
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: VmWorkingSetList
+- - r
+  - Offset: 112
+    content: 41221
+    depth: 1
+    field: NextPageColor
+- - r
+  - Offset: 114
+    content: 199
+    depth: 1
+    field: LastTrimStamp
+- - r
+  - Offset: 116
+    content: 33477
+    depth: 1
+    field: PageFaultCount
+- - r
+  - Offset: 120
+    content: 16290
+    depth: 1
+    field: RepurposeCount
+- - r
+  - Offset: 124
+    content:
+      id: 94455
+      mro: Array:BaseObject:object
+      name: Spare
+      offset: 275427684151108
+      type_name: Array
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Spare
+- - r
+  - Offset: 132
+    content:
+      id: 94440
+      mro: _MMSUPPORT_FLAGS:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Flags
+      offset: 275427684151116
+      type_name: _MMSUPPORT_FLAGS
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flags
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 95433
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: ForceTrim
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 95441
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: MaximumWorkingSetHard
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 95445
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: MinimumWorkingSetHard
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 95437
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: ModwriterAttached
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 95459
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: TrimHard
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 95447
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: WorkingSetType
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 95439
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: PageStealers
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 95453
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Reserved
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 95435
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: SessionMaster
+- - r
+  - Offset: 1
+    content:
+      enum: '0'
+      id: 95455
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: TrimmerState
+- - r
+  - Offset: 2
+    content:
+      enum: '0'
+      id: 95451
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: MemoryPriority
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 95431
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Available
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 95449
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: ExpansionFailed
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 95443
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: VmExiting
+- - r
+  - Offset: 3
+    content:
+      enum: '0'
+      id: 95457
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: WsleDeleted
+- - r
+  - Offset: 1056
+    content:
+      id: 80646
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: MmProcessLinks
+      offset: 275427684151120
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: MmProcessLinks
+- - r
+  - Offset: 0
+    content:
+      id: 95798
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684151120
+      target: 275427698462544
+      target_obj:
+        id: 95811
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 275427698462544
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 95800
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684151128
+      target: 275427684472672
+      target_obj:
+        id: 95870
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 275427684472672
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 1072
+    content:
+      id: 80671
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: HighestUserAddress
+      offset: 275427684151136
+      target: 2147418112
+      target_obj:
+        id: 95924
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: HighestUserAddress
+        offset: 2147418112
+        target: 2147418112
+        target_obj:
+          id: 95927
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: HighestUserAddress
+- - r
+  - Offset: 1080
+    content: 876
+    depth: 0
+    field: ModifiedPageCount
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80547
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: AccountingFolded
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80676
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: AffinityPermanent
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80687
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: AffinityUpdateEnable
+- - r
+  - Offset: 1084
+    content:
+      enum: '5'
+      id: 80644
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 5
+    depth: 0
+    field: DefaultPagePriority
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80595
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ExitProcessReported
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80785
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ExplicitAffinity
+- - r
+  - Offset: 1084
+    content: 53264
+    depth: 0
+    field: Flags2
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80804
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: HandleTableRundown
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80635
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: JobNotReallyActive
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80553
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: LastReportMemory
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80698
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: NeedsHandleRundown
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80577
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: NewProcessReported
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80628
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: NumaAware
+- - r
+  - Offset: 1084
+    content:
+      enum: '1'
+      id: 80539
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: PrimaryTokenFrozen
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80674
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ProcessVerifierTarget
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80598
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: PropagateNode
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80678
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ProtectedProcess
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80695
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: RefTraceEnabled
+- - r
+  - Offset: 1084
+    content:
+      enum: '1'
+      id: 80543
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: ReportCommitChanges
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80800
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ReportPhysicalPageChanges
+- - r
+  - Offset: 1084
+    content:
+      enum: '0'
+      id: 80583
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: StackRandomizationDisabled
+- - r
+  - Offset: 1088
+    content:
+      enum: '2'
+      id: 80680
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+    depth: 0
+    field: AddressSpaceInitialized
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80783
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: BreakOnTermination
+- - r
+  - Offset: 1088
+    content:
+      enum: '1'
+      id: 80610
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: CreateReported
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80614
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: CrossSessionCreate
+- - r
+  - Offset: 1088
+    content:
+      enum: '2'
+      id: 80790
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 2
+    depth: 0
+    field: DefaultIoPriority
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80608
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: DeprioritizeViews
+- - r
+  - Offset: 1088
+    content: 340592641
+    depth: 0
+    field: Flags
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80586
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ForkFailed
+- - r
+  - Offset: 1088
+    content:
+      enum: '1'
+      id: 80637
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: HasAddressSpace
+- - r
+  - Offset: 1088
+    content:
+      enum: '1'
+      id: 80602
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: ImageNotifyDone
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80798
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: InjectInpageErrors
+- - r
+  - Offset: 1088
+    content:
+      enum: '1'
+      id: 80592
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: LaunchPrefetched
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80620
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: NoDebugInherit
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80517
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: OutswapEnabled
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80549
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: Outswapped
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80633
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: OverrideAddressSpace
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80524
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: PdeUpdateNeeded
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80665
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ProcessDelete
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80669
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ProcessExiting
+- - r
+  - Offset: 1088
+    content:
+      enum: '1'
+      id: 80588
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: ProcessInSession
+- - r
+  - Offset: 1088
+    content:
+      enum: '1'
+      id: 80545
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    depth: 0
+    field: ProcessInserted
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80604
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: ProcessSelfDelete
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80775
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: SetTimerResolution
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80569
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: SetTimerResolutionLink
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80653
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: VdmAllowed
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80659
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: VmDeleted
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80581
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: VmTopDown
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80551
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: Wow64SplitPages
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80537
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: Wow64VaSpace4Gb
+- - r
+  - Offset: 1088
+    content:
+      enum: '0'
+      id: 80809
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 0
+    field: WriteWatch
+- - r
+  - Offset: 1092
+    content: 259
+    depth: 0
+    field: ExitStatus
+- - r
+  - Offset: 1096
+    content:
+      id: 80528
+      mro: _MM_AVL_TABLE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: VadRoot
+      offset: 275427684151160
+      type_name: _MM_AVL_TABLE
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: VadRoot
+- - r
+  - Offset: 0
+    content:
+      id: 80529
+      mro: _MMADDRESS_NODE:VadTraverser:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: BalancedRoot
+      offset: 275427684151160
+      type_name: _MMADDRESS_NODE
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: BalancedRoot
+- - r
+  - Offset: -12
+    content: "\x10\uFFFD"
+    depth: 2
+    field: Tag
+- - r
+  - Offset: 0
+    content:
+      id: 80838
+      mro: <unnamed-5581>:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: u1
+      offset: 275427684151160
+      type_name: <unnamed-5581>
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: u1
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 80875
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 3
+    field: Balance
+- - r
+  - Offset: 0
+    content:
+      id: 80877
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Parent
+      offset: 275427684151160
+      target: 275427684151160
+      target_obj:
+        id: 97154
+        mro: _MMADDRESS_NODE:VadTraverser:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Parent
+        offset: 275427684151160
+        type_name: _MMADDRESS_NODE
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 3
+    field: Parent
+- - r
+  - Offset: 8
+    content:
+      id: 80835
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: LeftChild
+      offset: 275427684151168
+      target: 0
+      target_obj:
+        id: 97207
+        mro: NoneObject:object
+        reason: Pointer LeftChild @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: LeftChild
+- - r
+  - Offset: 16
+    content:
+      id: 80840
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: RightChild
+      offset: 275427684151176
+      target: 275427699955200
+      target_obj:
+        id: 97248
+        mro: _MMADDRESS_NODE:VadTraverser:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: RightChild
+        offset: 275427699955200
+        type_name: _MMADDRESS_NODE
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: RightChild
+- - r
+  - Offset: 24
+    content: 0
+    depth: 2
+    field: StartingVpn
+- - r
+  - Offset: 32
+    content: 0
+    depth: 2
+    field: EndingVpn
+- - r
+  - Offset: 40
+    content:
+      enum: '11'
+      id: 97062
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 11
+    depth: 1
+    field: DepthOfTree
+- - r
+  - Offset: 40
+    content:
+      enum: '550'
+      id: 97058
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 550
+    depth: 1
+    field: NumberGenericTableElements
+- - r
+  - Offset: 40
+    content:
+      enum: '0'
+      id: 97056
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 1
+    field: Unused
+- - r
+  - Offset: 48
+    content:
+      id: 97064
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: NodeHint
+      offset: 275427684151208
+      target: 275427699955200
+      target_obj:
+        id: 97385
+        mro: Void:Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+        name: NodeHint
+        offset: 275427699955200
+        target: 275427699955200
+        target_obj:
+          id: 97388
+          mro: NoneObject:object
+          reason: Void reference
+        type_name: unsigned long
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: NodeHint
+- - r
+  - Offset: 56
+    content:
+      id: 97060
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: NodeFreeHint
+      offset: 275427684151216
+      target: 0
+      target_obj:
+        id: 97467
+        mro: NoneObject:object
+        reason: Pointer NodeFreeHint @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: NodeFreeHint
+- - r
+  - Offset: 1160
+    content:
+      id: 80584
+      mro: _ALPC_PROCESS_CONTEXT:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: AlpcContext
+      offset: 275427684151224
+      type_name: _ALPC_PROCESS_CONTEXT
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: AlpcContext
+- - r
+  - Offset: 0
+    content:
+      id: 97521
+      mro: _EX_PUSH_LOCK:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: Lock
+      offset: 275427684151224
+      type_name: _EX_PUSH_LOCK
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Lock
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 97554
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Locked
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 97556
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: MultipleShared
+- - r
+  - Offset: 0
+    content:
+      id: 97560
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Ptr
+      offset: 275427684151224
+      target: 0
+      target_obj:
+        id: 97612
+        mro: NoneObject:object
+        reason: Pointer Ptr @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Ptr
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 97558
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Shared
+- - r
+  - Offset: 0
+    content: 0
+    depth: 2
+    field: Value
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 97552
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Waiting
+- - r
+  - Offset: 0
+    content:
+      enum: '0'
+      id: 97563
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    depth: 2
+    field: Waking
+- - r
+  - Offset: 8
+    content:
+      id: 97522
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: ViewListHead
+      offset: 275427684151232
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: ViewListHead
+- - r
+  - Offset: 0
+    content:
+      id: 97739
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684151232
+      target: 273366101274608
+      target_obj:
+        id: 97752
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Flink
+        offset: 273366101274608
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 97741
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684151240
+      target: 273366101274608
+      target_obj:
+        id: 97805
+        mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+        name: Blink
+        offset: 273366101274608
+        type_name: _LIST_ENTRY
+        vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 2
+    field: Blink
+- - r
+  - Offset: 24
+    content: 864
+    depth: 1
+    field: PagedPoolQuotaCache
+- - r
+  - Offset: 1192
+    content:
+      id: 80657
+      mro: _LIST_ENTRY:ListMixIn:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: TimerResolutionLink
+      offset: 275427684151256
+      type_name: _LIST_ENTRY
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: TimerResolutionLink
+- - r
+  - Offset: 0
+    content:
+      id: 97881
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Flink
+      offset: 275427684151256
+      target: 0
+      target_obj:
+        id: 97894
+        mro: NoneObject:object
+        reason: Pointer Flink @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Flink
+- - r
+  - Offset: 8
+    content:
+      id: 97883
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: Blink
+      offset: 275427684151264
+      target: 0
+      target_obj:
+        id: 97935
+        mro: NoneObject:object
+        reason: Pointer Blink @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 1
+    field: Blink
+- - r
+  - Offset: 1208
+    content: 0
+    depth: 0
+    field: RequestedTimerResolution
+- - r
+  - Offset: 1212
+    content: 40
+    depth: 0
+    field: ActiveThreadsHighWatermark
+- - r
+  - Offset: 1216
+    content: 0
+    depth: 0
+    field: SmallestTimerResolution
+- - r
+  - Offset: 1224
+    content:
+      id: 80649
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: TimerResolutionStackRecord
+      offset: 275427684151288
+      target: 0
+      target_obj:
+        id: 98006
+        mro: NoneObject:object
+        reason: Pointer TimerResolutionStackRecord @ 0 invalid
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x00187000 (Kernel AS@0x187000)
+    depth: 0
+    field: TimerResolutionStackRecord
+- - x
+- - x

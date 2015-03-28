@@ -1,0 +1,22 @@
+- id: 160
+  mro: InteractiveSession:JsonSerializableSession:Session:object
+  session_id: 1
+  state:
+    ept:
+    - null
+    - IntParser
+    filename:
+    - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+    - FileName
+    pagefile:
+    - []
+    - FileName
+    profile:
+    - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+    - FileName
+    session_name:
+    - Windows Server 2012
+    - String
+    timezone:
+    - UTC
+    - TimeZone

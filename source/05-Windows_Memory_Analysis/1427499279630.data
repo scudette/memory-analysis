@@ -1,0 +1,72 @@
+cache_key: 6b71b2be2af1a74d3c89db028e4dcdd0-procdump
+data:
+- - m
+  - cookie: 819327
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 819327
+    plugin_name: procdump
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - s
+  - name: null
+- - f
+  - 'Dumping {0}, pid: {1:6} output: {2}
+
+    '
+  - LiteAgent.exe
+  - 1152
+  - executable.LiteAgent_exe_1152.exe
+- - file
+  - executable.LiteAgent_exe_1152.exe
+  - 1427499279630/executable.LiteAgent_exe_1152.exe
+- - x
+- - x

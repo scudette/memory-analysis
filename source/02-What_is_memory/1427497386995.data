@@ -1,0 +1,82 @@
+cache_key: e1a826c17906db686d2acad6bdf084bb-inspect_vaddr
+data:
+- - m
+  - cookie: 25241
+    plugin_name: None
+    session:
+      id: 213
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 3
+      state:
+        ept:
+        - - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 25241
+    plugin_name: inspect_vaddr
+    session:
+      id: 213
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 3
+      state:
+        ept:
+        - - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - t
+  - - name: Address Space
+      width: 30
+    - name: Offset
+      padding: '0'
+      style: address
+    - name: Base AS
+      width: 30
+    - name: Base AS Offset
+      padding: '0'
+      style: address
+  - {}
+- - r
+  - Address Space: Kernel AS@0x187000
+    Base AS: VTxPagedMemory@0x881af01e
+    Base AS Offset: &id001 40210432
+    Offset: 272678923898880
+- - r
+  - Address Space: VTxPagedMemory@0x881af01e
+    Base AS: AFF4AddressSpace
+    Base AS Offset: 4840398848
+    Offset: *id001
+- - x
+- - x

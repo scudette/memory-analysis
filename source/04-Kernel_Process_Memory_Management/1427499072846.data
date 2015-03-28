@@ -1,0 +1,64 @@
+cache_key: 650eb7f2e7af955fe308cb811ee579cd-cc
+data:
+- - m
+  - cookie: 227893
+    plugin_name: None
+    session:
+      id: 184
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 2
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/stuxnet.vmem.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/30B5FB31AE7E4ACAABA750AA241FF3311
+        - FileName
+        session_name:
+        - Stuxnet
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 227893
+    plugin_name: cc
+    session:
+      id: 184
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 2
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/stuxnet.vmem.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/30B5FB31AE7E4ACAABA750AA241FF3311
+        - FileName
+        session_name:
+        - Stuxnet
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - f
+  - 'Switching to process context: services.exe (Pid 668@0x82073020)
+
+    '
+- - x
+- - x

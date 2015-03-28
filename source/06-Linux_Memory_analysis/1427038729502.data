@@ -1,0 +1,69 @@
+cache_key: 288e7eedee477d0855f324959782fe3c-moddump
+data:
+- - m
+  - cookie: 10376
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/debianx64.elf.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 10376
+    plugin_name: moddump
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/debianx64.elf.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - file
+  - modules/rootkit.0xffffa02c0000.lkm
+  - 1427038729502/modules/rootkit.0xffffa02c0000.lkm
+- - f
+  - 'Wrote {0} bytes to {1}
+
+    '
+  - 17982
+  - rootkit.0xffffa02c0000.lkm
+- - x
+- - x

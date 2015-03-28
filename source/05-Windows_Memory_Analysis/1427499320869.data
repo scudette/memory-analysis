@@ -1,0 +1,210 @@
+cache_key: 052c70bb7b1693c92d7b2a0688320625-users
+data:
+- - m
+  - cookie: 842435
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 842435
+    plugin_name: users
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - s
+  - name: null
+- - f
+  - "Key {0} \n\n"
+  - CsiTool-CreateHive-{00000000-0000-0000-0000-000000000000}/SAM/Domains/Account/Users/000001F4
+- - t
+  - - cname: property
+      formatstring: '20'
+      name: ''
+    - cname: value
+      formatstring: ''
+      name: ''
+  - suppress_headers: true
+- - r
+  - property: UserName
+    value: Administrator
+- - r
+  - property: Comment
+    value: Built-in account for administering the computer/domain
+- - r
+  - property: NTHash
+    value: 0d000100477deaf7a10a1cdd9be29582e4fed656
+- - r
+  - property: LanHash
+    value: 0d000100
+- - r
+  - property: FullName
+    value: ''
+- - r
+  - property: Type
+    value:
+      enum: Default Admin User
+      id: 844713
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 188
+- - r
+  - property: AccountExpiration
+    value:
+      epoch: 0
+      id: 844728
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+- - r
+  - property: LoginCount
+    value: 37
+- - r
+  - property: FailedLoginCount
+    value: 0
+- - r
+  - property: Flags
+    value: 528
+- - r
+  - property: PasswordFailedTime
+    value:
+      epoch: 1400299420
+      id: 844765
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2014-05-17 04:03:40+0000
+- - r
+  - property: LastLoginTime
+    value:
+      epoch: 1426012291
+      id: 844780
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:31:31+0000
+- - r
+  - property: Rid
+    value: 500
+- - r
+  - property: PwdResetDate
+    value:
+      epoch: 1425995620
+      id: 844802
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 13:53:40+0000
+- - s
+  - name: null
+- - f
+  - "Key {0} \n\n"
+  - CsiTool-CreateHive-{00000000-0000-0000-0000-000000000000}/SAM/Domains/Account/Users/000001F5
+- - t
+  - - cname: property
+      formatstring: '20'
+      name: ''
+    - cname: value
+      formatstring: ''
+      name: ''
+  - suppress_headers: true
+- - r
+  - property: UserName
+    value: Guest
+- - r
+  - property: Comment
+    value: Built-in account for guest access to the computer/domain
+- - r
+  - property: NTHash
+    value: 0d000100
+- - r
+  - property: LanHash
+    value: 0d000100
+- - r
+  - property: FullName
+    value: ''
+- - r
+  - property: Type
+    value:
+      enum: Default Guest Acct
+      id: 844978
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 176
+- - r
+  - property: AccountExpiration
+    value:
+      epoch: 910692730085
+      id: 844993
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+- - r
+  - property: LoginCount
+    value: 0
+- - r
+  - property: FailedLoginCount
+    value: 0
+- - r
+  - property: Flags
+    value: 533
+- - r
+  - property: PasswordFailedTime
+    value:
+      epoch: 0
+      id: 845031
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+- - r
+  - property: LastLoginTime
+    value:
+      epoch: 0
+      id: 845046
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+- - r
+  - property: Rid
+    value: 501
+- - r
+  - property: PwdResetDate
+    value:
+      epoch: 0
+      id: 845068
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: '-'
+- - x
+- - x

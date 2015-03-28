@@ -1,0 +1,860 @@
+cache_key: b00b6c7520256ff19d793831a3887f75-timers
+data:
+- - m
+  - cookie: 1081010
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 1081010
+    plugin_name: timers
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - t
+  - - cname: ''
+      formatstring: '>3'
+      name: Table
+    - cname: offset
+      formatstring: '[addrpad]'
+      name: Offset
+    - cname: due_high
+      formatstring: '22'
+      name: DueTime(H)
+    - cname: due
+      formatstring: '24'
+      name: DueTime
+    - cname: period
+      formatstring: '>11'
+      name: Period(ms)
+    - cname: signaled
+      formatstring: '>10'
+      name: Signaled
+    - cname: routine
+      formatstring: '[addrpad]'
+      name: Routine
+    - cname: module
+      formatstring: ''
+      name: Module
+  - {}
+- - p
+  - Table [_KTIMER_TABLE_ENTRY TimerEntries[0] ] @ 0xF8005A91C180
+- - r
+  - due:
+      epoch: 1426013161
+      id: 1081358
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:46:01+0000
+    due_high: '0x000000000028fd2cf26d'
+    module: ntfs + 0x120f0
+    offset:
+      id: 1081336
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272679373684096
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1081365
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272679373684056
+      target: 272679373308144
+      target_obj:
+        id: 1081484
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679373308144
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - p
+  - Table [_KTIMER_TABLE_ENTRY TimerEntries[11] ] @ 0xF8005A91C2E0
+- - r
+  - due:
+      epoch: 1426013636
+      id: 1082157
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:53:56+0000
+    due_high: '0x00000000002a180e3301'
+    module: rdbss!RxPostPreAllocatedOneShotTimerRequest + 0x140
+    offset:
+      id: 1082135
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296791845520
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1082164
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296791845608
+      target: 272679359231632
+      target_obj:
+        id: 1084868
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679359231632
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013751
+      id: 1085055
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:55:51+0000
+    due_high: '0x00000000002a5cace065'
+    module: nt!ExpTimerDpcRoutine
+    offset:
+      id: 1085033
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296802936736
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1085062
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296802936920
+      target: 272680401145252
+      target_obj:
+        id: 1085106
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680401145252
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013340
+      id: 1085418
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:49:00+0000
+    due_high: '0x00000000002967e868c3'
+    module: nt!CmpLazyFlushDpcRoutine
+    offset:
+      id: 1085396
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272680402797680
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1085425
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272680402797768
+      target: 272680401039676
+      target_obj:
+        id: 1085468
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680401039676
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013148
+      id: 1086235
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:48+0000
+    due_high: '0x000000000028f55b1ca7'
+    module: hal + 0x50c0
+    offset:
+      id: 1086213
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272680408258912
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 17179
+    routine:
+      id: 1086242
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272680408258840
+      target: 272680407986368
+      target_obj:
+        id: 1087631
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680407986368
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: 'Yes'
+- - r
+  - due:
+      epoch: 1426014999
+      id: 1087818
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 19:16:39+0000
+    due_high: '0x00000000002d446c23a5'
+    module: cng!BCryptResolveProviders + 0x34cc
+    offset:
+      id: 1087796
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272679335757184
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1087825
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272679335757288
+      target: 272679335278076
+      target_obj:
+        id: 1088723
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679335278076
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013657
+      id: 1088855
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:54:17+0000
+    due_high: '0x00000000002a247b6dc3'
+    module: fltmgr!FltFreeGenericWorkItem + 0x200
+    offset:
+      id: 1088833
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296751278960
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1088862
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296751279048
+      target: 272679371160048
+      target_obj:
+        id: 1092476
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679371160048
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013156
+      id: 1092972
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:56+0000
+    due_high: '0x000000000028fa1b2af1'
+    module: xenbus + 0x15244
+    offset:
+      id: 1092950
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296750506936
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 1000
+    routine:
+      id: 1092979
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296750507024
+      target: 272679336002116
+      target_obj:
+        id: 1093092
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679336002116
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: 'Yes'
+- - r
+  - due:
+      epoch: 1426013156
+      id: 1093297
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:56+0000
+    due_high: '0x000000000028fa1b2af1'
+    module: ataport + 0x1000
+    offset:
+      id: 1093275
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296751068256
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 1000
+    routine:
+      id: 1093304
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296751068344
+      target: 272679341297664
+      target_obj:
+        id: 1094245
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679341297664
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: 'Yes'
+- - r
+  - due:
+      epoch: 1426013188
+      id: 1094455
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:46:28+0000
+    due_high: '0x0000000000290cfba0ea'
+    module: nt!CmpLazyFlushDpcRoutine
+    offset:
+      id: 1094433
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272680402797488
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1094462
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272680402797576
+      target: 272680401039676
+      target_obj:
+        id: 1094505
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680401039676
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426017163
+      id: 1094682
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 19:52:43+0000
+    due_high: '0x0000000000324e0df55a'
+    module: dxgkrnl!TraceDxgkPerformanceWarning + 0x84
+    offset:
+      id: 1094660
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296748911832
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 21600000
+    routine:
+      id: 1094689
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296748911944
+      target: 272679362464188
+      target_obj:
+        id: 1095363
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679362464188
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426082378
+      id: 1095671
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-11 13:59:38+0000
+    due_high: '0x0000000000ca253ec2be'
+    module: ndis!NdisAllocateNetBufferMdlAndData + 0x1458
+    offset:
+      id: 1095649
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272679337733840
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1095678
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272679337733928
+      target: 272679337262296
+      target_obj:
+        id: 1102750
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679337262296
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013161
+      id: 1102984
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:46:01+0000
+    due_high: '0x000000000028fcde496c'
+    module: afd + 0x60b0
+    offset:
+      id: 1102962
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272679355708224
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1102991
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272679355708184
+      target: 272679355572400
+      target_obj:
+        id: 1103104
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679355572400
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013142
+      id: 1103224
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:42+0000
+    due_high: '0x000000000028f1c4553e'
+    module: nt!CcScanDpc
+    offset:
+      id: 1103202
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272680403068096
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1103231
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272680403068056
+      target: 272680401069748
+      target_obj:
+        id: 1103274
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680401069748
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013566
+      id: 1103462
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:52:46+0000
+    due_high: '0x000000000029ee7fb6d8'
+    module: netbt + 0x21d0
+    offset:
+      id: 1103440
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296787730640
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1103469
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296787730600
+      target: 272679367389648
+      target_obj:
+        id: 1103582
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679367389648
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013143
+      id: 1103667
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:43+0000
+    due_high: '0x000000000028f24512ca'
+    module: ndis!NdisGetThreadObjectCompartmentId + 0x79c
+    offset:
+      id: 1103645
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296787440248
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1103674
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296787440336
+      target: 272679337210156
+      target_obj:
+        id: 1103718
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679337210156
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013142
+      id: 1104112
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:42+0000
+    due_high: '0x000000000028f1cb490e'
+    module: tcpip!TcpTcbHeaderSend + 0x600
+    offset:
+      id: 1104090
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296751501152
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 10
+    routine:
+      id: 1104119
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296751501112
+      target: 272679377346448
+      target_obj:
+        id: 1104171
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679377346448
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013156
+      id: 1104363
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:56+0000
+    due_high: '0x000000000028f9df8e07'
+    module: storport!StorPortQuerySystemTime + 0x10
+    offset:
+      id: 1104341
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296751266632
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 2000
+    routine:
+      id: 1104370
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296751266720
+      target: 272679340896460
+      target_obj:
+        id: 1105408
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679340896460
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: 'Yes'
+- - p
+  - Table [_KTIMER_TABLE_ENTRY TimerEntries[196] ] @ 0xF8005A91DA00
+- - r
+  - due:
+      epoch: 1426013144
+      id: 1105846
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:45:44+0000
+    due_high: '0x000000000028f2972402'
+    module: nt!PopCheckForIdleness
+    offset:
+      id: 1105824
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272680402905056
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 30000
+    routine:
+      id: 1105853
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272680402905144
+      target: 272680401049784
+      target_obj:
+        id: 1105896
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680401049784
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: 'Yes'
+- - r
+  - due:
+      epoch: 1426013580
+      id: 1106558
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:53:00+0000
+    due_high: '0x000000000029f68fffc9'
+    module: srv + 0x13ec
+    offset:
+      id: 1106536
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272679395508544
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 1498348
+    routine:
+      id: 1106565
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272679395508504
+      target: 272679395398636
+      target_obj:
+        id: 1106678
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679395398636
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: 'Yes'
+- - r
+  - due:
+      epoch: 1426013179
+      id: 1106917
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:46:19+0000
+    due_high: '0x00000000002907a039bc'
+    module: tunnel + 0x1550
+    offset:
+      id: 1106895
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272679396096808
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 28348
+    routine:
+      id: 1106924
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272679396096896
+      target: 272679395980624
+      target_obj:
+        id: 1107037
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679395980624
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: 'Yes'
+- - r
+  - due:
+      epoch: 1451606400
+      id: 1107369
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2016-01-01 00:00:00+0000
+    due_high: '0x00000000e8ede3d64fde'
+    module: nt!ExpNextYearDpcRoutine
+    offset:
+      id: 1107347
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272680402871648
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1107376
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272680402871608
+      target: 272680402385268
+      target_obj:
+        id: 1107419
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680402385268
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013574
+      id: 1107530
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:52:54+0000
+    due_high: '0x000000000029f34bca0c'
+    module: dfsc + 0x13cc
+    offset:
+      id: 1107508
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 272679367885376
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1107537
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 272679367885336
+      target: 272679367848908
+      target_obj:
+        id: 1107650
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272679367848908
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - r
+  - due:
+      epoch: 1426013218
+      id: 1107813
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-10 18:46:58+0000
+    due_high: '0x0000000000291ef6340f'
+    module: nt!KiBalanceSetManagerDeferredRoutine
+    offset:
+      id: 1107791
+      mro: _KTIMER:Struct:BaseAddressComparisonMixIn:BaseObject:object
+      name: _KTIMER
+      offset: 246296745610738
+      type_name: _KTIMER
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    period: 0
+    routine:
+      id: 1107820
+      mro: Pointer:NativeType:NumericProxyMixIn:BaseObject:object
+      name: DeferredRoutine
+      offset: 246296745610826
+      target: 272680401039508
+      target_obj:
+        id: 1107863
+        mro: Function:BaseAddressComparisonMixIn:BaseObject:object
+        name: DeferredRoutine
+        offset: 272680401039508
+        type_name: Function
+        vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+      type_name: Pointer
+      vm: WindowsAMD64PagedMemory@0x35DC6000 (Process 1152)
+    signaled: '-'
+- - x
+- - x

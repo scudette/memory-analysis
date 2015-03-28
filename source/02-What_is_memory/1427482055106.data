@@ -1,0 +1,119 @@
+cache_key: 52292a4d8597e0738b8da96280d4f427-imageinfo
+data:
+- - m
+  - cookie: 145202
+    plugin_name: None
+    session:
+      id: 213
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 3
+      state:
+        ept:
+        - - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 145202
+    plugin_name: imageinfo
+    session:
+      id: 213
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 3
+      state:
+        ept:
+        - - 2283466782
+        - IntParser
+        filename:
+        - ../images/Ubuntu14.10_virtualbox.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/3844DBB920174967BE7AA4A2C20430FA2
+        - FileName
+        session_name:
+        - Win7 Guest
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - t
+  - - cname: key
+      formatstring: '20'
+      name: Fact
+    - cname: value
+      formatstring: '30'
+      name: Value
+  - {}
+- - r
+  - key: Kernel DTB
+    value: '0x187000'
+- - r
+  - key: NT Build
+    value: 7601.win7sp1_rtm.101119-1850
+- - r
+  - key: NT Build Ex
+    value: 7601.17514.amd64fre.win7sp1_rtm.101119-1850
+- - r
+  - key: Signed Drivers
+    value: "\x01"
+- - r
+  - key: Time (UTC)
+    value:
+      epoch: 1426640705
+      id: 145328
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 01:05:05+0000
+- - r
+  - key: Time (Local)
+    value:
+      epoch: 1426665905
+      id: 145348
+      mro: WinFileTime:UnixTimeStamp:NativeType:NumericProxyMixIn:BaseObject:object
+      string_value: 2015-03-18 08:05:05+0000
+- - r
+  - key: Sec Since Boot
+    value: 223.828125
+- - r
+  - key: NtSystemRoot
+    value: C:\Windows
+- - s
+  - name: Physical Layout
+- - t
+  - - cname: phys
+      formatstring: '[addrpad]'
+      name: Phys Start
+    - cname: phys
+      formatstring: '[addrpad]'
+      name: Phys End
+    - cname: pages
+      formatstring: ''
+      name: Number of Pages
+  - {}
+- - r
+  - pages: 158
+    phys: 651264
+- - r
+  - pages: 261872
+    phys: 1073676288
+- - x
+- - x

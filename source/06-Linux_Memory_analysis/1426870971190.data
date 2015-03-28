@@ -1,0 +1,5200 @@
+cache_key: f1812ee596da5280151a61e01ac090d2-check_idt
+data:
+- - m
+  - cookie: 11248
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/debianx64.elf.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 11248
+    plugin_name: check_idt
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/debianx64.elf.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - t
+  - - cname: index
+      formatstring: '#5x'
+      name: Index
+    - cname: address
+      formatstring: '[addrpad]'
+      name: Address
+    - cname: type
+      formatstring: '>18'
+      name: Type
+    - cname: present
+      formatstring: '>7'
+      name: Present
+    - cname: dpl
+      formatstring: '>3'
+      name: DPL
+    - cname: symbol
+      formatstring: ''
+      name: Symbol
+  - {}
+- - r
+  - address: 18446744071582337328
+    dpl:
+      enum: '0'
+      id: 12168
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 0
+    present:
+      enum: '1'
+      id: 12166
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!divide_error
+    type:
+      enum: 32-bit Int Gate
+      id: 12164
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582309952
+    dpl:
+      enum: '0'
+      id: 12244
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 1
+    present:
+      enum: '1'
+      id: 12242
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!retint_signal + 0x8c
+    type:
+      enum: 32-bit Int Gate
+      id: 12240
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582310992
+    dpl:
+      enum: '0'
+      id: 12297
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 2
+    present:
+      enum: '1'
+      id: 12295
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!nmi
+    type:
+      enum: 32-bit Int Gate
+      id: 12293
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582310016
+    dpl:
+      enum: '3'
+      id: 12350
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 3
+    highlight: null
+    index: 3
+    present:
+      enum: '1'
+      id: 12348
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!int3
+    type:
+      enum: 32-bit Int Gate
+      id: 12346
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337360
+    dpl:
+      enum: '3'
+      id: 12403
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 3
+    highlight: null
+    index: 4
+    present:
+      enum: '1'
+      id: 12401
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!overflow
+    type:
+      enum: 32-bit Int Gate
+      id: 12399
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337392
+    dpl:
+      enum: '0'
+      id: 12456
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 5
+    present:
+      enum: '1'
+      id: 12454
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!bounds
+    type:
+      enum: 32-bit Int Gate
+      id: 12452
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337424
+    dpl:
+      enum: '0'
+      id: 12509
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 6
+    present:
+      enum: '1'
+      id: 12507
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalid_op
+    type:
+      enum: 32-bit Int Gate
+      id: 12505
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337456
+    dpl:
+      enum: '0'
+      id: 12562
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 7
+    present:
+      enum: '1'
+      id: 12560
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!device_not_available
+    type:
+      enum: 32-bit Int Gate
+      id: 12558
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337488
+    dpl:
+      enum: '0'
+      id: 12615
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 8
+    present:
+      enum: '1'
+      id: 12613
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!double_fault
+    type:
+      enum: 32-bit Int Gate
+      id: 12611
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337536
+    dpl:
+      enum: '0'
+      id: 12668
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 9
+    present:
+      enum: '1'
+      id: 12666
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!coprocessor_segment_overrun
+    type:
+      enum: 32-bit Int Gate
+      id: 12664
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337568
+    dpl:
+      enum: '0'
+      id: 12721
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 10
+    present:
+      enum: '1'
+      id: 12719
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalid_TSS
+    type:
+      enum: 32-bit Int Gate
+      id: 12717
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337616
+    dpl:
+      enum: '0'
+      id: 12774
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 11
+    present:
+      enum: '1'
+      id: 12772
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!segment_not_present
+    type:
+      enum: 32-bit Int Gate
+      id: 12770
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582310080
+    dpl:
+      enum: '0'
+      id: 12827
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 12
+    present:
+      enum: '1'
+      id: 12825
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!stack_segment
+    type:
+      enum: 32-bit Int Gate
+      id: 12823
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582310240
+    dpl:
+      enum: '0'
+      id: 12880
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 13
+    present:
+      enum: '1'
+      id: 12878
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!general_protection
+    type:
+      enum: 32-bit Int Gate
+      id: 12876
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582310288
+    dpl:
+      enum: '0'
+      id: 12933
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 14
+    present:
+      enum: '1'
+      id: 12931
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!page_fault
+    type:
+      enum: 32-bit Int Gate
+      id: 12929
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337664
+    dpl:
+      enum: '0'
+      id: 12993
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 15
+    present:
+      enum: '1'
+      id: 12991
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!spurious_interrupt_bug
+    type:
+      enum: 32-bit Int Gate
+      id: 12989
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337696
+    dpl:
+      enum: '0'
+      id: 13114
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 16
+    present:
+      enum: '1'
+      id: 13112
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!coprocessor_error
+    type:
+      enum: 32-bit Int Gate
+      id: 13110
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337728
+    dpl:
+      enum: '0'
+      id: 13192
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 17
+    present:
+      enum: '1'
+      id: 13190
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!alignment_check
+    type:
+      enum: 32-bit Int Gate
+      id: 13188
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582310384
+    dpl:
+      enum: '0'
+      id: 13287
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 18
+    present:
+      enum: '1'
+      id: 13285
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!machine_check
+    type:
+      enum: 32-bit Int Gate
+      id: 13283
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337776
+    dpl:
+      enum: '0'
+      id: 13340
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 19
+    present:
+      enum: '1'
+      id: 13338
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!simd_coprocessor_error
+    type:
+      enum: 32-bit Int Gate
+      id: 13336
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837256
+    dpl:
+      enum: '0'
+      id: 13563
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 20
+    present:
+      enum: '1'
+      id: 13561
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0xc8
+    type:
+      enum: 32-bit Int Gate
+      id: 13559
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837266
+    dpl:
+      enum: '0'
+      id: 13616
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 21
+    present:
+      enum: '1'
+      id: 13614
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0xd2
+    type:
+      enum: 32-bit Int Gate
+      id: 13612
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837276
+    dpl:
+      enum: '0'
+      id: 13698
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 22
+    present:
+      enum: '1'
+      id: 13696
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0xdc
+    type:
+      enum: 32-bit Int Gate
+      id: 13694
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837286
+    dpl:
+      enum: '0'
+      id: 13755
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 23
+    present:
+      enum: '1'
+      id: 13753
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0xe6
+    type:
+      enum: 32-bit Int Gate
+      id: 13751
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837296
+    dpl:
+      enum: '0'
+      id: 13767
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 24
+    present:
+      enum: '1'
+      id: 13765
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0xf0
+    type:
+      enum: 32-bit Int Gate
+      id: 13763
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837306
+    dpl:
+      enum: '0'
+      id: 13975
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 25
+    present:
+      enum: '1'
+      id: 13973
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0xfa
+    type:
+      enum: 32-bit Int Gate
+      id: 13971
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837316
+    dpl:
+      enum: '0'
+      id: 14071
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 26
+    present:
+      enum: '1'
+      id: 14069
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0x104
+    type:
+      enum: 32-bit Int Gate
+      id: 14067
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837326
+    dpl:
+      enum: '0'
+      id: 14269
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 27
+    present:
+      enum: '1'
+      id: 14267
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0x10e
+    type:
+      enum: 32-bit Int Gate
+      id: 14265
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837336
+    dpl:
+      enum: '0'
+      id: 14377
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 28
+    present:
+      enum: '1'
+      id: 14375
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0x118
+    type:
+      enum: 32-bit Int Gate
+      id: 14373
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837346
+    dpl:
+      enum: '0'
+      id: 14639
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 29
+    present:
+      enum: '1'
+      id: 14637
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0x122
+    type:
+      enum: 32-bit Int Gate
+      id: 14635
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837356
+    dpl:
+      enum: '0'
+      id: 14739
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 30
+    present:
+      enum: '1'
+      id: 14737
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0x12c
+    type:
+      enum: 32-bit Int Gate
+      id: 14735
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071585837366
+    dpl:
+      enum: '0'
+      id: 14901
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 31
+    present:
+      enum: '1'
+      id: 14899
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!_sinittext + 0x136
+    type:
+      enum: 32-bit Int Gate
+      id: 14897
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331712
+    dpl:
+      enum: '0'
+      id: 15302
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 32
+    present:
+      enum: '1'
+      id: 15097
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_move_cleanup_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 15095
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330692
+    dpl:
+      enum: '0'
+      id: 15410
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 33
+    present:
+      enum: '1'
+      id: 15408
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x4
+    type:
+      enum: 32-bit Int Gate
+      id: 15406
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330696
+    dpl:
+      enum: '0'
+      id: 15648
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 34
+    present:
+      enum: '1'
+      id: 15646
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x8
+    type:
+      enum: 32-bit Int Gate
+      id: 15644
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330700
+    dpl:
+      enum: '0'
+      id: 15701
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 35
+    present:
+      enum: '1'
+      id: 15699
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xc
+    type:
+      enum: 32-bit Int Gate
+      id: 15697
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330704
+    dpl:
+      enum: '0'
+      id: 15754
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 36
+    present:
+      enum: '1'
+      id: 15752
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x10
+    type:
+      enum: 32-bit Int Gate
+      id: 15750
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330708
+    dpl:
+      enum: '0'
+      id: 15971
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 37
+    present:
+      enum: '1'
+      id: 15969
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x14
+    type:
+      enum: 32-bit Int Gate
+      id: 15967
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330712
+    dpl:
+      enum: '0'
+      id: 16606
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 38
+    present:
+      enum: '1'
+      id: 16604
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x18
+    type:
+      enum: 32-bit Int Gate
+      id: 16602
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330720
+    dpl:
+      enum: '0'
+      id: 16659
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 39
+    present:
+      enum: '1'
+      id: 16657
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x20
+    type:
+      enum: 32-bit Int Gate
+      id: 16655
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330724
+    dpl:
+      enum: '0'
+      id: 16712
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 40
+    present:
+      enum: '1'
+      id: 16710
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x24
+    type:
+      enum: 32-bit Int Gate
+      id: 16708
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330728
+    dpl:
+      enum: '0'
+      id: 16766
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 41
+    present:
+      enum: '1'
+      id: 16764
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x28
+    type:
+      enum: 32-bit Int Gate
+      id: 16762
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330732
+    dpl:
+      enum: '0'
+      id: 16885
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 42
+    present:
+      enum: '1'
+      id: 16883
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2c
+    type:
+      enum: 32-bit Int Gate
+      id: 16881
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330736
+    dpl:
+      enum: '0'
+      id: 17021
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 43
+    present:
+      enum: '1'
+      id: 17019
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x30
+    type:
+      enum: 32-bit Int Gate
+      id: 17017
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330740
+    dpl:
+      enum: '0'
+      id: 18824
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 44
+    present:
+      enum: '1'
+      id: 18822
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x34
+    type:
+      enum: 32-bit Int Gate
+      id: 18820
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330744
+    dpl:
+      enum: '0'
+      id: 19653
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 45
+    present:
+      enum: '1'
+      id: 19651
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x38
+    type:
+      enum: 32-bit Int Gate
+      id: 19649
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330752
+    dpl:
+      enum: '0'
+      id: 19883
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 46
+    present:
+      enum: '1'
+      id: 19881
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x40
+    type:
+      enum: 32-bit Int Gate
+      id: 19879
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330756
+    dpl:
+      enum: '0'
+      id: 20357
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 47
+    present:
+      enum: '1'
+      id: 20355
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x44
+    type:
+      enum: 32-bit Int Gate
+      id: 20353
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330760
+    dpl:
+      enum: '0'
+      id: 20515
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 48
+    present:
+      enum: '1'
+      id: 20513
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x48
+    type:
+      enum: 32-bit Int Gate
+      id: 20511
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330764
+    dpl:
+      enum: '0'
+      id: 20934
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 49
+    present:
+      enum: '1'
+      id: 20932
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x4c
+    type:
+      enum: 32-bit Int Gate
+      id: 20930
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330768
+    dpl:
+      enum: '0'
+      id: 21222
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 50
+    present:
+      enum: '1'
+      id: 21220
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x50
+    type:
+      enum: 32-bit Int Gate
+      id: 21218
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330772
+    dpl:
+      enum: '0'
+      id: 21374
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 51
+    present:
+      enum: '1'
+      id: 21372
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x54
+    type:
+      enum: 32-bit Int Gate
+      id: 21370
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330776
+    dpl:
+      enum: '0'
+      id: 21502
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 52
+    present:
+      enum: '1'
+      id: 21496
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x58
+    type:
+      enum: 32-bit Int Gate
+      id: 21494
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330784
+    dpl:
+      enum: '0'
+      id: 22113
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 53
+    present:
+      enum: '1'
+      id: 22111
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x60
+    type:
+      enum: 32-bit Int Gate
+      id: 22109
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330788
+    dpl:
+      enum: '0'
+      id: 22166
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 54
+    present:
+      enum: '1'
+      id: 22164
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x64
+    type:
+      enum: 32-bit Int Gate
+      id: 22162
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330792
+    dpl:
+      enum: '0'
+      id: 22885
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 55
+    present:
+      enum: '1'
+      id: 22883
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x68
+    type:
+      enum: 32-bit Int Gate
+      id: 22881
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330796
+    dpl:
+      enum: '0'
+      id: 23750
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 56
+    present:
+      enum: '1'
+      id: 23748
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x6c
+    type:
+      enum: 32-bit Int Gate
+      id: 23746
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330800
+    dpl:
+      enum: '0'
+      id: 24069
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 57
+    present:
+      enum: '1'
+      id: 24067
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x70
+    type:
+      enum: 32-bit Int Gate
+      id: 24065
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330804
+    dpl:
+      enum: '0'
+      id: 24928
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 58
+    present:
+      enum: '1'
+      id: 24926
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x74
+    type:
+      enum: 32-bit Int Gate
+      id: 24924
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330808
+    dpl:
+      enum: '0'
+      id: 26301
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 59
+    present:
+      enum: '1'
+      id: 26299
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x78
+    type:
+      enum: 32-bit Int Gate
+      id: 26297
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330816
+    dpl:
+      enum: '0'
+      id: 26572
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 60
+    present:
+      enum: '1'
+      id: 26570
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x80
+    type:
+      enum: 32-bit Int Gate
+      id: 26568
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330820
+    dpl:
+      enum: '0'
+      id: 26667
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 61
+    present:
+      enum: '1'
+      id: 26665
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x84
+    type:
+      enum: 32-bit Int Gate
+      id: 26663
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330824
+    dpl:
+      enum: '0'
+      id: 27220
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 62
+    present:
+      enum: '1'
+      id: 27218
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x88
+    type:
+      enum: 32-bit Int Gate
+      id: 27216
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330828
+    dpl:
+      enum: '0'
+      id: 27421
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 63
+    present:
+      enum: '1'
+      id: 27419
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x8c
+    type:
+      enum: 32-bit Int Gate
+      id: 27417
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330832
+    dpl:
+      enum: '0'
+      id: 27792
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 64
+    present:
+      enum: '1'
+      id: 27790
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x90
+    type:
+      enum: 32-bit Int Gate
+      id: 27788
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330836
+    dpl:
+      enum: '0'
+      id: 27917
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 65
+    present:
+      enum: '1'
+      id: 27915
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x94
+    type:
+      enum: 32-bit Int Gate
+      id: 27913
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330840
+    dpl:
+      enum: '0'
+      id: 28064
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 66
+    present:
+      enum: '1'
+      id: 28062
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x98
+    type:
+      enum: 32-bit Int Gate
+      id: 28060
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330848
+    dpl:
+      enum: '0'
+      id: 28196
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 67
+    present:
+      enum: '1'
+      id: 28194
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xa0
+    type:
+      enum: 32-bit Int Gate
+      id: 28192
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330852
+    dpl:
+      enum: '0'
+      id: 28588
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 68
+    present:
+      enum: '1'
+      id: 28586
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xa4
+    type:
+      enum: 32-bit Int Gate
+      id: 28584
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330856
+    dpl:
+      enum: '0'
+      id: 28985
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 69
+    present:
+      enum: '1'
+      id: 28983
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xa8
+    type:
+      enum: 32-bit Int Gate
+      id: 28981
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330860
+    dpl:
+      enum: '0'
+      id: 29349
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 70
+    present:
+      enum: '1'
+      id: 29347
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xac
+    type:
+      enum: 32-bit Int Gate
+      id: 29345
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330864
+    dpl:
+      enum: '0'
+      id: 29673
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 71
+    present:
+      enum: '1'
+      id: 29671
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xb0
+    type:
+      enum: 32-bit Int Gate
+      id: 29669
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330868
+    dpl:
+      enum: '0'
+      id: 30285
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 72
+    present:
+      enum: '1'
+      id: 30283
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xb4
+    type:
+      enum: 32-bit Int Gate
+      id: 30281
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330872
+    dpl:
+      enum: '0'
+      id: 30476
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 73
+    present:
+      enum: '1'
+      id: 30474
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xb8
+    type:
+      enum: 32-bit Int Gate
+      id: 30472
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330880
+    dpl:
+      enum: '0'
+      id: 30919
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 74
+    present:
+      enum: '1'
+      id: 30917
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xc0
+    type:
+      enum: 32-bit Int Gate
+      id: 30915
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330884
+    dpl:
+      enum: '0'
+      id: 31289
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 75
+    present:
+      enum: '1'
+      id: 31287
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xc4
+    type:
+      enum: 32-bit Int Gate
+      id: 31285
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330888
+    dpl:
+      enum: '0'
+      id: 32019
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 76
+    present:
+      enum: '1'
+      id: 32017
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xc8
+    type:
+      enum: 32-bit Int Gate
+      id: 32015
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330892
+    dpl:
+      enum: '0'
+      id: 32338
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 77
+    present:
+      enum: '1'
+      id: 32336
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xcc
+    type:
+      enum: 32-bit Int Gate
+      id: 32334
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330896
+    dpl:
+      enum: '0'
+      id: 32602
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 78
+    present:
+      enum: '1'
+      id: 32600
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xd0
+    type:
+      enum: 32-bit Int Gate
+      id: 32598
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330900
+    dpl:
+      enum: '0'
+      id: 33090
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 79
+    present:
+      enum: '1'
+      id: 33088
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xd4
+    type:
+      enum: 32-bit Int Gate
+      id: 33086
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330904
+    dpl:
+      enum: '0'
+      id: 33351
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 80
+    present:
+      enum: '1'
+      id: 33349
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xd8
+    type:
+      enum: 32-bit Int Gate
+      id: 33347
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330912
+    dpl:
+      enum: '0'
+      id: 33727
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 81
+    present:
+      enum: '1'
+      id: 33725
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xe0
+    type:
+      enum: 32-bit Int Gate
+      id: 33723
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330916
+    dpl:
+      enum: '0'
+      id: 34153
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 82
+    present:
+      enum: '1'
+      id: 34151
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xe4
+    type:
+      enum: 32-bit Int Gate
+      id: 34149
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330920
+    dpl:
+      enum: '0'
+      id: 34552
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 83
+    present:
+      enum: '1'
+      id: 34550
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xe8
+    type:
+      enum: 32-bit Int Gate
+      id: 34548
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330924
+    dpl:
+      enum: '0'
+      id: 34952
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 84
+    present:
+      enum: '1'
+      id: 34950
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xec
+    type:
+      enum: 32-bit Int Gate
+      id: 34948
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330928
+    dpl:
+      enum: '0'
+      id: 35340
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 85
+    present:
+      enum: '1'
+      id: 35338
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xf0
+    type:
+      enum: 32-bit Int Gate
+      id: 35336
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330932
+    dpl:
+      enum: '0'
+      id: 35799
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 86
+    present:
+      enum: '1'
+      id: 35797
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xf4
+    type:
+      enum: 32-bit Int Gate
+      id: 35795
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330936
+    dpl:
+      enum: '0'
+      id: 36149
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 87
+    present:
+      enum: '1'
+      id: 36147
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0xf8
+    type:
+      enum: 32-bit Int Gate
+      id: 36145
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330944
+    dpl:
+      enum: '0'
+      id: 36496
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 88
+    present:
+      enum: '1'
+      id: 36494
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x100
+    type:
+      enum: 32-bit Int Gate
+      id: 36492
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330948
+    dpl:
+      enum: '0'
+      id: 36549
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 89
+    present:
+      enum: '1'
+      id: 36547
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x104
+    type:
+      enum: 32-bit Int Gate
+      id: 36545
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330952
+    dpl:
+      enum: '0'
+      id: 36760
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 90
+    present:
+      enum: '1'
+      id: 36758
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x108
+    type:
+      enum: 32-bit Int Gate
+      id: 36756
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330956
+    dpl:
+      enum: '0'
+      id: 37144
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 91
+    present:
+      enum: '1'
+      id: 37142
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x10c
+    type:
+      enum: 32-bit Int Gate
+      id: 37140
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330960
+    dpl:
+      enum: '0'
+      id: 37463
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 92
+    present:
+      enum: '1'
+      id: 37461
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x110
+    type:
+      enum: 32-bit Int Gate
+      id: 37459
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330964
+    dpl:
+      enum: '0'
+      id: 37681
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 93
+    present:
+      enum: '1'
+      id: 37679
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x114
+    type:
+      enum: 32-bit Int Gate
+      id: 37677
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330968
+    dpl:
+      enum: '0'
+      id: 38040
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 94
+    present:
+      enum: '1'
+      id: 38038
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x118
+    type:
+      enum: 32-bit Int Gate
+      id: 38036
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330976
+    dpl:
+      enum: '0'
+      id: 38191
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 95
+    present:
+      enum: '1'
+      id: 38189
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x120
+    type:
+      enum: 32-bit Int Gate
+      id: 38187
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330980
+    dpl:
+      enum: '0'
+      id: 38244
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 96
+    present:
+      enum: '1'
+      id: 38242
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x124
+    type:
+      enum: 32-bit Int Gate
+      id: 38240
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330984
+    dpl:
+      enum: '0'
+      id: 38297
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 97
+    present:
+      enum: '1'
+      id: 38295
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x128
+    type:
+      enum: 32-bit Int Gate
+      id: 38293
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330988
+    dpl:
+      enum: '0'
+      id: 38458
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 98
+    present:
+      enum: '1'
+      id: 38456
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x12c
+    type:
+      enum: 32-bit Int Gate
+      id: 38454
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330992
+    dpl:
+      enum: '0'
+      id: 38644
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 99
+    present:
+      enum: '1'
+      id: 38642
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x130
+    type:
+      enum: 32-bit Int Gate
+      id: 38640
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582330996
+    dpl:
+      enum: '0'
+      id: 38785
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 100
+    present:
+      enum: '1'
+      id: 38783
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x134
+    type:
+      enum: 32-bit Int Gate
+      id: 38781
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331000
+    dpl:
+      enum: '0'
+      id: 38840
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 101
+    present:
+      enum: '1'
+      id: 38838
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x138
+    type:
+      enum: 32-bit Int Gate
+      id: 38836
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331008
+    dpl:
+      enum: '0'
+      id: 38893
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 102
+    present:
+      enum: '1'
+      id: 38891
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x140
+    type:
+      enum: 32-bit Int Gate
+      id: 38889
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331012
+    dpl:
+      enum: '0'
+      id: 39098
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 103
+    present:
+      enum: '1'
+      id: 39096
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x144
+    type:
+      enum: 32-bit Int Gate
+      id: 39094
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331016
+    dpl:
+      enum: '0'
+      id: 39371
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 104
+    present:
+      enum: '1'
+      id: 39369
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x148
+    type:
+      enum: 32-bit Int Gate
+      id: 39367
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331020
+    dpl:
+      enum: '0'
+      id: 39591
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 105
+    present:
+      enum: '1'
+      id: 39589
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x14c
+    type:
+      enum: 32-bit Int Gate
+      id: 39587
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331024
+    dpl:
+      enum: '0'
+      id: 39731
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 106
+    present:
+      enum: '1'
+      id: 39729
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x150
+    type:
+      enum: 32-bit Int Gate
+      id: 39727
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331028
+    dpl:
+      enum: '0'
+      id: 40153
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 107
+    present:
+      enum: '1'
+      id: 40151
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x154
+    type:
+      enum: 32-bit Int Gate
+      id: 40149
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331032
+    dpl:
+      enum: '0'
+      id: 40330
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 108
+    present:
+      enum: '1'
+      id: 40328
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x158
+    type:
+      enum: 32-bit Int Gate
+      id: 40326
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331040
+    dpl:
+      enum: '0'
+      id: 40482
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 109
+    present:
+      enum: '1'
+      id: 40480
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x160
+    type:
+      enum: 32-bit Int Gate
+      id: 40478
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331044
+    dpl:
+      enum: '0'
+      id: 40695
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 110
+    present:
+      enum: '1'
+      id: 40693
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x164
+    type:
+      enum: 32-bit Int Gate
+      id: 40691
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331048
+    dpl:
+      enum: '0'
+      id: 40842
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 111
+    present:
+      enum: '1'
+      id: 40840
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x168
+    type:
+      enum: 32-bit Int Gate
+      id: 40838
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331052
+    dpl:
+      enum: '0'
+      id: 41019
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 112
+    present:
+      enum: '1'
+      id: 41017
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x16c
+    type:
+      enum: 32-bit Int Gate
+      id: 41015
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331056
+    dpl:
+      enum: '0'
+      id: 41228
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 113
+    present:
+      enum: '1'
+      id: 41226
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x170
+    type:
+      enum: 32-bit Int Gate
+      id: 41224
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331060
+    dpl:
+      enum: '0'
+      id: 41392
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 114
+    present:
+      enum: '1'
+      id: 41390
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x174
+    type:
+      enum: 32-bit Int Gate
+      id: 41388
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331064
+    dpl:
+      enum: '0'
+      id: 41537
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 115
+    present:
+      enum: '1'
+      id: 41535
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x178
+    type:
+      enum: 32-bit Int Gate
+      id: 41533
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331072
+    dpl:
+      enum: '0'
+      id: 41735
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 116
+    present:
+      enum: '1'
+      id: 41733
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x180
+    type:
+      enum: 32-bit Int Gate
+      id: 41731
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331076
+    dpl:
+      enum: '0'
+      id: 41885
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 117
+    present:
+      enum: '1'
+      id: 41883
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x184
+    type:
+      enum: 32-bit Int Gate
+      id: 41881
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331080
+    dpl:
+      enum: '0'
+      id: 42030
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 118
+    present:
+      enum: '1'
+      id: 42028
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x188
+    type:
+      enum: 32-bit Int Gate
+      id: 42026
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331084
+    dpl:
+      enum: '0'
+      id: 42409
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 119
+    present:
+      enum: '1'
+      id: 42407
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x18c
+    type:
+      enum: 32-bit Int Gate
+      id: 42405
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331088
+    dpl:
+      enum: '0'
+      id: 42545
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 120
+    present:
+      enum: '1'
+      id: 42543
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x190
+    type:
+      enum: 32-bit Int Gate
+      id: 42541
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331092
+    dpl:
+      enum: '0'
+      id: 42598
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 121
+    present:
+      enum: '1'
+      id: 42596
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x194
+    type:
+      enum: 32-bit Int Gate
+      id: 42594
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331096
+    dpl:
+      enum: '0'
+      id: 42651
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 122
+    present:
+      enum: '1'
+      id: 42649
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x198
+    type:
+      enum: 32-bit Int Gate
+      id: 42647
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331104
+    dpl:
+      enum: '0'
+      id: 42704
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 123
+    present:
+      enum: '1'
+      id: 42702
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1a0
+    type:
+      enum: 32-bit Int Gate
+      id: 42700
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331108
+    dpl:
+      enum: '0'
+      id: 42918
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 124
+    present:
+      enum: '1'
+      id: 42916
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1a4
+    type:
+      enum: 32-bit Int Gate
+      id: 42914
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331112
+    dpl:
+      enum: '0'
+      id: 43105
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 125
+    present:
+      enum: '1'
+      id: 43103
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1a8
+    type:
+      enum: 32-bit Int Gate
+      id: 43101
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331116
+    dpl:
+      enum: '0'
+      id: 43261
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 126
+    present:
+      enum: '1'
+      id: 43259
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1ac
+    type:
+      enum: 32-bit Int Gate
+      id: 43257
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331120
+    dpl:
+      enum: '0'
+      id: 43393
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 127
+    present:
+      enum: '1'
+      id: 43391
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1b0
+    type:
+      enum: 32-bit Int Gate
+      id: 43389
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582339696
+    dpl:
+      enum: '3'
+      id: 43585
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 3
+    highlight: null
+    index: 128
+    present:
+      enum: '1'
+      id: 43583
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!ia32_syscall
+    type:
+      enum: 32-bit Int Gate
+      id: 43581
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331128
+    dpl:
+      enum: '0'
+      id: 43768
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 129
+    present:
+      enum: '1'
+      id: 43766
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1b8
+    type:
+      enum: 32-bit Int Gate
+      id: 43764
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331136
+    dpl:
+      enum: '0'
+      id: 44413
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 130
+    present:
+      enum: '1'
+      id: 44411
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1c0
+    type:
+      enum: 32-bit Int Gate
+      id: 44409
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331140
+    dpl:
+      enum: '0'
+      id: 44541
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 131
+    present:
+      enum: '1'
+      id: 44539
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1c4
+    type:
+      enum: 32-bit Int Gate
+      id: 44537
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331144
+    dpl:
+      enum: '0'
+      id: 44679
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 132
+    present:
+      enum: '1'
+      id: 44677
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1c8
+    type:
+      enum: 32-bit Int Gate
+      id: 44675
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331148
+    dpl:
+      enum: '0'
+      id: 44889
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 133
+    present:
+      enum: '1'
+      id: 44887
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1cc
+    type:
+      enum: 32-bit Int Gate
+      id: 44885
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331152
+    dpl:
+      enum: '0'
+      id: 45053
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 134
+    present:
+      enum: '1'
+      id: 45051
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1d0
+    type:
+      enum: 32-bit Int Gate
+      id: 45049
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331156
+    dpl:
+      enum: '0'
+      id: 45212
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 135
+    present:
+      enum: '1'
+      id: 45210
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1d4
+    type:
+      enum: 32-bit Int Gate
+      id: 45208
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331160
+    dpl:
+      enum: '0'
+      id: 45390
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 136
+    present:
+      enum: '1'
+      id: 45388
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1d8
+    type:
+      enum: 32-bit Int Gate
+      id: 45386
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331168
+    dpl:
+      enum: '0'
+      id: 45614
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 137
+    present:
+      enum: '1'
+      id: 45612
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1e0
+    type:
+      enum: 32-bit Int Gate
+      id: 45610
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331172
+    dpl:
+      enum: '0'
+      id: 45765
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 138
+    present:
+      enum: '1'
+      id: 45763
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1e4
+    type:
+      enum: 32-bit Int Gate
+      id: 45761
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331176
+    dpl:
+      enum: '0'
+      id: 45915
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 139
+    present:
+      enum: '1'
+      id: 45913
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1e8
+    type:
+      enum: 32-bit Int Gate
+      id: 45911
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331180
+    dpl:
+      enum: '0'
+      id: 46052
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 140
+    present:
+      enum: '1'
+      id: 46050
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1ec
+    type:
+      enum: 32-bit Int Gate
+      id: 46048
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331184
+    dpl:
+      enum: '0'
+      id: 46234
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 141
+    present:
+      enum: '1'
+      id: 46232
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1f0
+    type:
+      enum: 32-bit Int Gate
+      id: 46230
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331188
+    dpl:
+      enum: '0'
+      id: 46485
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 142
+    present:
+      enum: '1'
+      id: 46483
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1f4
+    type:
+      enum: 32-bit Int Gate
+      id: 46481
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331192
+    dpl:
+      enum: '0'
+      id: 46615
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 143
+    present:
+      enum: '1'
+      id: 46613
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x1f8
+    type:
+      enum: 32-bit Int Gate
+      id: 46611
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331200
+    dpl:
+      enum: '0'
+      id: 46764
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 144
+    present:
+      enum: '1'
+      id: 46762
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x200
+    type:
+      enum: 32-bit Int Gate
+      id: 46760
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331204
+    dpl:
+      enum: '0'
+      id: 46974
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 145
+    present:
+      enum: '1'
+      id: 46972
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x204
+    type:
+      enum: 32-bit Int Gate
+      id: 46970
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331208
+    dpl:
+      enum: '0'
+      id: 47125
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 146
+    present:
+      enum: '1'
+      id: 47123
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x208
+    type:
+      enum: 32-bit Int Gate
+      id: 47121
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331212
+    dpl:
+      enum: '0'
+      id: 47255
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 147
+    present:
+      enum: '1'
+      id: 47253
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x20c
+    type:
+      enum: 32-bit Int Gate
+      id: 47251
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331216
+    dpl:
+      enum: '0'
+      id: 47615
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 148
+    present:
+      enum: '1'
+      id: 47613
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x210
+    type:
+      enum: 32-bit Int Gate
+      id: 47611
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331220
+    dpl:
+      enum: '0'
+      id: 47798
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 149
+    present:
+      enum: '1'
+      id: 47796
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x214
+    type:
+      enum: 32-bit Int Gate
+      id: 47794
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331224
+    dpl:
+      enum: '0'
+      id: 47951
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 150
+    present:
+      enum: '1'
+      id: 47949
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x218
+    type:
+      enum: 32-bit Int Gate
+      id: 47947
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331232
+    dpl:
+      enum: '0'
+      id: 48158
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 151
+    present:
+      enum: '1'
+      id: 48156
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x220
+    type:
+      enum: 32-bit Int Gate
+      id: 48154
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331236
+    dpl:
+      enum: '0'
+      id: 48317
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 152
+    present:
+      enum: '1'
+      id: 48315
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x224
+    type:
+      enum: 32-bit Int Gate
+      id: 48313
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331240
+    dpl:
+      enum: '0'
+      id: 48472
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 153
+    present:
+      enum: '1'
+      id: 48470
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x228
+    type:
+      enum: 32-bit Int Gate
+      id: 48468
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331244
+    dpl:
+      enum: '0'
+      id: 48647
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 154
+    present:
+      enum: '1'
+      id: 48645
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x22c
+    type:
+      enum: 32-bit Int Gate
+      id: 48643
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331248
+    dpl:
+      enum: '0'
+      id: 49135
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 155
+    present:
+      enum: '1'
+      id: 49133
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x230
+    type:
+      enum: 32-bit Int Gate
+      id: 49131
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331252
+    dpl:
+      enum: '0'
+      id: 49200
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 156
+    present:
+      enum: '1'
+      id: 49198
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x234
+    type:
+      enum: 32-bit Int Gate
+      id: 49196
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331256
+    dpl:
+      enum: '0'
+      id: 49708
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 157
+    present:
+      enum: '1'
+      id: 49706
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x238
+    type:
+      enum: 32-bit Int Gate
+      id: 49704
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331264
+    dpl:
+      enum: '0'
+      id: 49841
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 158
+    present:
+      enum: '1'
+      id: 49839
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x240
+    type:
+      enum: 32-bit Int Gate
+      id: 49837
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331268
+    dpl:
+      enum: '0'
+      id: 50144
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 159
+    present:
+      enum: '1'
+      id: 50142
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x244
+    type:
+      enum: 32-bit Int Gate
+      id: 50140
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331272
+    dpl:
+      enum: '0'
+      id: 50283
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 160
+    present:
+      enum: '1'
+      id: 50281
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x248
+    type:
+      enum: 32-bit Int Gate
+      id: 50279
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331276
+    dpl:
+      enum: '0'
+      id: 50457
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 161
+    present:
+      enum: '1'
+      id: 50455
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x24c
+    type:
+      enum: 32-bit Int Gate
+      id: 50453
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331280
+    dpl:
+      enum: '0'
+      id: 50755
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 162
+    present:
+      enum: '1'
+      id: 50753
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x250
+    type:
+      enum: 32-bit Int Gate
+      id: 50751
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331284
+    dpl:
+      enum: '0'
+      id: 50832
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 163
+    present:
+      enum: '1'
+      id: 50830
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x254
+    type:
+      enum: 32-bit Int Gate
+      id: 50828
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331288
+    dpl:
+      enum: '0'
+      id: 50924
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 164
+    present:
+      enum: '1'
+      id: 50922
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x258
+    type:
+      enum: 32-bit Int Gate
+      id: 50920
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331296
+    dpl:
+      enum: '0'
+      id: 51321
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 165
+    present:
+      enum: '1'
+      id: 51319
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x260
+    type:
+      enum: 32-bit Int Gate
+      id: 51317
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331300
+    dpl:
+      enum: '0'
+      id: 51486
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 166
+    present:
+      enum: '1'
+      id: 51484
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x264
+    type:
+      enum: 32-bit Int Gate
+      id: 51482
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331304
+    dpl:
+      enum: '0'
+      id: 51629
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 167
+    present:
+      enum: '1'
+      id: 51627
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x268
+    type:
+      enum: 32-bit Int Gate
+      id: 51625
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331308
+    dpl:
+      enum: '0'
+      id: 51849
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 168
+    present:
+      enum: '1'
+      id: 51847
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x26c
+    type:
+      enum: 32-bit Int Gate
+      id: 51845
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331312
+    dpl:
+      enum: '0'
+      id: 51998
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 169
+    present:
+      enum: '1'
+      id: 51996
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x270
+    type:
+      enum: 32-bit Int Gate
+      id: 51994
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331316
+    dpl:
+      enum: '0'
+      id: 52141
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 170
+    present:
+      enum: '1'
+      id: 52139
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x274
+    type:
+      enum: 32-bit Int Gate
+      id: 52137
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331320
+    dpl:
+      enum: '0'
+      id: 52293
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 171
+    present:
+      enum: '1'
+      id: 52291
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x278
+    type:
+      enum: 32-bit Int Gate
+      id: 52289
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331328
+    dpl:
+      enum: '0'
+      id: 52416
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 172
+    present:
+      enum: '1'
+      id: 52414
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x280
+    type:
+      enum: 32-bit Int Gate
+      id: 52412
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331332
+    dpl:
+      enum: '0'
+      id: 52593
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 173
+    present:
+      enum: '1'
+      id: 52591
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x284
+    type:
+      enum: 32-bit Int Gate
+      id: 52589
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331336
+    dpl:
+      enum: '0'
+      id: 52749
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 174
+    present:
+      enum: '1'
+      id: 52747
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x288
+    type:
+      enum: 32-bit Int Gate
+      id: 52745
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331340
+    dpl:
+      enum: '0'
+      id: 53046
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 175
+    present:
+      enum: '1'
+      id: 53044
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x28c
+    type:
+      enum: 32-bit Int Gate
+      id: 53042
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331344
+    dpl:
+      enum: '0'
+      id: 53190
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 176
+    present:
+      enum: '1'
+      id: 53188
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x290
+    type:
+      enum: 32-bit Int Gate
+      id: 53186
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331348
+    dpl:
+      enum: '0'
+      id: 53535
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 177
+    present:
+      enum: '1'
+      id: 53533
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x294
+    type:
+      enum: 32-bit Int Gate
+      id: 53531
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331352
+    dpl:
+      enum: '0'
+      id: 53610
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 178
+    present:
+      enum: '1'
+      id: 53608
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x298
+    type:
+      enum: 32-bit Int Gate
+      id: 53606
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331360
+    dpl:
+      enum: '0'
+      id: 53691
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 179
+    present:
+      enum: '1'
+      id: 53689
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2a0
+    type:
+      enum: 32-bit Int Gate
+      id: 53687
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331364
+    dpl:
+      enum: '0'
+      id: 54040
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 180
+    present:
+      enum: '1'
+      id: 54038
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2a4
+    type:
+      enum: 32-bit Int Gate
+      id: 54036
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331368
+    dpl:
+      enum: '0'
+      id: 54120
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 181
+    present:
+      enum: '1'
+      id: 54118
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2a8
+    type:
+      enum: 32-bit Int Gate
+      id: 54116
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331372
+    dpl:
+      enum: '0'
+      id: 54246
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 182
+    present:
+      enum: '1'
+      id: 54244
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2ac
+    type:
+      enum: 32-bit Int Gate
+      id: 54242
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331376
+    dpl:
+      enum: '0'
+      id: 54393
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 183
+    present:
+      enum: '1'
+      id: 54391
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2b0
+    type:
+      enum: 32-bit Int Gate
+      id: 54389
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331380
+    dpl:
+      enum: '0'
+      id: 54561
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 184
+    present:
+      enum: '1'
+      id: 54559
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2b4
+    type:
+      enum: 32-bit Int Gate
+      id: 54557
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331384
+    dpl:
+      enum: '0'
+      id: 54668
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 185
+    present:
+      enum: '1'
+      id: 54666
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2b8
+    type:
+      enum: 32-bit Int Gate
+      id: 54664
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331392
+    dpl:
+      enum: '0'
+      id: 54810
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 186
+    present:
+      enum: '1'
+      id: 54808
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2c0
+    type:
+      enum: 32-bit Int Gate
+      id: 54806
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331396
+    dpl:
+      enum: '0'
+      id: 54961
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 187
+    present:
+      enum: '1'
+      id: 54959
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2c4
+    type:
+      enum: 32-bit Int Gate
+      id: 54957
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331400
+    dpl:
+      enum: '0'
+      id: 55119
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 188
+    present:
+      enum: '1'
+      id: 55117
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2c8
+    type:
+      enum: 32-bit Int Gate
+      id: 55115
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331404
+    dpl:
+      enum: '0'
+      id: 55329
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 189
+    present:
+      enum: '1'
+      id: 55327
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2cc
+    type:
+      enum: 32-bit Int Gate
+      id: 55325
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331408
+    dpl:
+      enum: '0'
+      id: 55593
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 190
+    present:
+      enum: '1'
+      id: 55591
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2d0
+    type:
+      enum: 32-bit Int Gate
+      id: 55589
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331412
+    dpl:
+      enum: '0'
+      id: 55944
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 191
+    present:
+      enum: '1'
+      id: 55942
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2d4
+    type:
+      enum: 32-bit Int Gate
+      id: 55940
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331416
+    dpl:
+      enum: '0'
+      id: 56258
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 192
+    present:
+      enum: '1'
+      id: 56256
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2d8
+    type:
+      enum: 32-bit Int Gate
+      id: 56254
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331424
+    dpl:
+      enum: '0'
+      id: 56357
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 193
+    present:
+      enum: '1'
+      id: 56355
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2e0
+    type:
+      enum: 32-bit Int Gate
+      id: 56353
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331428
+    dpl:
+      enum: '0'
+      id: 56531
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 194
+    present:
+      enum: '1'
+      id: 56529
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2e4
+    type:
+      enum: 32-bit Int Gate
+      id: 56527
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331432
+    dpl:
+      enum: '0'
+      id: 56792
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 195
+    present:
+      enum: '1'
+      id: 56790
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2e8
+    type:
+      enum: 32-bit Int Gate
+      id: 56788
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331436
+    dpl:
+      enum: '0'
+      id: 57006
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 196
+    present:
+      enum: '1'
+      id: 57004
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2ec
+    type:
+      enum: 32-bit Int Gate
+      id: 57002
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331440
+    dpl:
+      enum: '0'
+      id: 57138
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 197
+    present:
+      enum: '1'
+      id: 57136
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2f0
+    type:
+      enum: 32-bit Int Gate
+      id: 57134
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331444
+    dpl:
+      enum: '0'
+      id: 57216
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 198
+    present:
+      enum: '1'
+      id: 57214
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2f4
+    type:
+      enum: 32-bit Int Gate
+      id: 57212
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331448
+    dpl:
+      enum: '0'
+      id: 57431
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 199
+    present:
+      enum: '1'
+      id: 57429
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x2f8
+    type:
+      enum: 32-bit Int Gate
+      id: 57427
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331456
+    dpl:
+      enum: '0'
+      id: 57484
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 200
+    present:
+      enum: '1'
+      id: 57482
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x300
+    type:
+      enum: 32-bit Int Gate
+      id: 57480
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331460
+    dpl:
+      enum: '0'
+      id: 57914
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 201
+    present:
+      enum: '1'
+      id: 57912
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x304
+    type:
+      enum: 32-bit Int Gate
+      id: 57910
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331464
+    dpl:
+      enum: '0'
+      id: 57967
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 202
+    present:
+      enum: '1'
+      id: 57965
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x308
+    type:
+      enum: 32-bit Int Gate
+      id: 57963
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331468
+    dpl:
+      enum: '0'
+      id: 58131
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 203
+    present:
+      enum: '1'
+      id: 58129
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x30c
+    type:
+      enum: 32-bit Int Gate
+      id: 58127
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331472
+    dpl:
+      enum: '0'
+      id: 58613
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 204
+    present:
+      enum: '1'
+      id: 58611
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x310
+    type:
+      enum: 32-bit Int Gate
+      id: 58609
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331476
+    dpl:
+      enum: '0'
+      id: 58741
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 205
+    present:
+      enum: '1'
+      id: 58739
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x314
+    type:
+      enum: 32-bit Int Gate
+      id: 58737
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331480
+    dpl:
+      enum: '0'
+      id: 58891
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 206
+    present:
+      enum: '1'
+      id: 58889
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x318
+    type:
+      enum: 32-bit Int Gate
+      id: 58887
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332208
+    dpl:
+      enum: '0'
+      id: 58951
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 207
+    present:
+      enum: '1'
+      id: 58949
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt0
+    type:
+      enum: 32-bit Int Gate
+      id: 58947
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332336
+    dpl:
+      enum: '0'
+      id: 59093
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 208
+    present:
+      enum: '1'
+      id: 59091
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt1
+    type:
+      enum: 32-bit Int Gate
+      id: 59089
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332464
+    dpl:
+      enum: '0'
+      id: 59386
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 209
+    present:
+      enum: '1'
+      id: 59384
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt2
+    type:
+      enum: 32-bit Int Gate
+      id: 59382
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332592
+    dpl:
+      enum: '0'
+      id: 59455
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 210
+    present:
+      enum: '1'
+      id: 59453
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt3
+    type:
+      enum: 32-bit Int Gate
+      id: 59451
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332720
+    dpl:
+      enum: '0'
+      id: 59508
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 211
+    present:
+      enum: '1'
+      id: 59506
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt4
+    type:
+      enum: 32-bit Int Gate
+      id: 59504
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332848
+    dpl:
+      enum: '0'
+      id: 59713
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 212
+    present:
+      enum: '1'
+      id: 59711
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt5
+    type:
+      enum: 32-bit Int Gate
+      id: 59709
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332976
+    dpl:
+      enum: '0'
+      id: 60247
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 213
+    present:
+      enum: '1'
+      id: 60245
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt6
+    type:
+      enum: 32-bit Int Gate
+      id: 60243
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582333104
+    dpl:
+      enum: '0'
+      id: 60300
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 214
+    present:
+      enum: '1'
+      id: 60298
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt7
+    type:
+      enum: 32-bit Int Gate
+      id: 60296
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582333232
+    dpl:
+      enum: '0'
+      id: 60353
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 215
+    present:
+      enum: '1'
+      id: 60351
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt8
+    type:
+      enum: 32-bit Int Gate
+      id: 60349
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582333360
+    dpl:
+      enum: '0'
+      id: 60406
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 216
+    present:
+      enum: '1'
+      id: 60404
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt9
+    type:
+      enum: 32-bit Int Gate
+      id: 60402
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582333488
+    dpl:
+      enum: '0'
+      id: 60893
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 217
+    present:
+      enum: '1'
+      id: 60891
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt10
+    type:
+      enum: 32-bit Int Gate
+      id: 60889
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582333616
+    dpl:
+      enum: '0'
+      id: 61032
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 218
+    present:
+      enum: '1'
+      id: 61030
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt11
+    type:
+      enum: 32-bit Int Gate
+      id: 61028
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582333744
+    dpl:
+      enum: '0'
+      id: 61138
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 219
+    present:
+      enum: '1'
+      id: 61136
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt12
+    type:
+      enum: 32-bit Int Gate
+      id: 61134
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582333872
+    dpl:
+      enum: '0'
+      id: 61211
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 220
+    present:
+      enum: '1'
+      id: 61209
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt13
+    type:
+      enum: 32-bit Int Gate
+      id: 61207
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334000
+    dpl:
+      enum: '0'
+      id: 61290
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 221
+    present:
+      enum: '1'
+      id: 61288
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt14
+    type:
+      enum: 32-bit Int Gate
+      id: 61286
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334128
+    dpl:
+      enum: '0'
+      id: 61507
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 222
+    present:
+      enum: '1'
+      id: 61505
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt15
+    type:
+      enum: 32-bit Int Gate
+      id: 61503
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334256
+    dpl:
+      enum: '0'
+      id: 61802
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 223
+    present:
+      enum: '1'
+      id: 61800
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt16
+    type:
+      enum: 32-bit Int Gate
+      id: 61798
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334384
+    dpl:
+      enum: '0'
+      id: 62022
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 224
+    present:
+      enum: '1'
+      id: 62020
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt17
+    type:
+      enum: 32-bit Int Gate
+      id: 62018
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334512
+    dpl:
+      enum: '0'
+      id: 62277
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 225
+    present:
+      enum: '1'
+      id: 62275
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt18
+    type:
+      enum: 32-bit Int Gate
+      id: 62273
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334640
+    dpl:
+      enum: '0'
+      id: 62477
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 226
+    present:
+      enum: '1'
+      id: 62475
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt19
+    type:
+      enum: 32-bit Int Gate
+      id: 62473
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334768
+    dpl:
+      enum: '0'
+      id: 62555
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 227
+    present:
+      enum: '1'
+      id: 62553
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt20
+    type:
+      enum: 32-bit Int Gate
+      id: 62551
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582334896
+    dpl:
+      enum: '0'
+      id: 62666
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 228
+    present:
+      enum: '1'
+      id: 62664
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt21
+    type:
+      enum: 32-bit Int Gate
+      id: 62662
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335024
+    dpl:
+      enum: '0'
+      id: 62821
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 229
+    present:
+      enum: '1'
+      id: 62819
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt22
+    type:
+      enum: 32-bit Int Gate
+      id: 62817
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335152
+    dpl:
+      enum: '0'
+      id: 62995
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 230
+    present:
+      enum: '1'
+      id: 62993
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt23
+    type:
+      enum: 32-bit Int Gate
+      id: 62991
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335280
+    dpl:
+      enum: '0'
+      id: 63051
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 231
+    present:
+      enum: '1'
+      id: 63049
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt24
+    type:
+      enum: 32-bit Int Gate
+      id: 63047
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335408
+    dpl:
+      enum: '0'
+      id: 63276
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 232
+    present:
+      enum: '1'
+      id: 63274
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt25
+    type:
+      enum: 32-bit Int Gate
+      id: 63272
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335536
+    dpl:
+      enum: '0'
+      id: 63698
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 233
+    present:
+      enum: '1'
+      id: 63696
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt26
+    type:
+      enum: 32-bit Int Gate
+      id: 63694
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335664
+    dpl:
+      enum: '0'
+      id: 63772
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 234
+    present:
+      enum: '1'
+      id: 63770
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt27
+    type:
+      enum: 32-bit Int Gate
+      id: 63768
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335792
+    dpl:
+      enum: '0'
+      id: 63864
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 235
+    present:
+      enum: '1'
+      id: 63862
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt28
+    type:
+      enum: 32-bit Int Gate
+      id: 63860
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582335920
+    dpl:
+      enum: '0'
+      id: 64039
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 236
+    present:
+      enum: '1'
+      id: 64037
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt29
+    type:
+      enum: 32-bit Int Gate
+      id: 64035
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336048
+    dpl:
+      enum: '0'
+      id: 64214
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 237
+    present:
+      enum: '1'
+      id: 64212
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt30
+    type:
+      enum: 32-bit Int Gate
+      id: 64210
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336176
+    dpl:
+      enum: '0'
+      id: 64377
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 238
+    present:
+      enum: '1'
+      id: 64375
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!invalidate_interrupt31
+    type:
+      enum: 32-bit Int Gate
+      id: 64373
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331952
+    dpl:
+      enum: '0'
+      id: 64525
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 239
+    present:
+      enum: '1'
+      id: 64523
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!apic_timer_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 64521
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331636
+    dpl:
+      enum: '0'
+      id: 64850
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 240
+    present:
+      enum: '1'
+      id: 64848
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x3b4
+    type:
+      enum: 32-bit Int Gate
+      id: 64846
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331640
+    dpl:
+      enum: '0'
+      id: 65095
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 241
+    present:
+      enum: '1'
+      id: 65093
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x3b8
+    type:
+      enum: 32-bit Int Gate
+      id: 65091
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331648
+    dpl:
+      enum: '0'
+      id: 65222
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 242
+    present:
+      enum: '1'
+      id: 65220
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x3c0
+    type:
+      enum: 32-bit Int Gate
+      id: 65218
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331652
+    dpl:
+      enum: '0'
+      id: 65483
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 243
+    present:
+      enum: '1'
+      id: 65481
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x3c4
+    type:
+      enum: 32-bit Int Gate
+      id: 65479
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331656
+    dpl:
+      enum: '0'
+      id: 65595
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 244
+    present:
+      enum: '1'
+      id: 65593
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x3c8
+    type:
+      enum: 32-bit Int Gate
+      id: 65591
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331660
+    dpl:
+      enum: '0'
+      id: 65867
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 245
+    present:
+      enum: '1'
+      id: 65865
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_entries_start + 0x3cc
+    type:
+      enum: 32-bit Int Gate
+      id: 65863
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337200
+    dpl:
+      enum: '0'
+      id: 66040
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 246
+    present:
+      enum: '1'
+      id: 66038
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!irq_work_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 66036
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582332080
+    dpl:
+      enum: '0'
+      id: 66117
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 247
+    present:
+      enum: '1'
+      id: 66115
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!x86_platform_ipi
+    type:
+      enum: 32-bit Int Gate
+      id: 66113
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582331824
+    dpl:
+      enum: '0'
+      id: 66294
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 248
+    present:
+      enum: '1'
+      id: 66292
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!reboot_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 66290
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336304
+    dpl:
+      enum: '0'
+      id: 66450
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 249
+    present:
+      enum: '1'
+      id: 66448
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!threshold_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 66446
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336432
+    dpl:
+      enum: '0'
+      id: 66649
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 250
+    present:
+      enum: '1'
+      id: 66647
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!thermal_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 66645
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336560
+    dpl:
+      enum: '0'
+      id: 66793
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 251
+    present:
+      enum: '1'
+      id: 66791
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!call_function_single_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 66789
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336688
+    dpl:
+      enum: '0'
+      id: 66952
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 252
+    present:
+      enum: '1'
+      id: 66950
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!call_function_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 66948
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336816
+    dpl:
+      enum: '0'
+      id: 67086
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 253
+    present:
+      enum: '1'
+      id: 67084
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!reschedule_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 67082
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582336944
+    dpl:
+      enum: '0'
+      id: 67236
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 254
+    present:
+      enum: '1'
+      id: 67234
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!error_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 67232
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - r
+  - address: 18446744071582337072
+    dpl:
+      enum: '0'
+      id: 67325
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 0
+    highlight: null
+    index: 255
+    present:
+      enum: '1'
+      id: 67323
+      mro: BitField:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 1
+    symbol: linux!spurious_interrupt
+    type:
+      enum: 32-bit Int Gate
+      id: 67321
+      mro: Enumeration:NativeType:NumericProxyMixIn:BaseObject:object
+      value: 14
+- - x
+- - x

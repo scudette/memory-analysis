@@ -1,0 +1,139 @@
+cache_key: b929f40b7bbd5eb3830b1b5fd0cbdaac-vadmap
+data:
+- - m
+  - cookie: 705437
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 705437
+    plugin_name: vadmap
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - s
+  - name: null
+- - f
+  - 'Pid: {0} {1}
+
+    '
+  - 1152
+  - LiteAgent.exe
+- - t
+  - - cname: virt_addr
+      formatstring: '[addrpad]'
+      name: Virt Addr
+    - cname: length
+      formatstring: '[addr]'
+      name: Length
+    - cname: type
+      formatstring: 20s
+      name: Type
+    - cname: comments
+      formatstring: ''
+      name: Comments
+  - {}
+- - p
+  - ' Enumerating VADs in LiteAgent.exe (1152)'
+- - r
+  - comments: ''
+    length: 77824
+    type: Valid
+    virt_addr: 140697458966528
+- - r
+  - comments: 'filename: \Program Files\Amazon\XenTools\LiteAgent.exe'
+    length: 4096
+    type: File Mapping
+    virt_addr: 140697459044352
+- - r
+  - comments: ''
+    length: 4096
+    type: Valid
+    virt_addr: 140697459048448
+- - r
+  - comments: 'filename: \Program Files\Amazon\XenTools\LiteAgent.exe'
+    length: 12288
+    type: File Mapping
+    virt_addr: 140697459052544
+- - r
+  - comments: ''
+    length: 12288
+    type: Valid
+    virt_addr: 140697459064832
+- - r
+  - comments: 'filename: \Program Files\Amazon\XenTools\LiteAgent.exe'
+    length: 4096
+    type: File Mapping
+    virt_addr: 140697459077120
+- - r
+  - comments: ''
+    length: 20480
+    type: Valid
+    virt_addr: 140697459081216
+- - r
+  - comments: 'filename: \Program Files\Amazon\XenTools\LiteAgent.exe'
+    length: 8192
+    type: File Mapping
+    virt_addr: 140697459101696
+- - r
+  - comments: ''
+    length: 8192
+    type: Valid
+    virt_addr: 140697459109888
+- - r
+  - comments: 'filename: \Program Files\Amazon\XenTools\LiteAgent.exe'
+    length: 20480
+    type: File Mapping
+    virt_addr: 140697459118080
+- - r
+  - comments: ''
+    length: 4096
+    type: Valid
+    virt_addr: 140697459138560
+- - x
+- - x

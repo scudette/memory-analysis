@@ -1,0 +1,110 @@
+cache_key: 50f7f8324fc3e5de037698d699adadc8-netstat
+data:
+- - m
+  - cookie: 17023
+    plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/debianx64.elf.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 17023
+    plugin_name: netstat
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/debianx64.elf.E01
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - Debian/3.2.0-4-amd64
+        - FileName
+        session_name:
+        - Debian AMD64
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - x
+- - e
+  - "Traceback (most recent call last):\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 604, in _RunPlugin\n    return plugin_obj.render(ui_renderer) or plugin_obj\n\
+    \  File \"/home/scudette/rekall/rekall/plugins/linux/netstat.py\", line 56, in\
+    \ render\n    for task, fd, sock, iaddr in self.sockets():\n  File \"/home/scudette/rekall/rekall/plugins/linux/netstat.py\"\
+    , line 40, in sockets\n    \"socket_file_ops\") or\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 713, in __eq__\n    return Pointer.integer_to_address(other.__int__())\
+    \ == self.v()\n  File \"/home/scudette/rekall/rekall/obj.py\", line 701, in v\n\
+    \    return Pointer.integer_to_address(self._proxy.v())\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 599, in v\n    data = self.obj_vm.read(self.obj_offset, self.obj_size)\n\
+    \  File \"/home/scudette/rekall/rekall/addrspace.py\", line 371, in read\n   \
+    \ buf = self._read_chunk(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 357, in _read_chunk\n    return self.base.read(paddr, to_read)\n  File\
+    \ \"/home/scudette/rekall/rekall/addrspace.py\", line 371, in read\n    buf =\
+    \ self._read_chunk(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 411, in _read_chunk\n    return self.base.read(file_offset, min(length,\
+    \ available_length))\n  File \"/home/scudette/rekall/rekall/plugins/addrspaces/ewf.py\"\
+    , line 58, in read\n    res = self.ewf_file.read(offset, length)\n  File \"/home/scudette/rekall/rekall/plugins/tools/ewf.py\"\
+    , line 354, in read\n    buf = self.read_partial(offset, available_length)\n \
+    \ File \"/home/scudette/rekall/rekall/plugins/tools/ewf.py\", line 341, in read_partial\n\
+    \    data = self.read_chunk(chunk_id)\n  File \"/home/scudette/rekall/rekall/plugins/tools/ewf.py\"\
+    , line 327, in read_chunk\n    data = zlib.decompress(data)\nerror: Error -5 while\
+    \ decompressing data: incomplete or truncated stream\n"
+- - e
+  - "Traceback (most recent call last):\n  File \"/home/scudette/rekall/rekall/plugins/tools/webconsole/runplugin.py\"\
+    , line 569, in RunPlugin\n    renderer=renderer, **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 1020, in RunPlugin\n    self.last = super(InteractiveSession, self).RunPlugin(*args,\
+    \ **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\", line 564, in\
+    \ RunPlugin\n    *pos_args, **kwargs)\n  File \"/home/scudette/rekall/rekall/session.py\"\
+    , line 604, in _RunPlugin\n    return plugin_obj.render(ui_renderer) or plugin_obj\n\
+    \  File \"/home/scudette/rekall/rekall/plugins/linux/netstat.py\", line 56, in\
+    \ render\n    for task, fd, sock, iaddr in self.sockets():\n  File \"/home/scudette/rekall/rekall/plugins/linux/netstat.py\"\
+    , line 40, in sockets\n    \"socket_file_ops\") or\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 713, in __eq__\n    return Pointer.integer_to_address(other.__int__())\
+    \ == self.v()\n  File \"/home/scudette/rekall/rekall/obj.py\", line 701, in v\n\
+    \    return Pointer.integer_to_address(self._proxy.v())\n  File \"/home/scudette/rekall/rekall/obj.py\"\
+    , line 599, in v\n    data = self.obj_vm.read(self.obj_offset, self.obj_size)\n\
+    \  File \"/home/scudette/rekall/rekall/addrspace.py\", line 371, in read\n   \
+    \ buf = self._read_chunk(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 357, in _read_chunk\n    return self.base.read(paddr, to_read)\n  File\
+    \ \"/home/scudette/rekall/rekall/addrspace.py\", line 371, in read\n    buf =\
+    \ self._read_chunk(addr, length)\n  File \"/home/scudette/rekall/rekall/addrspace.py\"\
+    , line 411, in _read_chunk\n    return self.base.read(file_offset, min(length,\
+    \ available_length))\n  File \"/home/scudette/rekall/rekall/plugins/addrspaces/ewf.py\"\
+    , line 58, in read\n    res = self.ewf_file.read(offset, length)\n  File \"/home/scudette/rekall/rekall/plugins/tools/ewf.py\"\
+    , line 354, in read\n    buf = self.read_partial(offset, available_length)\n \
+    \ File \"/home/scudette/rekall/rekall/plugins/tools/ewf.py\", line 341, in read_partial\n\
+    \    data = self.read_chunk(chunk_id)\n  File \"/home/scudette/rekall/rekall/plugins/tools/ewf.py\"\
+    , line 327, in read_chunk\n    data = zlib.decompress(data)\nerror: Error -5 while\
+    \ decompressing data: incomplete or truncated stream\n"
+- - x
