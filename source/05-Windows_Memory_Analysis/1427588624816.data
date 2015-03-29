@@ -1,8 +1,36 @@
-cache_key: 6b71b2be2af1a74d3c89db028e4dcdd0-procdump
+cache_key: 3ff40d4c844b54d05b599eeb33b54e96-cc
 data:
 - - m
-  - cookie: 2309
+  - cookie: 16970
     plugin_name: None
+    session:
+      id: 160
+      mro: InteractiveSession:JsonSerializableSession:Session:object
+      session_id: 1
+      state:
+        ept:
+        - null
+        - IntParser
+        filename:
+        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
+        - FileName
+        pagefile:
+        - []
+        - FileName
+        profile:
+        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
+        - FileName
+        session_name:
+        - Windows Server 2012
+        - String
+        timezone:
+        - UTC
+        - TimeZone
+    tool_name: rekall
+    tool_version: 1.3.0
+- - m
+  - cookie: 16970
+    plugin_name: cc
     session:
       id: 160
       mro: InteractiveSession:JsonSerializableSession:Session:object
@@ -30,33 +58,29 @@ data:
     tool_version: 1.3.0
 - - p
   - 'Kernel AS@0x1aa000: Merging Address Ranges -'
-- - m
-  - cookie: 2309
-    plugin_name: procdump
-    session:
-      id: 160
-      mro: InteractiveSession:JsonSerializableSession:Session:object
-      session_id: 1
-      state:
-        ept:
-        - null
-        - IntParser
-        filename:
-        - ../images/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4
-        - FileName
-        pagefile:
-        - []
-        - FileName
-        profile:
-        - nt/GUID/2BCBB42C1BC741DF9E1D4E2D28DAC9631
-        - FileName
-        session_name:
-        - Windows Server 2012
-        - String
-        timezone:
-        - UTC
-        - TimeZone
-    tool_name: rekall
-    tool_version: 1.3.0
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges /'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges \'
+- - p
+  - 'Kernel AS@0x1aa000: Merging Address Ranges |'
+- - f
+  - 'Switching to process context: LiteAgent.exe (Pid 1152@0xe00170d0f080)
+
+    '
 - - x
 - - x

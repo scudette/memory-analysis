@@ -1,7 +1,7 @@
-cache_key: f6c7cda89edeb0b5679f393eff368475-vtop
+cache_key: e3c7d5d790c7990862f20b6aed0f70a4-vtop
 data:
 - - m
-  - cookie: 1823
+  - cookie: 349204
     plugin_name: None
     session:
       id: 160
@@ -29,7 +29,7 @@ data:
     tool_name: rekall
     tool_version: 1.3.0
 - - m
-  - cookie: 1823
+  - cookie: 349204
     plugin_name: vtop
     session:
       id: 160
@@ -57,41 +57,41 @@ data:
     tool_name: rekall
     tool_version: 1.3.0
 - - s
-  - name: '0x7ff6ae113000'
+  - name: '0x7ff6ae100000'
 - - f
   - 'Virtual {0:addrpad} Page Directory {1:addr}
 
     '
-  - 140697459044352
-  - 1744896
-- - p
-  - 'Kernel AS@0x1aa000: Merging Address Ranges -'
+  - 140697458966528
+  - 903634944
 - - f
   - '{0}@ {1} = {2:addr}
 
     '
   - pml4e
-  - '0x1aa7f8'
-  - 270215978634664039
+  - '0x35dc67f8'
+  - 40532397549185127
 - - f
   - '{0}@ {1} = {2:addr}
 
     '
   - pdpte
-  - '0x3b275ed0'
-  - 0
-- - f
-  - '{0}
-
-    '
-  - Invalid PDPTE
+  - '0x35d06ed0'
+  - 45035997176559719
 - - f
   - '{0}@ {1} = {2:addr}
 
     '
   - pde
-  - '0xb80'
-  - 0
+  - '0x35d07b80'
+  - 49539596803934311
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pte
+  - '0x35d08800'
+  - 9277415233285787685
 - - f
   - '
 
@@ -102,21 +102,23 @@ data:
     {0:style=full}
 
     '
-  - id: 2942
-    mro: _MMPTE:Struct:BaseAddressComparisonMixIn:BaseObject:object
-    name: _MMPTE
-    offset: 0
-    type_name: _MMPTE
+  - id: 353488
+    mro: _MMPTE_HARDWARE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+    name: Hard
+    offset: 902858752
+    type_name: _MMPTE_HARDWARE
     vm: AFF4AddressSpace
-  - 0
-  - Unknown
+  - 9277415233285787685
+  - Valid
 - - f
-  - 'Invalid PTE
+  - 'PTE mapped at {0:addrpad}
 
     '
+  - 902565888
 - - f
-  - 'Physical Address Invalid
+  - 'Physical Address {0}
 
     '
+  - '0x35cc1000'
 - - x
 - - x

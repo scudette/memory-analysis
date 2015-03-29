@@ -231,7 +231,7 @@
     Address. First we must remember to switch Rekall into the process context of the
     process LiteAgent.exe.
   type: markdown
-- id: 1427499261439
+- id: 1427588624816
   source:
     arguments:
       proc_regex: LiteAgent.exe
@@ -294,7 +294,7 @@
       short_description: Set the current process context.
     session_id: 1
   type: rekallplugin
-- id: 1426890569336
+- id: 1427588654871
   source:
     arguments:
       virtual_address: '0x7ff6ae100000'
@@ -371,7 +371,7 @@
     MZ header, and the message "This program cannot be run in DOS mode". This is indeed
     the executable header which is resident.
   type: markdown
-- id: 1426890710611
+- id: 1427588662054
   source:
     arguments:
       offset: '0x7ff6ae100000'
@@ -415,7 +415,7 @@
   - Lets understand the virtual mapping for the address 0x7ff6ae113000, which the
     vadmap plugin indicated is the first page not resident.
   type: markdown
-- id: 1426890844870
+- id: 1427588678406
   source:
     arguments:
       virtual_address: '0x7ff6ae113000'
