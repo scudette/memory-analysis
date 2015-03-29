@@ -1,0 +1,12 @@
+# Authors
+
+This project was originally founded by Michael Cohen (scudette@google.com) with
+major contributions by:
+
+- Michael Cohen (https://github.com/scudette).
+- Johaness Stuettgen (https://github.com/driest).
+
+We thank all the Rekall team for developing an amazing tool and enabling this
+project. In particular we would like to thank Misha Bushkov (mbushkov) for
+writing the Rekall GUI worksheet and the Manuskript framework - without it we
+would not be able to have such an interactive tool.

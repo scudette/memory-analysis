@@ -46,7 +46,8 @@ def FetchFile(url, filename=None):
                 sys.stdout.flush()
 
 
-MakeSymlinks()
+# Symlinks do not work in windows Alas.
+# MakeSymlinks()
 
 base_url = "https://s3-eu-west-1.amazonaws.com/dfrws2015eu/"
 
