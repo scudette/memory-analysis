@@ -12,7 +12,7 @@
   type: markdown
 - id: 1426425048386
   source:
-    caption: 'An microscope image of DDR3 memory. You can just make the rectangular
+    caption: 'A microscope image of DDR3 memory. You can just make out the rectangular
       tracks for the address and data buses within the chip.
 
 
@@ -913,19 +913,70 @@
 - id: 1427497380275
   source:
     arguments:
-      address: nt
+      virtual_address: nt
     plugin:
       arguments:
-      - help: Virtual address to inspect.
-        name: address
+      - critical: true
+        help: Name of the profile to load. This is the filename of the profile found
+          in the profiles directory. Profiles are searched in the profile path order.
+        name: profile
+        positional: false
+        short_opt: p
+      - help: The DTB physical address.
+        name: dtb
+        positional: false
+        short_opt: ''
+        type: IntParser
+      - help: Kernel addresses of eprocess structs.
+        name: eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: Physical addresses of eprocess structs.
+        name: phys_eprocess
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - help: One or more pids of processes to select.
+        name: pid
+        positional: false
+        short_opt: ''
+        type: ArrayIntParser
+      - default: null
+        help: A regex to select a process by name.
+        name: proc_regex
+        positional: false
+        short_opt: ''
+        type: RegEx
+      - choices:
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
+        default:
+        - PsActiveProcessHead
+        - CSRSS
+        - PspCidTable
+        - Sessions
+        - Handles
+        help: Method to list processes (Default uses all methods).
+        name: method
+        positional: false
+        short_opt: ''
+        type: ChoiceArray
+      - help: The Virtual Address to examine.
+        name: virtual_address
         positional: true
         required: true
         short_opt: ''
         type: SymbolAddress
-      description: Inspect the mapping of a virtual address.
-      name: inspect_vaddr
-      requirements: []
-      short_description: Inspect the mapping of a virtual address.
+      description: Prints information about the virtual to physical translation.
+      name: vtop
+      requirements:
+      - profile
+      - physical_address_space
+      short_description: Prints information about the virtual to physical translation.
     session_id: 3
   type: rekallplugin
 - id: 1426685406927

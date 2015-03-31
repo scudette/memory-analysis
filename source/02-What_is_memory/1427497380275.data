@@ -1,7 +1,7 @@
-cache_key: e1a826c17906db686d2acad6bdf084bb-inspect_vaddr
+cache_key: 9482f2da11c109af0d9df6f7d222b19b-vtop
 data:
 - - m
-  - cookie: 1607
+  - cookie: 1891
     plugin_name: None
     session:
       id: 213
@@ -35,8 +35,8 @@ data:
 - - p
   - 'VTxPagedMemory@0x881af01e: Merging Address Ranges |'
 - - m
-  - cookie: 1607
-    plugin_name: inspect_vaddr
+  - cookie: 1891
+    plugin_name: vtop
     session:
       id: 213
       mro: InteractiveSession:JsonSerializableSession:Session:object
@@ -62,27 +62,69 @@ data:
         - TimeZone
     tool_name: rekall
     tool_version: 1.3.0
-- - t
-  - - name: Address Space
-      width: 30
-    - name: Offset
-      padding: '0'
-      style: address
-    - name: Base AS
-      width: 30
-    - name: Base AS Offset
-      padding: '0'
-      style: address
-  - {}
-- - r
-  - Address Space: Kernel AS@0x187000
-    Base AS: VTxPagedMemory@0x881af01e
-    Base AS Offset: &id001 40210432
-    Offset: 272678923898880
-- - r
-  - Address Space: VTxPagedMemory@0x881af01e
-    Base AS: AFF4AddressSpace
-    Base AS Offset: 4840398848
-    Offset: *id001
+- - s
+  - name: '0xf80002659000'
+- - f
+  - 'Virtual {0:addrpad} Page Directory {1:addr}
+
+    '
+  - 272678923898880
+  - 1601536
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pml4e
+  - '0x187f80'
+  - 1675363
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pdpte
+  - '0x199000'
+  - 1671267
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pde
+  - '0x198098'
+  - 1937507
+- - f
+  - '{0}@ {1} = {2:addr}
+
+    '
+  - pte
+  - '0x1d92c8'
+  - 9223372036894988643
+- - f
+  - '
+
+    PTE Contains {1:#x}
+
+    PTE Type: {2}
+
+    {0:style=full}
+
+    '
+  - id: 25446
+    mro: _MMPTE_HARDWARE:Struct:BaseAddressComparisonMixIn:BaseObject:object
+    name: Hard
+    offset: 1938120
+    type_name: _MMPTE_HARDWARE
+    vm: VTxPagedMemory@0x881AF01E
+  - 9223372036894988643
+  - Valid
+- - f
+  - 'PTE mapped at {0:addrpad}
+
+    '
+  - 40210432
+- - f
+  - 'Physical Address {0}
+
+    '
+  - '0x2659000'
 - - x
 - - x

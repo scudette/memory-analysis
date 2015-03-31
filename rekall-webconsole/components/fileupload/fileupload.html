@@ -12,14 +12,15 @@
           </button>
 
           <button type="button" class="btn btn-default"
-                  ng-hide="node.state=='edit'" ng-if="app_config.mode!='static'"
+                  ng-hide="node.state=='edit'"
+                  ng-if="app_config.mode != 'static'"
                   tooltip="Edit plugin" data-container="body"
                   ng-click="editNode(node)">
             <span class="glyphicon glyphicon-edit"></span>
           </button>
 
           <button type="button" class="btn btn-success"
-                  ng-hide="node.state!='edit'"
+                  ng-hide="node.state != 'edit'"
                   ng-click="renderNode()">
             <span class="glyphicon glyphicon-ok"></span>
           </button>
@@ -27,7 +28,7 @@
           <div class="btn btn-default upload"
                data-multiple="true"
                tooltip="Upload new image" data-container="body"
-               onclick="this.value = null"  ng-if="app_config.mode!='static'"
+               onclick="this.value = null"  ng-if="app_config.mode != 'static'"
                ng-file-select="onFileSelect($files)"
                >
             <span class="glyphicon glyphicon-upload"></span>
@@ -41,18 +42,22 @@
           </a>
 
           <button type="button" class="btn btn-default"
-                  ng-disabled="selected==null"  ng-if="app_config.mode!='static'"
-                  ng-click="removeFile()">
+                  ng-disabled="selected==null"
+                  ng-if="app_config.mode != 'static'"
+                 ng-click="removeFile()">
             <span class="glyphicon glyphicon-trash"></span>
           </button>
         </div>
-        <div ng-if="node.state == 'edit'" class="edit" on-alt-enter="renderNode(node)">
+        <div ng-if="node.state == 'edit'"
+             class="edit"
+             on-alt-enter="renderNode(node)">
           <code-editor language="plaintext"  ng-model="node.source.caption"
                        focus="node.state == 'edit'">
           </code-editor>
         </div>
 
-        <div ng-if="node.state != 'edit'" class="readonly" ng-dblclick="editNode(node)">
+        <div ng-if="node.state != 'edit'" class="readonly"
+             ng-dblclick="editNode(node)">
           <h3>{{node.rendered.caption}}</h3>
         </div>
 

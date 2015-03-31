@@ -13,12 +13,12 @@
       },
       templateUrl: '/rekall-webconsole/components/runplugin/paged-table.html',
       link: function(scope, element, attrs) {
-        scope.paginationSelectedPage = 1;
         scope.pageSize = 10;
         scope.rowGroups = [];
         scope.pageRows = [];
         scope.paginationSelectedPage = 1;
         scope.minimized = true;
+        scope.totalPages = 0;
 
         scope.toggleMinimize = function() {
           scope.minimized = !scope.minimized;
@@ -76,6 +76,9 @@
               var pageGroup = pageGroups[i];
               scope.pageRows.push.apply(scope.pageRows, pageGroup);
             }
+
+            scope.totalPages = parseInt(
+              scope.rowGroups.length / scope.pageSize) + 1;
           });
 
         scope.$watch('minimized', function() {
@@ -83,7 +86,9 @@
         });
 
         scope.selectPage = function(pageNumber) {
-          scope.paginationSelectedPage = pageNumber;
+          if (pageNumber > 0 && pageNumber <= scope.totalPages) {
+            scope.paginationSelectedPage = pageNumber;
+          };
         }
 
         scope.toggleTreeNode = function(branchRow) {

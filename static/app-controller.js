@@ -7,6 +7,9 @@ var manuskriptPluginsList = manuskriptPluginsList || [];
 (function() {
 
   var confModule = angular.module('manuskript.configuration', []);
+
+  // Incorporate configuration from the HTML generator into the global app
+  // configuration. This will be available everywhere as scope.app-config .
   confModule.value('manuskriptConfiguration', $('html').data());
 
   var module = angular.module('manuskript.app.controller', [
@@ -414,7 +417,8 @@ var manuskriptPluginsList = manuskriptPluginsList || [];
         for(var i=0; i < result.sessions.length; i++) {
           var session_id = result.sessions[i].session_id;
           manuskriptConfiguration.sessionsById[session_id] = result.sessions[i];
-          manuskriptConfiguration.sessionsById[""+session_id] = result.sessions[i];
+          manuskriptConfiguration.sessionsById["" + session_id] =
+            result.sessions[i];
         };
 
         if(angular.isUndefined(manuskriptConfiguration.default_session)) {
@@ -437,7 +441,8 @@ var manuskriptPluginsList = manuskriptPluginsList || [];
         for(var i=0; i < result.sessions.length; i++) {
           var session_id = result.sessions[i].session_id;
           manuskriptConfiguration.sessionsById[session_id] = result.sessions[i];
-          manuskriptConfiguration.sessionsById[""+session_id] = result.sessions[i];
+          manuskriptConfiguration.sessionsById["" + session_id] =
+            result.sessions[i];
         };
 
         if(angular.isUndefined(manuskriptConfiguration.default_session)) {
