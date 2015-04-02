@@ -1,10 +1,10 @@
 cache_key: d13422a4fc00edba159297a693a44b33-iomem
 data:
 - - m
-  - cookie: 1581
+  - cookie: 1803
     plugin_name: None
     session:
-      id: 160
+      id: 167
       mro: InteractiveSession:JsonSerializableSession:Session:object
       session_id: 1
       state:
@@ -27,16 +27,14 @@ data:
         - UTC
         - TimeZone
     tool_name: rekall
-    tool_version: 1.3.0
+    tool_version: 1.3.1
 - - p
   - 'Elf64CoreDump|: Merging Address Ranges -'
-- - p
-  - Scanning 0x00B00000 with SlideScanner
 - - m
-  - cookie: 1581
+  - cookie: 1803
     plugin_name: iomem
     session:
-      id: 160
+      id: 167
       mro: InteractiveSession:JsonSerializableSession:Session:object
       session_id: 1
       state:
@@ -59,30 +57,26 @@ data:
         - UTC
         - TimeZone
     tool_name: rekall
-    tool_version: 1.3.0
+    tool_version: 1.3.1
 - - t
   - - cname: resource
       formatstring: '[addrpad]'
       name: Resource
-    - cname: depth
-      formatstring: ''
-      name: ''
     - cname: start
       formatstring: '[addrpad]'
       name: Start
     - cname: end
       formatstring: '[addrpad]'
       name: End
-    - cname: name
-      formatstring: ''
-      name: Name
+    - name: Name
+      type: TreeNode
   - {}
 - - r
-  - depth: ''
+  - Name: PCI mem
+    depth: 0
     end: 68719476735
-    name: PCI mem
     resource:
-      id: 2022
+      id: 2073
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: resource
       offset: 281472852393216
@@ -90,11 +84,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 0
 - - r
-  - depth: .
+  - Name: reserved
+    depth: 1
     end: 65535
-    name: reserved
     resource:
-      id: 2054
+      id: 2105
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 149534118178112
@@ -102,11 +96,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 0
 - - r
-  - depth: .
+  - Name: System RAM
+    depth: 1
     end: 654335
-    name: System RAM
     resource:
-      id: 2088
+      id: 2139
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534118178168
@@ -114,11 +108,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 65536
 - - r
-  - depth: .
+  - Name: reserved
+    depth: 1
     end: 655359
-    name: reserved
     resource:
-      id: 2122
+      id: 2173
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534118178224
@@ -126,11 +120,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 654336
 - - r
-  - depth: .
+  - Name: Video ROM
+    depth: 1
     end: 819199
-    name: Video ROM
     resource:
-      id: 2156
+      id: 2207
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 281472852365904
@@ -138,11 +132,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 786432
 - - r
-  - depth: .
+  - Name: Adapter ROM
+    depth: 1
     end: 929791
-    name: Adapter ROM
     resource:
-      id: 2190
+      id: 2241
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 281472852365568
@@ -150,11 +144,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 925696
 - - r
-  - depth: .
+  - Name: reserved
+    depth: 1
     end: 1048575
-    name: reserved
     resource:
-      id: 2224
+      id: 2275
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534118178280
@@ -162,11 +156,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 983040
 - - r
-  - depth: ..
+  - Name: System ROM
+    depth: 2
     end: 1048575
-    name: System ROM
     resource:
-      id: 2256
+      id: 2307
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 281472852365968
@@ -174,11 +168,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 983040
 - - r
-  - depth: .
+  - Name: System RAM
+    depth: 1
     end: 536805375
-    name: System RAM
     resource:
-      id: 2293
+      id: 2344
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534118178336
@@ -186,11 +180,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 1048576
 - - r
-  - depth: ..
+  - Name: Kernel code
+    depth: 2
     end: 20280037
-    name: Kernel code
     resource:
-      id: 2325
+      id: 2376
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 281472852364672
@@ -198,11 +192,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 16777216
 - - r
-  - depth: ..
+  - Name: Kernel data
+    depth: 2
     end: 23677951
-    name: Kernel data
     resource:
-      id: 2359
+      id: 2410
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 281472852364736
@@ -210,11 +204,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 20280038
 - - r
-  - depth: ..
+  - Name: Kernel bss
+    depth: 2
     end: 25194495
-    name: Kernel bss
     resource:
-      id: 2393
+      id: 2444
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 281472852364800
@@ -222,11 +216,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 24285184
 - - r
-  - depth: .
+  - Name: ACPI Tables
+    depth: 1
     end: 536870911
-    name: ACPI Tables
     resource:
-      id: 2435
+      id: 2486
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534118178392
@@ -234,11 +228,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 536805376
 - - r
-  - depth: .
+  - Name: '0000:00:02.0'
+    depth: 1
     end: 3774873599
-    name: '0000:00:02.0'
     resource:
-      id: 2469
+      id: 2520
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111683352
@@ -246,11 +240,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 3758096384
 - - r
-  - depth: .
+  - Name: '0000:00:03.0'
+    depth: 1
     end: 4026662911
-    name: '0000:00:03.0'
     resource:
-      id: 2503
+      id: 2554
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111687448
@@ -258,11 +252,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4026531840
 - - r
-  - depth: ..
+  - Name: e1000
+    depth: 2
     end: 4026662911
-    name: e1000
     resource:
-      id: 2535
+      id: 2586
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 149534102149504
@@ -270,11 +264,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4026531840
 - - r
-  - depth: .
+  - Name: '0000:00:04.0'
+    depth: 1
     end: 4034920447
-    name: '0000:00:04.0'
     resource:
-      id: 2572
+      id: 2623
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111691600
@@ -282,11 +276,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4030726144
 - - r
-  - depth: ..
+  - Name: vboxguest
+    depth: 2
     end: 4034920447
-    name: vboxguest
     resource:
-      id: 2604
+      id: 2655
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 149534065368768
@@ -294,11 +288,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4030726144
 - - r
-  - depth: .
+  - Name: '0000:00:04.0'
+    depth: 1
     end: 4034936831
-    name: '0000:00:04.0'
     resource:
-      id: 2641
+      id: 2692
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111691656
@@ -306,11 +300,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4034920448
 - - r
-  - depth: .
+  - Name: '0000:00:06.0'
+    depth: 1
     end: 4034940927
-    name: '0000:00:06.0'
     resource:
-      id: 2675
+      id: 2726
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111699736
@@ -318,11 +312,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4034936832
 - - r
-  - depth: ..
+  - Name: ohci_hcd
+    depth: 2
     end: 4034940927
-    name: ohci_hcd
     resource:
-      id: 2707
+      id: 2758
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 149534097564288
@@ -330,11 +324,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4034936832
 - - r
-  - depth: .
+  - Name: '0000:00:08.0'
+    depth: 1
     end: 4035182591
-    name: '0000:00:08.0'
     resource:
-      id: 2744
+      id: 2795
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111707928
@@ -342,11 +336,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4035051520
 - - r
-  - depth: ..
+  - Name: e1000
+    depth: 2
     end: 4035182591
-    name: e1000
     resource:
-      id: 2776
+      id: 2827
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 149534097565120
@@ -354,11 +348,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4035051520
 - - r
-  - depth: .
+  - Name: 0000:00:0b.0
+    depth: 1
     end: 4035186687
-    name: 0000:00:0b.0
     resource:
-      id: 2813
+      id: 2864
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111712024
@@ -366,11 +360,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4035182592
 - - r
-  - depth: ..
+  - Name: ehci_hcd
+    depth: 2
     end: 4035186687
-    name: ehci_hcd
     resource:
-      id: 2845
+      id: 2896
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 149534075483968
@@ -378,11 +372,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4035182592
 - - r
-  - depth: .
+  - Name: 0000:00:0d.0
+    depth: 1
     end: 4035198975
-    name: 0000:00:0d.0
     resource:
-      id: 2882
+      id: 2933
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534111716400
@@ -390,11 +384,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4035190784
 - - r
-  - depth: ..
+  - Name: ahci
+    depth: 2
     end: 4035198975
-    name: ahci
     resource:
-      id: 2914
+      id: 2965
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: child
       offset: 149534097565696
@@ -402,11 +396,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4035190784
 - - r
-  - depth: .
+  - Name: IOAPIC 0
+    depth: 1
     end: 4273996799
-    name: IOAPIC 0
     resource:
-      id: 2951
+      id: 3002
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534118178560
@@ -414,11 +408,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4273995776
 - - r
-  - depth: .
+  - Name: Local APIC
+    depth: 1
     end: 4276097023
-    name: Local APIC
     resource:
-      id: 2985
+      id: 3036
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 281472852379312
@@ -426,11 +420,11 @@ data:
       vm: AMD64PagedMemory@0x01605000 (Kernel AS@0x1605000)
     start: 4276092928
 - - r
-  - depth: .
+  - Name: reserved
+    depth: 1
     end: 4294967295
-    name: reserved
     resource:
-      id: 3019
+      id: 3070
       mro: resource:Struct:BaseAddressComparisonMixIn:BaseObject:object
       name: sibling
       offset: 149534118178448

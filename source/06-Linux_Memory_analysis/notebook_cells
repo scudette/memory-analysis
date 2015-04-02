@@ -143,7 +143,7 @@
     More sophisticated strategies will split a region in two and leave out only the
     pages that malicious software is trying to hide.
   type: markdown
-- id: 1427056327758
+- id: 1428008289332
   source:
     arguments: {}
     plugin:
