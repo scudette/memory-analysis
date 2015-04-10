@@ -49,7 +49,7 @@ def FetchFile(url, filename=None):
 # Symlinks do not work in windows Alas.
 # MakeSymlinks()
 
-base_url = "https://images.rekall-forensic.com/images/"
+base_url = "http://images.rekall-forensic.com/images/"
 
 FetchFile(base_url + "3.16.0-23-generic_amd64.json")
 FetchFile(base_url + "3.16.0-23-generic_x86.json")
