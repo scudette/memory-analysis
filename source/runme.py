@@ -49,18 +49,22 @@ def FetchFile(url, filename=None):
 # Symlinks do not work in windows Alas.
 # MakeSymlinks()
 
-base_url = "http://images.rekall-forensic.com/images/"
+base_url = "http://images.rekall-forensic.com/"
 
-FetchFile(base_url + "3.16.0-23-generic_amd64.json")
-FetchFile(base_url + "3.16.0-23-generic_x86.json")
-FetchFile(base_url + "stuxnet.vmem.E01")
-FetchFile(base_url + "Ubuntu14.10_virtualbox.aff4")
+# linux images
+FetchFile(base_url + "linux/3.16.0-23-generic_amd64.json")
+FetchFile(base_url + "linux/3.16.0-23-generic_x86.json")
+FetchFile(base_url + "linux/Ubuntu14.10_virtualbox.aff4")
+
+# can't currently find a working link to this
+# FetchFile(base_url + "stuxnet.vmem.E01")
+
+# aws
+FetchFile(
+    base_url + "aws/Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4")
 
 FetchFile(
-    base_url + "Windows_Server-2003-R2_SP2-English-32Bit-Base-2015.02.11.aff4")
-
-FetchFile(
-    base_url + "Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4")
+    base_url + "aws/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4")
 
 FetchFile(base_url + "debianx64.elf.E01")
 FetchFile(base_url + "Debian-3.2.0-amd64")
