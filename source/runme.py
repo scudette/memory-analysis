@@ -66,5 +66,5 @@ FetchFile(
 FetchFile(
     base_url + "aws/Windows_Server-2012-R2_RTM-English-64Bit-Base-2015.02.11.aff4")
 
-FetchFile(base_url + "debianx64.elf.E01")
-FetchFile(base_url + "Debian-3.2.0-amd64")
+FetchFile(base_url + "linux/debianx64.elf.E01")
+FetchFile(base_url + "linux/Debian-3.2.0-amd64")
